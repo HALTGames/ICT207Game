@@ -1,15 +1,379 @@
-﻿Build started 27/09/2012 1:06:20 AM.
+﻿Build started 27/09/2012 5:18:59 AM.
      1>Project "D:\Github\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching ".\Debug\houses.unsuccessfulbuild".
+         Creating ".\Debug\houses.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MD /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt ShaysWorld.cpp
-         ShaysWorld.cpp
-     1>d:\github\ict207game\src\shaysworld.cpp(302): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
-     1>d:\github\ict207game\src\shaysworld.cpp(302): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
-     1>d:\github\ict207game\src\shaysworld.cpp(302): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MD /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\github\ict207game\src\main.cpp(470): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>d:\github\ict207game\src\main.cpp(470): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>d:\github\ict207game\src\main.cpp(470): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>d:\github\ict207game\src\main.cpp(773): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(773): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(779): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(779): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(789): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(789): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(794): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(794): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(1824): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(1850): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(1867): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2110): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2198): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2210): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2276): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2277): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2278): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2279): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2280): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2282): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2289): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2290): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2291): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2292): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2293): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2295): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2303): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2304): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2305): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2306): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2307): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2309): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2376): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2380): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2460): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2460): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2465): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2469): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2475): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2479): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2486): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2490): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2496): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2513): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2517): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2523): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2527): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2639): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2646): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2657): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2664): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2687): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2701): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2701): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2721): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2759): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2760): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2761): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2762): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2813): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2821): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2828): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2841): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2849): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(2915): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2916): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2917): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2918): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2927): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2928): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2929): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(2930): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3221): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3423): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3438): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3454): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3474): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3497): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3501): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3520): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3524): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3544): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3548): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3568): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3572): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3633): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3634): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3635): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3636): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3636): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3638): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3645): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3646): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3647): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3647): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3648): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3649): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3658): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3660): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3661): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3661): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3662): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3662): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3662): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3663): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3663): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3664): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3664): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3672): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3673): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3674): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3674): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3675): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3675): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3676): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3677): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3687): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3688): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3689): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3690): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3700): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3701): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3702): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3703): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3711): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3712): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3713): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3713): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3714): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3714): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3715): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3716): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3726): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3727): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3728): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3729): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3739): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3740): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3741): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3742): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3749): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3750): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3751): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3751): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3752): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3752): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3753): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3753): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3754): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3755): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3762): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3764): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3765): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3766): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3767): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3768): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3775): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3777): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3778): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3779): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3780): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3781): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3789): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3790): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3791): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3791): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3792): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3793): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3793): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3804): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3806): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3817): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3819): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3863): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3863): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3863): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3865): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3865): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3865): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3866): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3867): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3867): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3868): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3869): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3869): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3875): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3875): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3875): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3877): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3877): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3877): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3878): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3879): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3879): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3880): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3881): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3881): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(3891): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3891): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3891): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3893): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3893): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3893): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3894): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3895): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3896): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3897): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3903): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3903): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3903): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3905): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3905): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3905): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3906): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3907): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3908): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3909): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3939): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3939): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3943): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(3943): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4001): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4028): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4042): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4070): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4070): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4097): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4111): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4271): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4305): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4336): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4379): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4384): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4515): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4517): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4517): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4518): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4518): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4519): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4519): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4520): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4520): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4527): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4529): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4529): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4530): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4530): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4531): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4531): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4532): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4532): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4539): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4541): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4541): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4542): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4542): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4543): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4543): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4544): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4544): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4551): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4553): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4553): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4554): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4554): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4555): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4555): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4556): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4556): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4565): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4566): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4567): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4568): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(4601): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4612): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4624): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4658): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4669): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4681): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4691): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4704): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4788): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4799): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4810): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4822): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(4840): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5067): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5074): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5081): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5100): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5100): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5104): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5104): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5120): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5120): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5124): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5124): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5232): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5241): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5248): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5255): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5261): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5262): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5263): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5274): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5281): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5288): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5294): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5295): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5296): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5308): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5309): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5311): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5312): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5314): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5315): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5317): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5318): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5320): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5321): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5326): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5331): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5336): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5342): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5344): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5345): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5346): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5347): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5348): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5349): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5350): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5351): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5352): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5353): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5354): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\main.cpp(5489): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5489): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5492): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5492): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5493): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5493): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5497): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5497): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5504): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5504): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5508): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5512): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5512): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5517): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5517): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5517): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5521): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5521): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5521): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5522): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5528): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5528): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5529): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5534): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5534): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5534): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5535): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5535): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\main.cpp(5535): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
        ManifestResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Debug\houses.exe.embed.manifest.res" .\Debug\houses_manifest.rc 
+         All outputs are up-to-date.
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\houses.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib GlU32.lib OpenGL32.lib freeglut.lib glut32.lib SDL.lib SDLmain.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Debug\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Github\ICT207Game\src\Debug\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\houses.lib" /MACHINE:X86 .\Debug\houses.exe.embed.manifest.res
          .\Debug\AABB.obj
@@ -36,18 +400,19 @@
          .\Debug\Texture.obj
          .\Debug\texturedPolygons.obj
          .\Debug\Wave.obj
-         LINK : .\Debug\houses.exe not found or not built by the last incremental link; performing full link
-     1>ShaysWorld.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ShaysWorld::Display(void)" (?Display@ShaysWorld@@UAEXXZ)
-     1>ShaysWorld.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ShaysWorld::Keyboard(unsigned char,int,int)" (?Keyboard@ShaysWorld@@UAEXEHH@Z)
-     1>ShaysWorld.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ShaysWorld::Mouse(int,int,int,int)" (?Mouse@ShaysWorld@@UAEXHHHH@Z)
-     1>ShaysWorld.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ShaysWorld::SpecialKeyFunc(void)" (?SpecialKeyFunc@ShaysWorld@@UAEXXZ)
-     1>ShaysWorld.obj : error LNK2019: unresolved external symbol "public: void __thiscall ShaysWorld::CreateTextures(void)" (?CreateTextures@ShaysWorld@@QAEXXZ) referenced in function "public: virtual void __thiscall ShaysWorld::Init(void)" (?Init@ShaysWorld@@UAEXXZ)
-     1>ShaysWorld.obj : error LNK2019: unresolved external symbol "public: void __thiscall ShaysWorld::CreateTextureList(void)" (?CreateTextureList@ShaysWorld@@QAEXXZ) referenced in function "public: virtual void __thiscall ShaysWorld::Init(void)" (?Init@ShaysWorld@@UAEXXZ)
-     1>ShaysWorld.obj : error LNK2019: unresolved external symbol "public: void __thiscall ShaysWorld::CreateBoundingBoxes(void)" (?CreateBoundingBoxes@ShaysWorld@@QAEXXZ) referenced in function "public: virtual void __thiscall ShaysWorld::Init(void)" (?Init@ShaysWorld@@UAEXXZ)
-     1>ShaysWorld.obj : error LNK2019: unresolved external symbol "public: void __thiscall ShaysWorld::CreatePlains(void)" (?CreatePlains@ShaysWorld@@QAEXXZ) referenced in function "public: virtual void __thiscall ShaysWorld::Init(void)" (?Init@ShaysWorld@@UAEXXZ)
-     1>.\Debug\houses.exe : fatal error LNK1120: 8 unresolved externals
-     1>Done Building Project "D:\Github\ICT207Game\src\houses.vcxproj" (build target(s)) -- FAILED.
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:".\Debug\houses.exe.embed.manifest" /manifest .\Debug\houses.exe.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         houses.vcxproj -> D:\Github\ICT207Game\src\.\Debug\houses.exe
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Debug\houses.bsc" .\Debug\AABB.sbr .\Debug\AABBLinkedList.sbr .\Debug\AABBNode.sbr .\Debug\AbstractWorld.sbr .\Debug\camera.sbr .\Debug\cameraMap.sbr .\Debug\collision.sbr .\Debug\EasySound.sbr .\Debug\GameCamera.sbr .\Debug\GameCollision.sbr .\Debug\GameMain.sbr .\Debug\GameSound.sbr .\Debug\GameWorld.sbr .\Debug\glm.sbr .\Debug\glmimg.sbr .\Debug\main.sbr .\Debug\PlainLinkedList.sbr .\Debug\PlainNode.sbr .\Debug\ShaysWorld.sbr .\Debug\Sound.sbr .\Debug\SoundTime.sbr .\Debug\Texture.sbr .\Debug\texturedPolygons.sbr .\Debug\Wave.sbr
+       FinalizeBuildStatus:
+         Deleting file ".\Debug\houses.unsuccessfulbuild".
+         Touching ".\Debug\houses.lastbuildstate".
+     1>Done Building Project "D:\Github\ICT207Game\src\houses.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.23
+Time Elapsed 00:00:02.03
