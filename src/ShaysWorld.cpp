@@ -273,6 +273,21 @@ ShaysWorld::ShaysWorld(void)
 	int WELCOME						218;
 	int EXIT						219;
 	int NO_EXIT						222;
+
+	int frameCount = 0;
+	clock_t lastClock = 0;
+
+	// display campus map
+	bool DisplayMap = false;
+	// display welcome screen
+	bool DisplayWelcome = true;
+	// display exit screen
+	bool DisplayExit = false;
+	// display ECL block
+	bool displayECL = true;
+
+	// Stores raw image file
+	unsigned char* image = NULL;
 }
 
 

@@ -302,6 +302,42 @@ protected:
 	int EXIT						219
 	int NO_EXIT						222
 
+
+	GameMain GameMainLoop;
+
+	GLdouble stepIncrement;
+	GLdouble angleIncrement;
+	int frameCount;
+	clock_t lastClock;
+
+	// ratio of screen
+	float ratio;
+	// screen width and height
+	int width, height;
+
+	// display campus map
+	bool DisplayMap;
+	// display welcome screen
+	bool DisplayWelcome;
+	// display exit screen
+	bool DisplayExit;
+	// display light fittings
+	bool lightsOn;
+	// display ECL block
+	bool displayECL;
+
+	// varibles used for tarnslating graphics etc
+	GLdouble step, step2, stepLength;
+
+	// Glut Cylinder
+	GLUquadricObj *glu_cylinder;
+
+	// Stores raw image file
+	unsigned char* image;
+
+	// objects
+	Camera cam;
+	TexturedPolygons tp;
 private:
 
 };
