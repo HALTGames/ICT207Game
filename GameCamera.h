@@ -22,4 +22,3 @@ private:
 
 	point3D CameraPos;
 };
-
