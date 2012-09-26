@@ -146,6 +146,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PlainLinkedList.cpp" />
     <ClCompile Include="PlainNode.cpp" />
+    <ClCompile Include="ShaysWorld.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundTime.cpp" />
     <ClCompile Include="Texture.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="glm.h" />
     <ClInclude Include="PlainLinkedList.h" />
     <ClInclude Include="PlainNode.h" />
+    <ClInclude Include="ShaysWorld.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="SoundTime.h" />
     <ClInclude Include="texture.h" />
