@@ -27,6 +27,92 @@ public:
 
 	void Init();
 
+// display functions
+void reshape(int w, int h);
+//void keys(unsigned char key, int x, int y); ***REPLACE WITH KEYBOARD
+
+// keyboard and mouse functions
+void movementKeys(int key, int x, int y);
+void releaseKey(int key, int x, int y);
+void releaseKeys(unsigned char key, int x, int y);
+void mouseMove(int x, int y);
+
+// calls display functions below to draw the backdrops
+void DrawBackdrop();
+// functions to display display lists (images) and bind them to a texture
+void DisplayAboveWindowBlock ();
+void DisplayBench ();
+void DisplayBricks ();
+void DisplayChancPosts ();
+void DisplayCylinders ();
+void DisplayDoorPaving ();
+void DisplayDoorPosts ();
+void DisplayEntranceSteps ();
+void DisplayExtras ();
+void DisplayGrass ();
+void DisplayLargerTextures ();
+void DisplayLibraryPosts ();
+void DisplayMainPosts ();
+void DisplayPavement ();
+void DisplayPhysSciPosts ();
+void DisplayPurplePosts ();
+void DisplayRedPosts ();
+void DisplayRoof();
+void DisplayStepBricks ();
+void DisplayLights ();
+void DisplayECL ();
+
+// calls functions to create display lists (below)
+void CreateTextureList();
+// creates display lists
+void DrawGrass ();
+void DrawChancPosts ();
+void DrawDoorPosts ();
+void DrawPurplePosts ();
+void DrawRedPosts ();
+void DrawMainPosts ();
+void DrawAboveWindowBlock ();
+void DrawDoorPaving ();
+void DrawPhysSciPosts ();
+void DrawLibraryPosts ();
+void DrawBricks ();
+void DrawPavement ();
+void DrawExtras ();
+void DrawRoof();
+void DrawEntranceSteps ();
+void DrawLargerTextures ();
+void DrawLights ();
+void DrawBench ();
+void DrawCylinders ();
+void DrawAngledRoofBeam (int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
+void DrawAngledRoofBeam2 (int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
+void DrawStepBricks ();
+void DrawMapExit ();
+void DrawECL ();
+
+
+void BindBridgeWall(GLint LR);
+void BindBuildingWall();
+void BindWallPosts(GLint LR);
+
+void IncrementFrameCount();
+
+// loads images and creates texture
+void CreateTextures();
+// creates bounding boxes for collsion detection
+void CreateBoundingBoxes();
+void CreateNewBoundingBoxes();
+// creates different plains
+void CreatePlains();
+void CreateNewPlains();
+
+// deletes image and clears memory
+void DeleteImageFromMemory(unsigned char* tempImage);
+
+void drawmodel_box();
+void transition();
+
+
 protected:
 	Wave wave;
 
@@ -72,7 +158,7 @@ protected:
 	int PAVEMENT_16					;
 	int DOORPAVE_1					;
 	// Wall Brick Textures
-	int WALL_BRICK_YZ				
+	int WALL_BRICK_YZ				;
 	int WALL_BRICK_XY				;
 	int WALL_BRICK_XY_87WIDTH		;
 	int WALL_BRICK_GAP_YZ			;

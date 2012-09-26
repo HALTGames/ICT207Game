@@ -1,368 +1,21 @@
-﻿Build started 10/09/2012 8:00:44 PM.
-     1>Project "C:\Users\Chaokel\Desktop\New folder\CAMPUS TOUR\houses.vcxproj" on node 2 (build target(s)).
+﻿Build started 27/09/2012 1:06:20 AM.
+     1>Project "D:\Github\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Creating ".\Debug\houses.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching ".\Debug\houses.unsuccessfulbuild".
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MD /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(459): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(459): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(459): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(756): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(756): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(762): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(762): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(772): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(772): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(777): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(777): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(1680): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(1706): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(1723): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(1966): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2054): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2066): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2132): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2133): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2134): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2135): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2136): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2138): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2145): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2146): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2147): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2148): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2149): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2151): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2159): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2160): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2161): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2162): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2163): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2165): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2232): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2236): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2316): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2316): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2321): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2325): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2331): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2335): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2342): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2346): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2352): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2369): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2373): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2379): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2383): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2495): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2502): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2513): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2520): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2543): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2557): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2557): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2577): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2615): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2616): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2617): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2618): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2669): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2677): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2684): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2697): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2705): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2771): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2772): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2773): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2774): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2783): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2784): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2785): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(2786): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3077): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3279): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3294): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3310): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3330): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3353): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3357): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3376): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3380): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3400): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3404): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3424): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3428): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3489): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3490): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3491): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3492): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3492): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3494): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3501): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3502): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3503): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3503): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3504): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3505): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3514): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3516): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3517): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3517): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3518): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3518): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3518): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3519): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3519): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3520): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3520): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3528): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3529): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3530): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3530): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3531): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3531): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3532): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3533): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3543): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3544): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3545): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3546): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3556): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3557): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3558): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3559): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3567): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3568): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3569): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3569): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3570): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3570): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3571): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3572): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3582): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3583): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3584): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3585): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3595): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3596): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3597): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3598): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3605): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3606): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3607): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3607): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3608): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3608): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3609): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3609): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3610): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3611): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3618): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3620): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3621): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3622): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3623): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3624): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3631): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3633): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3634): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3635): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3636): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3637): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3645): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3646): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3647): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3647): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3648): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3649): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3649): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3660): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3662): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3673): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3675): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3719): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3719): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3719): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3721): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3721): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3721): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3722): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3723): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3723): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3724): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3725): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3725): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3731): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3731): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3731): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3733): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3733): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3733): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3734): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3735): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3735): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3736): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3737): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3737): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3747): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3747): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3747): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3749): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3749): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3749): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3750): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3751): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3752): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3753): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3759): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3759): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3759): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3761): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3761): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3761): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3762): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3763): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3764): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3765): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3795): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3795): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3799): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3799): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3857): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3884): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3898): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3926): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3926): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3953): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(3967): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4127): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4161): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4192): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4235): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4240): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4371): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4373): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4373): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4374): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4374): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4375): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4375): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4376): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4376): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4383): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4385): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4385): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4386): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4386): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4387): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4387): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4388): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4388): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4395): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4397): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4397): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4398): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4398): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4399): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4399): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4400): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4400): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4407): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4409): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4409): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4410): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4410): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4411): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4411): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4412): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4412): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4421): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4422): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4423): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4424): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4457): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4468): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4480): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4514): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4525): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4537): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4547): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4560): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4644): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4655): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4666): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4678): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4696): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4923): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4930): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4937): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4956): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4956): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4960): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4960): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4976): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4976): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4980): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(4980): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5088): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5097): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5104): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5111): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5117): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5118): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5119): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5130): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5137): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5144): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5150): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5151): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5152): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5164): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5165): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5167): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5168): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5170): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5171): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5173): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5174): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5176): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5177): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5182): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5187): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5192): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5198): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5200): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5201): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5202): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5203): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5204): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5205): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5206): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5207): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5208): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5209): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5210): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5328): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5329): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5329): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5329): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5332): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5332): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5339): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5339): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5343): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5352): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5356): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5356): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>c:\users\chaokel\desktop\new folder\campus tour\main.cpp(5356): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MD /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt ShaysWorld.cpp
+         ShaysWorld.cpp
+     1>d:\github\ict207game\src\shaysworld.cpp(302): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>d:\github\ict207game\src\shaysworld.cpp(302): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>d:\github\ict207game\src\shaysworld.cpp(302): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
        ManifestResourceCompile:
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Debug\houses.exe.embed.manifest.res" .\Debug\houses_manifest.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\houses.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib GlU32.lib OpenGL32.lib freeglut.lib glut32.lib SDL.lib SDLmain.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Debug\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Chaokel\Desktop\New folder\CAMPUS TOUR\Debug\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\houses.lib" /MACHINE:X86 .\Debug\houses.exe.embed.manifest.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\houses.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib GlU32.lib OpenGL32.lib freeglut.lib glut32.lib SDL.lib SDLmain.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Debug\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Github\ICT207Game\src\Debug\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\houses.lib" /MACHINE:X86 .\Debug\houses.exe.embed.manifest.res
          .\Debug\AABB.obj
          .\Debug\AABBLinkedList.obj
          .\Debug\AABBNode.obj
+         .\Debug\AbstractWorld.obj
          .\Debug\camera.obj
          .\Debug\cameraMap.obj
          .\Debug\collision.obj
@@ -371,28 +24,30 @@
          .\Debug\GameCollision.obj
          .\Debug\GameMain.obj
          .\Debug\GameSound.obj
+         .\Debug\GameWorld.obj
          .\Debug\glm.obj
          .\Debug\glmimg.obj
          .\Debug\main.obj
          .\Debug\PlainLinkedList.obj
          .\Debug\PlainNode.obj
+         .\Debug\ShaysWorld.obj
          .\Debug\Sound.obj
          .\Debug\SoundTime.obj
          .\Debug\Texture.obj
          .\Debug\texturedPolygons.obj
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:".\Debug\houses.exe.embed.manifest" /manifest .\Debug\houses.exe.intermediate.manifest
-         All outputs are up-to-date.
-       LinkEmbedManifest:
-         All outputs are up-to-date.
-         houses.vcxproj -> C:\Users\Chaokel\Desktop\New folder\CAMPUS TOUR\.\Debug\houses.exe
-       BscMake:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Debug\houses.bsc" .\Debug\AABB.sbr .\Debug\AABBLinkedList.sbr .\Debug\AABBNode.sbr .\Debug\camera.sbr .\Debug\cameraMap.sbr .\Debug\collision.sbr .\Debug\EasySound.sbr .\Debug\GameCamera.sbr .\Debug\GameCollision.sbr .\Debug\GameMain.sbr .\Debug\GameSound.sbr .\Debug\glm.sbr .\Debug\glmimg.sbr .\Debug\main.sbr .\Debug\PlainLinkedList.sbr .\Debug\PlainNode.sbr .\Debug\Sound.sbr .\Debug\SoundTime.sbr .\Debug\Texture.sbr .\Debug\texturedPolygons.sbr
-       FinalizeBuildStatus:
-         Deleting file ".\Debug\houses.unsuccessfulbuild".
-         Touching ".\Debug\houses.lastbuildstate".
-     1>Done Building Project "C:\Users\Chaokel\Desktop\New folder\CAMPUS TOUR\houses.vcxproj" (build target(s)).
+         .\Debug\Wave.obj
+         LINK : .\Debug\houses.exe not found or not built by the last incremental link; performing full link
+     1>ShaysWorld.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ShaysWorld::Display(void)" (?Display@ShaysWorld@@UAEXXZ)
+     1>ShaysWorld.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ShaysWorld::Keyboard(unsigned char,int,int)" (?Keyboard@ShaysWorld@@UAEXEHH@Z)
+     1>ShaysWorld.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ShaysWorld::Mouse(int,int,int,int)" (?Mouse@ShaysWorld@@UAEXHHHH@Z)
+     1>ShaysWorld.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall ShaysWorld::SpecialKeyFunc(void)" (?SpecialKeyFunc@ShaysWorld@@UAEXXZ)
+     1>ShaysWorld.obj : error LNK2019: unresolved external symbol "public: void __thiscall ShaysWorld::CreateTextures(void)" (?CreateTextures@ShaysWorld@@QAEXXZ) referenced in function "public: virtual void __thiscall ShaysWorld::Init(void)" (?Init@ShaysWorld@@UAEXXZ)
+     1>ShaysWorld.obj : error LNK2019: unresolved external symbol "public: void __thiscall ShaysWorld::CreateTextureList(void)" (?CreateTextureList@ShaysWorld@@QAEXXZ) referenced in function "public: virtual void __thiscall ShaysWorld::Init(void)" (?Init@ShaysWorld@@UAEXXZ)
+     1>ShaysWorld.obj : error LNK2019: unresolved external symbol "public: void __thiscall ShaysWorld::CreateBoundingBoxes(void)" (?CreateBoundingBoxes@ShaysWorld@@QAEXXZ) referenced in function "public: virtual void __thiscall ShaysWorld::Init(void)" (?Init@ShaysWorld@@UAEXXZ)
+     1>ShaysWorld.obj : error LNK2019: unresolved external symbol "public: void __thiscall ShaysWorld::CreatePlains(void)" (?CreatePlains@ShaysWorld@@QAEXXZ) referenced in function "public: virtual void __thiscall ShaysWorld::Init(void)" (?Init@ShaysWorld@@UAEXXZ)
+     1>.\Debug\houses.exe : fatal error LNK1120: 8 unresolved externals
+     1>Done Building Project "D:\Github\ICT207Game\src\houses.vcxproj" (build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:02.37
+Time Elapsed 00:00:01.23

@@ -88,7 +88,7 @@ ShaysWorld::ShaysWorld(void)
 	int DOOR_SIDEPOST_CHANC		=	50;
 	int DOOR_POST_LIB			=	215;
 	// Coloured Posts Textures;
-	int PURPLE_POST				=	51
+	int PURPLE_POST				=	51;
 	int PURPLE_POSTSIDE			=	52;
 	int RED_POST				=	53;
 	int RED_POSTSIDE			=	54;
@@ -294,5 +294,41 @@ ShaysWorld::ShaysWorld(void)
 
 ShaysWorld::~ShaysWorld(void)
 {
+}
+
+void ShaysWorld::Init()
+{
+	// set background (sky colour)
+	glClearColor(97.0/255.0, 140.0/255.0, 185.0/255.0, 1.0);
+	
+	// set perpsective
+	gluLookAt(0.0, 1.75, 0.0, 
+			  0.0, 1.75, -1,
+			  0.0f,1.0f,0.0f);
+	
+	// settings for glut cylinders
+	glu_cylinder = gluNewQuadric();
+	gluQuadricTexture(glu_cylinder, GL_TRUE );
+
+	// set the world co-ordinates (used to set quadrants for bounding boxes)
+	cam.SetWorldCoordinates(36000.0, 43200.0);
+	// turn collision detection on
+	cam.SetCollisionDetectionOn(true);
+	// set number of bounding boxes required
+	cam.SetNoBoundingBoxes(50);
+	// set starting position of user
+	cam.Position(28720.0, 10500.0,	
+				 27000.0, 90.0);
+	
+	CreatePlains();	
+	
+	// creates bounding boxes and places in array
+	CreateBoundingBoxes();
+	// copies bounding boxes from array to linked lists (one fopr each quadrant)
+	cam.InitiateBoundingBoxes();
+	
+	// load texture images and create display lists
+	CreateTextureList();
+	CreateTextures();
 }
 
