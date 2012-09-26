@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "houses", "houses.vcxproj", "{18119AE1-31BF-2EDE-428E-B569346F01EE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "houses", "houses.vcxproj", "{6E988366-4911-15A3-F004-B366827648C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,12 +10,12 @@ Global
 		Template|Win32 = Template|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{18119AE1-31BF-2EDE-428E-B569346F01EE}.Debug|Win32.ActiveCfg = Debug|Win32
-		{18119AE1-31BF-2EDE-428E-B569346F01EE}.Debug|Win32.Build.0 = Debug|Win32
-		{18119AE1-31BF-2EDE-428E-B569346F01EE}.Release|Win32.ActiveCfg = Release|Win32
-		{18119AE1-31BF-2EDE-428E-B569346F01EE}.Release|Win32.Build.0 = Release|Win32
-		{18119AE1-31BF-2EDE-428E-B569346F01EE}.Template|Win32.ActiveCfg = Template|Win32
-		{18119AE1-31BF-2EDE-428E-B569346F01EE}.Template|Win32.Build.0 = Template|Win32
+		{6E988366-4911-15A3-F004-B366827648C2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6E988366-4911-15A3-F004-B366827648C2}.Debug|Win32.Build.0 = Debug|Win32
+		{6E988366-4911-15A3-F004-B366827648C2}.Release|Win32.ActiveCfg = Release|Win32
+		{6E988366-4911-15A3-F004-B366827648C2}.Release|Win32.Build.0 = Release|Win32
+		{6E988366-4911-15A3-F004-B366827648C2}.Template|Win32.ActiveCfg = Template|Win32
+		{6E988366-4911-15A3-F004-B366827648C2}.Template|Win32.Build.0 = Template|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
