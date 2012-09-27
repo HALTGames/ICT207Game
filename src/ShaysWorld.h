@@ -1,5 +1,7 @@
 #pragma once
 
+#define GLUT_DISABLE_ATEXIT_HACK
+
 #include <stdlib.h>
 #include <math.h>
 #include <GL/glut.h>
@@ -72,7 +74,7 @@ protected:
 	int PAVEMENT_16					;
 	int DOORPAVE_1					;
 	// Wall Brick Textures
-	int WALL_BRICK_YZ				
+	int WALL_BRICK_YZ				;
 	int WALL_BRICK_XY				;
 	int WALL_BRICK_XY_87WIDTH		;
 	int WALL_BRICK_GAP_YZ			;

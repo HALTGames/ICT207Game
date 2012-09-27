@@ -88,7 +88,7 @@ ShaysWorld::ShaysWorld(void)
 	int DOOR_SIDEPOST_CHANC		=	50;
 	int DOOR_POST_LIB			=	215;
 	// Coloured Posts Textures;
-	int PURPLE_POST				=	51
+	int PURPLE_POST				=	51;
 	int PURPLE_POSTSIDE			=	52;
 	int RED_POST				=	53;
 	int RED_POSTSIDE			=	54;
