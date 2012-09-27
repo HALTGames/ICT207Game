@@ -11,6 +11,9 @@
 #include "texturedPolygons.h"
 #include "GameMain.h"
 #include "Wave.h"
+#include "AbstractWorld.h"
+#include "ShaysWorld.h"
+#include "GameWorld.h"
 
 //--------------------------------------------------------------------------------------
 

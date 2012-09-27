@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Build started 27/09/2012 15:25:13.
      1>Project "D:\Users\Timothy Veletta\Documents\GitHub\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
@@ -1581,7 +1582,31 @@
          AABB.CPP
          Generating Code...
      1>Done Building Project "D:\Users\Timothy Veletta\Documents\GitHub\ICT207Game\src\houses.vcxproj" (build target(s)) -- FAILED.
+=======
+﻿Build started 27/09/2012 3:24:49 PM.
+     1>Project "D:\Github\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Debug\houses.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+       Manifest:
+         All outputs are up-to-date.
+       BscMake:
+         All outputs are up-to-date.
+       FinalizeBuildStatus:
+         Deleting file ".\Debug\houses.unsuccessfulbuild".
+         Touching ".\Debug\houses.lastbuildstate".
+     1>Done Building Project "D:\Github\ICT207Game\src\houses.vcxproj" (build target(s)).
+>>>>>>> f10d5290235198371b0253616a7278588f7874c4
 
 Build FAILED.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:13.48
+=======
+Time Elapsed 00:00:00.18
+>>>>>>> f10d5290235198371b0253616a7278588f7874c4
