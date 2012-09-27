@@ -424,6 +424,7 @@ protected:
 	Camera cam;
 	TexturedPolygons tp;
 
+
 private:
 
 };
