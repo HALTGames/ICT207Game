@@ -63,5 +63,5 @@ void GameWorld::SpecialKeyFunc(void)
 
 void GameWorld::Init(void)
 {
-
+		glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 }

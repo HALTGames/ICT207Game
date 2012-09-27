@@ -11,7 +11,6 @@ public:
 
 	void GameLoop(void);
 
-
 	virtual void Display() = 0;
 
 	virtual void Keyboard(unsigned char Key, int KeyX, int KeyY) = 0;

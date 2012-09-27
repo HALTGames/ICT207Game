@@ -15,6 +15,7 @@ AbstractWorld::~AbstractWorld(void)
 void AbstractWorld::GameLoop(void)
 {
 	currentInstance = this;
+
 	Init();
 	glutDisplayFunc(AbstractWorld::displayCallback);
 	glutKeyboardFunc(AbstractWorld::keyboardCallback);
