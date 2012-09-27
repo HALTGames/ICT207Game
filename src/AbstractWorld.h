@@ -17,7 +17,7 @@ public:
 
 	virtual void Mouse(int Button, int State, int MouseX, int MouseY) = 0;
 
-	virtual void SpecialKeyFunc() = 0;
+	virtual void SpecialKeyFunc(int Key, int X, int Y) = 0;
 
 	virtual void Init() = 0;
 
@@ -40,8 +40,8 @@ private:
 		currentInstance->Mouse(Button, State, MouseX, MouseY);
 	}
 
-	static void specialKeyFuncCallback()
+	static void specialKeyFuncCallback(int Key, int X, int Y)
 	{
-		currentInstance->SpecialKeyFunc();
+		currentInstance->SpecialKeyFunc(Key, X, Y);
 	}
 };

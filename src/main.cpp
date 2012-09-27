@@ -32,6 +32,8 @@
 	return(0);
 }*/
 
+void Select(bool Check);
+
 AbstractWorld* Instance;
 
 int main(int argc, char **argv)
@@ -43,9 +45,8 @@ int main(int argc, char **argv)
 	glutCreateWindow("Window!");
 
 	Instance = new ShaysWorld;
-
 	Select(true);
-
+	Instance->GameLoop();
 	glutMainLoop();
 	return(0);
 }

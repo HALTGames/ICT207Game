@@ -299,7 +299,7 @@ ShaysWorld::~ShaysWorld(void)
 
 void ShaysWorld::Init()
 {
-	glutSetWindowTitle("Game!");
+	glutSetWindowTitle("ShaysWorld!");
 	// set background (sky colour)
 	glClearColor(97.0/255.0, 140.0/255.0, 185.0/255.0, 1.0);
 	
@@ -335,7 +335,7 @@ void ShaysWorld::Init()
 	glutIgnoreKeyRepeat(1);
 }
 
-void ShaysWorld::SpecialKeyFunc()
+void ShaysWorld::SpecialKeyFunc(int Key, int X, int Y)
 {
 
 }

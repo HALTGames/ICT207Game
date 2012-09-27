@@ -25,7 +25,7 @@ public:
 
 	void Mouse(int Button, int State, int MouseX, int MouseY);
 
-	void SpecialKeyFunc();
+	void SpecialKeyFunc(int Key, int X, int Y);
 
 	void Init();
 
