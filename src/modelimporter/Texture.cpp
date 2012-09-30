@@ -1,5 +1,3 @@
-
-
 #include "Texture.h"
 
 TGAHeader tgaheader;									// TGA header

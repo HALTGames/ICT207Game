@@ -3,292 +3,23 @@
 
 ShaysWorld::ShaysWorld(void)
 {
-	GLMmodel* pmodel1 = NULL;
-	GLMmodel* stairs_model = NULL;
-	GLMmodel* display_model = NULL;
-	GLMmodel* billboard_model = NULL;
-	GLMmodel* roof_model = NULL;
-	GLMmodel* upper_model = NULL;
-	GLMmodel* bannister_model = NULL;
-	GLMmodel* wall_model = NULL;
-	GLMmodel* frame_model = NULL;
-
 	GLdouble movementSpeed = 10.0;
 	GLdouble rotationSpeed = 0.005;
-	int XY	=0;
-	int XZ	=1;
-	int YZ		=2;
-	int YZ_FLIP =3;
-	int XY_FLIP =4;
-
-	// PLAIN TYPES
-	int FLAT_PLAIN	=0;
-	int XY_PLAIN	=1;
-	int ZY_PLAIN	=2;
-
-	// TEXTURES
-	// Grass Textures
-	int GRASS		=				1;
-	int GRASS_2		=				2;
-	int GRASS_HILL	=				3;
-	// Pavement Textures
-	int PAVEMENT	=				4;
-	int PAVEMENT_TOP=				5;
-	int PAVEMENTSIDE_LEFT		=	6;
-	int PAVEMENTSIDE_RIGHT		=	7;
-	int PAVEMENTSIDE_TOP		=	8;
-	int PAVEMENT_CORNER_1		=	9;
-	int PAVEMENT_CORNER_2		=	10;
-	int PAVEMENT_FLIP			=	11;
-	int PAVEMENT_TOP_FLIP		=	12;
-	int PAVEMENT_16				=	13;
-	int DOORPAVE_1				=	14;
-	// Wall Brick Textures;
-	int WALL_BRICK_YZ			=	15;
-	int WALL_BRICK_XY			=	16;
-	int WALL_BRICK_XY_87WIDTH	=	17;
-	int WALL_BRICK_GAP_YZ		=	18;
-	int WALL_BRICK_GAP2_YZ		=	19;
-	int	WALL_BRICK_USD_YZ		=	20;
-	int WALL_BRICK_XY_END		=	21;
-	int WALL_BRICK_YZ_END		=	22;
-	int	WALL_GAP_1				=	23;
-	int WALL_BRICK_3_4			=	24;
-	int SHADOW_BRICK			=	25;
-	int WALL_BRICK_SEC_SIGN		=	216;
-	// Window Post Textures;
-	int WINDOWPOST_CHANC_FRONT	=	26;
-	int WINDOWPOST_CHANC_RIGHT	 =   27;
-	int WINDOWPOST_CHANC_LEFT	  =  28;
-	int WINDOWLEDGE_CHANC_FRONT		=29;
-	int WINDOWLEDGE_CHANC_TOP	=	30;
-	int WINDOWPOST_PHYSSCI_FRONT=	31;
-	int WINDOWPOST_PHYSSCI_RIGHT=	32;
-	int WINDOWPOST_PHYSSCI_LEFT	=	33;
-	int	WINDOWPOST_LIB_FRONT	=	34;
-	int	WINDOWPOST_LIB_LEFT		=	35;
-	int	WINDOWPOST_LIB_RIGHT	=	36;
-	// Door Post Textures;
-	int DOOR_POST_SECURITY		=	37;
-	// Window Ledge Textures;
-	int WINDOWLEDGE_PS_FRONT	=	38;
-	int WINDOWLEDGE_PS_TOP		=	39;
-	int WINDOWLEDGE_PS_BOTT		=	40;
-	int WINDOWLEDGE_LIB_A		=	41;
-	int WINDOWLEDGE_LIB_B		=	42;
-	int WINDOWLEDGE_LIB_TOP_A	=	43;
-	int WINDOWLEDGE_LIB_TOP_B	=	44;
-	int WINDOW_LEDGE_END_1		=	45;
-	int WINDOW_LEDGE_END_2		=	46;
-	// Main Post Textures;
-	int	MAIN_POST				=	47;
-	int	MAIN_POST_2				=	48;
-	// Door Post Textures;
-	int DOOR_POST_CHANC			=	49;
-	int DOOR_SIDEPOST_CHANC		=	50;
-	int DOOR_POST_LIB			=	215;
-	// Coloured Posts Textures;
-	int PURPLE_POST				=	51;
-	int PURPLE_POSTSIDE			=	52;
-	int RED_POST				=	53;
-	int RED_POSTSIDE			=	54;
-	// Roof Textures;
-	int ROOF_TOP				=	55;
-	int ROOF_TOP_LIB			=	56;
-	int ROOF_PLANKS				=	57;
-	int ROOF_BEAM_1				=	58;
-	int ROOF_PLANKS_2			=	59;
-	int ROOF_BEAM_2				=	60;
-	int BELOW_ROOF_FILL			=	61;
-	int ROOF_BEAM_3				=	62;
-	int ROOF_BEAM_4				=	63;
-	int ROOF_BEAM_3_TOP			=	64;
-	// KBLT Textures
-	int KBLT					=	65;
-	int KBLT_EDGE				=	66;
-	int KBLT_EDGE_2				=	67;
-	int KBLT_EDGE_CORNER		=	68;
-	int KBLT_SIDE_1				=	69;
-	int KBLT_SIDE_2				=	70;
-	// Sign and Other Textures;
-	int NEXUS_SIGN				=	71;
-	int NEXUS_SIDE				=	72;
-	int SECURITY_SIGN			=	73;
-	int SECURITY_SIGN_2			=	74;
-	int SIGN_1					=	75;
-	int SIGN_1_SIDE_1			=	76;
-	int SIGN_1_SIDE_2			=	77;
-	int SIGN_2					=	78;
-	int SIGN_2_SIDE				=	79;
-	int PSC_SIGN				=	80;
-	int PSC_SIGN_2				=	81;
-	int CO_SIGN					=	82;
-	int STA_TRAVEL				=	83;
-	int STA_TRAVEL_EDGE			=	84;
-	int STA_TRAVEL_BRACKET		=	85;
-	int STA_TRAVEL_2			=	86;
-	int STA_TRAVEL_BOTTOM		=	87;
-	int TOILET_MEN				=	88;
-	int TOILET_WOMEN			=	89;
-	int GS_SIGN					=	90;
-	int GS_SIGN_2				=	91;
-	int GS_SIGN_EDGE			=	92;
-	int MAP_2					=	93;
-	int GLASS_BOARD				=	94;
-	int GLASS_BOARD_2			=	95;
-	int GLASS_BOARD_3			=	96;
-	int GLASS_B_SIDE			=	97;
-	int RUSTY_MAN				=	98;
-	int NO_SMOKE_SIGN			=	99;
-	int CARPET					=	100;
-	// Drinks Machine Textures
-	int DRINKS_SIDE				=	101;
-	int DRINKS_TOP				=	102;
-	int DRINKS_EDGE				=	103;
-	int DRINKS_SIDE_2			=	104;
-	int COKE_MACHINE			=	105;
-	int COFFEE_MACHINE			=	106;
-	int SWEET_MACHINE			=	107;
-	int MACHINE_SIDES			=	108;
-	int MACHINE_SIDES_2			=	109;
-	// Telephone Box Textures;
-	int TELEPHONE_BACK			=	110;
-	int TELEPHONE_FRONT			=	111;
-	int TELEPHONE_SIDE_1		=	112;
-	int TELEPHONE_FRONT_2		=	113;
-	int TELEPHONE_MAIN_SIDE		=	114;
-	int TELEPHONE_TOP_1			=	115;
-	int TELEPHONE_SIDE_2		=	116;
-	int TELEPHONE_TOP_2			=	117;
-	int TELEPHONE_BOTTOM		=	118;
-	int TELEPHONE_FILL			=	119;
-	int TELEPHONE_FRONT_3		=	120;
-	// Step Textures;
-	int STEPS_LIBRARY			=	121;
-	int STEPS_LIBRARY_TOP		=	122;
-	int	STEP_PAVING_1			=	123;
-	int	STEP_EDGE				=	124;
-	;
-	// Larger Window and Door Textures Etc
-	int WINDOW_1				=	125;
-	int WINDOW_2				=	126;
-	int WINDOW_3				=	127;
-	int WINDOW_4				=	128;
-	int WINDOW_5				=	129;
-	int WINDOW_6				=	130;
-	int WINDOW_7				=	131;
-	int WINDOW_8				=	132;
-	int WINDOW_9				=	133;
-	int WINDOW_10				=	134;
-	int WINDOW_11				=	135;
-	int WINDOW_12				=	136;
-	int WINDOW_13				=	137;
-	int WINDOW_14				=	138;
-	int WINDOW_14B				=	139;
-	int WINDOW_15				=	140;
-	int WINDOW_16				=	141;
-	int WINDOW_17				=	142;
-	int WINDOW_2B				=	143;
-	int WINDOW_2C				=	144;
-	int WINDOW_2US				=	145;
-	int WINDOW_3B				=	146;
-	int WINDOW_2USB				=	147;
-	int WINDOW_LIB_1			=	148;
-	int WINDOW_LIB_1A			=	149;
-	int WINDOW_LIB_1B			=	150;
-	int WINDOW_LIB_1C			=	151;
-	int WINDOW_LIB_US_A			=	152;
-	int WINDOW_LIB_US_B			=	153;
-	int WINDOW_LIB_DOOR_1		=	154;
-	int WINDOW_LIB_DOOR_2		=	155;
-	int WINDOW_LIB_LONG			=	156;
-	int ENTRANCE				=	157;
-	int ENTRANCE_2				=	158;
-	int EXIT_EAST				=	159;
-	int EXIT_WEST				=	220;
-	int CHANC_DOOR_1			=	160;
-	int CHANC_DOOR_2			=	161;
-	int WINDOW_2D				=	162;
-	int WINDOW_2E				=	163;
-	int WINDOW_1B				=	164;
-	int STEP_WINDOW				=	221;
 	
-	// Above Window Block Textures
-	int ABOVE_WINDOW_BLOCK		=	165;
-	int ABOVE_WINDOW_BLOCK_2	=	166;
-	int ABOVE_WINDOW_BLOCK_3	=	167;
-	int ABOVE_WINDOW_EDGE_3B	=	168;
-	int ABOVE_WINDOW_BLOCK_XY_3	=	169;
-	int	ABOVE_LIB				=	170;
-	int	ABOVE_UNDER_POSTS		=	171;
-	int ABOVE_UNDER_POSTS_2		=	172;
-	int ABOVE_WINDOW_UNDER_LIB	=	173;
-	int ABOVE_WINDOW_BLOCK_CHANC=	174;
-	int ABOVE_WINDOW_EDGE_3B_LIB=	175;
-	int ABOVE_WINDOW_EDGE_4B_LIB=	176;
-	int ABOVE_UNDER_4B			=	177;
-	int ABOVE_CHANC_TEXT		=	178;
-	int ABOVE_CHANC_TEXT_2		=	179;
-	int ABOVE_PHYS_SCI_TEXT		=	180;
-	int ABOVE_CHANC_TEXT_3		=	181;
-	int ABOVE_LIB_TEXT			=	182;
-	int ABOVE_LIB_TEXT_2		=	183;
-	int ABOVE_TICKETS_TEXT		=	184;
-	int ABOVE_CHANC_EDGE		=	185;
-	int TOILET_DOOR_TOP			=	186;
-	// Light Fitting Textures;
-	int LIGHT					=	187;
-	int	LIGHT_SUPPORT			=	188;
-	int	LIGHT_SUPPORT_2			=	189;
-	// Bench Textures;
-	int BENCH_TOP				=	190;
-	int BENCH_SIDE				=	191;
-	int BENCH_SIDE_2			=	192;
-	int BENCH_EDGE				=	193;
-	int BENCH_EDGE_TOP			=	194;
-	int BENCH_EDGE_SIDE			=	195;
-	int BENCH_EDGE_TOP_2		=	196;
-	int BENCH_EDGE_2			=	197;
-	int BENCH_EDGE_3			=	198;
-	// Ticket Counter and Ledge Textures;
-	int TICKET_COUNTER_TOP		=	200;
-	int TICKET_COUNTER_EDGE		=	201;
-	int TICKET_COUNTER_EDGE_2	=	202;
-	int TICKET_COUNTER_EDGE_3	=	203;
-	int TICKET_LEDGE			=	204;
-	int TICKET_LEDGE_EDGE		=	205;
-	int TICKET_LEDGE_EDGE_2		=	206;
-	// Wall by Steps Textures;
-	int WALL_BRICK_STEPS_TOP	=	207;
-	int WALL_BRICK_STEPS		=	208;
-	int WALL_BRICK_STEPS_COVER	=	209;
-	int WALL_BRICK_STEPS_EDGE	=	210;
-	int WALL_BRICK_STEPS_EDGE_2	=	211;
-	// Extra Textures;
-	int DRAINPIPE				=	212;
-	int COUNTER_TOP				=	213;
-	int COUNTER_SIDE			=	214;
-	// Welcome, Exit and Map Screens
-	int MAP						=	217;
-	int WELCOME					=	218;
-	int EXIT					=	219;
-	int NO_EXIT					=	222;
-
-	
-	int frameCount = 0;
-	clock_t lastClock = 0;
+	frameCount = 0;
+	lastClock = 0;
 
 	// display campus map
-	bool DisplayMap = false;
+	DisplayMap = false;
 	// display welcome screen
-	bool DisplayWelcome = true;
+	DisplayWelcome = true;
 	// display exit screen
-	bool DisplayExit = false;
+	DisplayExit = false;
 	// display ECL block
-	bool displayECL = true;
+	displayECL = true;
 
 	// Stores raw image file
-	unsigned char* image = NULL;
+	image = NULL;
 }
 
 
@@ -299,7 +30,7 @@ ShaysWorld::~ShaysWorld(void)
 
 void ShaysWorld::Init()
 {
-	glutSetWindowTitle("ShaysWorld!");
+	glutSetWindowTitle("This is Shays World!");
 	// set background (sky colour)
 	glClearColor(97.0/255.0, 140.0/255.0, 185.0/255.0, 1.0);
 	
@@ -333,11 +64,18 @@ void ShaysWorld::Init()
 	CreateTextureList();
 	CreateTextures();
 	glutIgnoreKeyRepeat(1);
-}
 
-void ShaysWorld::SpecialKeyFunc(int Key, int X, int Y)
-{
+	pmodel1.LoadModel("models/lower_floor.obj");
+	stairs_model.LoadModel("models/stairs.obj");
+	display_model.LoadModel("models/display.obj");
+	billboard_model.LoadModel("models/billboard.obj");
+	roof_model.LoadModel("models/roof.obj");
+	upper_model.LoadModel("models/upper_floor.obj");
+	bannister_model.LoadModel("models/bannister.obj");
+	wall_model.LoadModel("models/wall.obj");
+	frame_model.LoadModel("models/frame.obj");
 
+	CreateNewPlains();
 }
 
 void ShaysWorld::Display()
@@ -372,21 +110,23 @@ void ShaysWorld::Display()
 	glPopMatrix();
 	glDisable (GL_TEXTURE_2D); 
 
+
+
 	glPushMatrix();
 		glTranslatef(36000.0, 10500.0, 28000.0);
 		glRotatef(-90,0,1,0);
 		glScalef(2500,2500,2500);
-		drawmodel_box();
+		DrawModels();
 	glPopMatrix();
 
-	transition();
+	Transition();
 
 	// clear buffers
 	glFlush();
 	glutSwapBuffers();
 }
 
-void ShaysWorld::reshape(int w, int h)
+void ShaysWorld::Reshape(int w, int h)
 {
 	width = w;
 	height = h;
@@ -403,7 +143,7 @@ void ShaysWorld::reshape(int w, int h)
 	glMatrixMode(GL_MODELVIEW);
 }
 
-void ShaysWorld::movementKeys(int key, int x, int y)
+void ShaysWorld::MovementKeys(int key, int x, int y)
 {
 	switch (key)
 	{
@@ -427,7 +167,7 @@ void ShaysWorld::movementKeys(int key, int x, int y)
 	}
 }
 
-void ShaysWorld::releaseKey(int key, int x, int y)
+void ShaysWorld::ReleaseKey(int key, int x, int y)
 {
 	switch (key)
 	{
@@ -542,13 +282,13 @@ void ShaysWorld::Keyboard(unsigned char key, int x, int y)
 		case 'g':
 		{
 			//Load Game World
-			GameMainLoop.GameLoop();
+			//GameMainLoop.GameLoop();
 			break;
 		}
 	}
 }
 
-void ShaysWorld::releaseKeys(unsigned char key, int x, int y)
+void ShaysWorld::ReleaseKeys(unsigned char key, int x, int y)
 {
 	switch (key)
 	{
@@ -583,7 +323,7 @@ void ShaysWorld::Mouse(int button, int state, int x, int y)
 	 }
 }
 
-void ShaysWorld::mouseMove(int x, int y)
+void ShaysWorld::MouseMove(int x, int y)
 {
 		if (x < 0)
 			cam.DirectionRotateLR(0);
@@ -5079,126 +4819,58 @@ void ShaysWorld::IncrementFrameCount()
 	}
 }
 
-void ShaysWorld::drawmodel_box()
+void ShaysWorld::DrawModels()
 {
-	// Load the model only if it hasn't been loaded before
-	// If it's been loaded then pmodel1 should be a pointer to the model geometry data...otherwise it's null
-	if ((!pmodel1) || (!stairs_model) || (!display_model) || (!billboard_model) || (!roof_model) || (!bannister_model) || (!wall_model) || (!frame_model)) 
-	{
-		// this is the call that actualy reads the OBJ and creates the model object
-		pmodel1 = glmReadOBJ("models/lower_floor.obj");	
-		stairs_model = glmReadOBJ("models/stairs.obj");	
-		display_model = glmReadOBJ("models/display.obj");
-		billboard_model = glmReadOBJ("models/billboard.obj");
-		roof_model = glmReadOBJ("models/roof.obj");
-		upper_model = glmReadOBJ("models/upper_floor.obj");
-		bannister_model = glmReadOBJ("models/bannister.obj");
-		wall_model = glmReadOBJ("models/wall.obj");
-		frame_model = glmReadOBJ("models/frame.obj");
-		//wallfix = glmReadOBJ("models/wallfix.obj");
-
-		if ((!pmodel1) || (!stairs_model) || (!display_model) || (!billboard_model) || (!roof_model) || (!upper_model) || (!bannister_model) || (!wall_model) || (!frame_model)) exit(0);
-		// This will rescale the object to fit into the unity matrix
-		// Depending on your project you might want to keep the original size and positions you had in 3DS Max or GMAX so you may have to comment this.
-		glmUnitize(pmodel1);
-		glmUnitize(stairs_model);
-		glmUnitize(display_model);
-		glmUnitize(billboard_model);
-		glmUnitize(roof_model);
-		glmUnitize(upper_model);
-		glmUnitize(bannister_model);
-		glmUnitize(wall_model);
-		glmUnitize(frame_model);
-		//glmUnitize(wallfix);
-
-		// These 2 functions calculate triangle and vertex normals from the geometry data.
-		// To be honest I had some problem with very complex models that didn't look to good because of how vertex normals were calculated
-		// So if you can export these directly from you modeling tool do it and comment these line
-		// 3DS Max can calculate these for you and GLM is perfectly capable of loading them
-		glmFacetNormals(pmodel1);        
-		glmVertexNormals(pmodel1, 90.0);
-
-		glmFacetNormals(stairs_model);        
-		glmVertexNormals(stairs_model, 90.0);
-
-		glmFacetNormals(display_model);        
-		glmVertexNormals(display_model, 90.0);
-
-		glmFacetNormals(billboard_model);        
-		glmVertexNormals(billboard_model, 90.0);
-
-		glmFacetNormals(roof_model);        
-		glmVertexNormals(roof_model, 90.0);
-
-		glmFacetNormals(upper_model);        
-		glmVertexNormals(upper_model, 90.0);
-
-		glmFacetNormals(bannister_model);        
-		glmVertexNormals(bannister_model, 90.0);
-
-		glmFacetNormals(wall_model);        
-		glmVertexNormals(wall_model, 90.0);
-
-		glmFacetNormals(frame_model);        
-		glmVertexNormals(frame_model, 90.0);
-
-		//glmFacetNormals(wallfix);
-		//glmVertexNormals(wallfix, 90.0);
-	}
-	// This is the call that will actualy draw the model
-	// Don't forget to tell it if you want textures or not :))
-	//glScalef(0.65,0.65,0.65);
-
 	glPushMatrix();
 	glTranslatef(0.001, 0.0, 0.06);
-	glmDraw(pmodel1, GLM_SMOOTH| GLM_TEXTURE);
+	pmodel1.DrawModel();
 
 	glTranslatef(-0.80,0,0.46);
 	glScalef(0.65,0.65,0.75);
-	glmDraw(stairs_model, GLM_SMOOTH| GLM_TEXTURE);
+	stairs_model.DrawModel();
 
 
 	glTranslatef(0.4,-0.15,-1);
 	glScalef(0.5,0.5,0.5);
-	glmDraw(display_model, GLM_SMOOTH| GLM_TEXTURE);
+	display_model.DrawModel();
 
 	glTranslatef(0,0,2);
-	//glmDraw(display_model, GLM_SMOOTH| GLM_TEXTURE);
 
 	glTranslatef(1.45,0.3,-0.5);
-	glmDraw(billboard_model, GLM_SMOOTH| GLM_TEXTURE);
-
+	billboard_model.DrawModel();
 
 	glTranslatef(2,0,-2.1);
 	glRotatef(90,0,1,0);
-	glmDraw(billboard_model, GLM_SMOOTH| GLM_TEXTURE);
+	billboard_model.DrawModel();
 
 	glTranslatef(-1.3,1.2,-1.5);
 	glScalef(3.5,3.5,3.5);
 	glRotatef(-90,0,1,0);
-	glmDraw(roof_model, GLM_SMOOTH| GLM_TEXTURE);
+	roof_model.DrawModel();
 
 	glTranslatef(-0.78,0.05,0.1);
 	glScalef(0.75,0.75,0.75);
-	glmDraw(upper_model, GLM_SMOOTH| GLM_TEXTURE);
+	upper_model.DrawModel();
 
 	glTranslatef(-0.012,-0.46,0.30);
 	glScalef(0.75,0.75,0.73);
-	glmDraw(bannister_model, GLM_SMOOTH| GLM_TEXTURE);
+	bannister_model.DrawModel();
 
 	glPopMatrix();
 
 	glPushMatrix();
 		glTranslatef(-0.556, 0.0, 0.49);
 		glScalef(1.0, 1.0, 0.86);
-		glmDraw(wall_model, GLM_SMOOTH| GLM_TEXTURE);
+		//glmDraw(wall_model, GLM_SMOOTH| GLM_TEXTURE);
+		wall_model.DrawModel();
 	glPopMatrix();
 
 	glPushMatrix();
 		glTranslatef(-0.775, 0.45, 0.03);
 		glScalef(0.15, 0.15, 0.3);
 		glRotatef(90.0, 0.0, 1.0, 0.0);
-		glmDraw(frame_model, GLM_SMOOTH| GLM_TEXTURE);
+		//glmDraw(frame_model, GLM_SMOOTH| GLM_TEXTURE);
+		frame_model.DrawModel();
 	glPopMatrix();
 
 	//glPushMatrix();
@@ -5208,7 +4880,7 @@ void ShaysWorld::drawmodel_box()
 	//glPopMatrix();
 }
 
-void ShaysWorld::transition(void)
+void ShaysWorld::Transition(void)
 {
 	glPushMatrix();
 	glBegin(GL_QUADS);

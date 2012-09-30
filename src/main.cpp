@@ -4,8 +4,8 @@
 #include <SDL.h>
 
 #include "World.h"
-#include "ShaysWorld\ShaysMain.h"
-#include "GameMain.h"
+#include "shaysworld\ShaysWorld.h"
+//#include "GameMain.h"
 
 void Display(void);
 void Keyboard(unsigned char key, int x, int y);
@@ -17,8 +17,8 @@ void ReleaseKeys(unsigned char key, int x, int y);
 void MouseMove(int x, int y);
 
 World* currentWorld;
-ShaysMain* shays = new ShaysMain();
-GameMain* game = NULL;
+ShaysWorld* shays = new ShaysWorld();
+//GameMain* game = NULL;
 
 bool isShays = true;
 
@@ -56,14 +56,14 @@ int main(int argc, char** argv)
 
 void SwitchWorld()
 {
-	if(currentWorld->changeWorld)
+/*	if(currentWorld->changeWorld)
 	{
 		if(isShays)
 		{
 			delete shays;
 			shays = NULL;
 
-			game = new GameMain();
+//			game = new GameMain();
 			currentWorld = game;
 
 			currentWorld->Init();
@@ -82,7 +82,7 @@ void SwitchWorld()
 
 			isShays = true;
 		}
-	}
+	}*/
 }
 
 void Display(void)

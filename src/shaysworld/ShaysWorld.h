@@ -1,399 +1,57 @@
 #pragma once
 
 #define GLUT_DISABLE_ATEXIT_HACK
+#define PI 3.1415962654
+
+#include <iostream>
 
 #include <stdlib.h>
 #include <math.h>
-#include <GL/glut.h>
 #include <time.h>
-#include <string.h>
 
-#include "AbstractWorld.h"
+#include <GL/freeglut.h>
 #include "camera.h"
 #include "texturedPolygons.h"
 #include "Wave.h"
 
-class ShaysWorld: public AbstractWorld
+#include "../modelimporter/Model.h"
+
+#include "../World.h"
+
+class ShaysWorld 
+	: public World
 {
 public:
 	ShaysWorld(void);
 	~ShaysWorld(void);
 
-	void Display();
+	// initializes setting
+	virtual void Init();
 
-	void Keyboard(unsigned char Key, int KeyX, int KeyY);
+	// display functions
+	virtual void Display();
 
-	void Mouse(int Button, int State, int MouseX, int MouseY);
+	virtual void Reshape(int w, int h);
 
-	void SpecialKeyFunc(int Key, int X, int Y);
+	virtual void Keyboard(unsigned char key, int x, int y);
 
-	void Init();
+	// keyboard and mouse functions
+	virtual void MovementKeys(int key, int x, int y);
+	virtual void ReleaseKey(int key, int x, int y);
+	virtual void ReleaseKeys(unsigned char key, int x, int y);
 
-// display functions
-void reshape(int w, int h);
-//void keys(unsigned char key, int x, int y); ***REPLACE WITH KEYBOARD
+	virtual void Mouse(int button, int state, int x, int y);
 
-// keyboard and mouse functions
-void movementKeys(int key, int x, int y);
-void releaseKey(int key, int x, int y);
-void releaseKeys(unsigned char key, int x, int y);
-void mouseMove(int x, int y);
+	virtual void MouseMove(int x, int y);
 
-// calls display functions below to draw the backdrops
-void DrawBackdrop();
-// functions to display display lists (images) and bind them to a texture
-void DisplayAboveWindowBlock ();
-void DisplayBench ();
-void DisplayBricks ();
-void DisplayChancPosts ();
-void DisplayCylinders ();
-void DisplayDoorPaving ();
-void DisplayDoorPosts ();
-void DisplayEntranceSteps ();
-void DisplayExtras ();
-void DisplayGrass ();
-void DisplayLargerTextures ();
-void DisplayLibraryPosts ();
-void DisplayMainPosts ();
-void DisplayPavement ();
-void DisplayPhysSciPosts ();
-void DisplayPurplePosts ();
-void DisplayRedPosts ();
-void DisplayRoof();
-void DisplayStepBricks ();
-void DisplayLights ();
-void DisplayECL ();
-
-// calls functions to create display lists (below)
-void CreateTextureList();
-// creates display lists
-void DrawGrass ();
-void DrawChancPosts ();
-void DrawDoorPosts ();
-void DrawPurplePosts ();
-void DrawRedPosts ();
-void DrawMainPosts ();
-void DrawAboveWindowBlock ();
-void DrawDoorPaving ();
-void DrawPhysSciPosts ();
-void DrawLibraryPosts ();
-void DrawBricks ();
-void DrawPavement ();
-void DrawExtras ();
-void DrawRoof();
-void DrawEntranceSteps ();
-void DrawLargerTextures ();
-void DrawLights ();
-void DrawBench ();
-void DrawCylinders ();
-void DrawAngledRoofBeam (int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
-void DrawAngledRoofBeam2 (int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
-void DrawStepBricks ();
-void DrawMapExit ();
-void DrawECL ();
-
-
-void BindBridgeWall(GLint LR);
-void BindBuildingWall();
-void BindWallPosts(GLint LR);
-
-void IncrementFrameCount();
-
-// loads images and creates texture
-void CreateTextures();
-// creates bounding boxes for collsion detection
-void CreateBoundingBoxes();
-void CreateNewBoundingBoxes();
-// creates different plains
-void CreatePlains();
-void CreateNewPlains();
-
-// deletes image and clears memory
-void DeleteImageFromMemory(unsigned char* tempImage);
-
-void drawmodel_box();
-void transition();
-
-
-protected:
-	Wave wave;
-
-	GLMmodel* pmodel1;
-	GLMmodel* stairs_model;
-	GLMmodel* display_model;
-	GLMmodel* billboard_model;
-	GLMmodel* roof_model;
-	GLMmodel* upper_model;
-	GLMmodel* bannister_model;
-	GLMmodel* wall_model;
-	GLMmodel* frame_model;
-
+				
+private:
 	GLdouble movementSpeed;
 	GLdouble rotationSpeed;
 
-	int XY		;
-	int XZ		;
-	int YZ		;
-	int YZ_FLIP ;
-	int XY_FLIP ;
-
-	// PLAIN TYPES
-	int FLAT_PLAIN	;
-	int XY_PLAIN	;
-	int ZY_PLAIN	;
-
-	// TEXTURES
-	// Grass Textures
-	int GRASS						;
-	int GRASS_2						;
-	int GRASS_HILL					;
-	// Pavement Textures
-	int PAVEMENT					;
-	int PAVEMENT_TOP				;
-	int PAVEMENTSIDE_LEFT			;
-	int PAVEMENTSIDE_RIGHT			;
-	int PAVEMENTSIDE_TOP			;
-	int PAVEMENT_CORNER_1			;
-	int PAVEMENT_CORNER_2			;
-	int PAVEMENT_FLIP				;
-	int PAVEMENT_TOP_FLIP			;
-	int PAVEMENT_16					;
-	int DOORPAVE_1					;
-	// Wall Brick Textures
-	int WALL_BRICK_YZ				;
-	int WALL_BRICK_XY				;
-	int WALL_BRICK_XY_87WIDTH		;
-	int WALL_BRICK_GAP_YZ			;
-	int WALL_BRICK_GAP2_YZ			;
-	int	WALL_BRICK_USD_YZ			;
-	int WALL_BRICK_XY_END			;
-	int WALL_BRICK_YZ_END			;
-	int	WALL_GAP_1					;
-	int WALL_BRICK_3_4				;
-	int SHADOW_BRICK				;
-	int WALL_BRICK_SEC_SIGN			;
-	// Window Post Textures
-	int WINDOWPOST_CHANC_FRONT		;
-	int WINDOWPOST_CHANC_RIGHT	   ;
-	int WINDOWPOST_CHANC_LEFT	    ;
-	int WINDOWLEDGE_CHANC_FRONT		;
-	int WINDOWLEDGE_CHANC_TOP		;
-	int WINDOWPOST_PHYSSCI_FRONT	;
-	int WINDOWPOST_PHYSSCI_RIGHT	;
-	int WINDOWPOST_PHYSSCI_LEFT		;
-	int	WINDOWPOST_LIB_FRONT		;
-	int	WINDOWPOST_LIB_LEFT			;
-	int	WINDOWPOST_LIB_RIGHT		;
-	// Door Post Textures
-	int DOOR_POST_SECURITY			;
-	// Window Ledge Textures
-	int WINDOWLEDGE_PS_FRONT		;
-	int WINDOWLEDGE_PS_TOP			;
-	int WINDOWLEDGE_PS_BOTT			;
-	int WINDOWLEDGE_LIB_A			;
-	int WINDOWLEDGE_LIB_B			;
-	int WINDOWLEDGE_LIB_TOP_A		;
-	int WINDOWLEDGE_LIB_TOP_B		;
-	int WINDOW_LEDGE_END_1			;
-	int WINDOW_LEDGE_END_2			;
-	// Main Post Textures
-	int	MAIN_POST					;
-	int	MAIN_POST_2					;
-	// Door Post Textures
-	int DOOR_POST_CHANC				;
-	int DOOR_SIDEPOST_CHANC			;
-	int DOOR_POST_LIB				;
-	// Coloured Posts Textures
-	int PURPLE_POST					;
-	int PURPLE_POSTSIDE				;
-	int RED_POST					;
-	int RED_POSTSIDE				;
-	// Roof Textures
-	int ROOF_TOP					;
-	int ROOF_TOP_LIB				;
-	int ROOF_PLANKS					;
-	int ROOF_BEAM_1					;
-	int ROOF_PLANKS_2				;
-	int ROOF_BEAM_2					;
-	int BELOW_ROOF_FILL				;
-	int ROOF_BEAM_3					;
-	int ROOF_BEAM_4					;
-	int ROOF_BEAM_3_TOP				;
-	// KBLT Textures
-	int KBLT						;
-	int KBLT_EDGE					;
-	int KBLT_EDGE_2					;
-	int KBLT_EDGE_CORNER			;
-	int KBLT_SIDE_1					;
-	int KBLT_SIDE_2					;
-	// Sign and Other Textures
-	int NEXUS_SIGN					;
-	int NEXUS_SIDE					;
-	int SECURITY_SIGN				;
-	int SECURITY_SIGN_2				;
-	int SIGN_1						;
-	int SIGN_1_SIDE_1				;
-	int SIGN_1_SIDE_2				;
-	int SIGN_2						;
-	int SIGN_2_SIDE					;
-	int PSC_SIGN					;
-	int PSC_SIGN_2					;
-	int CO_SIGN						;
-	int STA_TRAVEL					;
-	int STA_TRAVEL_EDGE				;
-	int STA_TRAVEL_BRACKET			;
-	int STA_TRAVEL_2				;
-	int STA_TRAVEL_BOTTOM			;
-	int TOILET_MEN					;
-	int TOILET_WOMEN				;
-	int GS_SIGN						;
-	int GS_SIGN_2					;
-	int GS_SIGN_EDGE				;
-	int MAP_2						;
-	int GLASS_BOARD					;
-	int GLASS_BOARD_2				;
-	int GLASS_BOARD_3				;
-	int GLASS_B_SIDE				;
-	int RUSTY_MAN					;
-	int NO_SMOKE_SIGN				;
-	int CARPET						;
-	// Drinks Machine Textures
-	int DRINKS_SIDE					;
-	int DRINKS_TOP					;
-	int DRINKS_EDGE					;
-	int DRINKS_SIDE_2				;
-	int COKE_MACHINE				;
-	int COFFEE_MACHINE				;
-	int SWEET_MACHINE				;
-	int MACHINE_SIDES				;
-	int MACHINE_SIDES_2				;
-	// Telephone Box Textures
-	int TELEPHONE_BACK				;
-	int TELEPHONE_FRONT				;
-	int TELEPHONE_SIDE_1			;
-	int TELEPHONE_FRONT_2			;
-	int TELEPHONE_MAIN_SIDE			;
-	int TELEPHONE_TOP_1				;
-	int TELEPHONE_SIDE_2			;
-	int TELEPHONE_TOP_2				;
-	int TELEPHONE_BOTTOM			;
-	int TELEPHONE_FILL				;
-	int TELEPHONE_FRONT_3			;
-	// Step Textures
-	int STEPS_LIBRARY				;
-	int STEPS_LIBRARY_TOP			;
-	int	STEP_PAVING_1				;
-	int	STEP_EDGE					;
-
-	// Larger Window and Door Textures Etc
-	int WINDOW_1					;
-	int WINDOW_2					;
-	int WINDOW_3					;
-	int WINDOW_4					;
-	int WINDOW_5					;
-	int WINDOW_6					;
-	int WINDOW_7					;
-	int WINDOW_8					;
-	int WINDOW_9					;
-	int WINDOW_10					;
-	int WINDOW_11					;
-	int WINDOW_12					;
-	int WINDOW_13					;
-	int WINDOW_14					;
-	int WINDOW_14B					;
-	int WINDOW_15					;
-	int WINDOW_16					;
-	int WINDOW_17					;
-	int WINDOW_2B					;
-	int WINDOW_2C					;
-	int WINDOW_2US					;
-	int WINDOW_3B					;
-	int WINDOW_2USB					;
-	int WINDOW_LIB_1				;
-	int WINDOW_LIB_1A				;
-	int WINDOW_LIB_1B				;
-	int WINDOW_LIB_1C				;
-	int WINDOW_LIB_US_A				;
-	int WINDOW_LIB_US_B				;
-	int WINDOW_LIB_DOOR_1			;
-	int WINDOW_LIB_DOOR_2			;
-	int WINDOW_LIB_LONG				;
-	int ENTRANCE					;
-	int ENTRANCE_2					;
-	int EXIT_EAST					;
-	int EXIT_WEST					;
-	int CHANC_DOOR_1				;
-	int CHANC_DOOR_2				;
-	int WINDOW_2D					;
-	int WINDOW_2E					;
-	int WINDOW_1B					;
-	int STEP_WINDOW					;
-
-	// Above Window Block Textures
-	int ABOVE_WINDOW_BLOCK			;
-	int ABOVE_WINDOW_BLOCK_2		;
-	int ABOVE_WINDOW_BLOCK_3		;
-	int ABOVE_WINDOW_EDGE_3B		;
-	int ABOVE_WINDOW_BLOCK_XY_3		;
-	int	ABOVE_LIB					;
-	int	ABOVE_UNDER_POSTS			;
-	int ABOVE_UNDER_POSTS_2			;
-	int ABOVE_WINDOW_UNDER_LIB		;
-	int ABOVE_WINDOW_BLOCK_CHANC	;
-	int ABOVE_WINDOW_EDGE_3B_LIB	;
-	int ABOVE_WINDOW_EDGE_4B_LIB	;
-	int ABOVE_UNDER_4B				;
-	int ABOVE_CHANC_TEXT			;
-	int ABOVE_CHANC_TEXT_2			;
-	int ABOVE_PHYS_SCI_TEXT			;
-	int ABOVE_CHANC_TEXT_3			;
-	int ABOVE_LIB_TEXT				;
-	int ABOVE_LIB_TEXT_2			;
-	int ABOVE_TICKETS_TEXT			;
-	int ABOVE_CHANC_EDGE			;
-	int TOILET_DOOR_TOP				;
-	// Light Fitting Textures
-	int LIGHT						;
-	int	LIGHT_SUPPORT				;
-	int	LIGHT_SUPPORT_2				;
-	// Bench Textures
-	int BENCH_TOP					;
-	int BENCH_SIDE					;
-	int BENCH_SIDE_2				;
-	int BENCH_EDGE					;
-	int BENCH_EDGE_TOP				;
-	int BENCH_EDGE_SIDE				;
-	int BENCH_EDGE_TOP_2			;
-	int BENCH_EDGE_2				;
-	int BENCH_EDGE_3				;
-	// Ticket Counter and Ledge Textures
-	int TICKET_COUNTER_TOP			;
-	int TICKET_COUNTER_EDGE			;
-	int TICKET_COUNTER_EDGE_2		;
-	int TICKET_COUNTER_EDGE_3		;
-	int TICKET_LEDGE				;
-	int TICKET_LEDGE_EDGE			;
-	int TICKET_LEDGE_EDGE_2			;
-	// Wall by Steps Textures
-	int WALL_BRICK_STEPS_TOP		;
-	int WALL_BRICK_STEPS			;
-	int WALL_BRICK_STEPS_COVER		;
-	int WALL_BRICK_STEPS_EDGE		;
-	int WALL_BRICK_STEPS_EDGE_2		;
-	// Extra Textures
-	int DRAINPIPE					;
-	int COUNTER_TOP					;
-	int COUNTER_SIDE				;
-	// Welcome, Exit and Map Screens
-	int MAP							;
-	int WELCOME						;
-	int EXIT						;
-	int NO_EXIT						;
-
-	GameMain GameMainLoop;
-
 	GLdouble stepIncrement;
 	GLdouble angleIncrement;
+
 	int frameCount;
 	clock_t lastClock;
 
@@ -426,9 +84,367 @@ protected:
 	Camera cam;
 	TexturedPolygons tp;
 
+	Wave wave;
 
-private:
+	//void drawmodel_box();
 
+	Model pmodel1;
+	Model stairs_model;
+	Model display_model;
+	Model billboard_model;
+	Model roof_model;
+	Model upper_model;
+	Model bannister_model;
+	Model wall_model;
+	Model frame_model;
+
+	// calls display functions below to draw the backdrops
+	void DrawBackdrop();
+	// functions to display display lists (images) and bind them to a texture
+	void DisplayAboveWindowBlock ();
+	void DisplayBench ();
+	void DisplayBricks ();
+	void DisplayChancPosts ();
+	void DisplayCylinders ();
+	void DisplayDoorPaving ();
+	void DisplayDoorPosts ();
+	void DisplayEntranceSteps ();
+	void DisplayExtras ();
+	void DisplayGrass ();
+	void DisplayLargerTextures ();
+	void DisplayLibraryPosts ();
+	void DisplayMainPosts ();
+	void DisplayPavement ();
+	void DisplayPhysSciPosts ();
+	void DisplayPurplePosts ();
+	void DisplayRedPosts ();
+	void DisplayRoof();
+	void DisplayStepBricks ();
+	void DisplayLights ();
+	void DisplayECL ();
+
+	// calls functions to create display lists (below)
+	void CreateTextureList();
+	// creates display lists
+	void DrawGrass ();
+	void DrawChancPosts ();
+	void DrawDoorPosts ();
+	void DrawPurplePosts ();
+	void DrawRedPosts ();
+	void DrawMainPosts ();
+	void DrawAboveWindowBlock ();
+	void DrawDoorPaving ();
+	void DrawPhysSciPosts ();
+	void DrawLibraryPosts ();
+	void DrawBricks ();
+	void DrawPavement ();
+	void DrawExtras ();
+	void DrawRoof();
+	void DrawEntranceSteps ();
+	void DrawLargerTextures ();
+	void DrawLights ();
+	void DrawBench ();
+	void DrawCylinders ();
+	void DrawAngledRoofBeam (int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
+	void DrawAngledRoofBeam2 (int listNo, GLdouble x, GLdouble y, GLdouble z, GLdouble beamSize);
+	void DrawStepBricks ();
+	void DrawMapExit ();
+	void DrawECL ();
+
+
+	void BindBridgeWall(GLint LR);
+	void BindBuildingWall();
+	void BindWallPosts(GLint LR);
+
+	void IncrementFrameCount();
+
+	// loads images and creates texture
+	void CreateTextures();
+	// creates bounding boxes for collsion detection
+	void CreateBoundingBoxes();
+	// creates different plains
+	void CreatePlains();
+
+	// deletes image and clears memory
+	void DeleteImageFromMemory(unsigned char* tempImage);
+
+	void CreateNewBoundingBoxes();
+
+	void CreateNewPlains();
+
+	void DrawModels();
+
+	void Transition();
+
+	// TEXTURE IMAGE AXISES
+	enum
+	{
+		XY,
+		XZ,
+		YZ,
+		YZ_FLIP,
+		XY_FLIP
+	};
+
+	// PLAIN TYPES
+	enum 
+	{ 
+		FLAT_PLAIN, 
+		XY_PLAIN,
+		ZY_PLAIN
+	};
+
+	enum
+	{
+		// TEXTURES
+		// Grass Textures
+		GRASS,
+		GRASS_2					,
+		GRASS_HILL				,
+		// Pavement Textures
+		PAVEMENT				,
+		PAVEMENT_TOP			,
+		PAVEMENTSIDE_LEFT		,	
+		PAVEMENTSIDE_RIGHT		,	
+		PAVEMENTSIDE_TOP		,
+		PAVEMENT_CORNER_1		,	
+		PAVEMENT_CORNER_2		,	
+		PAVEMENT_FLIP			,	
+		PAVEMENT_TOP_FLIP		,	
+		PAVEMENT_16				,
+		DOORPAVE_1				,	
+		// Wall Brick Textures
+		WALL_BRICK_YZ			,	
+		WALL_BRICK_XY			,	
+		WALL_BRICK_XY_87WIDTH	,	
+		WALL_BRICK_GAP_YZ		,	
+		WALL_BRICK_GAP2_YZ		,	
+		WALL_BRICK_USD_YZ		,	
+		WALL_BRICK_XY_END		,	
+		WALL_BRICK_YZ_END		,	
+		WALL_GAP_1				,	
+		WALL_BRICK_3_4			,	
+		SHADOW_BRICK			,	
+		WALL_BRICK_SEC_SIGN		,	
+		// Window Post Textures
+		WINDOWPOST_CHANC_FRONT	,	
+		WINDOWPOST_CHANC_RIGHT	 ,   
+		WINDOWPOST_CHANC_LEFT	  ,  
+		WINDOWLEDGE_CHANC_FRONT		,
+		WINDOWLEDGE_CHANC_TOP	,	
+		WINDOWPOST_PHYSSCI_FRONT,	
+		WINDOWPOST_PHYSSCI_RIGHT,	
+		WINDOWPOST_PHYSSCI_LEFT	,	
+		WINDOWPOST_LIB_FRONT	,	
+		WINDOWPOST_LIB_LEFT		,	
+		WINDOWPOST_LIB_RIGHT	,	
+		// Door Post Textures
+		DOOR_POST_SECURITY		,	
+		// Window Ledge Textures
+		WINDOWLEDGE_PS_FRONT	,	
+		WINDOWLEDGE_PS_TOP		,	
+		WINDOWLEDGE_PS_BOTT		,	
+		WINDOWLEDGE_LIB_A		,	
+		WINDOWLEDGE_LIB_B		,	
+		WINDOWLEDGE_LIB_TOP_A	,	
+		WINDOWLEDGE_LIB_TOP_B	,	
+		WINDOW_LEDGE_END_1		,	
+		WINDOW_LEDGE_END_2		,	
+		// Main Post Textures
+		MAIN_POST			,		
+		MAIN_POST_2			,		
+		// Door Post Textures
+		DOOR_POST_CHANC		,		
+		DOOR_SIDEPOST_CHANC	,		
+		DOOR_POST_LIB		,		
+		// Coloured Posts Textures
+		PURPLE_POST			,		
+		PURPLE_POSTSIDE		,		
+		RED_POST			,		
+		RED_POSTSIDE		,		
+		// Roof Textures
+		ROOF_TOP			,		
+		ROOF_TOP_LIB		,		
+		ROOF_PLANKS			,	
+		ROOF_BEAM_1			,	
+		ROOF_PLANKS_2		,		
+		ROOF_BEAM_2			,	
+		BELOW_ROOF_FILL		,	
+		ROOF_BEAM_3			,	
+		ROOF_BEAM_4			,	
+		ROOF_BEAM_3_TOP		,	
+		// KBLT Textures
+		KBLT				,		
+		KBLT_EDGE			,		
+		KBLT_EDGE_2			,	
+		KBLT_EDGE_CORNER	,		
+		KBLT_SIDE_1			,		
+		KBLT_SIDE_2			,		
+		// Sign and Other Textures
+		NEXUS_SIGN			,		
+		NEXUS_SIDE			,		
+		SECURITY_SIGN		,		
+		SECURITY_SIGN_2		,	
+		SIGN_1				,		
+		SIGN_1_SIDE_1		,		
+		SIGN_1_SIDE_2		,		
+		SIGN_2				,		
+		SIGN_2_SIDE			,	
+		PSC_SIGN			,		
+		PSC_SIGN_2			,		
+		CO_SIGN				,	
+		STA_TRAVEL			,		
+		STA_TRAVEL_EDGE		,	
+		STA_TRAVEL_BRACKET	,		
+		STA_TRAVEL_2		,		
+		STA_TRAVEL_BOTTOM	,		
+		TOILET_MEN			,		
+		TOILET_WOMEN		,		
+		GS_SIGN				,	
+		GS_SIGN_2			,		
+		GS_SIGN_EDGE		,		
+		MAP_2				,		
+		GLASS_BOARD			,	
+		GLASS_BOARD_2		,		
+		GLASS_BOARD_3		,		
+		GLASS_B_SIDE		,		
+		RUSTY_MAN			,		
+		NO_SMOKE_SIGN		,		
+		CARPET				,		
+		// Drinks Machine Textures
+		DRINKS_SIDE			,	
+		DRINKS_TOP			,		
+		DRINKS_EDGE			,	
+		DRINKS_SIDE_2		,		
+		COKE_MACHINE		,		
+		COFFEE_MACHINE		,		
+		SWEET_MACHINE		,		
+		MACHINE_SIDES		,		
+		MACHINE_SIDES_2		,	
+		// Telephone Box Textures
+		TELEPHONE_BACK		,		
+		TELEPHONE_FRONT		,	
+		TELEPHONE_SIDE_1	,		
+		TELEPHONE_FRONT_2	,		
+		TELEPHONE_MAIN_SIDE	,	
+		TELEPHONE_TOP_1		,	
+		TELEPHONE_SIDE_2	,		
+		TELEPHONE_TOP_2		,	
+		TELEPHONE_BOTTOM	,		
+		TELEPHONE_FILL		,		
+		TELEPHONE_FRONT_3	,		
+		// Step Textures
+		STEPS_LIBRARY		,		
+		STEPS_LIBRARY_TOP	,		
+		STEP_PAVING_1		,	
+		STEP_EDGE			,	
+
+		// Larger Window and Door Textures Etc
+		WINDOW_1			,		
+		WINDOW_2			,		
+		WINDOW_3			,		
+		WINDOW_4			,		
+		WINDOW_5			,		
+		WINDOW_6			,		
+		WINDOW_7			,		
+		WINDOW_8			,		
+		WINDOW_9			,		
+		WINDOW_10			,		
+		WINDOW_11			,		
+		WINDOW_12			,		
+		WINDOW_13			,		
+		WINDOW_14			,		
+		WINDOW_14B			,		
+		WINDOW_15			,		
+		WINDOW_16			,		
+		WINDOW_17			,		
+		WINDOW_2B			,		
+		WINDOW_2C			,		
+		WINDOW_2US			,		
+		WINDOW_3B			,		
+		WINDOW_2USB			,	
+		WINDOW_LIB_1		,		
+		WINDOW_LIB_1A		,		
+		WINDOW_LIB_1B		,		
+		WINDOW_LIB_1C		,		
+		WINDOW_LIB_US_A		,	
+		WINDOW_LIB_US_B		,	
+		WINDOW_LIB_DOOR_1	,		
+		WINDOW_LIB_DOOR_2	,		
+		WINDOW_LIB_LONG		,	
+		ENTRANCE			,		
+		ENTRANCE_2			,		
+		EXIT_EAST			,		
+		EXIT_WEST			,		
+		CHANC_DOOR_1		,		
+		CHANC_DOOR_2		,		
+		WINDOW_2D			,		
+		WINDOW_2E			,		
+		WINDOW_1B			,		
+		STEP_WINDOW			,	
+
+		// Above Window Block Textures
+		ABOVE_WINDOW_BLOCK		,	
+		ABOVE_WINDOW_BLOCK_2	,	
+		ABOVE_WINDOW_BLOCK_3	,	
+		ABOVE_WINDOW_EDGE_3B	,	
+		ABOVE_WINDOW_BLOCK_XY_3	,
+		ABOVE_LIB				,
+		ABOVE_UNDER_POSTS		,
+		ABOVE_UNDER_POSTS_2		,
+		ABOVE_WINDOW_UNDER_LIB	,	
+		ABOVE_WINDOW_BLOCK_CHANC,	
+		ABOVE_WINDOW_EDGE_3B_LIB,	
+		ABOVE_WINDOW_EDGE_4B_LIB,	
+		ABOVE_UNDER_4B			,	
+		ABOVE_CHANC_TEXT		,	
+		ABOVE_CHANC_TEXT_2		,	
+		ABOVE_PHYS_SCI_TEXT		,
+		ABOVE_CHANC_TEXT_3		,	
+		ABOVE_LIB_TEXT			,	
+		ABOVE_LIB_TEXT_2		,	
+		ABOVE_TICKETS_TEXT		,	
+		ABOVE_CHANC_EDGE		,	
+		TOILET_DOOR_TOP			,
+		// Light Fitting Textures
+		LIGHT					,	
+		LIGHT_SUPPORT			,
+		LIGHT_SUPPORT_2			,
+		// Bench Textures
+		BENCH_TOP				,	
+		BENCH_SIDE				,	
+		BENCH_SIDE_2			,	
+		BENCH_EDGE				,	
+		BENCH_EDGE_TOP			,	
+		BENCH_EDGE_SIDE			,
+		BENCH_EDGE_TOP_2		,	
+		BENCH_EDGE_2			,	
+		BENCH_EDGE_3			,	
+		// Ticket Counter and Ledge Textures
+		TICKET_COUNTER_TOP		,	
+		TICKET_COUNTER_EDGE		,
+		TICKET_COUNTER_EDGE_2	,	
+		TICKET_COUNTER_EDGE_3	,	
+		TICKET_LEDGE			,	
+		TICKET_LEDGE_EDGE		,	
+		TICKET_LEDGE_EDGE_2		,
+		// Wall by Steps Textures
+		WALL_BRICK_STEPS_TOP	,	
+		WALL_BRICK_STEPS		,	
+		WALL_BRICK_STEPS_COVER	,	
+		WALL_BRICK_STEPS_EDGE	,	
+		WALL_BRICK_STEPS_EDGE_2	,
+		// Extra Textures
+		DRAINPIPE				,	
+		COUNTER_TOP				,
+		COUNTER_SIDE			,	
+		// Welcome, Exit and Map Screens
+		MAP						,
+		WELCOME					,
+		EXIT					,	
+		NO_EXIT					,
+
+		ME						,	
+	};
 };
-
 

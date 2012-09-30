@@ -25,150 +25,144 @@
     <Filter Include="Source Files\GameWorld">
       <UniqueIdentifier>{8113d325-4476-4834-953c-a7e0ed845629}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\ModelImporter">
-      <UniqueIdentifier>{6f9ad81c-8650-4fc4-a08c-ecfb82f0de17}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\ModelImporter">
       <UniqueIdentifier>{a457a040-95bf-42a3-9920-f0282bfa8a6f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\ModelImporter">
+      <UniqueIdentifier>{6f9ad81c-8650-4fc4-a08c-ecfb82f0de17}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AABB.CPP">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="texturedPolygons.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="AABBLinkedList.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="AABBNode.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="camera.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="cameraMap.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="collision.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="EasySound.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="PlainLinkedList.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="PlainNode.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="Sound.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
-    <ClCompile Include="SoundTime.cpp">
-      <Filter>Source Files\Shays Code</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Wave.cpp">
+    <ClCompile Include="shaysworld\AABB.CPP">
       <Filter>Source Files\Shays Code</Filter>
     </ClCompile>
-    <ClCompile Include="ShaysWorld.cpp">
+    <ClCompile Include="shaysworld\AABBLinkedList.cpp">
       <Filter>Source Files\Shays Code</Filter>
     </ClCompile>
-    <ClCompile Include="glmimg.cpp">
+    <ClCompile Include="shaysworld\AABBNode.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\cameraMap.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\collision.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\EasySound.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\PlainLinkedList.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\PlainNode.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\ShaysWorld.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\Sound.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\SoundTime.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\texturedPolygons.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\Wave.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="shaysworld\camera.cpp">
+      <Filter>Source Files\Shays Code</Filter>
+    </ClCompile>
+    <ClCompile Include="modelimporter\GameModel.cpp">
       <Filter>Source Files\ModelImporter</Filter>
     </ClCompile>
-    <ClCompile Include="glm.cpp">
+    <ClCompile Include="modelimporter\glm.cpp">
       <Filter>Source Files\ModelImporter</Filter>
     </ClCompile>
-    <ClCompile Include="Texture.cpp">
+    <ClCompile Include="modelimporter\glmimg.cpp">
       <Filter>Source Files\ModelImporter</Filter>
     </ClCompile>
-    <ClCompile Include="GameWorld.cpp">
-      <Filter>Source Files\GameWorld</Filter>
+    <ClCompile Include="modelimporter\Model.cpp">
+      <Filter>Source Files\ModelImporter</Filter>
     </ClCompile>
-    <ClCompile Include="GameCamera.cpp">
-      <Filter>Source Files\GameWorld</Filter>
+    <ClCompile Include="modelimporter\TerrainModel.cpp">
+      <Filter>Source Files\ModelImporter</Filter>
     </ClCompile>
-    <ClCompile Include="GameCollision.cpp">
-      <Filter>Source Files\GameWorld</Filter>
+    <ClCompile Include="modelimporter\Texture.cpp">
+      <Filter>Source Files\ModelImporter</Filter>
     </ClCompile>
-    <ClCompile Include="GameMain.cpp">
-      <Filter>Source Files\GameWorld</Filter>
-    </ClCompile>
-    <ClCompile Include="GameSound.cpp">
-      <Filter>Source Files\GameWorld</Filter>
+    <ClCompile Include="modelimporter\Vector3.cpp">
+      <Filter>Source Files\ModelImporter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AABB.H">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="texturedPolygons.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="AABBLinkedList.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="AABBNode.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="camera.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="cameraMap.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="collision.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="EasySound.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="PlainLinkedList.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="PlainNode.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="Sound.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="SoundTime.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaysWorld.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="Wave.h">
-      <Filter>Header Files\Shays Code</Filter>
-    </ClInclude>
-    <ClInclude Include="GameWorld.h">
-      <Filter>Header Files\GameWorld</Filter>
-    </ClInclude>
-    <ClInclude Include="GameCamera.h">
-      <Filter>Header Files\GameWorld</Filter>
-    </ClInclude>
-    <ClInclude Include="GameCollision.h">
-      <Filter>Header Files\GameWorld</Filter>
-    </ClInclude>
-    <ClInclude Include="GameMain.h">
-      <Filter>Header Files\GameWorld</Filter>
-    </ClInclude>
-    <ClInclude Include="GameSound.h">
-      <Filter>Header Files\GameWorld</Filter>
-    </ClInclude>
-    <ClInclude Include="glm.h">
-      <Filter>Header Files\ModelImporter</Filter>
-    </ClInclude>
-    <ClInclude Include="texture.h">
-      <Filter>Header Files\ModelImporter</Filter>
-    </ClInclude>
     <ClInclude Include="World.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\AABB.H">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\AABBLinkedList.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\AABBNode.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\cameraMap.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\collision.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\EasySound.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\PlainLinkedList.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\PlainNode.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\ShaysWorld.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\Sound.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\SoundTime.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\texturedPolygons.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\Wave.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="shaysworld\camera.h">
+      <Filter>Header Files\Shays Code</Filter>
+    </ClInclude>
+    <ClInclude Include="modelimporter\GameModel.h">
+      <Filter>Header Files\ModelImporter</Filter>
+    </ClInclude>
+    <ClInclude Include="modelimporter\glm.h">
+      <Filter>Header Files\ModelImporter</Filter>
+    </ClInclude>
+    <ClInclude Include="modelimporter\Model.h">
+      <Filter>Header Files\ModelImporter</Filter>
+    </ClInclude>
+    <ClInclude Include="modelimporter\TerrainModel.h">
+      <Filter>Header Files\ModelImporter</Filter>
+    </ClInclude>
+    <ClInclude Include="modelimporter\texture.h">
+      <Filter>Header Files\ModelImporter</Filter>
+    </ClInclude>
+    <ClInclude Include="modelimporter\Vector3.h">
+      <Filter>Header Files\ModelImporter</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

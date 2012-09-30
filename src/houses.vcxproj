@@ -18,7 +18,7 @@
     <SccProjectName />
     <SccLocalPath />
     <ProjectGuid>{98DC3C1E-DA01-1091-881B-8C52EA93F6E8}</ProjectGuid>
-    <ProjectName>ICT207Project</ProjectName>
+    <ProjectName>houses</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
@@ -50,13 +50,13 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\Debug\</OutDir>
-    <IntDir>.\Debug\</IntDir>
+    <OutDir>Debug</OutDir>
+    <IntDir>Debug</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\Release\</OutDir>
-    <IntDir>.\Release\</IntDir>
+    <OutDir>.\Release</OutDir>
+    <IntDir>.\Release</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -92,7 +92,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <OutputFile>.\Debug\houses.exe</OutputFile>
+      <OutputFile>Debug\houses.exe</OutputFile>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;GlU32.lib;OpenGL32.lib;freeglut.lib;glut32.lib;SDL.lib;SDLmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -130,52 +130,50 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AABB.CPP" />
-    <ClCompile Include="AABBLinkedList.cpp" />
-    <ClCompile Include="AABBNode.cpp" />
-    <ClCompile Include="camera.cpp" />
-    <ClCompile Include="cameraMap.cpp" />
-    <ClCompile Include="collision.cpp" />
-    <ClCompile Include="EasySound.cpp" />
-    <ClCompile Include="GameCamera.cpp" />
-    <ClCompile Include="GameCollision.cpp" />
-    <ClCompile Include="GameMain.cpp" />
-    <ClCompile Include="GameSound.cpp" />
-    <ClCompile Include="GameWorld.cpp" />
-    <ClCompile Include="glm.cpp" />
-    <ClCompile Include="glmimg.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PlainLinkedList.cpp" />
-    <ClCompile Include="PlainNode.cpp" />
-    <ClCompile Include="ShaysWorld.cpp" />
-    <ClCompile Include="Sound.cpp" />
-    <ClCompile Include="SoundTime.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="texturedPolygons.cpp" />
-    <ClCompile Include="Wave.cpp" />
+    <ClCompile Include="modelimporter\GameModel.cpp" />
+    <ClCompile Include="modelimporter\glm.cpp" />
+    <ClCompile Include="modelimporter\glmimg.cpp" />
+    <ClCompile Include="modelimporter\Model.cpp" />
+    <ClCompile Include="modelimporter\TerrainModel.cpp" />
+    <ClCompile Include="modelimporter\Texture.cpp" />
+    <ClCompile Include="modelimporter\Vector3.cpp" />
+    <ClCompile Include="shaysworld\AABB.CPP" />
+    <ClCompile Include="shaysworld\AABBLinkedList.cpp" />
+    <ClCompile Include="shaysworld\AABBNode.cpp" />
+    <ClCompile Include="shaysworld\camera.cpp" />
+    <ClCompile Include="shaysworld\cameraMap.cpp" />
+    <ClCompile Include="shaysworld\collision.cpp" />
+    <ClCompile Include="shaysworld\EasySound.cpp" />
+    <ClCompile Include="shaysworld\PlainLinkedList.cpp" />
+    <ClCompile Include="shaysworld\PlainNode.cpp" />
+    <ClCompile Include="shaysworld\ShaysWorld.cpp" />
+    <ClCompile Include="shaysworld\Sound.cpp" />
+    <ClCompile Include="shaysworld\SoundTime.cpp" />
+    <ClCompile Include="shaysworld\texturedPolygons.cpp" />
+    <ClCompile Include="shaysworld\Wave.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AABB.H" />
-    <ClInclude Include="AABBLinkedList.h" />
-    <ClInclude Include="AABBNode.h" />
-    <ClInclude Include="camera.h" />
-    <ClInclude Include="cameraMap.h" />
-    <ClInclude Include="collision.h" />
-    <ClInclude Include="EasySound.h" />
-    <ClInclude Include="GameCamera.h" />
-    <ClInclude Include="GameCollision.h" />
-    <ClInclude Include="GameMain.h" />
-    <ClInclude Include="GameSound.h" />
-    <ClInclude Include="GameWorld.h" />
-    <ClInclude Include="glm.h" />
-    <ClInclude Include="PlainLinkedList.h" />
-    <ClInclude Include="PlainNode.h" />
-    <ClInclude Include="ShaysWorld.h" />
-    <ClInclude Include="Sound.h" />
-    <ClInclude Include="SoundTime.h" />
-    <ClInclude Include="texture.h" />
-    <ClInclude Include="texturedPolygons.h" />
-    <ClInclude Include="Wave.h" />
+    <ClInclude Include="modelimporter\GameModel.h" />
+    <ClInclude Include="modelimporter\glm.h" />
+    <ClInclude Include="modelimporter\Model.h" />
+    <ClInclude Include="modelimporter\TerrainModel.h" />
+    <ClInclude Include="modelimporter\texture.h" />
+    <ClInclude Include="modelimporter\Vector3.h" />
+    <ClInclude Include="shaysworld\AABB.H" />
+    <ClInclude Include="shaysworld\AABBLinkedList.h" />
+    <ClInclude Include="shaysworld\AABBNode.h" />
+    <ClInclude Include="shaysworld\camera.h" />
+    <ClInclude Include="shaysworld\cameraMap.h" />
+    <ClInclude Include="shaysworld\collision.h" />
+    <ClInclude Include="shaysworld\EasySound.h" />
+    <ClInclude Include="shaysworld\PlainLinkedList.h" />
+    <ClInclude Include="shaysworld\PlainNode.h" />
+    <ClInclude Include="shaysworld\ShaysWorld.h" />
+    <ClInclude Include="shaysworld\Sound.h" />
+    <ClInclude Include="shaysworld\SoundTime.h" />
+    <ClInclude Include="shaysworld\texturedPolygons.h" />
+    <ClInclude Include="shaysworld\Wave.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
