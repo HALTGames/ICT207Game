@@ -1,23 +1,44 @@
-#include "AbstractWorld.h"
-#include "ShaysWorld.h"
-#include "GameWorld.h"
+#define GLUT_DISABLE_ATEXIT_HACK
 
+#include <GL\freeglut.h>
+#include <SDL.h>
 
-/*int main(int argc, char **argv)
+#include "World.h"
+#include "ShaysWorld\ShaysMain.h"
+#include "GameMain.h"
+
+void Display(void);
+void Keyboard(unsigned char key, int x, int y);
+void Mouse(int button, int state, int mouseX, int mouseY);
+void Reshape(int w, int h);
+void MovementKeys(int key, int x, int y);
+void ReleaseKey(int key, int x, int y);
+void ReleaseKeys(unsigned char key, int x, int y);
+void MouseMove(int x, int y);
+
+World* currentWorld;
+ShaysMain* shays = new ShaysMain();
+GameMain* game = NULL;
+
+bool isShays = true;
+
+int main(int argc, char** argv)
 {
+	currentWorld = shays;
+
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-	glutInitWindowPosition(100,100);
-	glutInitWindowSize(800,500);
-	glutCreateWindow("Murdoch University Campus Tour");
 
-	myinit();
+	glutInitWindowSize(800, 600);
+	glutCreateWindow("Window");
 
+	currentWorld->Init();
+	
 	glutIgnoreKeyRepeat(1);
-	glutSpecialFunc(movementKeys);
-	glutSpecialUpFunc(releaseKey);
-	glutKeyboardUpFunc (releaseKeys);
-	glutKeyboardFunc(keys);
+	glutSpecialFunc(MovementKeys);
+	glutSpecialUpFunc(ReleaseKey);
+	glutKeyboardUpFunc (ReleaseKeys);
+	glutKeyboardFunc(Keyboard);
 
 	glutDisplayFunc(Display);
 	glutIdleFunc(Display);
@@ -27,38 +48,79 @@
 	//glutPassiveMotionFunc(mouseMove);
 	//ShowCursor(FALSE);
 
-	glutReshapeFunc(reshape);
+	glutReshapeFunc(Reshape);
 	glutMainLoop();
-	return(0);
-}*/
 
-void Select(bool Check);
-
-AbstractWorld* Instance;
-
-int main(int argc, char **argv)
-{
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-	glutInitWindowPosition(100,100);
-	glutInitWindowSize(800,500);
-	glutCreateWindow("Window!");
-
-	Instance = new ShaysWorld;
-	Select(true);
-	Instance->GameLoop();
-	glutMainLoop();
-	return(0);
+	return 0;
 }
 
-
-void Select(bool Check)
+void SwitchWorld()
 {
-	delete Instance;
-	
-	if(Check)
-		Instance = new ShaysWorld;
-	else
-		Instance = new GameWorld;
+	if(currentWorld->changeWorld)
+	{
+		if(isShays)
+		{
+			delete shays;
+			shays = NULL;
 
+			game = new GameMain();
+			currentWorld = game;
+
+			currentWorld->Init();
+
+			isShays = false;
+		}
+		else
+		{
+			delete game;
+			game = NULL;
+
+			shays = new ShaysMain();
+			currentWorld = shays;
+
+			currentWorld->Init();
+
+			isShays = true;
+		}
+	}
+}
+
+void Display(void)
+{
+	currentWorld->Display();
+}
+
+void Keyboard(unsigned char key, int x, int y)
+{
+	currentWorld->Keyboard(key, x, y);
+}
+
+void Mouse(int button, int state, int mouseX, int mouseY)
+{
+	currentWorld->Mouse(button, state, mouseX, mouseY);
+}
+
+void Reshape(int w, int h)
+{
+	currentWorld->Reshape(w, h);
+}
+
+void MovementKeys(int key, int x, int y)
+{
+	currentWorld->MovementKeys(key, x, y);
+}
+
+void ReleaseKey(int key, int x, int y)
+{
+	currentWorld->ReleaseKey(key, x, y);
+}
+
+void ReleaseKeys(unsigned char key, int x, int y)
+{
+	currentWorld->ReleaseKeys(key, x, y);
+}
+
+void MouseMove(int x, int y)
+{
+	currentWorld->MouseMove(x, y);
 }
