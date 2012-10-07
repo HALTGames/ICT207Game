@@ -35,6 +35,6 @@ public:
 	float CalculateTerrainCollisions(GLMmodel *model, float px, float py, float pz);
 
 private:
-	TriangleApprox *terrain[100000];
+	TriangleApprox* terrain[100000];
 	int terrainIndex;
 };
