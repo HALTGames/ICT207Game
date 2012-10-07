@@ -1541,7 +1541,8 @@
 <XPD:OBJ name="OwnedViews[43]" type="UMLAssociationView" guid="Mcv0zHZNA0S0FwsVN9P0xQAA">
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">856,438;1008,434</XPD:ATTR>
+<XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">856,438;1008,438</XPD:ATTR>
 <XPD:REF name="Model">DHQQh4PZQE6aPcAQXM2F/wAA</XPD:REF>
 <XPD:REF name="Head">WoJj747f8EOC4neZoK1vdgAA</XPD:REF>
 <XPD:REF name="Tail">NNyhMJcC1U6p4eS5k5meTgAA</XPD:REF>
