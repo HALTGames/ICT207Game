@@ -1,33 +1,45 @@
 #include "GameModel.h"
 
+//-----------------------------------------------------------------------------
 
 GameModel::GameModel()
 {
-	box = (BoundingBox*)malloc(sizeof(BoundingBox));
+	box = new BoundingBox();
 
 	InitBoundingBox();
+
+	Model::Model();
 }
 
+//-----------------------------------------------------------------------------
 
 GameModel::~GameModel(void)
 {
+	delete box;
+	box = NULL;
+
+	Model::~Model();
 }
+
+//-----------------------------------------------------------------------------
 
 bool GameModel::LoadModel(char* fileName)
 {
 	Model::LoadModel(fileName);
 
-	CreateCollisionBox();
-
-	return true;
+	return CreateCollisionBox();
 }
+
+//-----------------------------------------------------------------------------
 
 bool GameModel::DrawModel()
 {
-	DrawBox();
+	// ? if global DEBUG is true draw the bounding box
 
 	return Model::DrawModel();	
 }
+
+//-----------------------------------------------------------------------------
 
 void GameModel::InitBoundingBox()
 {
@@ -40,6 +52,8 @@ void GameModel::InitBoundingBox()
 	box->max.z = -1000000;
 }
 
+//-----------------------------------------------------------------------------
+
 void GameModel::DrawBox()
 {
 	glLineWidth(5);
@@ -47,36 +61,38 @@ void GameModel::DrawBox()
 	glColor4f(1.0, 0.0, 0.0, 1.0);
 
 	glBegin (GL_LINE_LOOP); 
-	glVertex3f(box->max.x, box->max.y, box->min.z); // 0
-	glVertex3f(box->min.x, box->max.y, box->min.z); // 1
-	glVertex3f(box->min.x, box->min.y, box->min.z); // 2
-	glVertex3f(box->max.x, box->min.y, box->min.z); // 3
+	glVertex3f(box->max.x, box->max.y, box->min.z);
+	glVertex3f(box->min.x, box->max.y, box->min.z);
+	glVertex3f(box->min.x, box->min.y, box->min.z);
+	glVertex3f(box->max.x, box->min.y, box->min.z);
 	glEnd();
 
 	glBegin (GL_LINE_LOOP); 
-	glVertex3f(box->max.x, box->min.y, box->max.z); // 4
-	glVertex3f(box->max.x, box->max.y, box->max.z); // 5
-	glVertex3f(box->min.x, box->max.y, box->max.z); // 6
-	glVertex3f(box->min.x, box->min.y, box->max.z); // 7
+	glVertex3f(box->max.x, box->min.y, box->max.z);
+	glVertex3f(box->max.x, box->max.y, box->max.z);
+	glVertex3f(box->min.x, box->max.y, box->max.z); 
+	glVertex3f(box->min.x, box->min.y, box->max.z);
 	glEnd();
 
 	glBegin (GL_LINE_LOOP); 
-	glVertex3f(box->max.x, box->max.y, box->min.z); // 0
-	glVertex3f(box->max.x, box->max.y, box->max.z); // 5
-	glVertex3f(box->min.x, box->max.y, box->max.z); // 6
-	glVertex3f(box->min.x, box->max.y, box->min.z); // 1
+	glVertex3f(box->max.x, box->max.y, box->min.z);
+	glVertex3f(box->max.x, box->max.y, box->max.z);
+	glVertex3f(box->min.x, box->max.y, box->max.z);
+	glVertex3f(box->min.x, box->max.y, box->min.z);
 	glEnd();
 
 	glBegin (GL_LINE_LOOP); 
-	glVertex3f(box->max.x, box->min.y, box->max.z); // 4
-	glVertex3f(box->min.x, box->min.y, box->max.z); // 7
-	glVertex3f(box->min.x, box->min.y, box->min.z); // 2 
-	glVertex3f(box->max.x, box->min.y, box->min.z); // 3
+	glVertex3f(box->max.x, box->min.y, box->max.z);
+	glVertex3f(box->min.x, box->min.y, box->max.z);
+	glVertex3f(box->min.x, box->min.y, box->min.z);
+	glVertex3f(box->max.x, box->min.y, box->min.z);
 
 	glEnd();
 
 	glColor4f(1.0, 1.0, 1.0, 1.0);
 }
+
+//-----------------------------------------------------------------------------
 
 bool GameModel::CreateCollisionBox()
 {
@@ -94,5 +110,11 @@ bool GameModel::CreateCollisionBox()
 		if(box->max.y < y) box->max.y = y;
 		if(box->max.z < z) box->max.z = z;
 	}
+
+	assert(box->max.x >= box->min.x && box->max.y >= box->min.y && 
+		box->max.z >= box->min.z);
+
 	return true;
 }
+
+//-----------------------------------------------------------------------------

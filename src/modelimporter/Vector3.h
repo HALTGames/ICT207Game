@@ -7,27 +7,13 @@
 //-----------------------------------------------------------------------------
 
 /**
- * \file Vector3.h Vector3.cpp
- * \class Vector3
- * \brief 3D Vector class implementation.
- *
- * Sets up a vector in 3D space and permits basic addition and subtraction of
- * vectors as well as finding out the length, normalising the vector and 
- * identifying the scalar dot product of this vector and another one.
- *
- * \author Timothy Veletta
- * \date 08/10/12
- * \version 01 - Timothy Veletta 08/10/12
- *		Created and implemented constructors, basic operators (+=, -=, ==, !=)
- *		as well as functions to work out the length of the vector, normalise
- *		the vector and work out the scalar dot product of this vector and
- *		another one.
+ * A structure to represent 3D vectors.
  */
 struct Vector3
 {
-	double x; //<! the x component
-	double y; //<! the y component
-	double z; //<! the z component
+	double x; /**< the x component */
+	double y; /**< the y component */
+	double z; /**< the z component */
 
 	/**
 	 * \brief The default constructor.

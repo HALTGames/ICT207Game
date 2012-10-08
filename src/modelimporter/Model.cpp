@@ -1,20 +1,29 @@
 #include "Model.h"
 
+//-----------------------------------------------------------------------------
 
 Model::Model(void)
 {
-	mod = NULL;//(GLMmodel*)malloc(sizeof(GLMmodel*));
+	mod = new GLMmodel;
+	mod = NULL;
 }
+
+//-----------------------------------------------------------------------------
 
 Model::Model(char* fileName)
 {
 	LoadModel(fileName);
 }
 
+//-----------------------------------------------------------------------------
+
 Model::~Model(void)
 {
+	delete mod;
 	mod = NULL;
 }
+
+//-----------------------------------------------------------------------------
 
 bool Model::LoadModel(char* fileName)
 {
@@ -34,6 +43,8 @@ bool Model::LoadModel(char* fileName)
 	return false;
 }
 
+//-----------------------------------------------------------------------------
+
 bool Model::DrawModel()
 {
 	if(!mod)
@@ -46,3 +57,5 @@ bool Model::DrawModel()
 
 	return true;
 }
+
+//-----------------------------------------------------------------------------
