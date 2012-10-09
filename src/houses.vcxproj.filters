@@ -99,11 +99,11 @@
     <ClCompile Include="modelimporter\Vector3.cpp">
       <Filter>Source Files\ModelImporter</Filter>
     </ClCompile>
+    <ClCompile Include="gameworld\GameObj.cpp">
+      <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="World.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="shaysworld\AABB.H">
       <Filter>Header Files\Shays Code</Filter>
     </ClInclude>
@@ -163,6 +163,12 @@
     </ClInclude>
     <ClInclude Include="modelimporter\Vector3.h">
       <Filter>Header Files\ModelImporter</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\GameObj.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@
 
 #include <assert.h>
 #include "model.h"
-#include "Vector3.h"
+#include "../Vector3.h"
 
 //-----------------------------------------------------------------------------
 

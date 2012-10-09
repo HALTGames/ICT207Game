@@ -39,6 +39,9 @@ bool Model::LoadModel(char* fileName)
 		return true;
 	}
 
+	// TODO may need to change this function in the case of "animations" when
+	// the model changes from one frame to another
+
 	// model with this name has already been loaded
 	return false;
 }
