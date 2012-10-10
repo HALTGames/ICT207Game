@@ -12,6 +12,9 @@ Model::Model(void)
 
 Model::Model(char* fileName)
 {
+	mod = new GLMmodel;
+	mod = NULL;
+
 	LoadModel(fileName);
 }
 

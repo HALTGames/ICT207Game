@@ -96,11 +96,11 @@
     <ClCompile Include="modelimporter\Texture.cpp">
       <Filter>Source Files\ModelImporter</Filter>
     </ClCompile>
-    <ClCompile Include="modelimporter\Vector3.cpp">
-      <Filter>Source Files\ModelImporter</Filter>
-    </ClCompile>
     <ClCompile Include="gameworld\GameObj.cpp">
       <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -161,13 +161,13 @@
     <ClInclude Include="modelimporter\texture.h">
       <Filter>Header Files\ModelImporter</Filter>
     </ClInclude>
-    <ClInclude Include="modelimporter\Vector3.h">
-      <Filter>Header Files\ModelImporter</Filter>
-    </ClInclude>
     <ClInclude Include="gameworld\GameObj.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
     <ClInclude Include="World.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

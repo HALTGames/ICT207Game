@@ -138,7 +138,6 @@
     <ClCompile Include="modelimporter\Model.cpp" />
     <ClCompile Include="modelimporter\TerrainModel.cpp" />
     <ClCompile Include="modelimporter\Texture.cpp" />
-    <ClCompile Include="modelimporter\Vector3.cpp" />
     <ClCompile Include="shaysworld\AABB.CPP" />
     <ClCompile Include="shaysworld\AABBLinkedList.cpp" />
     <ClCompile Include="shaysworld\AABBNode.cpp" />
@@ -153,6 +152,7 @@
     <ClCompile Include="shaysworld\SoundTime.cpp" />
     <ClCompile Include="shaysworld\texturedPolygons.cpp" />
     <ClCompile Include="shaysworld\Wave.cpp" />
+    <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gameworld\GameObj.h" />
@@ -161,7 +161,6 @@
     <ClInclude Include="modelimporter\Model.h" />
     <ClInclude Include="modelimporter\TerrainModel.h" />
     <ClInclude Include="modelimporter\texture.h" />
-    <ClInclude Include="modelimporter\Vector3.h" />
     <ClInclude Include="shaysworld\AABB.H" />
     <ClInclude Include="shaysworld\AABBLinkedList.h" />
     <ClInclude Include="shaysworld\AABBNode.h" />
@@ -176,6 +175,7 @@
     <ClInclude Include="shaysworld\SoundTime.h" />
     <ClInclude Include="shaysworld\texturedPolygons.h" />
     <ClInclude Include="shaysworld\Wave.h" />
+    <ClInclude Include="Vector3.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

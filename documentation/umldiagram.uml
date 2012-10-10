@@ -2600,40 +2600,35 @@
 <XPD:REF name="Specializations[4]">WOGFZscpNUO3oXpxhwmxTQAA</XPD:REF>
 <XPD:ATTR name="#Operations" type="integer">7</XPD:ATTR>
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="GEyfNnv1fUSY8aMVkyIsBAAA">
-<XPD:ATTR name="Name" type="string">GameObject</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">GameObj</XPD:ATTR>
 <XPD:REF name="Owner">5CpswPoGFk2ADB0d1qzGRAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[1]" type="UMLOperation" guid="QduWHM1/W0KHjX6g2Zvl+gAA">
-<XPD:ATTR name="Name" type="string">GameObject</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">GameObj</XPD:ATTR>
 <XPD:REF name="Owner">5CpswPoGFk2ADB0d1qzGRAAA</XPD:REF>
-<XPD:ATTR name="#Parameters" type="integer">4</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="QxHljSu2Hk+a8EQn18OQMQAA">
-<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">virtual</XPD:ATTR>
-<XPD:REF name="BehavioralFeature">QduWHM1/W0KHjX6g2Zvl+gAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="L5AXYWTRHkClBLt4eAlOIgAA">
+<XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="6h+ItgjuWk6gRlrSG+eWzAAA">
 <XPD:ATTR name="Name" type="string">pos</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">Vector3</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">QduWHM1/W0KHjX6g2Zvl+gAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="tr952mEOh0+AvdVBih+zCQAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="BQsZNg+hJ0mb1yBhodWnpwAA">
 <XPD:ATTR name="Name" type="string">modelFile</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">char*</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">QduWHM1/W0KHjX6g2Zvl+gAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[3]" type="UMLParameter" guid="dAtT+74g+0+uGznWkicnhQAA">
+<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="a0aRH6YrA06G+CBzWVDqpgAA">
 <XPD:ATTR name="Name" type="string">collideType</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">string</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">QduWHM1/W0KHjX6g2Zvl+gAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[2]" type="UMLOperation" guid="gSPvrxH1jE+ULeVoEDuHbwAA">
-<XPD:ATTR name="Name" type="string">GameObject</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">GameObj</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPackage</XPD:ATTR>
 <XPD:REF name="Owner">5CpswPoGFk2ADB0d1qzGRAAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="7tWST3nYGEmNq+WCBi5KIQAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="rUZIgi5yKESV+WbGoINkOwAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">virtual</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">gSPvrxH1jE+ULeVoEDuHbwAA</XPD:REF>
