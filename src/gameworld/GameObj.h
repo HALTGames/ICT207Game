@@ -174,11 +174,25 @@ public:
 	 * \retval the angle of the game object
 	 */
 	int GetAngle() const;
+
+	/**
+	 * \brief Gets the identification number.
+	 *
+	 * Gets the identification number for this game object to make it easy to
+	 * add or remove the object from the game world.
+	 *
+	 * \retval the identification number
+	 */
+	int GetIdentificationNumber() const;
 private:
 	GameModel model; /**< the model of the game object */
 	string collidableType; /**< the collision type */
 	Vector3 position; /**< the current position of the object */
 	int angle; /**< the current angle of the object */
+	int identificationNumber; /**< identification number for the
+									object */
+	static int numObjects; /**< keeps a count of all game objects for
+									identification number purposes */
 };
 
 //-----------------------------------------------------------------------------

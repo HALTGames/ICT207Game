@@ -1,4 +1,4 @@
-#include "GameCamera.h"
+/*#include "GameCamera.h"
 
 
 
@@ -30,4 +30,4 @@ void GameCamera::MoveCamera(double addX, double addY, double addZ)
 			  CameraPos.X+addX, CameraPos.Y+addY+10, CameraPos.Z+addZ-10,
 			  0, 0, -1);
 
-}
+}*/

@@ -44,6 +44,8 @@ bool Model::LoadModel(char* fileName)
 
 	// TODO may need to change this function in the case of "animations" when
 	// the model changes from one frame to another
+	// TODO may also need to be changed so it returns false if the model file
+	// is not a valid OBJ file or it cannot be found
 
 	// model with this name has already been loaded
 	return false;

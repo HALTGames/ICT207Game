@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include <gl\freeglut.h>
 
 struct point3D
@@ -22,3 +22,4 @@ private:
 
 	point3D CameraPos;
 };
+*/

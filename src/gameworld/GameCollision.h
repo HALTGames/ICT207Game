@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 		/**
 		 * @class GameCollision
 		 * @brief Stub Class for game collision
@@ -9,7 +9,7 @@
 		 *
 		 */
 
-class GameCollision
+/*class GameCollision
 {
 public:
 	GameCollision(void);
@@ -17,4 +17,4 @@ public:
 
 	//bool Collision();
 };
-
+*/

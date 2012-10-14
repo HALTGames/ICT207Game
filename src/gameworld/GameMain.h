@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #define GLUT_DISABLE_ATEXIT_HACK
 
 #include <gl\freeglut.h>
@@ -14,7 +14,7 @@
 		 *
 		 */
 
-
+/*
 class GameMain
 {
 public:
@@ -26,13 +26,13 @@ public:
 		 *
 		 * @return void
 		 */
-	void GameLoop();
+	/*void GameLoop();
 		/** 
 		 * @brief Function used in rendering our world, fed into glut display function.
 		 * 
 		 * @return void
 		 */
-	static void RenderWorld(void);
+	/*static void RenderWorld(void);
 		/** 
 		 * @brief Function used to overwrite shays keyboard callback function (stub for now)
 		 * 
@@ -42,7 +42,7 @@ public:
 		 *
 		 * @return void
 		 */
-	static void EmptyFunc(int key, int x, int y);
+	/*static void EmptyFunc(int key, int x, int y);
 		/** 
 		 * @brief Function used to overwrite shays keymap callback function (stub for now)
 		 * 
@@ -52,7 +52,7 @@ public:
 		 *
 		 * @return void
 		 */
-	static void KeyMap(unsigned char key, int x, int y);
+	/*static void KeyMap(unsigned char key, int x, int y);
 		/** 
 		 * @brief Function used to overwrite shays mouse callback function (stub for now)
 		 * 
@@ -63,15 +63,15 @@ public:
 		 *
 		 * @return void
 		 */
-	static void Mouse(int button, int state, int x, int y);
+	/*static void Mouse(int button, int state, int x, int y);
 		/** 
 		 * @brief Used to import our island model
 		 *
 		 * @return void
 		 */
-	static void DrawModel();
+	/*static void DrawModel();
 
 private:
 
 };
-
+*/

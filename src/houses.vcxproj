@@ -130,7 +130,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="gameworld\GameCamera.cpp" />
+    <ClCompile Include="gameworld\GameCollision.cpp" />
+    <ClCompile Include="gameworld\GameMain.cpp" />
     <ClCompile Include="gameworld\GameObj.cpp" />
+    <ClCompile Include="gameworld\GameSound.cpp" />
+    <ClCompile Include="gameworld\GameWorld.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="modelimporter\GameModel.cpp" />
     <ClCompile Include="modelimporter\glm.cpp" />
@@ -155,7 +160,13 @@
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="gameworld\GameCamera.h" />
+    <ClInclude Include="gameworld\GameCollision.h" />
+    <ClInclude Include="gameworld\GameMain.h" />
     <ClInclude Include="gameworld\GameObj.h" />
+    <ClInclude Include="gameworld\GameSound.h" />
+    <ClInclude Include="gameworld\GameWorld.h" />
+    <ClInclude Include="GlobalVars.h" />
     <ClInclude Include="modelimporter\GameModel.h" />
     <ClInclude Include="modelimporter\glm.h" />
     <ClInclude Include="modelimporter\Model.h" />

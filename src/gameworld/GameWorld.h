@@ -1,20 +1,38 @@
 #pragma once
 
-#include "AbstractWorld.h"
-#include "GameCamera.h"
+#include <map>
 
-class GameWorld: public AbstractWorld
+#include "../World.h"
+#include "GameCamera.h"
+#include "GameObj.h"
+
+typedef map<int, GameObj*> MapGameObj;
+typedef MapGameObj::iterator ItrGameObj;
+typedef MapGameObj::const_iterator CItrGameObj;
+
+class GameWorld: public World
 {
 public:
 	GameWorld(void);
 	~GameWorld(void);
 
-	void Display(void);
-	void Keyboard(unsigned char Key, int KeyX, int KeyY);
-	void Mouse(int Button, int State, int MouseX, int MouseY);
-	void SpecialKeyFunc();
-	void Init(void);
+	// Callbacks
+	virtual void Init();
+	virtual void Reshape(int w, int h);
+	virtual void Display();
+	virtual void Keyboard(unsigned char key, int keyX, int keyY);
+	virtual void Mouse(int button, int state, int mouseX, int mouseY);
+	virtual void MovementKeys(int key, int x, int y);
+	virtual void ReleaseKey(int key, int x, int y);
+	virtual void ReleaseKeys(unsigned char key, int x, int y);
+	virtual void MouseMove(int x, int y);
 
+	void UpdateObjects() const;
+
+	void AddObject(GameObj* obj);
+
+	void RemoveObject(int idnum);
 private:
-	GameCamera Camera;
+	MapGameObj objects;
+	//GameCamera camera;
 };

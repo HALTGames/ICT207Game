@@ -1,4 +1,4 @@
-#include "GameMain.h"
+/*#include "GameMain.h"
 
 GameMain::GameMain(void)
 {
@@ -122,4 +122,4 @@ void GameMain::DrawModel()
 	// Don't forget to tell it if you want textures or not :))
 	//glScalef(0.65,0.65,0.65);
     glmDraw(island, GLM_SMOOTH|GLM_TEXTURE);  
-}
+}*/

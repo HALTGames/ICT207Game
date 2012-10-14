@@ -31,6 +31,12 @@
     <Filter Include="Header Files\ModelImporter">
       <UniqueIdentifier>{6f9ad81c-8650-4fc4-a08c-ecfb82f0de17}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\GameMenu">
+      <UniqueIdentifier>{7a7b1293-3039-407a-a65b-7889c684bb0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameMenu">
+      <UniqueIdentifier>{3ff51cdf-a75d-4eb9-8f6a-1790dc432ca7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -102,6 +108,21 @@
     <ClCompile Include="Vector3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gameworld\GameCamera.cpp">
+      <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\GameCollision.cpp">
+      <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\GameMain.cpp">
+      <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\GameSound.cpp">
+      <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\GameWorld.cpp">
+      <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -169,6 +190,24 @@
     </ClInclude>
     <ClInclude Include="Vector3.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalVars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\GameCamera.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\GameCollision.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\GameMain.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\GameSound.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\GameWorld.h">
+      <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

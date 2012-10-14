@@ -1,5 +1,7 @@
 #include "GameObj.h"
 
+int GameObj::numObjects = 0;
+
 //-----------------------------------------------------------------------------
 
 GameObj::GameObj(void)
@@ -30,6 +32,9 @@ GameObj::~GameObj(void)
 
 void GameObj::Init()
 {
+	identificationNumber = numObjects;
+	++numObjects;
+
 	position = Vector3(0.0, 0.0, 0.0);
 	angle = 0.0f;
 }
@@ -58,7 +63,7 @@ void GameObj::Update()
 bool GameObj::IsOnScreen() const
 {
 	// still trying to figure out a way to do this
-
+	return true;
 }
 
 //-----------------------------------------------------------------------------
@@ -125,3 +130,8 @@ int GameObj::GetAngle() const
 }
 
 //-----------------------------------------------------------------------------
+
+int GameObj::GetIdentificationNumber() const
+{
+	return identificationNumber;
+}
