@@ -17,7 +17,7 @@ private:
 
 public:
 
-	StateMachine(entity_type* owner):Owner(owner), Currentstate(NULL), PreviousState(NULL)
+	StateMachine(entity_type* owner):Owner(owner), CurrentState(NULL), PreviousState(NULL)
 	{}
 
 	

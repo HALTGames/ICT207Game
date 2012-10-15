@@ -278,7 +278,8 @@ void Camera::MoveLR()
 void Camera::SetPlains(const int & moveX, const int & moveZ)
 {
 	// store number of plains (stops from looping through linked list each time)
-	if (m_No_Plains == 0) m_No_Plains = m_Plain.GetListSize();
+	//if (m_No_Plains == 0) m_No_Plains = m_Plain.GetListSize();
+	m_No_Plains = 40;
 
 	for (int i = 0;  i < m_No_Plains; i++)
 	{

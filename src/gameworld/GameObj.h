@@ -184,10 +184,10 @@ public:
 	 * \retval the identification number
 	 */
 	int GetIdentificationNumber() const;
+	Vector3 position; /**< the current position of the object */
 private:
 	GameModel model; /**< the model of the game object */
 	string collidableType; /**< the collision type */
-	Vector3 position; /**< the current position of the object */
 	int angle; /**< the current angle of the object */
 	int identificationNumber; /**< identification number for the
 									object */
