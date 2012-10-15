@@ -1,6 +1,8 @@
 #include "GameObj.h"
-#include "State.h"
+//#include "State.h"
 #include "StateMachine.h"
+#include "BirdStates.h"
+
 
 class Bird: public GameObj
 {
@@ -10,8 +12,7 @@ private:
 	float MaxForce;
 	double temp;
 	StateMachine<Bird>* ThisStateMachine;
-	Vector3 PlayerPos;
-	Vector3 Direction;
+
 
 
 public:
@@ -20,6 +21,8 @@ public:
 	~Bird(){delete ThisStateMachine;}
 	void SetVector(Vector3 New);
 	void Move();
+	Vector3 PlayerPos;
+	Vector3 Direction;
 	
 	void Update(Vector3 PlayPos);
 	Bird();
@@ -28,6 +31,7 @@ public:
 	{
 	
 	 ThisStateMachine = new StateMachine<Bird>(this);
+	 ThisStateMachine->SetCurrentState(Seek::Instance());
 
 
 	}

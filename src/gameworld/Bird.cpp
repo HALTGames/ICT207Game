@@ -2,6 +2,8 @@
 #include <math.h>
 
 
+
+
 void Bird::Update(Vector3 PlayPos)
 {
 	//move somewhere

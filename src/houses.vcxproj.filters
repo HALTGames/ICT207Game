@@ -126,7 +126,7 @@
     <ClCompile Include="gameworld\Bird.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
-    <ClCompile Include="Seek.cpp">
+    <ClCompile Include="gameworld\BirdStates.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
   </ItemGroup>
@@ -224,7 +224,7 @@
     <ClInclude Include="gameworld\StateMachine.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
-    <ClInclude Include="Seek.h">
+    <ClInclude Include="gameworld\BirdStates.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
   </ItemGroup>

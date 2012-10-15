@@ -1,12 +1,12 @@
-﻿Build started 10/15/2012 10:40:44 PM.
+﻿Build started 10/16/2012 12:36:31 AM.
      1>Project "D:\Shays\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(298,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>InitializeBuildStatus:
          Creating ".\Release\houses.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt gameworld\Bird.cpp shaysworld\camera.cpp
-         Bird.cpp
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt gameworld\BirdStates.cpp
+         BirdStates.cpp
      1>d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL/glut.h(227): warning C4005: 'GLUT_RGB' : macro redefinition
                  d:\program files (x86)\microsoft visual studio 10.0\vc\include\gl\freeglut_std.h(156) : see previous definition of 'GLUT_RGB'
      1>d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL/glut.h(228): warning C4005: 'GLUT_RGBA' : macro redefinition
@@ -349,10 +349,9 @@
                  d:\program files (x86)\microsoft visual studio 10.0\vc\include\gl\freeglut_std.h(378) : see previous definition of 'GLUT_GAME_MODE_REFRESH_RATE'
      1>d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL/glut.h(683): warning C4005: 'GLUT_GAME_MODE_DISPLAY_CHANGED' : macro redefinition
                  d:\program files (x86)\microsoft visual studio 10.0\vc\include\gl\freeglut_std.h(379) : see previous definition of 'GLUT_GAME_MODE_DISPLAY_CHANGED'
-         camera.cpp
-         Generating Code...
        Link:
          d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\houses.exe" /INCREMENTAL:NO /NOLOGO odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Release\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:\Shays\ICT207Game\src\Release\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\houses.lib" /MACHINE:X86 .\Release\Bird.obj
+         .\Release\BirdStates.obj
          .\Release\GameCamera.obj
          .\Release\GameCollision.obj
          .\Release\GameMain.obj
@@ -366,7 +365,6 @@
          .\Release\Model.obj
          .\Release\TerrainModel.obj
          .\Release\Texture.obj
-         .\Release\Seek.obj
          .\Release\AABB.obj
          .\Release\AABBLinkedList.obj
          .\Release\AABBNode.obj
@@ -392,4 +390,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.95
+Time Elapsed 00:00:00.53
