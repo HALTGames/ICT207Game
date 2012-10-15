@@ -123,6 +123,9 @@
     <ClCompile Include="gameworld\GameWorld.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
+    <ClCompile Include="gameworld\Bird.cpp">
+      <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -207,6 +210,15 @@
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
     <ClInclude Include="gameworld\GameWorld.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\Bird.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\State.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\StateMachine.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
   </ItemGroup>
