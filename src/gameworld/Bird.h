@@ -31,7 +31,7 @@ public:
 	{
 	
 	 ThisStateMachine = new StateMachine<Bird>(this);
-	 ThisStateMachine->SetCurrentState(Seek::Instance());
+	 ThisStateMachine->SetCurrentState(BirdSeek::Instance());
 
 
 	}

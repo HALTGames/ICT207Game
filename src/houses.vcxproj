@@ -130,6 +130,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Alligator.cpp" />
+    <ClCompile Include="AlligatorStates.cpp" />
     <ClCompile Include="gameworld\Bird.cpp" />
     <ClCompile Include="gameworld\BirdStates.cpp" />
     <ClCompile Include="gameworld\GameCamera.cpp" />
@@ -162,6 +164,8 @@
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Alligator.h" />
+    <ClInclude Include="AlligatorStates.h" />
     <ClInclude Include="gameworld\Bird.h" />
     <ClInclude Include="gameworld\BirdStates.h" />
     <ClInclude Include="gameworld\GameCamera.h" />

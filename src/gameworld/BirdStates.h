@@ -6,14 +6,14 @@
 
 class Bird;
 
-class Seek: public State<Bird>
+class BirdSeek: public State<Bird>
 {
 private:
-	Seek(){}
+	BirdSeek(){}
 	//may need copy constructer, assignment operator and destructer here
 
 public:
-	static Seek* Instance();
+	static BirdSeek* Instance();
 
 	virtual void Enter(Bird* bird);
 	virtual void Execute(Bird* bird);

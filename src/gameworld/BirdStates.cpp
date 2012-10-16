@@ -4,20 +4,20 @@
 
 //-----------------------------------------Seek Methods
 
-Seek* Seek::Instance()
+BirdSeek* BirdSeek::Instance()
 {
-	static Seek instance;
+	static BirdSeek instance;
 
 	return &instance;
 }
 
-void Seek::Enter(Bird* bird)
+void BirdSeek::Enter(Bird* bird)
 {
 	std::cout<<"Enter seek function called \n";
 }
 
 
-void Seek::Execute(Bird* bird)
+void BirdSeek::Execute(Bird* bird)
 {
 	std::cout<<"Execute seek function called \n";
 	bird->SetVector(bird->PlayerPos - bird->GameObj::position);
@@ -27,7 +27,7 @@ void Seek::Execute(Bird* bird)
 
 }
 
-void Seek::Exit(Bird* bird)
+void BirdSeek::Exit(Bird* bird)
 {
 	std::cout<<"Exit seek function called \n";
 
