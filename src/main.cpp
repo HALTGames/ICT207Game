@@ -4,7 +4,6 @@
 
 #include <GL\freeglut.h>
 #include <SDL.h>
-
 #include "World.h"
 #include "shaysworld\ShaysWorld.h"
 #include "gameworld\GameWorld.h"

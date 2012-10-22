@@ -11,6 +11,22 @@ const Vector3& Vector3::operator+=(const Vector3& rhs)
 	return *this;
 }
 
+
+
+//-----------------------------------------------------------------------------
+const Vector3& Vector3::operator-(const Vector3& rhs)
+{
+	Vector3 Vec;
+
+	Vec.x = x-rhs.x;
+	Vec.y = y-rhs.y;
+	Vec.z = z-rhs.z;
+
+	return Vec;
+
+}
+
+
 //-----------------------------------------------------------------------------
 
 const Vector3& Vector3::operator-=(const Vector3& rhs)

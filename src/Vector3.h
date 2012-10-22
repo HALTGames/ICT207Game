@@ -43,6 +43,18 @@ struct Vector3
 	 */
 	const Vector3& operator+=(const Vector3& rhs);
 
+	
+	/**
+	 * \brief Subtracts two vectors.
+	 *
+	 * Subtracts two vectors from each other
+	 *overloads only the minus operator, not combined with equals
+	 *
+	 * \param rhs the other vector to subtract
+	 * \retval the result of subtracting the two vectors
+	 */
+	const Vector3& operator-(const Vector3& rhs);
+
 	/**
 	 * \brief Subtracts two vectors.
 	 *

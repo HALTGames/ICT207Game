@@ -186,9 +186,10 @@ public:
 	int GetIdentificationNumber() const;
 
 protected:
+	Vector3 position; /**< the current position of the object */
+private:
 	GameModel model; /**< the model of the game object */
 	string collidableType; /**< the collision type */
-	Vector3 position; /**< the current position of the object */
 	int angle; /**< the current angle of the object */
 
 private:
