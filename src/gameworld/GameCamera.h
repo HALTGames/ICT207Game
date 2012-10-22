@@ -1,25 +1,24 @@
-/*#pragma once
-#include <gl\freeglut.h>
+#pragma once
 
-struct point3D
-{
-	double X;
-	double Y;
-	double Z;
-};
+#define GLUT_DISABLE_ATEXIT_HACK
+
+#include <gl\freeglut.h>
+#include "GameObj.h"
+#include "../Vector3.h"
 
 class GameCamera
 {
 public:
 	GameCamera(void);
+	
+	GameCamera(GameObj* obj);
+	
 	~GameCamera(void);
 
-	void Init();
+	void ChangeFollowing(GameObj* obj);
 
-	void MoveCamera(double addX, double addY, double addZ);
-
+	void UpdateCamera();
 private:
-
-	point3D CameraPos;
+	GameObj* following;
+	bool followingObj;
 };
-*/

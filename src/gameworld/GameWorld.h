@@ -1,10 +1,16 @@
 #pragma once
 
+#define GLUT_DISABLE_ATEXIT_HACK
+
 #include <map>
+#include <GL\freeglut.h>
 
 #include "../World.h"
 #include "GameCamera.h"
 #include "GameObj.h"
+#include "../modelimporter/TerrainModel.h"
+
+#include "objects\PlayerObj.h"
 
 typedef map<int, GameObj*> MapGameObj;
 typedef MapGameObj::iterator ItrGameObj;
@@ -35,4 +41,6 @@ public:
 private:
 	MapGameObj objects;
 	//GameCamera camera;
+
+	TerrainModel level;
 };

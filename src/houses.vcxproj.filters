@@ -37,6 +37,12 @@
     <Filter Include="Source Files\GameMenu">
       <UniqueIdentifier>{3ff51cdf-a75d-4eb9-8f6a-1790dc432ca7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\GameWorld\GameObjects">
+      <UniqueIdentifier>{1b08573f-6c4b-4d0a-8505-144748ad5a06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameWorld\GameObjects">
+      <UniqueIdentifier>{bf378f09-7133-4776-af60-549840212aa9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -123,6 +129,9 @@
     <ClCompile Include="gameworld\GameWorld.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
+    <ClCompile Include="gameworld\objects\PlayerObj.cpp">
+      <Filter>Source Files\GameWorld\GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -208,6 +217,9 @@
     </ClInclude>
     <ClInclude Include="gameworld\GameWorld.h">
       <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\PlayerObj.h">
+      <Filter>Header Files\GameWorld\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

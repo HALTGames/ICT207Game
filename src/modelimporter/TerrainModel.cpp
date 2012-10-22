@@ -41,16 +41,12 @@ void TerrainModel::DefineTerrain()
 {
 	for(int i = 0; i < mod->numtriangles; i++)
 	{
-		TriangleApprox* tri = (TriangleApprox*)malloc(sizeof(TriangleApprox));
+		TriangleApprox* tri = new TriangleApprox;
 		InitBox(tri);
 
 		GLfloat x = mod->triangles[i].vindices[0];
 		GLfloat y = mod->triangles[i].vindices[1];
 		GLfloat z = mod->triangles[i].vindices[2];
-
-		std::cout << "x = " << x << std::endl;
-		std::cout << "y = " << y << std::endl;
-		std::cout << "z = " << z << std::endl << std::endl;
 
 		if (tri->min.x>x) tri->min.x = x;
 		if (tri->min.y>y) tri->min.y = y;

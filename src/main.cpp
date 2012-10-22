@@ -48,7 +48,7 @@ int main(int argc, char** argv)
 	glutCreateWindow("Window");
 
 	// Start World
-	SwitchWorld(SHAYSWORLD);
+	SwitchWorld(GAMEWORLD);
 
 	currentWorld->Init();
 	
@@ -80,7 +80,7 @@ void SwitchWorld(WorldEnum newWorld)
 			currentWorld = new ShaysWorld();
 			break;
 		case GAMEWORLD:
-			//currentWorld = new GameWorld();
+			currentWorld = new GameWorld();
 			break;
 	}
 

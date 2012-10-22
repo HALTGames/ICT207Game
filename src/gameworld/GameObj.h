@@ -184,11 +184,14 @@ public:
 	 * \retval the identification number
 	 */
 	int GetIdentificationNumber() const;
-private:
+
+protected:
 	GameModel model; /**< the model of the game object */
 	string collidableType; /**< the collision type */
 	Vector3 position; /**< the current position of the object */
 	int angle; /**< the current angle of the object */
+
+private:
 	int identificationNumber; /**< identification number for the
 									object */
 	static int numObjects; /**< keeps a count of all game objects for

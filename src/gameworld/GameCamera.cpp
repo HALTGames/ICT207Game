@@ -1,33 +1,39 @@
-/*#include "GameCamera.h"
-
-
+#include "GameCamera.h"
 
 GameCamera::GameCamera(void)
 {
+	following = NULL;
+	followingObj = false;
+}
+
+GameCamera::GameCamera(GameObj* obj)
+{
+	following = NULL;
+	ChangeFollowing(obj);
 }
 
 
 GameCamera::~GameCamera(void)
 {
+	following = NULL;
 }
 
-
-void GameCamera::Init(void)
+void GameCamera::ChangeFollowing(GameObj* obj)
 {
-	CameraPos.X = 0;
-	CameraPos.Y = 10;
-	CameraPos.Z = -10;
-
-	gluLookAt(CameraPos.X, CameraPos.Y, CameraPos.Z,
-			  CameraPos.X, CameraPos.Y+10, CameraPos.Z-10,
-			  0, 0, -1);
-
+	followingObj = true;
+	following = obj;
 }
 
-void GameCamera::MoveCamera(double addX, double addY, double addZ)
+void GameCamera::UpdateCamera()
 {
-	gluLookAt(CameraPos.X+addX, CameraPos.Y+addY, CameraPos.Z+addZ,
-			  CameraPos.X+addX, CameraPos.Y+addY+10, CameraPos.Z+addZ-10,
-			  0, 0, -1);
+	if(followingObj) 
+	{
+		Vector3 cameraPos = following->GetPosition();
 
-}*/
+		cameraPos += Vector3(5.0, 20.0, 0.0);
+
+		glTranslatef(cameraPos.x, cameraPos.y, cameraPos.z);
+
+		glRotatef(90.0, 1.0, 0.0, 0.0);
+	}
+}

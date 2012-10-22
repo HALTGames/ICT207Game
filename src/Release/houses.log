@@ -1,12 +1,12 @@
-﻿Build started 14/10/2012 15:32:39.
+﻿Build started 14/10/2012 21:47:14.
      1>Project "D:\Users\Timothy Veletta\Documents\GitHub\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(298,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>InitializeBuildStatus:
-         Touching ".\Release\houses.unsuccessfulbuild".
+         Creating ".\Release\houses.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt gameworld\GameObj.cpp
-         GameObj.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt gameworld\GameWorld.cpp
+         GameWorld.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL/glut.h(233): warning C4005: 'GLUT_RGB' : macro redefinition
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\gl\freeglut_std.h(164) : see previous definition of 'GLUT_RGB'
      1>C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL/glut.h(234): warning C4005: 'GLUT_RGBA' : macro redefinition
@@ -349,6 +349,7 @@
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\gl\freeglut_std.h(385) : see previous definition of 'GLUT_GAME_MODE_REFRESH_RATE'
      1>C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL/glut.h(689): warning C4005: 'GLUT_GAME_MODE_DISPLAY_CHANGED' : macro redefinition
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\gl\freeglut_std.h(386) : see previous definition of 'GLUT_GAME_MODE_DISPLAY_CHANGED'
+     1>d:\users\timothy veletta\documents\github\ict207game\src\gameworld\gameworld.cpp(20): warning C4700: uninitialized local variable 'player' used
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\houses.exe" /INCREMENTAL:NO /NOLOGO odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Release\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:\Users\Timothy Veletta\Documents\GitHub\ICT207Game\src\Release\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\houses.lib" /MACHINE:X86 .\Release\GameCamera.obj
          .\Release\GameCollision.obj
@@ -356,6 +357,7 @@
          .\Release\GameObj.obj
          .\Release\GameSound.obj
          .\Release\GameWorld.obj
+         .\Release\PlayerObj.obj
          .\Release\main.obj
          .\Release\GameModel.obj
          .\Release\glm.obj
@@ -388,4 +390,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.23
+Time Elapsed 00:00:01.06
