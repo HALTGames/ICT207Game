@@ -3,22 +3,25 @@
 #define GLUT_DISABLE_ATEXIT_HACK
 
 #include <gl\freeglut.h>
-#include "GameObj.h"
 #include "../Vector3.h"
 
 class GameCamera
 {
 public:
-	GameCamera(void);
-	
-	GameCamera(GameObj* obj);
-	
-	~GameCamera(void);
+	void rotateX(double amount);
+	void rotateY(double amount);
+	void rotateZ(double amount);
 
-	void ChangeFollowing(GameObj* obj);
+	void moveForward(double amount);
+	void moveLeft(double amount);
+	void moveRight(double amount);
 
-	void UpdateCamera();
+	void SetTarget(Vector3 target);
+	void SetPosition(Vector3 position);
+	void SetUp(Vector3 up);
 private:
-	GameObj* following;
-	bool followingObj;
+	Vector3 m_target;
+	Vector3 m_position;
+	Vector3 m_up;
+	Vector3 m_right;
 };

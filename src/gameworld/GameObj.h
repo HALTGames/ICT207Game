@@ -187,7 +187,6 @@ public:
 
 protected:
 	Vector3 position; /**< the current position of the object */
-private:
 	GameModel model; /**< the model of the game object */
 	string collidableType; /**< the collision type */
 	int angle; /**< the current angle of the object */

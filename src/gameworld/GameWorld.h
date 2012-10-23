@@ -40,7 +40,8 @@ public:
 	void RemoveObject(int idnum);
 private:
 	MapGameObj objects;
-	//GameCamera camera;
+	GameCamera camera;
+	PlayerObj* player;
 
 	TerrainModel level;
 };

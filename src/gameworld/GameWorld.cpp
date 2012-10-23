@@ -5,6 +5,9 @@ float back = 0.0;
 GameWorld::GameWorld(void)
 {
 	level.LoadModel("./models/island.obj");
+
+	PlayerObj* player = new PlayerObj;
+	AddObject(player);
 }
 
 
@@ -14,10 +17,8 @@ GameWorld::~GameWorld(void)
 
 void GameWorld::Init(void)
 {
-		glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
-		
-		PlayerObj* player;
-		AddObject(player);
+	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
+	glEnable(GL_DEPTH_TEST);
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -29,14 +30,16 @@ void GameWorld::Display(void)
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f ); 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	glTranslatef(0.0, 0.0, back);
-	glRotatef(90.0, 1.0, 0.0, 0.0);
+	camera.SetTarget(Vector3(0.0, 100.0, 0.0));
 
-	back -= 0.0001;
+	glMatrixMode(GL_MODELVIEW);
 
-	//level.DrawModel();
+	glPushMatrix();
+		level.DrawModel();
+	glPopMatrix();
 
 	UpdateObjects();
 
@@ -46,31 +49,6 @@ void GameWorld::Display(void)
 
 void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 {
-	toupper(Key);
-	switch(Key)
-	{
-		case 'W'://move camera up
-		{
-			
-			break;
-		}
-		case 'A'://move camera to the left
-		{
-			
-			break;
-		}
-		case 'S'://move camera down
-		{
-			
-			break;
-		}
-		case 'D'://move camera right
-		{
-			
-			break;
-		}
-	}
-
 }
 
 void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
@@ -80,7 +58,6 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 
 void GameWorld::MovementKeys(int key, int x, int y)
 {
-
 }
 
 void GameWorld::ReleaseKey(int key, int x, int y)

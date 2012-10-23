@@ -1,39 +1,97 @@
 #include "GameCamera.h"
 
-GameCamera::GameCamera(void)
+void GameCamera::rotateX(double amount)
 {
-	following = NULL;
-	followingObj = false;
 }
 
-GameCamera::GameCamera(GameObj* obj)
+void GameCamera::rotateY(double amount)
 {
-	following = NULL;
-	ChangeFollowing(obj);
+	Vector3 target = m_target;
+	Vector3 right = m_right;
+ 
+	amount /= 57.2957795f;
+ 
+	m_target.x = (cos(1.5708f + amount) * target.x) + (cos(amount) * right.x);
+ 
+	m_target.y = (cos(1.5708f + amount) * target.y) + (cos(amount) * right.y);
+ 
+	m_target.z = (cos(1.5708f + amount) * target.z) + (cos(amount) * right.z);
+ 
+	m_right.x  = (cos(amount) * target.x) + (cos(1.5708f - amount) * right.x);
+ 
+	m_right.y  = (cos(amount) * target.y) + (cos(1.5708f - amount) * right.y);
+ 
+	m_right.z  = (cos(amount) * target.z) + (cos(1.5708f - amount) * right.z);
+ 
+	m_target = m_target.Normalise();
+	m_right = m_right.Normalise();
 }
 
-
-GameCamera::~GameCamera(void)
+void GameCamera::rotateZ(double amount)
 {
-	following = NULL;
+
 }
 
-void GameCamera::ChangeFollowing(GameObj* obj)
+void GameCamera::moveForward(double amount)
 {
-	followingObj = true;
-	following = obj;
+	m_position += m_target.Normalise() * amount;
 }
 
-void GameCamera::UpdateCamera()
+void GameCamera::moveLeft(double amount)
 {
-	if(followingObj) 
-	{
-		Vector3 cameraPos = following->GetPosition();
+	m_position += m_right.Normalise() * -amount;
+}
 
-		cameraPos += Vector3(5.0, 20.0, 0.0);
+void GameCamera::moveRight(double amount)
+{
+	m_position += m_right.Normalise() * amount;
+}
 
-		glTranslatef(cameraPos.x, cameraPos.y, cameraPos.z);
+void GameCamera::SetTarget(Vector3 target)
+{
+	Vector3 projectedTarget;
+	 
+	target = target - m_position;
+	projectedTarget = target;
+		 
+	if(fabs(target.x) < 0.00001 && fabs(target.z) < 0.00001) {  // YZ plane
+	 
+		projectedTarget.x = 0.0f;
+		projectedTarget.Normalise();
+		 
+		m_right = Vector3(1.0, 0.0, 0.0);
+		m_up = projectedTarget.Cross(m_right);
+			 
+		m_target = target;
+		m_right = m_target.Cross(m_up);
 
-		glRotatef(90.0, 1.0, 0.0, 0.0);
+		m_right = m_right * -1;
 	}
+		 
+	else {                                      // XZ plane
+			 
+		projectedTarget.y = 0.0;
+		projectedTarget.Normalise();
+		 
+		m_up = Vector3(0.0f, 1.0f, 0.0f);
+		m_right = projectedTarget.Cross(m_up);
+		m_right = m_right * -1;
+	 
+		m_target = target;
+		m_up = m_target.Cross(m_right);
+	}
+	 
+	m_target.Normalise();
+	m_right.Normalise();
+	m_up.Normalise();
+}
+
+void GameCamera::SetPosition(Vector3 position)
+{
+	m_position = position;
+}
+
+void GameCamera::SetUp(Vector3 up)
+{
+	m_up = up;
 }
