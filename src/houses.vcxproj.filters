@@ -120,9 +120,6 @@
     <ClCompile Include="gameworld\GameCollision.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
-    <ClCompile Include="gameworld\GameMain.cpp">
-      <Filter>Source Files\GameWorld</Filter>
-    </ClCompile>
     <ClCompile Include="gameworld\GameSound.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
@@ -143,6 +140,9 @@
     </ClCompile>
     <ClCompile Include="gameworld\objects\PlayerObj.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface.cpp">
+      <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -221,9 +221,6 @@
     <ClInclude Include="gameworld\GameCollision.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
-    <ClInclude Include="gameworld\GameMain.h">
-      <Filter>Header Files\GameWorld</Filter>
-    </ClInclude>
     <ClInclude Include="gameworld\GameSound.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
@@ -243,6 +240,9 @@
       <Filter>Header Files\GameWorld\Objects</Filter>
     </ClInclude>
     <ClInclude Include="gameworld\objects\PlayerObj.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
     </ClInclude>
   </ItemGroup>

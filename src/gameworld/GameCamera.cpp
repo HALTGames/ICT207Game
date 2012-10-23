@@ -8,12 +8,24 @@ GameCamera::GameCamera()
 
 bool GameCamera::SetHeight(double height)
 {
-	m_height = height;
+	if(height >= 0)
+	{
+		m_height = height;
+		return true;
+	}
+
+	return false;
 }
 
 bool GameCamera::SetBehind(double behind)
 {
-	m_behind = behind;
+	if(behind >= 0)
+	{
+		m_behind = behind;
+		return true;
+	}
+
+	return false;
 }
 
 void GameCamera::Render(const Vector3 position)

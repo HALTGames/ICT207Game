@@ -4,6 +4,7 @@
 
 #include <map>
 #include <GL\freeglut.h>
+#include <GL\freeglut_ext.h>
 
 #include "../World.h"
 #include "GameCamera.h"
@@ -42,6 +43,16 @@ private:
 	MapGameObj objects;
 	GameCamera camera;
 	PlayerObj* player;
+	void PlayerMovement();
 
 	TerrainModel level;
+
+	void CalculateFPS();
+	int elapsedTime;
+	int frameCount;
+	int currentTime;
+	int previousTime;
+	double fps;
+
+	bool left, right, forward, back;
 };
