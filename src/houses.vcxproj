@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{98DC3C1E-DA01-1091-881B-8C52EA93F6E8}</ProjectGuid>
+    <ProjectName>houses</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug</OutDir>
+    <IntDir>Debug</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release</OutDir>
+    <IntDir>.\Release</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\houses.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Debug\houses.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0809</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\houses.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>Debug\houses.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;GlU32.lib;OpenGL32.lib;freeglut.lib;glut32.lib;SDL.lib;SDLmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\houses.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Release\houses.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0809</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\houses.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>.\Release\houses.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="gameworld\GameCamera.cpp" />
+    <ClCompile Include="gameworld\GameCollision.cpp" />
+    <ClCompile Include="gameworld\GameMain.cpp" />
+    <ClCompile Include="gameworld\GameObj.cpp" />
+    <ClCompile Include="gameworld\GameSound.cpp" />
+    <ClCompile Include="gameworld\GameWorld.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="modelimporter\GameModel.cpp" />
+    <ClCompile Include="modelimporter\glm.cpp" />
+    <ClCompile Include="modelimporter\glmimg.cpp" />
+    <ClCompile Include="modelimporter\Model.cpp" />
+    <ClCompile Include="modelimporter\TerrainModel.cpp" />
+    <ClCompile Include="modelimporter\Texture.cpp" />
+    <ClCompile Include="shaysworld\AABB.CPP" />
+    <ClCompile Include="shaysworld\AABBLinkedList.cpp" />
+    <ClCompile Include="shaysworld\AABBNode.cpp" />
+    <ClCompile Include="shaysworld\camera.cpp" />
+    <ClCompile Include="shaysworld\cameraMap.cpp" />
+    <ClCompile Include="shaysworld\collision.cpp" />
+    <ClCompile Include="shaysworld\EasySound.cpp" />
+    <ClCompile Include="shaysworld\PlainLinkedList.cpp" />
+    <ClCompile Include="shaysworld\PlainNode.cpp" />
+    <ClCompile Include="shaysworld\ShaysWorld.cpp" />
+    <ClCompile Include="shaysworld\Sound.cpp" />
+    <ClCompile Include="shaysworld\SoundTime.cpp" />
+    <ClCompile Include="shaysworld\texturedPolygons.cpp" />
+    <ClCompile Include="shaysworld\Wave.cpp" />
+    <ClCompile Include="Vector3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gameworld\GameCamera.h" />
+    <ClInclude Include="gameworld\GameCollision.h" />
+    <ClInclude Include="gameworld\GameMain.h" />
+    <ClInclude Include="gameworld\GameObj.h" />
+    <ClInclude Include="gameworld\GameSound.h" />
+    <ClInclude Include="gameworld\GameWorld.h" />
+    <ClInclude Include="GlobalVars.h" />
+    <ClInclude Include="modelimporter\GameModel.h" />
+    <ClInclude Include="modelimporter\glm.h" />
+    <ClInclude Include="modelimporter\Model.h" />
+    <ClInclude Include="modelimporter\TerrainModel.h" />
+    <ClInclude Include="modelimporter\texture.h" />
+    <ClInclude Include="shaysworld\AABB.H" />
+    <ClInclude Include="shaysworld\AABBLinkedList.h" />
+    <ClInclude Include="shaysworld\AABBNode.h" />
+    <ClInclude Include="shaysworld\camera.h" />
+    <ClInclude Include="shaysworld\cameraMap.h" />
+    <ClInclude Include="shaysworld\collision.h" />
+    <ClInclude Include="shaysworld\EasySound.h" />
+    <ClInclude Include="shaysworld\PlainLinkedList.h" />
+    <ClInclude Include="shaysworld\PlainNode.h" />
+    <ClInclude Include="shaysworld\ShaysWorld.h" />
+    <ClInclude Include="shaysworld\Sound.h" />
+    <ClInclude Include="shaysworld\SoundTime.h" />
+    <ClInclude Include="shaysworld\texturedPolygons.h" />
+    <ClInclude Include="shaysworld\Wave.h" />
+    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="World.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
