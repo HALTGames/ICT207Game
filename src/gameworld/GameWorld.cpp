@@ -2,11 +2,12 @@
 
 float back = 0.0;
 
+
 GameWorld::GameWorld(void)
 {
 	level.LoadModel("./models/island.obj");
 
-	PlayerObj* player = new PlayerObj;
+	player = new PlayerObj;
 	AddObject(player);
 }
 
@@ -23,25 +24,30 @@ void GameWorld::Init(void)
 
 void GameWorld::Reshape(int w, int h) 
 {
+	if (h == 0 || w == 0) return;
+	
+	glMatrixMode(GL_PROJECTION);  
+	glLoadIdentity();
 
+	gluPerspective(60.0,(GLdouble)w/(GLdouble)h,1.0, 500.0);
+
+	glMatrixMode(GL_MODELVIEW);
+	glViewport(0,0,w,h); 
 }
 
 void GameWorld::Display(void)
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f ); 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-
-	camera.SetTarget(Vector3(0.0, 100.0, 0.0));
-
-	glMatrixMode(GL_MODELVIEW);
+	camera.Render(player->GetPosition());
 
 	glPushMatrix();
+		glScalef(30.0, 30.0, 30.0);
 		level.DrawModel();
 	glPopMatrix();
 
-	UpdateObjects();
+	//UpdateObjects();
 
 	glFlush();
 	glutSwapBuffers();
@@ -49,6 +55,25 @@ void GameWorld::Display(void)
 
 void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 {
+	if(Key == 'a')
+	{
+		player->ChangePosition(Vector3(0.0, 0.0, -1.0));
+	}
+
+	if(Key =='d')
+	{
+		player->ChangePosition(Vector3(0.0, 0.0, 1.0));
+	}
+
+	if(Key == 'w')
+	{
+		player->ChangePosition(Vector3(1.0, 0.0, 0.0));
+	}
+
+	if(Key == 's')
+	{
+		player->ChangePosition(Vector3(-1.0, 0.0, 0.0));
+	}
 }
 
 void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)

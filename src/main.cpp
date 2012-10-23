@@ -30,8 +30,6 @@ void ReleaseKeys(unsigned char key, int x, int y);
 void MouseMove(int x, int y);
 
 World* currentWorld = NULL;
-//ShaysWorld* shays = new ShaysWorld();
-//GameMain* game = NULL;
 
 int main(int argc, char** argv)
 {

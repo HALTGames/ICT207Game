@@ -1,5 +1,12 @@
 #include "Vector3.h"
 
+void Vector3::Set( const double X, const double Y, const double Z)
+{
+    x = X;
+    y = Y;
+    z = Z;
+}
+
 //-----------------------------------------------------------------------------
 
 const Vector3& Vector3::operator+=(const Vector3& rhs)
@@ -12,9 +19,19 @@ const Vector3& Vector3::operator+=(const Vector3& rhs)
 }
 
 
+//-----------------------------------------------------------------------------
+
+const Vector3& Vector3::operator-=(const Vector3& rhs)
+{
+	x -= rhs.x;
+	y -= rhs.y;
+	z -= rhs.z;
+
+	return *this;
+}
 
 //-----------------------------------------------------------------------------
-const Vector3& Vector3::operator-(const Vector3& rhs)
+const Vector3 Vector3::operator-(const Vector3& rhs)
 {
 	Vector3 Vec;
 
@@ -26,16 +43,26 @@ const Vector3& Vector3::operator-(const Vector3& rhs)
 
 }
 
-
-//-----------------------------------------------------------------------------
-
-const Vector3& Vector3::operator-=(const Vector3& rhs)
+const Vector3 Vector3::operator+(const Vector3 &other)
 {
-	x -= rhs.x;
-	y -= rhs.y;
-	z -= rhs.z;
+	Vector3 vec;
 
-	return *this;
+	vec.x = x + other.x;
+	vec.y = y + other.y;
+	vec.z = z + other.z;
+
+	return vec;
+}
+
+const Vector3 Vector3::operator*(const double scalar)
+{
+	Vector3 vec;
+
+	vec.x = x * scalar;
+	vec.y = y * scalar;
+	vec.z = z * scalar;
+
+	return vec;
 }
 
 //-----------------------------------------------------------------------------
@@ -80,3 +107,14 @@ double Vector3::Dot(const Vector3& other) const
 }
 
 //-----------------------------------------------------------------------------
+
+Vector3 Vector3::Cross(const Vector3& other) const
+{
+	Vector3 crossProduct;
+
+    crossProduct.x = y * other.z - z * other.y;
+    crossProduct.y = z * other.x - x * other.z;
+    crossProduct.z = x * other.y - y * other.x;
+
+    return crossProduct;
+}

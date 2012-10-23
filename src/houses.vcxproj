@@ -136,6 +136,11 @@
     <ClCompile Include="gameworld\GameObj.cpp" />
     <ClCompile Include="gameworld\GameSound.cpp" />
     <ClCompile Include="gameworld\GameWorld.cpp" />
+    <ClCompile Include="gameworld\objects\Alligator.cpp" />
+    <ClCompile Include="gameworld\objects\AlligatorStates.cpp" />
+    <ClCompile Include="gameworld\objects\Bird.cpp" />
+    <ClCompile Include="gameworld\objects\BirdStates.cpp" />
+    <ClCompile Include="gameworld\objects\PlayerObj.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="modelimporter\GameModel.cpp" />
     <ClCompile Include="modelimporter\glm.cpp" />
@@ -166,6 +171,11 @@
     <ClInclude Include="gameworld\GameObj.h" />
     <ClInclude Include="gameworld\GameSound.h" />
     <ClInclude Include="gameworld\GameWorld.h" />
+    <ClInclude Include="gameworld\objects\Alligator.h" />
+    <ClInclude Include="gameworld\objects\AlligatorStates.h" />
+    <ClInclude Include="gameworld\objects\Bird.h" />
+    <ClInclude Include="gameworld\objects\BirdStates.h" />
+    <ClInclude Include="gameworld\objects\PlayerObj.h" />
     <ClInclude Include="GlobalVars.h" />
     <ClInclude Include="modelimporter\GameModel.h" />
     <ClInclude Include="modelimporter\glm.h" />

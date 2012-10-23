@@ -5,23 +5,20 @@
 #include <gl\freeglut.h>
 #include "../Vector3.h"
 
+#include <math.h>
+
+
+ 
 class GameCamera
 {
 public:
-	void rotateX(double amount);
-	void rotateY(double amount);
-	void rotateZ(double amount);
+	GameCamera();			
 
-	void moveForward(double amount);
-	void moveLeft(double amount);
-	void moveRight(double amount);
+	void Render (Vector3 position);	
 
-	void SetTarget(Vector3 target);
-	void SetPosition(Vector3 position);
-	void SetUp(Vector3 up);
+	bool SetHeight(double height);
+	bool SetBehind(double behind);
 private:
-	Vector3 m_target;
-	Vector3 m_position;
-	Vector3 m_up;
-	Vector3 m_right;
+	double m_height;
+	double m_behind;
 };

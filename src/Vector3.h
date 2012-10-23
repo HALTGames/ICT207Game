@@ -2,7 +2,7 @@
 
 //-----------------------------------------------------------------------------
 
-#include <math.h>
+#include <cmath>
 
 //-----------------------------------------------------------------------------
 
@@ -33,6 +33,8 @@ struct Vector3
 	 */
 	Vector3(const double X, const double Y, const double Z):x(X), y(Y), z(Z) {}
 
+	void Set(const double X, const double Y, const double Z);
+
 	/**
 	 * \brief Adds two vectors.
 	 *
@@ -43,18 +45,6 @@ struct Vector3
 	 */
 	const Vector3& operator+=(const Vector3& rhs);
 
-	
-	/**
-	 * \brief Subtracts two vectors.
-	 *
-	 * Subtracts two vectors from each other
-	 *overloads only the minus operator, not combined with equals
-	 *
-	 * \param rhs the other vector to subtract
-	 * \retval the result of subtracting the two vectors
-	 */
-	const Vector3& operator-(const Vector3& rhs);
-
 	/**
 	 * \brief Subtracts two vectors.
 	 *
@@ -64,6 +54,22 @@ struct Vector3
 	 * \retval the result of subtracting the two vectors
 	 */
 	const Vector3& operator-=(const Vector3& rhs);
+
+	/**
+	 * \brief Subtracts two vectors.
+	 *
+	 * Subtracts two vectors from each other
+	 * overloads only the minus operator, not combined with equals
+	 *
+	 * \param rhs the other vector to subtract
+	 * \retval the result of subtracting the two vectors
+	 */
+	const Vector3 operator-(const Vector3& rhs);
+
+	const Vector3 operator+(const Vector3 &other);
+
+	const Vector3 operator*(const double scalar);
+
 
 	/**
 	 * \brief Equlity operator.
@@ -112,6 +118,8 @@ struct Vector3
 	 * \retval the scalar dot product of the two vectors
 	 */
 	double Dot(const Vector3& other) const;
+
+	Vector3 Cross(const Vector3& other) const;
 };
 
 //-----------------------------------------------------------------------------

@@ -37,6 +37,12 @@
     <Filter Include="Source Files\GameMenu">
       <UniqueIdentifier>{3ff51cdf-a75d-4eb9-8f6a-1790dc432ca7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\GameWorld\Objects">
+      <UniqueIdentifier>{89535c9c-d9f5-4fa9-917b-c8197794e199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameWorld\Objects">
+      <UniqueIdentifier>{2cd03d2c-7f35-4620-b7db-389443c4464d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -123,6 +129,21 @@
     <ClCompile Include="gameworld\GameWorld.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
+    <ClCompile Include="gameworld\objects\Alligator.cpp">
+      <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\objects\AlligatorStates.cpp">
+      <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\objects\Bird.cpp">
+      <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\objects\BirdStates.cpp">
+      <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\objects\PlayerObj.cpp">
+      <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -208,6 +229,21 @@
     </ClInclude>
     <ClInclude Include="gameworld\GameWorld.h">
       <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\Alligator.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\AlligatorStates.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\Bird.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\BirdStates.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\PlayerObj.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
