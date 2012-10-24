@@ -87,6 +87,26 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 		back = true;
 	}
 
+	if(Key == 'o')
+	{
+		camera.ChangeHeight(2);
+	}
+
+	if(Key == 'l')
+	{
+		camera.ChangeHeight(-2);
+	}
+
+	if(Key == 'i')
+	{
+		camera.ChangeBehind(2);
+	}
+
+	if(Key == 'k')
+	{
+		camera.ChangeBehind(-2);
+	}
+
 	glutPostRedisplay();
 }
 

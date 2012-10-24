@@ -4,9 +4,7 @@
 
 GameModel::GameModel()
 {
-	box = new BoundingBox();
-
-	InitBoundingBox();
+	sphere = new CollisionSphere();
 
 	Model::Model();
 }
@@ -15,8 +13,8 @@ GameModel::GameModel()
 
 GameModel::~GameModel(void)
 {
-	delete box;
-	box = NULL;
+	delete sphere;
+	sphere = NULL;
 
 	Model::~Model();
 }
@@ -27,92 +25,57 @@ bool GameModel::LoadModel(char* fileName)
 {
 	Model::LoadModel(fileName);
 
-	return CreateCollisionBox();
+	return CreateCollisionSphere();
 }
 
 //-----------------------------------------------------------------------------
 
 bool GameModel::DrawModel()
 {
-	// ? if global DEBUG is true draw the bounding box
+	DrawSphere();
 
 	return Model::DrawModel();	
 }
 
 //-----------------------------------------------------------------------------
 
-void GameModel::InitBoundingBox()
-{
-	box->min.x = 1000000;
-	box->min.y = 1000000;
-	box->min.z = 1000000;
-
-	box->max.x = -1000000;
-	box->max.y = -1000000;
-	box->max.z = -1000000;
-}
-
-//-----------------------------------------------------------------------------
-
-void GameModel::DrawBox()
+void GameModel::DrawSphere()
 {
 	glLineWidth(5);
 
 	glColor4f(1.0, 0.0, 0.0, 1.0);
-
-	glBegin (GL_LINE_LOOP); 
-	glVertex3f(box->max.x, box->max.y, box->min.z);
-	glVertex3f(box->min.x, box->max.y, box->min.z);
-	glVertex3f(box->min.x, box->min.y, box->min.z);
-	glVertex3f(box->max.x, box->min.y, box->min.z);
-	glEnd();
-
-	glBegin (GL_LINE_LOOP); 
-	glVertex3f(box->max.x, box->min.y, box->max.z);
-	glVertex3f(box->max.x, box->max.y, box->max.z);
-	glVertex3f(box->min.x, box->max.y, box->max.z); 
-	glVertex3f(box->min.x, box->min.y, box->max.z);
-	glEnd();
-
-	glBegin (GL_LINE_LOOP); 
-	glVertex3f(box->max.x, box->max.y, box->min.z);
-	glVertex3f(box->max.x, box->max.y, box->max.z);
-	glVertex3f(box->min.x, box->max.y, box->max.z);
-	glVertex3f(box->min.x, box->max.y, box->min.z);
-	glEnd();
-
-	glBegin (GL_LINE_LOOP); 
-	glVertex3f(box->max.x, box->min.y, box->max.z);
-	glVertex3f(box->min.x, box->min.y, box->max.z);
-	glVertex3f(box->min.x, box->min.y, box->min.z);
-	glVertex3f(box->max.x, box->min.y, box->min.z);
-
-	glEnd();
-
-	glColor4f(1.0, 1.0, 1.0, 1.0);
+	
+	glPushMatrix();
+		glTranslatef(sphere->center.x, sphere->center.y, sphere->center.z);
+		glutWireSphere(sphere->radius, 8, 8);
+	glPopMatrix();
 }
 
 //-----------------------------------------------------------------------------
 
-bool GameModel::CreateCollisionBox()
+bool GameModel::CreateCollisionSphere()
 {
+	double minx, miny, minz = 1000000;
+	double maxx, maxy, maxz = -1000000;
+
 	for(int i = 0; i < mod->numvertices; i++)
 	{		
 		GLfloat x = mod->vertices[i * 3 + 0];
 		GLfloat y = mod->vertices[i * 3 + 1];
 		GLfloat z = mod->vertices[i * 3 + 2];
 
-		if(box->min.x > x) box->min.x = x;
-		if(box->min.y > y) box->min.y = y;
-		if(box->min.z > z) box->min.z = z;
+		if(minx > x) minx = x;
+		if(miny > y) miny = y;
+		if(minz > z) minz = z;
 
-		if(box->max.x < x) box->max.x = x;
-		if(box->max.y < y) box->max.y = y;
-		if(box->max.z < z) box->max.z = z;
+		if(maxx < x) maxx = x;
+		if(maxy < y) maxy = y;
+		if(maxz < z) maxz = z;
 	}
 
-	assert(box->max.x >= box->min.x && box->max.y >= box->min.y && 
-		box->max.z >= box->min.z);
+	double average = ((maxx - minx) + (maxy - miny) + (maxz - minz)) / 3;
+
+	sphere->radius = average;
 
 	return true;
 }

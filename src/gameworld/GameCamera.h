@@ -18,6 +18,9 @@ public:
 
 	bool SetHeight(double height);
 	bool SetBehind(double behind);
+
+	bool ChangeHeight(double height);
+	bool ChangeBehind(double behind);
 private:
 	double m_height;
 	double m_behind;

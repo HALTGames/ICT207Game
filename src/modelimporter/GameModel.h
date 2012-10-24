@@ -8,19 +8,16 @@
 
 //-----------------------------------------------------------------------------
 
-/**
- * A structure to represent a bounding box.
- */
-struct BoundingBox
+struct CollisionSphere
 {
-	Vector3 max; /**< The maximum coordinates of the model */
-	Vector3 min; /**< The minimum coordinates of the model */
+	Vector3 center;
+	double radius;
 
-	// translate bounding box
+	CollisionSphere():center(Vector3()), radius(1) {}
+	CollisionSphere(Vector3 cen, double rad):center(cen), radius(rad) {}
 
-	// scale bounding box
-
-	// rotate bounding box
+	void TranslateSphere(Vector3 move) { center += move; }
+	void ScaleSphere(double scale) { radius *= scale; }
 };
 
 //-----------------------------------------------------------------------------
@@ -76,21 +73,9 @@ public:
 	 */
 	virtual bool DrawModel();
 
-	/**
-	 * \brief Draws bounding box.
-	 *
-	 * Draws the bounding box around the model.
-	 */
-	void DrawBox();
+	void DrawSphere();
 private:
-	BoundingBox* box; /**< the bounding box object **/
-
-	/**
-	 * \brief Sets up the bounding box.
-	 *
-	 * Initialises the bounding box.
-	 */
-	void InitBoundingBox();
+	CollisionSphere* sphere;
 
 	/**
 	 * \brief Creates the bounding box.
@@ -99,7 +84,7 @@ private:
 	 *
 	 * \retval whether or not the process was successful
 	 */
-	bool CreateCollisionBox();
+	bool CreateCollisionSphere();
 };
 
 //-----------------------------------------------------------------------------

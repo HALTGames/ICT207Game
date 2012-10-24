@@ -34,3 +34,17 @@ void GameCamera::Render(const Vector3 position)
 			position.x, position.y, position.z, 
 			1.0, 0.0, 0.0);
 }
+
+bool GameCamera::ChangeHeight(double height)
+{
+	m_height += height;
+
+	return true;
+}
+
+bool GameCamera::ChangeBehind(double behind)
+{
+	m_behind += behind;
+
+	return true;
+}
