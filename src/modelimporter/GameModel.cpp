@@ -41,9 +41,9 @@ bool GameModel::DrawModel()
 
 void GameModel::DrawSphere()
 {
-	glLineWidth(5);
+	glLineWidth(2);
 
-	glColor4f(1.0, 0.0, 0.0, 1.0);
+	glColor4f(1.0, 1.0, 1.0, 1.0);
 	
 	glPushMatrix();
 		glTranslatef(sphere->center.x, sphere->center.y, sphere->center.z);

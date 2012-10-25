@@ -2,13 +2,13 @@
 
 float back = 0.0;
 
-
 GameWorld::GameWorld(void)
 {
 	frameCount = 0;
 	currentTime = 0;
 	previousTime = 0;
 	fps = 0;
+
 
 	level.LoadModel("./models/island.obj");
 
@@ -45,7 +45,7 @@ void GameWorld::Reshape(int w, int h)
 void GameWorld::Display(void)
 {
 	CalculateFPS();
-	std::cout << "FPS: " << fps << std::endl;
+	std::cout << fps << std::endl;
 
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f ); 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -59,10 +59,10 @@ void GameWorld::Display(void)
 		level.DrawModel();
 	glPopMatrix();
 
-	//UpdateObjects();
+	UpdateObjects();
 
 	glFlush();
-	glutSwapBuffers();
+	glutSwapBuffers();	
 }
 
 void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
@@ -119,22 +119,22 @@ void GameWorld::PlayerMovement()
 {
 	if(left)
 	{
-		player->ChangePosition(Vector3(0.0, 0.0, -0.1));
+		player->ChangePosition(Vector3(0.0, 0.0, -0.01));
 	}
 
 	if(right)
 	{
-		player->ChangePosition(Vector3(0.0, 0.0, 0.1));
+		player->ChangePosition(Vector3(0.0, 0.0, 0.01));
 	}
 
 	if(forward)
 	{
-		player->ChangePosition(Vector3(0.1, 0.0, 0.0));
+		player->ChangePosition(Vector3(0.01, 0.0, 0.0));
 	}
 
 	if(back)
 	{
-		player->ChangePosition(Vector3(-0.1, 0.0, 0.0));
+		player->ChangePosition(Vector3(-0.01, 0.0, 0.0));
 	}
 }
 
@@ -179,7 +179,6 @@ void GameWorld::UpdateObjects() const
 {
 	for(CItrGameObj itr = objects.begin(); itr != objects.end(); itr++)
 	{
-		(itr->second)->Update();
 		(itr->second)->Display();
 	}
 }

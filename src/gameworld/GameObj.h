@@ -57,26 +57,11 @@ public:
 	virtual ~GameObj(void);
 
 	/**
-	 * \brief Initialises the object.
-	 *
-	 * Sets the initial properties of the game object.
-	 */
-	virtual void Init();
-
-	/**
 	 * \brief Displays the object.
 	 *
 	 * Displays the object at the current position with the current angle.
 	 */
 	virtual void Display();
-
-	/**
-	 * \brief Updates the object.
-	 *
-	 * Updates the object every single loop. This would be used for anything
-	 * that changes on its own.
-	 */
-	virtual void Update();
 
 	/**
 	 * \brief Whether or not the object is shown.

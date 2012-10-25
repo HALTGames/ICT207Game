@@ -6,7 +6,6 @@ int GameObj::numObjects = 0;
 
 GameObj::GameObj(void)
 {
-	Init();
 }
 
 //-----------------------------------------------------------------------------
@@ -14,7 +13,11 @@ GameObj::GameObj(void)
 GameObj::GameObj(const Vector3 pos, char* modelFile, 
 	const string collideType)
 {
-	Init();
+	identificationNumber = numObjects;
+	++numObjects;
+
+	position = Vector3(0.0, 0.0, 0.0);
+	angle = 0.0f;
 
 	model.LoadModel(modelFile);
 	position = pos;
@@ -30,17 +33,6 @@ GameObj::~GameObj(void)
 
 //-----------------------------------------------------------------------------
 
-void GameObj::Init()
-{
-	identificationNumber = numObjects;
-	++numObjects;
-
-	position = Vector3(0.0, 0.0, 0.0);
-	angle = 0.0f;
-}
-
-//-----------------------------------------------------------------------------
-
 void GameObj::Display()
 {
 	glPushMatrix();
@@ -48,14 +40,6 @@ void GameObj::Display()
 		glRotatef(angle, 0.0, 1.0, 0.0);
 		model.DrawModel();
 	glPopMatrix();
-}
-
-//-----------------------------------------------------------------------------
-
-void GameObj::Update()
-{
-	// anything that changes on its own goes in here
-	// i.e. a scroll spinning around when its dropped
 }
 
 //-----------------------------------------------------------------------------

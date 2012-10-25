@@ -48,7 +48,7 @@ private:
 	TerrainModel level;
 
 	void CalculateFPS();
-	int elapsedTime;
+	double elapsedTime;
 	int frameCount;
 	int currentTime;
 	int previousTime;

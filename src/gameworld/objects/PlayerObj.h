@@ -6,7 +6,7 @@ class PlayerObj :
 	public GameObj
 {
 public:
-	virtual void Init();
+	PlayerObj();
 
 	virtual void Display();
 

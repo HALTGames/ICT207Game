@@ -1,8 +1,8 @@
 #include "PlayerObj.h"
 
-void PlayerObj::Init()
+PlayerObj::PlayerObj()
 {
-	model.LoadModel("../../models/display.obj");
+	model.LoadModel("./models/frame.obj");
 	collidableType = "Player";
 	position = Vector3(0.0, 0.0, 0.0);
 	angle = 0.0;
@@ -10,7 +10,9 @@ void PlayerObj::Init()
 
 void PlayerObj::Display()
 {
+	glPushMatrix();
 	GameObj::Display();
+	glPopMatrix();
 }
 
 void PlayerObj::Update()
