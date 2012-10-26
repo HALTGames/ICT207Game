@@ -21,6 +21,7 @@ enum WorldEnum {
 
 void SwitchWorld(WorldEnum newWorld);
 void Display(void);
+void Idle(void);
 void Keyboard(unsigned char key, int x, int y);
 void Mouse(int button, int state, int mouseX, int mouseY);
 void Reshape(int w, int h);
@@ -28,6 +29,9 @@ void MovementKeys(int key, int x, int y);
 void ReleaseKey(int key, int x, int y);
 void ReleaseKeys(unsigned char key, int x, int y);
 void MouseMove(int x, int y);
+
+//void timer(int n);
+
 
 World* currentWorld = NULL;
 
@@ -56,9 +60,12 @@ int main(int argc, char** argv)
 	glutKeyboardUpFunc (ReleaseKeys);
 	glutKeyboardFunc(Keyboard);
 	glutDisplayFunc(Display);
-	glutIdleFunc(Display);
+	glutIdleFunc(Idle);
 	glutMouseFunc(Mouse);
 	glutReshapeFunc(Reshape);
+
+	//int fps = 60;
+	//glutTimerFunc(100, timer, fps);
 
 	glutMainLoop();
 
@@ -87,6 +94,11 @@ void SwitchWorld(WorldEnum newWorld)
 void Display(void)
 {
 	currentWorld->Display();
+}
+
+void Idle(void)
+{
+	currentWorld->Idle();
 }
 
 void Keyboard(unsigned char key, int x, int y)
@@ -126,3 +138,9 @@ void MouseMove(int x, int y)
 {
 	currentWorld->MouseMove(x, y);
 }
+
+/*void timer(int n)
+{
+	glutPostRedisplay();
+	glutTimerFunc(1000/n, timer, n);
+}*/

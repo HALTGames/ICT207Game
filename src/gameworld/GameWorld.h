@@ -27,6 +27,7 @@ public:
 	virtual void Init();
 	virtual void Reshape(int w, int h);
 	virtual void Display();
+	virtual void Idle();
 	virtual void Keyboard(unsigned char key, int keyX, int keyY);
 	virtual void Mouse(int button, int state, int mouseX, int mouseY);
 	virtual void MovementKeys(int key, int x, int y);
@@ -37,6 +38,8 @@ public:
 	void UpdateObjects() const;
 
 	void AddObject(GameObj* obj);
+
+	GameObj* GetObject(int idnum);
 
 	void RemoveObject(int idnum);
 private:
@@ -53,6 +56,9 @@ private:
 	int currentTime;
 	int previousTime;
 	double fps;
+
+	int lastdrawn;
+
 
 	bool left, right, forward, back;
 };

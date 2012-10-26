@@ -126,6 +126,11 @@ void ShaysWorld::Display()
 	glutSwapBuffers();
 }
 
+void ShaysWorld::Idle()
+{
+	glutPostRedisplay();
+}
+
 void ShaysWorld::Reshape(int w, int h)
 {
 	width = w;

@@ -8,7 +8,7 @@ GameWorld::GameWorld(void)
 	currentTime = 0;
 	previousTime = 0;
 	fps = 0;
-
+	lastdrawn = 0;
 
 	level.LoadModel("./models/island.obj");
 
@@ -47,6 +47,8 @@ void GameWorld::Display(void)
 	CalculateFPS();
 	std::cout << fps << std::endl;
 
+	lastdrawn = glutGet(GLUT_ELAPSED_TIME);
+
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f ); 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
@@ -63,6 +65,14 @@ void GameWorld::Display(void)
 
 	glFlush();
 	glutSwapBuffers();	
+}
+
+void GameWorld::Idle()
+{
+	if(glutGet(GLUT_ELAPSED_TIME) - lastdrawn > 1000/85)
+	{
+		glutPostRedisplay();
+	}
 }
 
 void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)

@@ -1,20 +1,33 @@
-/*#pragma once
-		/**
-		 * @class GameCollision
-		 * @brief Stub Class for game collision
-		 * 
-		 * @author Hamish Carrier
-		 * @version 1.0.0 
-		 * @date 16/09/2012 
-		 *
-		 */
+#pragma once
 
-/*class GameCollision
+#include <map>
+#include <list>
+#include "../modelimporter/GameModel.h"
+#include "GameObj.h"
+
+typedef enum collidableType {
+	PLAYER,
+	ENEMY,
+	TERRAIN,
+	ENEMYPROJECTILE,
+	PLAYERPROJECTILE
+};
+
+using namespace std;
+
+typedef map<collidableType, list<GameObj*> > collisionMap;
+
+
+class GameCollision
 {
 public:
 	GameCollision(void);
 	~GameCollision(void);
 
-	//bool Collision();
+	bool AddCollidable(collidableType type, GameObj* obj);
+
+	bool CollidesWith(CollisionSphere* sphere, collidableType type);
+
+	bool RemoveCollidable(collidableType type, int objectNum);
 };
-*/
+

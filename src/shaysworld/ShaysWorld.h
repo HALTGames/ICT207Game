@@ -31,6 +31,8 @@ public:
 	// display functions
 	virtual void Display();
 
+	virtual void Idle();
+
 	virtual void Reshape(int w, int h);
 
 	virtual void Keyboard(unsigned char key, int x, int y);
@@ -42,9 +44,7 @@ public:
 
 	virtual void Mouse(int button, int state, int x, int y);
 
-	virtual void MouseMove(int x, int y);
-
-				
+	virtual void MouseMove(int x, int y);		
 private:
 	GLdouble movementSpeed;
 	GLdouble rotationSpeed;
