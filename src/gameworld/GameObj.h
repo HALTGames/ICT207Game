@@ -64,16 +64,6 @@ public:
 	virtual void Display();
 
 	/**
-	 * \brief Whether or not the object is shown.
-	 *
-	 * Returns whether or not this GameObj is on the screen at the current 
-	 * time.
-	 *
-	 * \retval whether or not this object is on the screen
-	 */
-	bool IsOnScreen() const;
-
-	/**
 	 * \brief Sets the model.
 	 *
 	 * Sets the model associated with this game object. This is the model that

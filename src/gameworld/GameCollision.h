@@ -5,6 +5,8 @@
 #include "../modelimporter/GameModel.h"
 #include "GameObj.h"
 
+using namespace std;
+
 typedef enum collidableType {
 	PLAYER,
 	ENEMY,
@@ -13,10 +15,13 @@ typedef enum collidableType {
 	PLAYERPROJECTILE
 };
 
-using namespace std;
+//typedef list<GameObj*> gameObjList;
+//typedef gameObjList::iterator ItrGameObj;
+//typedef gameObjList::const_iterator CItrGameObj;
 
-typedef map<collidableType, list<GameObj*> > collisionMap;
-
+//typedef map<collidableType, gameObjList > collisionMap;
+//typedef collisionMap::iterator ItrCollMap;
+//typedef collisionMap::const_iterator CItrCollMap;
 
 class GameCollision
 {
@@ -24,10 +29,16 @@ public:
 	GameCollision(void);
 	~GameCollision(void);
 
-	bool AddCollidable(collidableType type, GameObj* obj);
+	static bool AddCollidable(collidableType type, GameObj* obj);
 
-	bool CollidesWith(CollisionSphere* sphere, collidableType type);
+	static bool CollidesWith(CollisionSphere* sphere, collidableType type);
 
-	bool RemoveCollidable(collidableType type, int objectNum);
+	static bool RemoveCollidable(collidableType type, int objectNum);
+
+private:
+	//static collisionMap objCollision;
+
+	static bool CheckCollision(CollisionSphere* sphere1, 
+								CollisionSphere* sphere2);
 };
 

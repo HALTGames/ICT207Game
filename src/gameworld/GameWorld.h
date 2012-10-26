@@ -59,6 +59,5 @@ private:
 
 	int lastdrawn;
 
-
 	bool left, right, forward, back;
 };

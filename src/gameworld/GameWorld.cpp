@@ -129,22 +129,22 @@ void GameWorld::PlayerMovement()
 {
 	if(left)
 	{
-		player->ChangePosition(Vector3(0.0, 0.0, -0.01));
+		player->ChangePosition(Vector3(0.0, 0.0, -0.1));
 	}
 
 	if(right)
 	{
-		player->ChangePosition(Vector3(0.0, 0.0, 0.01));
+		player->ChangePosition(Vector3(0.0, 0.0, 0.1));
 	}
 
 	if(forward)
 	{
-		player->ChangePosition(Vector3(0.01, 0.0, 0.0));
+		player->ChangePosition(Vector3(0.1, 0.0, 0.0));
 	}
 
 	if(back)
 	{
-		player->ChangePosition(Vector3(-0.01, 0.0, 0.0));
+		player->ChangePosition(Vector3(-0.1, 0.0, 0.0));
 	}
 }
 

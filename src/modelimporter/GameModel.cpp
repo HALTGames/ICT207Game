@@ -47,7 +47,7 @@ void GameModel::DrawSphere()
 	
 	glPushMatrix();
 		glTranslatef(sphere->center.x, sphere->center.y, sphere->center.z);
-		glutWireSphere(sphere->radius, 8, 8);
+		glutWireSphere(10 * sphere->radius, 8, 8);
 	glPopMatrix();
 }
 
@@ -65,8 +65,8 @@ bool GameModel::CreateCollisionSphere()
 		GLfloat z = mod->vertices[i * 3 + 2];
 
 		if(minx > x) minx = x;
-		if(miny > y) miny = y;
 		if(minz > z) minz = z;
+		if(miny > y) miny = y;
 
 		if(maxx < x) maxx = x;
 		if(maxy < y) maxy = y;

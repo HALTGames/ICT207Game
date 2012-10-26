@@ -44,14 +44,6 @@ void GameObj::Display()
 
 //-----------------------------------------------------------------------------
 
-bool GameObj::IsOnScreen() const
-{
-	// still trying to figure out a way to do this
-	return true;
-}
-
-//-----------------------------------------------------------------------------
-
 bool GameObj::SetModel(char* modelFile)
 {
 	return model.LoadModel(modelFile);
