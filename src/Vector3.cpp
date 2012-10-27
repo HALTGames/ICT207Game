@@ -2,9 +2,9 @@
 
 void Vector3::Set( const double X, const double Y, const double Z)
 {
-    x = X;
-    y = Y;
-    z = Z;
+	x = X;
+	y = Y;
+	z = Z;
 }
 
 //-----------------------------------------------------------------------------
@@ -112,9 +112,9 @@ Vector3 Vector3::Cross(const Vector3& other) const
 {
 	Vector3 crossProduct;
 
-    crossProduct.x = y * other.z - z * other.y;
-    crossProduct.y = z * other.x - x * other.z;
-    crossProduct.z = x * other.y - y * other.x;
+	crossProduct.x = y * other.z - z * other.y;
+	crossProduct.y = z * other.x - x * other.z;
+	crossProduct.z = x * other.y - y * other.x;
 
-    return crossProduct;
+	return crossProduct;
 }

@@ -6,6 +6,8 @@ PlayerObj::PlayerObj()
 	collidableType = "Player";
 	position = Vector3(0.0, 0.0, 0.0);
 	angle = 0.0;
+
+	GameCollision::AddCollidable(PLAYER, this);
 }
 
 void PlayerObj::Display()
@@ -13,8 +15,9 @@ void PlayerObj::Display()
 	glPushMatrix();
 	GameObj::Display();
 	glPopMatrix();
-}
 
-void PlayerObj::Update()
-{
+	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
+	{
+		std::cout << "Collision with terrain" << std::endl;
+	}
 }

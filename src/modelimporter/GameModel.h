@@ -2,7 +2,7 @@
 
 //-----------------------------------------------------------------------------
 
-#include <assert.h>
+#include <iostream>
 #include "model.h"
 #include "../Vector3.h"
 
@@ -16,7 +16,7 @@ struct CollisionSphere
 	CollisionSphere():center(Vector3()), radius(1) {}
 	CollisionSphere(Vector3 cen, double rad):center(cen), radius(rad) {}
 
-	void TranslateSphere(Vector3 move) { center += move; }
+	void SetCenter(Vector3 cen) { center = cen; }
 	void ScaleSphere(double scale) { radius *= scale; }
 };
 
@@ -74,6 +74,8 @@ public:
 	virtual bool DrawModel();
 
 	void DrawSphere();
+
+	CollisionSphere* GetCollisionSphere();
 private:
 	CollisionSphere* sphere;
 

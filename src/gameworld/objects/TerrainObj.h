@@ -1,15 +1,13 @@
 #pragma once
 
-#include <iostream>
-#include "..\gameobj.h"
+#include "..\GameObj.h"
 #include "..\GameCollision.h"
 
-class PlayerObj :
+class TerrainObj :
 	public GameObj
 {
 public:
-	PlayerObj();
+	TerrainObj();
 
 	virtual void Display();
 };
-

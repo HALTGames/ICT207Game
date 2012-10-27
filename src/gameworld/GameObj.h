@@ -160,6 +160,7 @@ public:
 	 */
 	int GetIdentificationNumber() const;
 
+	CollisionSphere* GetCollisionSphere();
 protected:
 	Vector3 position; /**< the current position of the object */
 	GameModel model; /**< the model of the game object */

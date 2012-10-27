@@ -6,6 +6,8 @@ int GameObj::numObjects = 0;
 
 GameObj::GameObj(void)
 {
+	identificationNumber = numObjects;
+	++numObjects;
 }
 
 //-----------------------------------------------------------------------------
@@ -68,6 +70,8 @@ void GameObj::SetPosition(const Vector3 pos)
 void GameObj::ChangePosition(const Vector3 pos)
 {
 	position += pos;
+
+	model.GetCollisionSphere()->SetCenter(position);
 }
 
 //-----------------------------------------------------------------------------
@@ -110,4 +114,9 @@ int GameObj::GetAngle() const
 int GameObj::GetIdentificationNumber() const
 {
 	return identificationNumber;
+}
+
+CollisionSphere* GameObj::GetCollisionSphere()
+{
+	return model.GetCollisionSphere();
 }

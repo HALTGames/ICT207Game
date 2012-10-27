@@ -140,6 +140,8 @@
     <ClCompile Include="gameworld\objects\Bird.cpp" />
     <ClCompile Include="gameworld\objects\BirdStates.cpp" />
     <ClCompile Include="gameworld\objects\PlayerObj.cpp" />
+    <ClCompile Include="gameworld\objects\ProjectileObj.cpp" />
+    <ClCompile Include="gameworld\objects\TerrainObj.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="modelimporter\GameModel.cpp" />
     <ClCompile Include="modelimporter\glm.cpp" />
@@ -175,6 +177,8 @@
     <ClInclude Include="gameworld\objects\Bird.h" />
     <ClInclude Include="gameworld\objects\BirdStates.h" />
     <ClInclude Include="gameworld\objects\PlayerObj.h" />
+    <ClInclude Include="gameworld\objects\ProjectileObj.h" />
+    <ClInclude Include="gameworld\objects\TerrainObj.h" />
     <ClInclude Include="GlobalVars.h" />
     <ClInclude Include="modelimporter\GameModel.h" />
     <ClInclude Include="modelimporter\glm.h" />

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <map>
 #include <list>
 #include "../modelimporter/GameModel.h"
@@ -15,13 +16,13 @@ typedef enum collidableType {
 	PLAYERPROJECTILE
 };
 
-//typedef list<GameObj*> gameObjList;
-//typedef gameObjList::iterator ItrGameObj;
-//typedef gameObjList::const_iterator CItrGameObj;
+typedef list<GameObj*> objList;
+typedef objList::iterator ItrObjList;
+typedef objList::const_iterator CItrObjList;
 
-//typedef map<collidableType, gameObjList > collisionMap;
-//typedef collisionMap::iterator ItrCollMap;
-//typedef collisionMap::const_iterator CItrCollMap;
+typedef map<collidableType, objList > collisionMap;
+typedef collisionMap::iterator ItrCollMap;
+typedef collisionMap::const_iterator CItrCollMap;
 
 class GameCollision
 {
@@ -36,7 +37,7 @@ public:
 	static bool RemoveCollidable(collidableType type, int objectNum);
 
 private:
-	//static collisionMap objCollision;
+	static collisionMap objCollision;
 
 	static bool CheckCollision(CollisionSphere* sphere1, 
 								CollisionSphere* sphere2);

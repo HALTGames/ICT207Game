@@ -15,6 +15,9 @@ GameWorld::GameWorld(void)
 	player = new PlayerObj;
 	AddObject(player);
 
+	TerrainObj* terrain = new TerrainObj;
+	AddObject(terrain);
+
 	left = right = forward = back = false;
 }
 
@@ -45,7 +48,7 @@ void GameWorld::Reshape(int w, int h)
 void GameWorld::Display(void)
 {
 	CalculateFPS();
-	std::cout << fps << std::endl;
+	//std::cout << fps << std::endl;
 
 	lastdrawn = glutGet(GLUT_ELAPSED_TIME);
 

@@ -144,6 +144,12 @@
     <ClCompile Include="UserInterface.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
+    <ClCompile Include="gameworld\objects\TerrainObj.cpp">
+      <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\objects\ProjectileObj.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -244,6 +250,12 @@
     </ClInclude>
     <ClInclude Include="UserInterface.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\TerrainObj.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\ProjectileObj.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

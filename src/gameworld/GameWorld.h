@@ -12,6 +12,7 @@
 #include "../modelimporter/TerrainModel.h"
 
 #include "objects\PlayerObj.h"
+#include "objects\TerrainObj.h"
 
 typedef map<int, GameObj*> MapGameObj;
 typedef MapGameObj::iterator ItrGameObj;
