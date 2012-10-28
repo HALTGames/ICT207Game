@@ -12,7 +12,8 @@ void AIObject::SetVector(Vector3 New, Vector3 other)
 	//cout<<New.z-other.z<<"\n";
 	temp = sqrt((New.x-other.x)*(New.x-other.x) + (New.y-other.y)*(New.y-other.y) + (New.z-other.z)*(New.z-other.z));
 	
-	
+	if(temp>0.1)
+	{
 	Direction.x = (New.x-other.x)/temp;
 	Direction.y = (New.y-other.y)/temp;
 	Direction.z = (New.z-other.z)/temp;
@@ -20,7 +21,15 @@ void AIObject::SetVector(Vector3 New, Vector3 other)
 	Direction.x = Direction.x*MaxSpeed;
 	Direction.y = Direction.y*MaxSpeed;
 	Direction.z = Direction.z*MaxSpeed;
+	}
+	else
+	{
+		Direction.x = 0;
+		Direction.y = 0;
+		Direction.z = 0;
+	}
 
+	
 	
 
 	
