@@ -20,7 +20,7 @@ void BirdSeek::Enter(Bird* bird)
 void BirdSeek::Execute(Bird* bird)
 {
 	std::cout<<"Execute seek function called \n";
-	bird->SetVector(bird->PlayerPos - bird->GetPosition());
+	bird->SetVector(bird->SetPlayerPos - bird->GetPosition());
 
 	bird->Move();
 

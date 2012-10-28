@@ -43,6 +43,12 @@
     <Filter Include="Source Files\GameWorld\Objects">
       <UniqueIdentifier>{2cd03d2c-7f35-4620-b7db-389443c4464d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\GameWorld\Behaviours">
+      <UniqueIdentifier>{788c81af-e899-4f2c-9c07-aafc6e123d14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameWorld\Behaviours">
+      <UniqueIdentifier>{44b8c6cb-7401-4c59-8a67-dcf73b7aabd6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -135,9 +141,6 @@
     <ClCompile Include="gameworld\objects\Bird.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="gameworld\objects\BirdStates.cpp">
-      <Filter>Source Files\GameWorld\Objects</Filter>
-    </ClCompile>
     <ClCompile Include="gameworld\objects\PlayerObj.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
@@ -149,6 +152,12 @@
     </ClCompile>
     <ClCompile Include="gameworld\objects\ProjectileObj.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seek.cpp">
+      <Filter>Source Files\GameWorld\Behaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\objects\AIObject.cpp">
+      <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -242,9 +251,6 @@
     <ClInclude Include="gameworld\objects\Bird.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="gameworld\objects\BirdStates.h">
-      <Filter>Header Files\GameWorld\Objects</Filter>
-    </ClInclude>
     <ClInclude Include="gameworld\objects\PlayerObj.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
     </ClInclude>
@@ -256,6 +262,18 @@
     </ClInclude>
     <ClInclude Include="gameworld\objects\ProjectileObj.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\State.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\StateMachine.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\AIObject.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Seek.h">
+      <Filter>Header Files\GameWorld\Behaviours</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
