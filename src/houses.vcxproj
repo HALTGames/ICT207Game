@@ -130,6 +130,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="gamemenu\MenuWorld.cpp" />
+    <ClCompile Include="gamemenu\RAWTexture.cpp" />
     <ClCompile Include="gameworld\Behaviours\Seek.cpp" />
     <ClCompile Include="gameworld\GameCamera.cpp" />
     <ClCompile Include="gameworld\GameCollision.cpp" />
@@ -168,6 +170,8 @@
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="gamemenu\MenuWorld.h" />
+    <ClInclude Include="gamemenu\RAWTexture.h" />
     <ClInclude Include="gameworld\Behaviours\Seek.h" />
     <ClInclude Include="gameworld\GameCamera.h" />
     <ClInclude Include="gameworld\GameCollision.h" />

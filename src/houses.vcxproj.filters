@@ -150,14 +150,20 @@
     <ClCompile Include="gameworld\objects\TerrainObj.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="gameworld\objects\ProjectileObj.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="gameworld\objects\AIObject.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
     <ClCompile Include="gameworld\Behaviours\Seek.cpp">
       <Filter>Source Files\GameWorld\Behaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="gamemenu\MenuWorld.cpp">
+      <Filter>Source Files\GameMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\objects\ProjectileObj.cpp">
+      <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="gamemenu\RAWTexture.cpp">
+      <Filter>Source Files\GameMenu</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -260,9 +266,6 @@
     <ClInclude Include="gameworld\objects\TerrainObj.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="gameworld\objects\ProjectileObj.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="gameworld\StateMachine.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
@@ -274,6 +277,15 @@
     </ClInclude>
     <ClInclude Include="gameworld\State.h">
       <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gamemenu\MenuWorld.h">
+      <Filter>Header Files\GameMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\ProjectileObj.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gamemenu\RAWTexture.h">
+      <Filter>Header Files\GameMenu</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

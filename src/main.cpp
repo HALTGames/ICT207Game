@@ -63,6 +63,7 @@ int main(int argc, char** argv)
 	glutIdleFunc(Idle);
 	glutMouseFunc(Mouse);
 	glutReshapeFunc(Reshape);
+	glutPassiveMotionFunc(MouseMove);
 
 	//int fps = 60;
 	//glutTimerFunc(100, timer, fps);
