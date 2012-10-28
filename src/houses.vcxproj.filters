@@ -153,11 +153,11 @@
     <ClCompile Include="gameworld\objects\ProjectileObj.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Seek.cpp">
-      <Filter>Source Files\GameWorld\Behaviours</Filter>
-    </ClCompile>
     <ClCompile Include="gameworld\objects\AIObject.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\Behaviours\Seek.cpp">
+      <Filter>Source Files\GameWorld\Behaviours</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -263,17 +263,17 @@
     <ClInclude Include="gameworld\objects\ProjectileObj.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gameworld\State.h">
-      <Filter>Header Files\GameWorld</Filter>
-    </ClInclude>
     <ClInclude Include="gameworld\StateMachine.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
     <ClInclude Include="gameworld\objects\AIObject.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Seek.h">
+    <ClInclude Include="gameworld\Behaviours\Seek.h">
       <Filter>Header Files\GameWorld\Behaviours</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\State.h">
+      <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

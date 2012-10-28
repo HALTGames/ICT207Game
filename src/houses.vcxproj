@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="gameworld\Behaviours\Seek.cpp" />
     <ClCompile Include="gameworld\GameCamera.cpp" />
     <ClCompile Include="gameworld\GameCollision.cpp" />
     <ClCompile Include="gameworld\GameObj.cpp" />
@@ -149,7 +150,6 @@
     <ClCompile Include="modelimporter\Model.cpp" />
     <ClCompile Include="modelimporter\TerrainModel.cpp" />
     <ClCompile Include="modelimporter\Texture.cpp" />
-    <ClCompile Include="Seek.cpp" />
     <ClCompile Include="shaysworld\AABB.CPP" />
     <ClCompile Include="shaysworld\AABBLinkedList.cpp" />
     <ClCompile Include="shaysworld\AABBNode.cpp" />
@@ -168,6 +168,7 @@
     <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="gameworld\Behaviours\Seek.h" />
     <ClInclude Include="gameworld\GameCamera.h" />
     <ClInclude Include="gameworld\GameCollision.h" />
     <ClInclude Include="gameworld\GameObj.h" />
@@ -188,7 +189,6 @@
     <ClInclude Include="modelimporter\Model.h" />
     <ClInclude Include="modelimporter\TerrainModel.h" />
     <ClInclude Include="modelimporter\texture.h" />
-    <ClInclude Include="Seek.h" />
     <ClInclude Include="shaysworld\AABB.H" />
     <ClInclude Include="shaysworld\AABBLinkedList.h" />
     <ClInclude Include="shaysworld\AABBNode.h" />

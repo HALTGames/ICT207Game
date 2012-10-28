@@ -27,7 +27,9 @@ public:
 
 	void update()const
 	{
+		
 		if(CurrentState) CurrentState->Execute(Owner);
+		
 	}
 
 

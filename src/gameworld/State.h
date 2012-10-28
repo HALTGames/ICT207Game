@@ -1,5 +1,5 @@
- #ifndef State_AI
- #define State_AI
+ #ifndef STATE_AI
+ #define STATE_AI
 
 template<class entity_type>
 class State

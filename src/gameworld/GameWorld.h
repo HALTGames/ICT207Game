@@ -1,7 +1,7 @@
 #pragma once
 
 #define GLUT_DISABLE_ATEXIT_HACK
-
+#include "objects\Bird.h"
 #include <map>
 #include <GL\freeglut.h>
 #include <GL\freeglut_ext.h>
@@ -47,6 +47,9 @@ private:
 	MapGameObj objects;
 	GameCamera camera;
 	PlayerObj* player;
+
+	Bird *AI;
+
 	void PlayerMovement();
 
 	TerrainModel level;

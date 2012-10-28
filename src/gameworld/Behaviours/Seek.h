@@ -1,10 +1,11 @@
 #ifndef SEEK_H
 #define SEEK_H
 
-#include "gameworld\State.h"
-#include "gameworld\objects\AIObject.h"
+#include "../State.h"
+#include "../objects/AIObject.h"
 #include <iostream>
 
+//class Bird;
 
 class Seek: public State<AIObject>
 {

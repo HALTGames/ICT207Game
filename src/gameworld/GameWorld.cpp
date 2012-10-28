@@ -1,5 +1,8 @@
 #include "GameWorld.h"
+#include <time.h>
 
+int minuser =0;
+time_t seconds;
 float back = 0.0;
 
 GameWorld::GameWorld(void)
@@ -17,6 +20,12 @@ GameWorld::GameWorld(void)
 
 	TerrainObj* terrain = new TerrainObj;
 	AddObject(terrain);
+
+	AI = new Bird;
+	AddObject(AI);
+	
+
+
 
 	left = right = forward = back = false;
 }
@@ -58,6 +67,10 @@ void GameWorld::Display(void)
 	camera.Render(player->GetPosition());
 
 	PlayerMovement();
+
+	
+	
+	
 
 	glPushMatrix();
 		glScalef(30.0, 30.0, 30.0);
@@ -190,6 +203,24 @@ void GameWorld::MouseMove(int x, int y)
 
 void GameWorld::UpdateObjects() const
 {
+	//cout<<"AIUPDATE \n";
+	
+	seconds = time(NULL);
+	
+	
+	//if(seconds-minuser>1)
+	//{
+	//minuser = seconds;
+	AI->Update(player->GetPosition());
+	//cout<<AI->GetDirection().x<<"\n";
+	//cout<<AI->GetDirection().y<<"\n";
+	//cout<<AI->GetDirection().z<<"\n";
+	cout<<AI->GetPosition().x<<"\n";
+	cout<<AI->GetPosition().y<<"\n";
+	cout<<AI->GetPosition().z<<"\n";
+	AI->ChangePosition(AI->GetDirection());
+	//}
+	
 	for(CItrGameObj itr = objects.begin(); itr != objects.end(); itr++)
 	{
 		(itr->second)->Display();

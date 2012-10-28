@@ -2,7 +2,8 @@
 
 //#include "State.h"
 #include "../StateMachine.h"
-#include "BirdStates.h"
+#include "../Behaviours/Seek.h"
+
 
 
 class Bird: public AIObject
@@ -11,7 +12,7 @@ private:
 	
 	
 		
-	StateMachine<Bird>* ThisStateMachine;
+	StateMachine<AIObject>* ThisStateMachine;
 	double temp;
 
 
@@ -27,9 +28,9 @@ public:
 	{
 	
 		Health =100;
-		MaxSpeed =10;
-	 ThisStateMachine = new StateMachine<Bird>(this);
-	 ThisStateMachine->SetCurrentState(BirdSeek::Instance());
+		MaxSpeed =0.0001;
+	 ThisStateMachine = new StateMachine<AIObject>(this);
+	 ThisStateMachine->SetCurrentState(Seek::Instance());
 
 
 	}
