@@ -203,23 +203,10 @@ void GameWorld::MouseMove(int x, int y)
 
 void GameWorld::UpdateObjects() const
 {
-	//cout<<"AIUPDATE \n";
 	
-	seconds = time(NULL);
-	
-	
-	//if(seconds-minuser>1)
-	//{
-	//minuser = seconds;
 	AI->Update(player->GetPosition());
-	//cout<<AI->GetDirection().x<<"\n";
-	//cout<<AI->GetDirection().y<<"\n";
-	//cout<<AI->GetDirection().z<<"\n";
-	cout<<AI->GetPosition().x<<"\n";
-	cout<<AI->GetPosition().y<<"\n";
-	cout<<AI->GetPosition().z<<"\n";
-	AI->ChangePosition(AI->GetDirection());
-	//}
+	//AI->ChangePosition(AI->GetDirection());
+	
 	
 	for(CItrGameObj itr = objects.begin(); itr != objects.end(); itr++)
 	{

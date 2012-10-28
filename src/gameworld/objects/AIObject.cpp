@@ -29,7 +29,7 @@ void AIObject::SetVector(Vector3 New, Vector3 other)
 void  AIObject::Move()
 {
 	//cout<< Direction.x<<"    Move \n";
-	//ChangePosition(Direction);
+	ChangePosition(Direction);
 //	position.x = position.x + Direction.x;
 //	position.y = position.y + Direction.y;
 //	position.z = position.z + Direction.z;
