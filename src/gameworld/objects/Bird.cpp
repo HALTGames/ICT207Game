@@ -7,7 +7,7 @@ Bird::Bird()
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
-	Health =100;
+	Health =500;
 	MaxSpeed =0.09;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(Seek::Instance());

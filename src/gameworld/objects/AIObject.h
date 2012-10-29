@@ -20,6 +20,8 @@ public:
 	void Move();
 	void SetVector(Vector3 dir, Vector3 other);
 	void Update(Vector3 PlayPos);
+	void SubtractHealth(int minus);
+	int GetHealth();
 	Vector3 GetPlayerPos();
 	Vector3 GetDirection();
 
