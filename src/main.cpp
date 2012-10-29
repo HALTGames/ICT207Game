@@ -7,7 +7,6 @@
 #include "World.h"
 #include "shaysworld\ShaysWorld.h"
 #include "gameworld\GameWorld.h"
-#include "GlobalVars.h"
 
 //-----------------------------------------------------------------------------
 
@@ -42,10 +41,7 @@ int main(int argc, char** argv)
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 
-	GAMEWIDTH = 1280;
-	GAMEHEIGHT = 960;
-
-	glutInitWindowSize(GAMEWIDTH, GAMEHEIGHT);
+	glutInitWindowSize(1280, 960);
 
 	glutCreateWindow("Window");
 
@@ -127,9 +123,6 @@ void Mouse(int button, int state, int mouseX, int mouseY)
 
 void Reshape(int w, int h)
 {
-	GAMEWIDTH = w;
-	GAMEHEIGHT = h;
-
 	currentWorld->Reshape(w, h);
 }
 
