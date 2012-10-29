@@ -108,26 +108,26 @@ void GameWorld::GUI(void)
 		glEnd();
 		glDisable(GL_TEXTURE_2D);
 	glPopMatrix();
-	//healthbar - multiply the negative x components by gethealth()/100
+	//healthbar - multiply the positive x components by gethealth()/100
 	glPushMatrix();
 	glColor3f (1.0F, 0.0F, 0.0F); 
 	glTranslatef(-0.7, 0.5, 0);
 	glBegin(GL_QUADS);
 		glVertex3f(-0.1,-0.1,-0.1);
 		glVertex3f(-0.1,0.1,-0.1);
-		glVertex3f(0.1,0.1,-0.1);
-		glVertex3f(0.1,-0.1,-0.1);
+		glVertex3f((0.2*Character.GetHealth()/100),0.1,-0.1);
+		glVertex3f((0.2*Character.GetHealth()/100),-0.1,-0.1);
 		glEnd();
 	glPopMatrix();
-	//manabar- multiply the negative x components by getmana()/100
+	//manabar- multiply the positive x components by getmana()/100
 	glPushMatrix();
 	glColor3f (0.0F, 0.0F, 1.0F); 
 	glTranslatef(-0.7, 0.2, 0);
 	glBegin(GL_QUADS);
 		glVertex3f(-0.1,-0.1,-0.1);
 		glVertex3f(-0.1,0.1,-0.1);
-		glVertex3f(0.1,0.1,-0.1);
-		glVertex3f(0.1,-0.1,-0.1);
+		glVertex3f((0.2*Character.GetMana()/100),0.1,-0.1);
+		glVertex3f((0.2*Character.GetMana()/100),-0.1,-0.1);
 		glEnd();
 	glPopMatrix();
 	glutSwapBuffers ();

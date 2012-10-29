@@ -17,7 +17,7 @@ public:
 	int GetMana() const {return Mana;}
 
 private:
-	int Health;
-	int Mana;
+	static int Health;
+	static int Mana;
 };
 
