@@ -12,13 +12,10 @@
 const int winIdMain = 1;                                       /* Main Window handle         */
 const int winIdSub = 2;                                        /* Sub-Window handle          */
 int exitIdSub;
+bool loaded;
 //int MenuOn = 1;
 
-void CreateParticle(int i);
-void EvolveParticle();
-void DrawObjects();
-void Display();
-void GUI();
+
 
 GLuint texture;
 
@@ -36,6 +33,12 @@ const int maxparticle = 1000;
 
 PARTICLE particle[maxparticle];
 
+void CreateParticle(int i);
+void EvolveParticle();
+void DrawObjects();
+void Display();
+void GUI();
+
 void Init()
 {
 	srand(time(0));
@@ -49,13 +52,17 @@ void LoadGLTextures()									// Load Bitmaps And Convert To Textures
 		"UIfinal.png",
 		SOIL_LOAD_AUTO,
 		SOIL_CREATE_NEW_ID,
-		SOIL_FLAG_INVERT_Y
+		SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
 		);
 
 	// Typical Texture Generation Using Data From The Bitmap
 	glBindTexture(GL_TEXTURE_2D, texture);
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
+	if( 0 == texture )
+	{
+		printf( "SOIL loading error: '%s'\n", SOIL_last_result() );
+	}
 
 };
 
@@ -89,9 +96,11 @@ subReshape (int w, int h)
  void Idle()
 {
 	glutSetWindow (winIdMain); 
-	glutPostRedisplay (); 
+	glutPostRedisplay ();
+
 	glutSetWindow (winIdSub); 
-	glutPostRedisplay (); 
+	glutPostRedisplay ();
+
 }
 
 int main(int argc, char** argv)
@@ -105,10 +114,11 @@ int main(int argc, char** argv)
 	glutInitWindowSize(GAMEWIDTH, GAMEHEIGHT);
 	Init();
 	glutCreateWindow("Window");
-
+		loaded = false;
 	//glutReshapeFunc (mainReshape); 
-	glutIdleFunc(Idle);
+	texture = 0;
 
+	glutIdleFunc(Idle);
 	glEnable(GL_TEXTURE_2D);
 	glShadeModel(GL_SMOOTH);
 	glClearDepth(1.0f);
@@ -159,9 +169,13 @@ void GUI()
 	glutSetWindow(winIdSub);
 	glClearColor (0.25, 0.25, 0.25, 0.0); 
 	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
-
-
-	LoadGLTextures();
+	std::cout << texture;
+	std::getchar();
+	if(texture == 0)
+	{
+		std::cout << "Loading Texture";
+		LoadGLTextures();
+	}
 	glEnable(GL_TEXTURE_2D);
 	glShadeModel(GL_SMOOTH);
 	glClearDepth(1.0f);
