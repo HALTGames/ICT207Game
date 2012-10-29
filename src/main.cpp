@@ -67,6 +67,10 @@ int main(int argc, char** argv)
 		glutCreateSubWindow (1, 200, 810, 880, 150); //(1, 200, 810, 880, 150); 
 		glutDisplayFunc(GUI);
 	}
+	else
+	{
+		glutDestroyWindow(2);
+	}
 
 	//int fps = 60;
 	//glutTimerFunc(100, timer, fps);
