@@ -53,6 +53,7 @@ void GameWorld::Reshape(int w, int h)
 
 void GameWorld::Display(void)
 {
+	glutSetWindow(1);
 	CalculateFPS();
 	//std::cout << fps << std::endl;
 
@@ -75,6 +76,35 @@ void GameWorld::Display(void)
 
 	glFlush();
 	glutSwapBuffers();	
+}
+
+
+void GameWorld::GUI(void)
+{
+	glutSetWindow(2);
+	glClearColor (0.25, 0.25, 0.25, 0.0); 
+	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
+	glEnable(GL_TEXTURE_2D);
+	glShadeModel(GL_SMOOTH);
+	glClearDepth(1.0f);
+	glEnable(GL_DEPTH_TEST);
+
+	//glBindTexture(GL_TEXTURE_2D, texture);
+	glPushMatrix();
+	glLoadIdentity();
+	glBegin(GL_QUADS);
+		glTexCoord2f(0.0,0.0);
+		glVertex2f(-1.0f,-1.0f);
+		glTexCoord2f(0.0,1.0);
+		glVertex2f(-1.0f,1.0f);
+		glTexCoord2f(1.0,1.0);
+		glVertex2f(1.0f,1.0f);
+		glTexCoord2f(1.0,0.0);
+		glVertex2f(1.0f,-1.0f);
+		glEnd();
+		glDisable(GL_TEXTURE_2D);
+	glPopMatrix();
+	glutSwapBuffers ();
 }
 
 void GameWorld::Idle()

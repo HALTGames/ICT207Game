@@ -131,6 +131,11 @@ void ShaysWorld::Idle()
 	glutPostRedisplay();
 }
 
+void ShaysWorld::GUI()
+{
+	//do nothing
+}
+
 void ShaysWorld::Reshape(int w, int h)
 {
 	width = w;

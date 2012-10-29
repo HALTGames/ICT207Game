@@ -36,6 +36,7 @@ public:
 	virtual void ReleaseKey(int key, int x, int y);
 	virtual void ReleaseKeys(unsigned char key, int x, int y);
 	virtual void MouseMove(int x, int y);
+	virtual void GUI();
 
 	void UpdateObjects() const;
 	void CreateAI();

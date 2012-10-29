@@ -29,10 +29,11 @@ void MovementKeys(int key, int x, int y);
 void ReleaseKey(int key, int x, int y);
 void ReleaseKeys(unsigned char key, int x, int y);
 void MouseMove(int x, int y);
+void GUI(void);
 
 //void timer(int n);
 
-
+bool Game;
 World* currentWorld = NULL;
 
 int main(int argc, char** argv)
@@ -41,8 +42,8 @@ int main(int argc, char** argv)
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 
-	GAMEWIDTH = 800;
-	GAMEHEIGHT = 600;
+	GAMEWIDTH = 1280;
+	GAMEHEIGHT = 960;
 
 	glutInitWindowSize(GAMEWIDTH, GAMEHEIGHT);
 
@@ -65,6 +66,12 @@ int main(int argc, char** argv)
 	glutReshapeFunc(Reshape);
 	glutPassiveMotionFunc(MouseMove);
 
+	if(Game)
+	{
+		//glutCreateSubWindow (1, 200, 810, 880, 150); 
+		//glutDisplayFunc(GUI);
+	}
+
 	//int fps = 60;
 	//glutTimerFunc(100, timer, fps);
 
@@ -82,11 +89,17 @@ void SwitchWorld(WorldEnum newWorld)
 
 	switch (newWorld) {
 		case SHAYSWORLD:
+			{
 			currentWorld = new ShaysWorld();
+			Game = false;
 			break;
+			}
 		case GAMEWORLD:
+			{
 			currentWorld = new GameWorld();
+			Game = true;
 			break;
+			}
 	}
 
 	currentWorld->Init();
@@ -138,6 +151,11 @@ void ReleaseKeys(unsigned char key, int x, int y)
 void MouseMove(int x, int y)
 {
 	currentWorld->MouseMove(x, y);
+}
+
+void GUI()
+{
+	currentWorld->GUI();
 }
 
 /*void timer(int n)
