@@ -153,6 +153,7 @@
     <ClCompile Include="modelimporter\Model.cpp" />
     <ClCompile Include="modelimporter\TerrainModel.cpp" />
     <ClCompile Include="modelimporter\Texture.cpp" />
+    <ClCompile Include="Particle.cpp" />
     <ClCompile Include="shaysworld\AABB.CPP" />
     <ClCompile Include="shaysworld\AABBLinkedList.cpp" />
     <ClCompile Include="shaysworld\AABBNode.cpp" />
@@ -195,6 +196,7 @@
     <ClInclude Include="modelimporter\Model.h" />
     <ClInclude Include="modelimporter\TerrainModel.h" />
     <ClInclude Include="modelimporter\texture.h" />
+    <ClInclude Include="Particle.h" />
     <ClInclude Include="shaysworld\AABB.H" />
     <ClInclude Include="shaysworld\AABBLinkedList.h" />
     <ClInclude Include="shaysworld\AABBNode.h" />
