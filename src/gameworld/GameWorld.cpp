@@ -36,7 +36,7 @@ void GameWorld::Init(void)
 	srand(time(0));
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
-//	TextureLoad.LoadTexture(1, "textures/UIfinal.png");
+	//TextureLoad.LoadTexture(1, "textures/UIfinal.png");
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -89,21 +89,44 @@ void GameWorld::GUI(void)
 	glShadeModel(GL_SMOOTH);
 	glClearDepth(1.0f);
 	glEnable(GL_DEPTH_TEST);
-
-	//glBindTexture(GL_TEXTURE_2D, TextureLoad.GetTexture(1));
-	glPushMatrix();
 	glLoadIdentity();
+//	glBindTexture(GL_TEXTURE_2D, TextureLoad.GetTexture(1));
+	glPushMatrix();
+
+	glColor3f (1.0F, 1.0F, 1.0F); 
 	glBegin(GL_QUADS);
 		glTexCoord2f(0.0,0.0);
-		glVertex2f(-1.0f,-1.0f);
+		glVertex3f(-1.0f,-1.0f,0);
 		glTexCoord2f(0.0,1.0);
-		glVertex2f(-1.0f,1.0f);
+		glVertex3f(-1.0f,1.0f,0);
 		glTexCoord2f(1.0,1.0);
-		glVertex2f(1.0f,1.0f);
+		glVertex3f(1.0f,1.0f,0);
 		glTexCoord2f(1.0,0.0);
-		glVertex2f(1.0f,-1.0f);
+		glVertex3f(1.0f,-1.0f,0);
 		glEnd();
 		glDisable(GL_TEXTURE_2D);
+	glPopMatrix();
+	//healthbar - multiply the negative x components by gethealth()/100
+	glPushMatrix();
+	glColor3f (1.0F, 0.0F, 0.0F); 
+	glTranslatef(-0.7, 0.5, 0);
+	glBegin(GL_QUADS);
+		glVertex3f(-0.1,-0.1,-0.1);
+		glVertex3f(-0.1,0.1,-0.1);
+		glVertex3f(0.1,0.1,-0.1);
+		glVertex3f(0.1,-0.1,-0.1);
+		glEnd();
+	glPopMatrix();
+	//manabar- multiply the negative x components by getmana()/100
+	glPushMatrix();
+	glColor3f (0.0F, 0.0F, 1.0F); 
+	glTranslatef(-0.7, 0.2, 0);
+	glBegin(GL_QUADS);
+		glVertex3f(-0.1,-0.1,-0.1);
+		glVertex3f(-0.1,0.1,-0.1);
+		glVertex3f(0.1,0.1,-0.1);
+		glVertex3f(0.1,-0.1,-0.1);
+		glEnd();
 	glPopMatrix();
 	glutSwapBuffers ();
 }

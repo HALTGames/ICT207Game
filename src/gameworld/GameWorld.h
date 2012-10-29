@@ -14,7 +14,7 @@
 #include "objects\PlayerObj.h"
 #include "objects\TerrainObj.h"
 #include <list>
-//#include "../TextureLoader.h"
+#include "../TextureLoader.h"
 
 typedef map<int, GameObj*> MapGameObj;
 typedef MapGameObj::iterator ItrGameObj;
@@ -56,7 +56,7 @@ private:
 	list<Bird*> BirdList;
 
 	Bird *AIBird;
-	//TextureLoad TextureLoad;
+	TextureLoader TextureLoad;
 
 	void PlayerMovement();
 
