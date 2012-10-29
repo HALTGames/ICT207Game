@@ -168,6 +168,9 @@
     <ClCompile Include="SoundControl\sounds.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -292,6 +295,9 @@
     </ClInclude>
     <ClInclude Include="SoundControl\sounds.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
