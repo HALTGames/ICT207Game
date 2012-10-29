@@ -68,8 +68,8 @@ int main(int argc, char** argv)
 
 	if(Game)
 	{
-		//glutCreateSubWindow (1, 200, 810, 880, 150); 
-		//glutDisplayFunc(GUI);
+		glutCreateSubWindow (1, 200, 810, 880, 150); 
+		glutDisplayFunc(GUI);
 	}
 
 	//int fps = 60;

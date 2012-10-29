@@ -36,6 +36,7 @@ void GameWorld::Init(void)
 	srand(time(0));
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
+//	TextureLoad.LoadTexture(1, "textures/UIfinal.png");
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -89,7 +90,7 @@ void GameWorld::GUI(void)
 	glClearDepth(1.0f);
 	glEnable(GL_DEPTH_TEST);
 
-	//glBindTexture(GL_TEXTURE_2D, texture);
+	//glBindTexture(GL_TEXTURE_2D, TextureLoad.GetTexture(1));
 	glPushMatrix();
 	glLoadIdentity();
 	glBegin(GL_QUADS);
