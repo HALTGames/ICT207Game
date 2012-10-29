@@ -15,7 +15,7 @@ public:
 
 	void LoadTexture(int i, std::string Name);
 
-	Gluint GetTexture(int i) const {return Texture[i];}
+	GLuint GetTexture(int i) const {return Texture[i];}
 
 private:
 	GLuint Texture[100];
