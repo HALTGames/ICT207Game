@@ -171,6 +171,7 @@
     <ClCompile Include="TextureLoader.cpp" />
     <ClCompile Include="UserInterface.cpp" />
     <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="WorldManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gamemenu\MenuWorld.h" />
@@ -214,6 +215,7 @@
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="Vector3.h" />
     <ClInclude Include="World.h" />
+    <ClInclude Include="WorldManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
