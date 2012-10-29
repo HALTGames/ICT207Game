@@ -1,39 +1,44 @@
-#include "../GameObj.h"
+#include "AIObject.h"
+
 //#include "State.h"
 #include "../StateMachine.h"
-#include "AlligatorStates.h"
+#include "../Behaviours/Seek.h"
 
 
-class Alligator: public GameObj
+
+class Alligator: public AIObject
 {
 private:
-	int Health;
-	float MaxSpeed;
-	float MaxForce;
+	
+	
+		
+	StateMachine<AIObject>* ThisStateMachine;
 	double temp;
-	StateMachine<Alligator>* ThisStateMachine;
 
 
 
 public:
 	//void Init();
 	
-	~Alligator(){delete ThisStateMachine;}
-	void SetVector(Vector3 New);
-	void Move();
-	Vector3 PlayerPos;
-	Vector3 Direction;
-	
 	void Update(Vector3 PlayPos);
+	~Alligator(){delete ThisStateMachine;}
 	Alligator();
 
-	Alligator(const Vector3 pos, char* modelFile, const string collideType):GameObj(pos, modelFile, collideType), Health(400), MaxSpeed(1), MaxForce(10)
+	Alligator(const Vector3 pos, char* modelFile, const string collideType):AIObject(pos, modelFile, collideType)
 	{
 	
-	 ThisStateMachine = new StateMachine<Alligator>(this);
-	 ThisStateMachine->SetCurrentState(AlligatorSeek::Instance());
+		Health =1000;
+		MaxSpeed =0.0001;
+	 ThisStateMachine = new StateMachine<AIObject>(this);
+	 ThisStateMachine->SetCurrentState(Seek::Instance());
 
 
 	}
+
+		Alligator &operator=(const Alligator &rhs);
+
+      int operator==(const Alligator &rhs) const;
+
+      int operator<(const Alligator &rhs) const;
 
 };

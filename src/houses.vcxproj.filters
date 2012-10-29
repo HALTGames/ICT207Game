@@ -135,9 +135,6 @@
     <ClCompile Include="gameworld\objects\Alligator.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="gameworld\objects\AlligatorStates.cpp">
-      <Filter>Source Files\GameWorld\Objects</Filter>
-    </ClCompile>
     <ClCompile Include="gameworld\objects\Bird.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
@@ -255,9 +252,6 @@
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
     <ClInclude Include="gameworld\objects\Alligator.h">
-      <Filter>Header Files\GameWorld\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="gameworld\objects\AlligatorStates.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
     </ClInclude>
     <ClInclude Include="gameworld\objects\Bird.h">
