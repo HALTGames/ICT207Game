@@ -7,7 +7,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <iostream>
+#include <vector>
 #include "SOIL.h"
+#include <string>
 
 const int winIdMain = 1;                                       /* Main Window handle         */
 const int winIdSub = 2;                                        /* Sub-Window handle          */
@@ -47,9 +49,12 @@ void Init()
 void LoadGLTextures()									// Load Bitmaps And Convert To Textures
 {
 	/* load an image file directly as a new OpenGL texture */
+	std::string Name = "UIfinal.png";
+	std::vector<char> chars(Name.c_str(), Name.c_str() + Name.size() + 1u); 
+	
 	texture = SOIL_load_OGL_texture
-		(
-		"UIfinal.png",
+	(
+	&chars[0],
 		SOIL_LOAD_AUTO,
 		SOIL_CREATE_NEW_ID,
 		SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
@@ -259,3 +264,51 @@ void DrawObjects()
     }
 	EvolveParticle();
 }
+
+
+
+/*
+int main(int argc, char** argv)
+{
+	// OpenGL Initialisation
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
+
+	GAMEWIDTH = 800;
+	GAMEHEIGHT = 600;
+
+	glutInitWindowSize(GAMEWIDTH, GAMEHEIGHT);
+
+	glutCreateWindow("Window");
+
+	// Start World
+	SwitchWorld(GAMEWORLD);
+
+	currentWorld->Init();
+	
+	// Set Callbacks
+	glutIgnoreKeyRepeat(1);
+	glutSpecialFunc(MovementKeys);
+	glutSpecialUpFunc(ReleaseKey);
+	glutKeyboardUpFunc (ReleaseKeys);
+	glutKeyboardFunc(Keyboard);
+	glutDisplayFunc(Display);
+	glutIdleFunc(Idle);
+	glutMouseFunc(Mouse);
+	glutReshapeFunc(Reshape);
+	glutPassiveMotionFunc(MouseMove);
+
+	//int fps = 60;
+	//glutTimerFunc(100, timer, fps);
+
+	//create subwindow only if gameworld
+	glutCreateSubWindow (winIdMain, 200, 810, 880, 150); 
+	glutDisplayFunc (GUI);
+
+	glutMainLoop();
+
+	return 0;
+}
+
+
+*/
