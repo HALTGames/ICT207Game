@@ -20,13 +20,13 @@ sounds::sounds()
 	itr = 0;
 
 	result = FMOD::System_Create(&system);
-    ERRCHECK(result);
+   // ERRCHECK(result);
 
     result = system->getVersion(&version);
-    ERRCHECK(result);
+   // ERRCHECK(result);
 
     result = system->init(32, FMOD_INIT_NORMAL, 0);
-    ERRCHECK(result);
+   // ERRCHECK(result);
        
 }
 
@@ -43,7 +43,7 @@ void sounds::addSound(const char *filename, string name)
 {
 	result = system->createSound(filename, FMOD_HARDWARE, 0, &sounds1[itr]);
 	names[itr] = name;
-    ERRCHECK(result);
+    //ERRCHECK(result);
 	itr++;
 }
 
@@ -67,12 +67,11 @@ void sounds::SoundMenu()
 
 
 	
-
-    result = system->createSound("../media/testing.m3u", FMOD_DEFAULT, 0, &playlist);
-    ERRCHECK(result);
+	  result = system->createSound("Media/testing.m3u", FMOD_DEFAULT, 0, &playlist);
+  //  ERRCHECK(result);
 
     result = playlist->getFormat(&soundtype, 0, 0, 0);
-    ERRCHECK(result);
+    //ERRCHECK(result);
 
     isplaylist = (soundtype == FMOD_SOUND_TYPE_PLAYLIST);
 
@@ -83,15 +82,15 @@ void sounds::SoundMenu()
             Get the first song in the playlist, create the sound and then play it.
         */
         result = playlist->getTag("FILE", count, &tag);
-        ERRCHECK(result);
+       // ERRCHECK(result);
 
-        sprintf(file, "../media/%s", (char *)tag.data);
+        sprintf(file, "Media/%s", (char *)tag.data);
 
         result = system->createSound(file, FMOD_DEFAULT, 0, &sound);
-        ERRCHECK(result);
+        //ERRCHECK(result);
 
         result = system->playSound(FMOD_CHANNEL_FREE, sound, false, &channel);
-        ERRCHECK(result);
+       // ERRCHECK(result);
 
         playlist->getTag("TITLE", count, &tag);
         title = (char *)tag.data;
@@ -108,14 +107,15 @@ void sounds::SoundMenu()
         sound = playlist;
 
         result = sound->setMode(FMOD_LOOP_NORMAL);
-        ERRCHECK(result);
+        //ERRCHECK(result);
 
         result = system->playSound(FMOD_CHANNEL_FREE, sound, false, &channel);
-        ERRCHECK(result);
+       // ERRCHECK(result);
     }
 
-    printf("\n");
+    //printf("\n");
 
+  
     
 
 	  
@@ -162,13 +162,13 @@ void sounds::loopmain()
                 {
                     printf("playing next song in playlist...\n");
 
-                    sprintf(file, "../media/%s", (char *)tag.data);
+                    sprintf(file, "Media/%s", (char *)tag.data);
 
                     result = system->createSound(file, FMOD_DEFAULT, 0, &sound);
-                    ERRCHECK(result);
+                   // ERRCHECK(result);
 
                     result = system->playSound(FMOD_CHANNEL_FREE, sound, false, &channel);
-                    ERRCHECK(result);
+                   // ERRCHECK(result);
 
                     playlist->getTag("TITLE", count, &tag);
                     title = (char *)tag.data;
@@ -216,42 +216,7 @@ void sounds::loopmain()
         }
 		*/
 
-        system->update();
-
-        {
-            unsigned int ms = 0;
-            unsigned int lenms = 0;
-            bool         paused = 0;
-
-            if (channel)
-            {
-                if (sound)
-                {
-                    result = sound->getLength(&lenms, FMOD_TIMEUNIT_MS);
-                    if ((result != FMOD_OK) && (result != FMOD_ERR_INVALID_HANDLE) && (result != FMOD_ERR_CHANNEL_STOLEN))
-                    {
-                        ERRCHECK(result);
-                    }
-                }
-
-                result = channel->getPaused(&paused);
-                if ((result != FMOD_OK) && (result != FMOD_ERR_INVALID_HANDLE) && (result != FMOD_ERR_CHANNEL_STOLEN))
-                {
-                    ERRCHECK(result);
-                }
-
-                result = channel->getPosition(&ms, FMOD_TIMEUNIT_MS);
-                if ((result != FMOD_OK) && (result != FMOD_ERR_INVALID_HANDLE) && (result != FMOD_ERR_CHANNEL_STOLEN))
-                {
-                    ERRCHECK(result);
-                }
-            }
-
-          //  printf("Time %02d:%02d:%02d/%02d:%02d:%02d : %s : %s\r", ms / 1000 / 60, ms / 1000 % 60, ms / 10 % 100, lenms / 1000 / 60, lenms / 1000 % 60, lenms / 10 % 100, paused ? "Paused " : "Playing ", title);
-
-        }
-
-        Sleep(10);
+       
 
     
 }

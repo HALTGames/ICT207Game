@@ -7,6 +7,7 @@ float back = 0.0;
 
 GameWorld::GameWorld(void)
 {
+	SoundController.SoundMenu();
 	frameCount = 0;
 	currentTime = 0;
 	previousTime = 0;
@@ -54,6 +55,7 @@ void GameWorld::Reshape(int w, int h)
 
 void GameWorld::Display(void)
 {
+	SoundController.loopmain();
 	glutSetWindow(1);
 	CalculateFPS();
 	//std::cout << fps << std::endl;
@@ -180,7 +182,10 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 	{
 		camera.ChangeBehind(-2);
 	}
-
+	if(Key == 'm')
+	{
+		SoundController.PausePlaySoundTrack();
+	}
 	glutPostRedisplay();
 }
 
@@ -210,6 +215,7 @@ void GameWorld::PlayerMovement()
 	{
 		player->ChangePosition(Vector3(-0.1, 0.0, 0.0));
 	}
+
 }
 
 void GameWorld::MovementKeys(int key, int x, int y)

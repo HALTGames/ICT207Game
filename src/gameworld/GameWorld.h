@@ -15,6 +15,7 @@
 #include "objects\TerrainObj.h"
 #include <list>
 #include "../TextureLoader.h"
+#include "../SoundControl/sounds.h"
 
 typedef map<int, GameObj*> MapGameObj;
 typedef MapGameObj::iterator ItrGameObj;
@@ -50,6 +51,7 @@ public:
 
 	void RemoveObject(int idnum);
 private:
+	sounds SoundController;
 	MapGameObj objects;
 	GameCamera camera;
 	PlayerObj* player;
