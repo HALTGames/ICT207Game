@@ -4,6 +4,7 @@
 #include "../State.h"
 #include "../objects/AIObject.h"
 #include <iostream>
+#include <time.h>
 
 //class Bird;
 
@@ -11,6 +12,7 @@ class Seek: public State<AIObject>
 {
 private:
 	Seek(){}
+	int seconds;
 	//may need copy constructer, assignment operator and destructer here
 
 public:

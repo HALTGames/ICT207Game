@@ -1,6 +1,7 @@
 #ifndef AI_OBJECT_H
 #define AI_OBJECT_H
 #include "../GameObj.h"
+#include "../StateMachine.h"
 //#include "../Behaviours/Seek.h"
 
 
@@ -8,19 +9,26 @@
 class AIObject: public GameObj
 {
 protected:
+	StateMachine<AIObject>* ThisStateMachine;
 	int Health;
 	double MaxSpeed;
 	Vector3 PlayerPos;
 	Vector3 Direction;
 	double temp;
+	
+	
 private:
+//
 
 public:
+	int seconds;
+	StateMachine<AIObject>*  GetFSM()const{return ThisStateMachine;}
 	AIObject();
 	void Move();
 	void SetVector(Vector3 dir, Vector3 other);
 	void Update(Vector3 PlayPos);
 	void SubtractHealth(int minus);
+	bool Check();
 	int GetHealth();
 	Vector3 GetPlayerPos();
 	Vector3 GetDirection();

@@ -1,3 +1,5 @@
+#ifndef STATE_MACHINE_H
+#define STATE_MACHINE_H
 #include "State.h"
 
 
@@ -62,3 +64,5 @@ public:
 
 
 };
+
+#endif

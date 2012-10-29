@@ -17,19 +17,15 @@ void Seek::Enter(AIObject* AI)
 
 void Seek::Execute(AIObject* AI)
 {
-	//std::cout<<"Execute seek function called \n";
-	
-	
-	//cout<<AI->GetPosition().x<<"\n";
-	//cout<<AI->GetPosition().x<<"\n";
-	//cout<<AI->GetPosition().y<<"\n";
-	//cout<<AI->GetPosition().z<<"\n";
-
+	if(time(NULL) > AI->seconds+1)
+	{
 	AI->SetVector(AI->GetPlayerPos(),  AI->GetPosition());
-	//cout<<AI->GetPosition().x<<"\n";
 	AI->Move();
-	
-
+	if(AI->Check())
+	{
+		AI->seconds = time(NULL);
+	}
+	}
 
 }
 

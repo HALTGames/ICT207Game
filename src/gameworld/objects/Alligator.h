@@ -1,7 +1,7 @@
 #include "AIObject.h"
 
 //#include "State.h"
-#include "../StateMachine.h"
+//#include "../StateMachine.h"
 #include "../Behaviours/Seek.h"
 
 
@@ -12,7 +12,7 @@ private:
 	
 	
 		
-	StateMachine<AIObject>* ThisStateMachine;
+	//StateMachine<AIObject>* ThisStateMachine;
 	double temp;
 
 
@@ -21,7 +21,7 @@ public:
 	//void Init();
 	
 	void Update(Vector3 PlayPos);
-	~Alligator(){delete ThisStateMachine;}
+	~Alligator(){/*delete ThisStateMachine;*/}
 	Alligator();
 
 	Alligator(const Vector3 pos, char* modelFile, const string collideType):AIObject(pos, modelFile, collideType)
@@ -29,8 +29,8 @@ public:
 	
 		Health =1000;
 		MaxSpeed =0.0001;
-	 ThisStateMachine = new StateMachine<AIObject>(this);
-	 ThisStateMachine->SetCurrentState(Seek::Instance());
+	 //ThisStateMachine = new StateMachine<AIObject>(this);
+	// ThisStateMachine->SetCurrentState(Seek::Instance());
 
 
 	}

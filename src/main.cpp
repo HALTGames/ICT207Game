@@ -68,7 +68,7 @@ int main(int argc, char** argv)
 
 	if(Game)
 	{
-		glutCreateSubWindow (1, 200, 810, 880, 150); 
+		glutCreateSubWindow (1, 0, 0, 0, 0); //(1, 200, 810, 880, 150); 
 		glutDisplayFunc(GUI);
 	}
 
