@@ -3,8 +3,8 @@
 #include <conio.h>
 #include <string>
 
-#include "fmod.hpp"
-#include "fmod_errors.h"
+#include "../inc/fmod.hpp"
+#include "../inc/fmod_errors.h"
 
 using namespace std;
 

@@ -33,7 +33,6 @@ public:
 
 private:
 	GLuint Texture[100];
-	GLuint X;
 };
 
 #endif
