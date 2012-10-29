@@ -128,7 +128,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <SubSystem>Console</SubSystem>
       <OutputFile>.\Release\houses.exe</OutputFile>
-      <AdditionalDependencies>fmodex_vc.lib;Soil.lib;odbc32.lib;odbccp32.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>fmodex_vc.lib;SOIL.lib;odbc32.lib;odbccp32.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
