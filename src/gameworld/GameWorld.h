@@ -16,7 +16,7 @@
 #include <list>
 #include "../TextureLoader.h"
 #include "../SoundControl/sounds.h"
-#include "../Character.h"
+#include "objects\PlayerObj.h"
 
 typedef map<int, GameObj*> MapGameObj;
 typedef MapGameObj::iterator ItrGameObj;
@@ -64,7 +64,7 @@ private:
 	void PlayerMovement();
 
 	TerrainModel level;
-	Character Character;
+	PlayerObj Character;
 
 	void CalculateFPS();
 	double elapsedTime;
