@@ -31,3 +31,4 @@ void  Alligator::Move()
 {
 	GameObj::position += Direction;
 }
+

@@ -39,8 +39,10 @@ GameWorld::~GameWorld(void)
 
 void GameWorld::Init(void)
 {
+	srand(time(0));
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
+
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -248,18 +250,33 @@ void GameWorld::CreateAI()
 	seconds = time(NULL);
 	if(seconds>minuser+10)
 	{
+	Vector3 Placement;
+	
+	Placement.x = (rand() %40)-20 ;
+	Placement.y = 0;
+	Placement.z = (rand() %40)-20 ;
 	minuser = seconds;
 	AIBird = new Bird;
+	AIBird->SetPosition(Placement);
 	BirdList.push_back(AIBird);
+	//delete AIBird;
 	}
 
 
 	list<Bird*>::iterator itr;
 	for(itr=BirdList.begin(); itr != BirdList.end(); ++itr)
 	{
+		(*itr)->SubtractHealth(1);
 		(*itr)->Update(player->GetPosition());
 		(*itr)->Display();
+		if((*itr)->GetHealth() < 0)
+		{
+			itr = BirdList.erase(itr);
+		}
+
 	}
+
+	
 	//AIBird->Update(player->GetPosition());
 	//AIBird->Display();
 	//AI->ChangePosition(AI->GetDirection());

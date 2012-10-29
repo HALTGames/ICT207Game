@@ -101,3 +101,13 @@ int AIObject::operator<(const AIObject &rhs) const
    return 0;
 
 }
+
+void AIObject::SubtractHealth(int minus)
+{
+	Health -= minus;
+}
+
+int AIObject::GetHealth()
+{
+	return Health;
+}
