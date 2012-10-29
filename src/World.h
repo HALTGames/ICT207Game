@@ -13,6 +13,6 @@ public:
 	virtual void MovementKeys(int key, int x, int y) {};
 	virtual void ReleaseKey(int key, int x, int y) {};
 	virtual void ReleaseKeys(unsigned char key, int x, int y) {};
-	virtual void MouseMove(int x, int y) {};
+	virtual void MouseMove(int x, int y) {}; 
 };
 

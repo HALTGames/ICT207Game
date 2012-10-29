@@ -38,9 +38,6 @@ private:
 	void MenuDown();
 	void MenuUp();
 
-	GLuint LoadTexture(const char * filename, int width, int height);
-	void FreeTexture( GLuint texture );
-
 	GLuint texture; // stores the current texture being used
 
 	int windowWidth;//window width
