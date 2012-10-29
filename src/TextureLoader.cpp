@@ -1,6 +1,5 @@
 #include "TextureLoader.h"
 
-
 TextureLoader::TextureLoader(void)
 {
 }
@@ -10,9 +9,9 @@ TextureLoader::~TextureLoader(void)
 {
 }
 
-void TextureLoader::LoadTexture(int i, std::string Name)
+/*void TextureLoader::LoadTexture(int i, std::string Name)
 {
-	/*std::vector<char> chars(Name.c_str(), Name.c_str() + Name.size() + 1u); 
+	std::vector<char> chars(Name.c_str(), Name.c_str() + Name.size() + 1u); 
 	
 	Texture[i] = SOIL_load_OGL_texture
 	(
@@ -23,5 +22,6 @@ void TextureLoader::LoadTexture(int i, std::string Name)
 	);
 	glBindTexture(GL_TEXTURE_2D, Texture[i]);
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);*/
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
 }
+*/
