@@ -21,13 +21,7 @@ GameWorld::GameWorld(void)
 	TerrainObj* terrain = new TerrainObj;
 	AddObject(terrain);
 
-
-	
-	
-
 	//AddObject(AIBird);
-
-
 
 	left = right = forward = back = false;
 }
@@ -42,7 +36,6 @@ void GameWorld::Init(void)
 	srand(time(0));
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
-
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -71,10 +64,6 @@ void GameWorld::Display(void)
 	camera.Render(player->GetPosition());
 
 	PlayerMovement();
-
-	
-	
-	
 
 	glPushMatrix();
 		glScalef(30.0, 30.0, 30.0);
