@@ -14,7 +14,7 @@
 const int winIdMain = 1;                                       /* Main Window handle         */
 const int winIdSub = 2;                                        /* Sub-Window handle          */
 int exitIdSub;
-bool loaded;
+//bool loaded;
 //int MenuOn = 1;
 
 
@@ -49,12 +49,12 @@ void Init()
 void LoadGLTextures()									// Load Bitmaps And Convert To Textures
 {
 	/* load an image file directly as a new OpenGL texture */
-	std::string Name = "UIfinal.png";
-	std::vector<char> chars(Name.c_str(), Name.c_str() + Name.size() + 1u); 
+	//std::string Name = "UIfinal.png";
+	//std::vector<char> chars(Name.c_str(), Name.c_str() + Name.size() + 1u); 
 	
 	texture = SOIL_load_OGL_texture
 	(
-	&chars[0],
+	"UIfinal.png",
 		SOIL_LOAD_AUTO,
 		SOIL_CREATE_NEW_ID,
 		SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
@@ -119,7 +119,7 @@ int main(int argc, char** argv)
 	glutInitWindowSize(GAMEWIDTH, GAMEHEIGHT);
 	Init();
 	glutCreateWindow("Window");
-		loaded = false;
+//		loaded = false;
 	//glutReshapeFunc (mainReshape); 
 	texture = 0;
 
@@ -174,13 +174,13 @@ void GUI()
 	glutSetWindow(winIdSub);
 	glClearColor (0.25, 0.25, 0.25, 0.0); 
 	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
-	std::cout << texture;
-	std::getchar();
-	if(texture == 0)
-	{
-		std::cout << "Loading Texture";
+	//std::cout << texture;
+	//std::getchar();
+	//if(texture == 0)
+	//{
+		//std::cout << "Loading Texture";
 		LoadGLTextures();
-	}
+	//}
 	glEnable(GL_TEXTURE_2D);
 	glShadeModel(GL_SMOOTH);
 	glClearDepth(1.0f);
