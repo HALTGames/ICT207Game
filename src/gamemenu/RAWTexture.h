@@ -10,7 +10,7 @@ public:
 	RAWTexture(void);
 	~RAWTexture(void);
 
-	GLuint LoadTexture(const char* filename, int width, int height);
-	void FreeTexture(GLuint texture);
+	static GLuint LoadTexture(const char* filename, int width, int height);
+	static void FreeTexture(GLuint texture);
 };
 

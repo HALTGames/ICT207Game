@@ -153,24 +153,24 @@ void MenuWorld::DrawMenu()
 {
 		glPushMatrix();
 		//Load our texture
-		texture = LoadTexture( "textures/start_icon_alpha.raw", 256, 256 );
+		texture = RAWTexture::LoadTexture( "textures/start_icon_alpha.raw", 256, 256 );
 		glColor4f(1,1,1,1);
 		glTranslatef(-1,-1,0);
 		DrawBox();
 
-		texture = LoadTexture( "textures/settings_icon_alpha.raw", 256, 256 );
+		texture = RAWTexture::LoadTexture( "textures/settings_icon_alpha.raw", 256, 256 );
 		glTranslatef(0,-menuDist,0);
 		DrawBox();
 
-		texture = LoadTexture( "textures/help_icon_alpha.raw", 256, 256 );
+		texture = RAWTexture::LoadTexture( "textures/help_icon_alpha.raw", 256, 256 );
 		glTranslatef(0,-menuDist,0);
 		DrawBox();
 
-		texture = LoadTexture( "textures/exit_icon_alpha.raw", 256, 256 );
+		texture = RAWTexture::LoadTexture( "textures/exit_icon_alpha.raw", 256, 256 );
 		glTranslatef(0,-menuDist,0);
 		DrawBox();
 		//Free our texture
-		FreeTexture( texture );
+		RAWTexture::FreeTexture( texture );
 	glPopMatrix();
 	
 	glPushMatrix();
@@ -201,9 +201,9 @@ void MenuWorld::DrawMenu()
 	glPushMatrix();
 		glColor4f(1,1,1,1);
 		glTranslatef(-1.4,0.4,0);
-		texture = LoadTexture( "textures/banner_alpha.raw", 512, 512 );
+		texture = RAWTexture::LoadTexture( "textures/banner_alpha.raw", 512, 512 );
 		DrawBanner();
-		FreeTexture( texture );
+		RAWTexture::FreeTexture( texture );
 	glPopMatrix();
 }
 
@@ -219,7 +219,7 @@ void MenuWorld::DrawBanner()
 
 void MenuWorld::DrawSelectionBox()
 {
-	texture = LoadTexture( "textures/select_icon_alpha.raw", 256, 256 );
+	texture = RAWTexture::LoadTexture( "textures/select_icon_alpha.raw", 256, 256 );
 	glBegin(GL_POLYGON);
 		glTexCoord3f(0,1,0); glVertex3fv(p1);
 		glTexCoord3f(1,1,0); glVertex3fv(p5);
@@ -233,7 +233,7 @@ void MenuWorld::DrawSelectionBox()
 		glTexCoord3f(0,1,0); glVertex3fv(p6);
 		glTexCoord3f(1,1,0); glVertex3fv(p7);
 	glEnd();
-	FreeTexture( texture );
+	RAWTexture::FreeTexture( texture );
 }
 
 void MenuWorld::DrawBox()

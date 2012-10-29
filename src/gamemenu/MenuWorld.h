@@ -8,6 +8,8 @@
 #include <GL\freeglut.h>
 #include "../world.h"
 
+#include "RAWTexture.h"
+
 typedef GLfloat point[3];//Point in 3d space
 
 class MenuWorld :
