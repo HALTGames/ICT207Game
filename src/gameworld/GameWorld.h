@@ -13,6 +13,7 @@
 
 #include "objects\PlayerObj.h"
 #include "objects\TerrainObj.h"
+#include <list>
 
 typedef map<int, GameObj*> MapGameObj;
 typedef MapGameObj::iterator ItrGameObj;
@@ -37,6 +38,9 @@ public:
 	virtual void MouseMove(int x, int y);
 
 	void UpdateObjects() const;
+	void CreateAI();
+	/// may get moved to a class
+	
 
 	void AddObject(GameObj* obj);
 
@@ -47,8 +51,10 @@ private:
 	MapGameObj objects;
 	GameCamera camera;
 	PlayerObj* player;
+	list<Bird*> BirdList;
 
-	Bird *AI;
+	Bird *AIBird;
+
 
 	void PlayerMovement();
 

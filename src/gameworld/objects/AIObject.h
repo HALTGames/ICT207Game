@@ -22,6 +22,13 @@ public:
 	void Update(Vector3 PlayPos);
 	Vector3 GetPlayerPos();
 	Vector3 GetDirection();
+
+	AIObject &operator=(const AIObject &rhs);
+
+      int operator==(const AIObject &rhs) const;
+
+      int operator<(const AIObject &rhs) const;
+
 	
 	//void SetHealth(int health);
 	//void SetMaxSpeed(float speed);

@@ -21,9 +21,11 @@ GameWorld::GameWorld(void)
 	TerrainObj* terrain = new TerrainObj;
 	AddObject(terrain);
 
-	AI = new Bird;
-	AddObject(AI);
+
 	
+	
+
+	//AddObject(AIBird);
 
 
 
@@ -78,6 +80,7 @@ void GameWorld::Display(void)
 	glPopMatrix();
 
 	UpdateObjects();
+	CreateAI();
 
 	glFlush();
 	glutSwapBuffers();	
@@ -204,8 +207,8 @@ void GameWorld::MouseMove(int x, int y)
 void GameWorld::UpdateObjects() const
 {
 	
-	AI->Update(player->GetPosition());
-	//AI->ChangePosition(AI->GetDirection());
+	
+	
 	
 	
 	for(CItrGameObj itr = objects.begin(); itr != objects.end(); itr++)
@@ -238,4 +241,29 @@ void GameWorld::CalculateFPS()
 		previousTime = currentTime;
 		frameCount = 0;
 	}
+}
+
+void GameWorld::CreateAI() 
+{
+	seconds = time(NULL);
+	if(seconds>minuser+10)
+	{
+	minuser = seconds;
+	AIBird = new Bird;
+	BirdList.push_back(AIBird);
+	}
+
+
+	list<Bird*>::iterator itr;
+	for(itr=BirdList.begin(); itr != BirdList.end(); ++itr)
+	{
+		(*itr)->Update(player->GetPosition());
+		(*itr)->Display();
+	}
+	//AIBird->Update(player->GetPosition());
+	//AIBird->Display();
+	//AI->ChangePosition(AI->GetDirection());
+	//AI = new Bird;
+	//AddObject(AI);
+
 }

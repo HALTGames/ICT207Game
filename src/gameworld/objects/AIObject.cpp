@@ -53,3 +53,51 @@ Vector3 AIObject::GetPlayerPos()
 {
 	return PlayerPos;
 }
+
+AIObject& AIObject::operator=(const AIObject &rhs)
+
+{
+
+   this->position = rhs.position;
+
+   this->Health = rhs.Health;
+
+   this->MaxSpeed = rhs.MaxSpeed;
+
+   return *this;
+
+}
+
+ 
+
+int AIObject::operator==(const AIObject &rhs) const
+
+{
+
+   if( this->Health != rhs.Health) return 0;
+
+  // if( this->y != rhs.y) return 0;
+
+  //if( this->z != rhs.z) return 0;
+
+  return 1;
+
+}
+
+ 
+
+// This function is required for built-in STL list functions like sort
+
+int AIObject::operator<(const AIObject &rhs) const
+
+{
+
+//   if( this->x == rhs.x && this->y == rhs.y && this->z < rhs.z) return 1;
+
+ //  if( this->x == rhs.x && this->y < rhs.y) return 1;
+
+   if( this->Health < rhs.Health ) return 1;
+
+   return 0;
+
+}
