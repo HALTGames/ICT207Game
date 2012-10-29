@@ -58,6 +58,8 @@
     <OutDir>.\Release</OutDir>
     <IntDir>.\Release</IntDir>
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\shaysnew\ICT207Game\src\inc;D:\shaysnew\ICT207Game\src\include\IrrSound;D:\shaysnew\ICT207Game\src\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\shaysnew\ICT207Game\src\lib;D:\shaysnew\ICT207Game\src\Win64-visualStudio;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -126,7 +128,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <SubSystem>Console</SubSystem>
       <OutputFile>.\Release\houses.exe</OutputFile>
-      <AdditionalDependencies>Soil.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Soil.lib;odbc32.lib;odbccp32.lib;fmodex_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -166,6 +168,7 @@
     <ClCompile Include="shaysworld\SoundTime.cpp" />
     <ClCompile Include="shaysworld\texturedPolygons.cpp" />
     <ClCompile Include="shaysworld\Wave.cpp" />
+    <ClCompile Include="SoundControl\sounds.cpp" />
     <ClCompile Include="TextureLoader.cpp" />
     <ClCompile Include="UserInterface.cpp" />
     <ClCompile Include="Vector3.cpp" />
@@ -208,6 +211,7 @@
     <ClInclude Include="shaysworld\SoundTime.h" />
     <ClInclude Include="shaysworld\texturedPolygons.h" />
     <ClInclude Include="shaysworld\Wave.h" />
+    <ClInclude Include="SoundControl\sounds.h" />
     <ClInclude Include="TextureLoader.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="Vector3.h" />
