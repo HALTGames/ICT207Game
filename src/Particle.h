@@ -11,7 +11,7 @@ public:
 		float r,g,b;                          // color values of the particle
 		float xpos,ypos,zpos;                 // position of the particle
 		float xspeed,yspeed,zspeed;           // speed of the particle
-		bool active;                       // is particle active or not?
+		bool active;						  // is particle active or not?
 	} PARTICLES;
 
 	Particle(void);
