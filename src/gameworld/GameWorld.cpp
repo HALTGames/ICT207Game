@@ -12,19 +12,16 @@ GameWorld::~GameWorld(void)
 void GameWorld::Init(void)
 {
 	SoundController.SoundMenu();
-	frameCount = 0;
-	currentTime = 0;
-	previousTime = 0;
-	fps = 0;
+
 	lastdrawn = 0;
 
 	level.LoadModel("./models/island.obj");
 
-	player = new PlayerObj;
-	AddObject(player);
-
 	TerrainObj* terrain = new TerrainObj;
-	AddObject(terrain);
+	objectManager.AddObject(terrain);
+
+	player = new PlayerObj;
+	objectManager.AddObject(player);
 
 	//AddObject(AIBird);
 
@@ -60,8 +57,6 @@ void GameWorld::Display(void)
 {
 	SoundController.loopmain();
 	glutSetWindow(1);
-	CalculateFPS();
-	//std::cout << fps << std::endl;
 
 	lastdrawn = glutGet(GLUT_ELAPSED_TIME);
 
@@ -77,7 +72,7 @@ void GameWorld::Display(void)
 		level.DrawModel();
 	glPopMatrix();
 
-	UpdateObjects();
+	objectManager.UpdateObjects();
 	CreateAI();
 
 	glFlush();
@@ -261,45 +256,6 @@ void GameWorld::ReleaseKeys(unsigned char key, int x, int y)
 void GameWorld::MouseMove(int x, int y)
 {
 
-}
-
-void GameWorld::UpdateObjects() const
-{
-	
-	
-	
-	
-	
-	for(CItrGameObj itr = objects.begin(); itr != objects.end(); itr++)
-	{
-		(itr->second)->Display();
-	}
-}
-
-void GameWorld::AddObject(GameObj* obj)
-{
-	objects[obj->GetIdentificationNumber()] = obj;
-}
-
-void GameWorld::RemoveObject(int idnum)
-{
-	objects.erase(idnum);
-}
-
-void GameWorld::CalculateFPS()
-{
-	frameCount++;
-
-	currentTime = glutGet(GLUT_ELAPSED_TIME);
-
-	elapsedTime = currentTime - previousTime;
-
-	if(elapsedTime > 1000)
-	{
-		fps = frameCount / (elapsedTime / 1000.0);
-		previousTime = currentTime;
-		frameCount = 0;
-	}
 }
 
 void GameWorld::CreateAI() 

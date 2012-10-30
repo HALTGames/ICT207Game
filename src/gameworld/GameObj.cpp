@@ -8,6 +8,8 @@ GameObj::GameObj(void)
 {
 	identificationNumber = numObjects;
 	++numObjects;
+
+	deleteThis = false;
 }
 
 //-----------------------------------------------------------------------------
@@ -17,6 +19,8 @@ GameObj::GameObj(const Vector3 pos, char* modelFile,
 {
 	identificationNumber = numObjects;
 	++numObjects;
+
+	deleteThis = false;
 
 	position = Vector3(0.0, 0.0, 0.0);
 	angle = 0.0f;
@@ -119,4 +123,9 @@ int GameObj::GetIdentificationNumber() const
 CollisionSphere* GameObj::GetCollisionSphere()
 {
 	return model.GetCollisionSphere();
+}
+
+bool GameObj::GetDeleteThis() const
+{
+	return deleteThis;
 }

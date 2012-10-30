@@ -162,11 +162,15 @@ public:
 	int GetIdentificationNumber() const;
 
 	CollisionSphere* GetCollisionSphere();
+
+	bool GetDeleteThis() const;
 protected:
 	Vector3 position; /**< the current position of the object */
 	GameModel model; /**< the model of the game object */
 	string collidableType; /**< the collision type */
 	int angle; /**< the current angle of the object */
+
+	bool deleteThis;
 
 private:
 	int identificationNumber; /**< identification number for the

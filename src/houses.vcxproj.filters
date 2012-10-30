@@ -171,6 +171,9 @@
     <ClCompile Include="Particle.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
+    <ClCompile Include="gameworld\GameObjManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -298,6 +301,9 @@
     </ClInclude>
     <ClInclude Include="Particle.h">
       <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\GameObjManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

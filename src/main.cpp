@@ -59,7 +59,7 @@ int main(int argc, char** argv)
 	glutReshapeFunc(Reshape);
 	glutPassiveMotionFunc(MouseMove);
 
-	/*if(Game)
+	if(current == GAMEWORLD)
 	{
 		glutCreateSubWindow (1, 200, 810, 880, 150); //(1, 200, 810, 880, 150); 
 		glutDisplayFunc(GUI);
@@ -67,7 +67,7 @@ int main(int argc, char** argv)
 	else
 	{
 		glutDestroyWindow(2);
-	}*/
+	}
 
 	//int fps = 60;
 	//glutTimerFunc(100, timer, fps);

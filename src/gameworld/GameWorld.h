@@ -1,26 +1,30 @@
 #pragma once
 
 #define GLUT_DISABLE_ATEXIT_HACK
-#include "objects\Bird.h"
-#include <map>
+
+// STL
+#include <list>
+
+// FREEGLUT
 #include <GL\freeglut.h>
 #include <GL\freeglut_ext.h>
 
+// PARENT
 #include "../World.h"
+
+// HELPER CLASSES
+#include "../modelimporter/TerrainModel.h"
 #include "GameCamera.h"
 #include "GameObj.h"
-#include "../modelimporter/TerrainModel.h"
-
-#include "objects\PlayerObj.h"
-#include "objects\TerrainObj.h"
-#include <list>
 #include "../TextureLoader.h"
 #include "../SoundControl/sounds.h"
-#include "objects\PlayerObj.h"
+#include "GameObjManager.h"
 
-typedef map<int, GameObj*> MapGameObj;
-typedef MapGameObj::iterator ItrGameObj;
-typedef MapGameObj::const_iterator CItrGameObj;
+// OBJECTS
+#include "objects\Bird.h"
+#include "objects\PlayerObj.h"
+#include "objects\TerrainObj.h"
+
 
 class GameWorld: public World
 {
@@ -41,20 +45,12 @@ public:
 	virtual void GUI();
 
 	virtual void Exit();
-
-	void UpdateObjects() const;
 	void CreateAI();
 	/// may get moved to a class
-	
-
-	void AddObject(GameObj* obj);
-
-	GameObj* GetObject(int idnum);
-
-	void RemoveObject(int idnum);
 private:
+	GameObjManager objectManager;
+
 	sounds SoundController;
-	MapGameObj objects;
 	GameCamera camera;
 	PlayerObj* player;
 	list<Bird*> BirdList;
@@ -66,13 +62,6 @@ private:
 
 	TerrainModel level;
 	PlayerObj Character;
-
-	void CalculateFPS();
-	double elapsedTime;
-	int frameCount;
-	int currentTime;
-	int previousTime;
-	double fps;
 
 	int lastdrawn;
 
