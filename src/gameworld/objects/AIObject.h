@@ -3,6 +3,7 @@
 #include "../GameObj.h"
 #include "../StateMachine.h"
 //#include "../Behaviours/Seek.h"
+#include <math.h>
 
 
 
@@ -14,7 +15,10 @@ protected:
 	double MaxSpeed;
 	Vector3 PlayerPos;
 	Vector3 Direction;
+	Vector3 Direction2;
+	Vector3 AILookDirection;
 	double temp;
+	
 	
 	
 private:
@@ -23,14 +27,17 @@ private:
 public:
 	~AIObject(){delete[] ThisStateMachine;}
 	int seconds;
+	int checker;
 	int GunSeconds;
 	StateMachine<AIObject>*  GetFSM()const{return ThisStateMachine;}
 	AIObject();
 	void Move();
 	void SetVector(Vector3 dir, Vector3 other);
+	void SetAngle(Vector3 dir, Vector3 other);
 	void Update(Vector3 PlayPos);
 	void SubtractHealth(int minus);
 	void Fire();
+	double GetMag(Vector3 pass);
 	double GetDistanceFrom();
 	int GetHealth();
 	Vector3 GetPlayerPos();

@@ -17,11 +17,12 @@ void SeekandShoot::Enter(AIObject* AI)
 
 void SeekandShoot::Execute(AIObject* AI)
 {
+	AI->SetAngle(AI->GetPlayerPos(),  AI->GetPosition());
 	if(time(NULL) > AI->seconds+1)
 	{
 	AI->SetVector(AI->GetPlayerPos(),  AI->GetPosition());
 	AI->Move();
-	if(AI->GetDistanceFrom()<2)
+	if(AI->GetDistanceFrom()<5)
 	{
 		AI->seconds = time(NULL);
 	}

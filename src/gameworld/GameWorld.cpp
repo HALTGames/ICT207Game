@@ -16,6 +16,7 @@ void GameWorld::Init(void)
 	ShooterList = new list<Shooter*>;
 	BirdList = new list<Bird*>;
 	AlligatorList = new list<Alligator*>;
+	StraferList = new list<Strafer*>;
 	SoundController = new sounds;
 	SoundController->SoundMenu();
 	SoundController->PausePlaySoundTrack();
@@ -276,7 +277,7 @@ void GameWorld::MouseMove(int x, int y)
 void GameWorld::CreateAI() 
 {
 	seconds = time(NULL);
-	if(seconds>minuser+10)
+	if(seconds>minuser+5)
 	{
 	Vector3 Placement;
 	
@@ -284,7 +285,8 @@ void GameWorld::CreateAI()
 	Placement.y = 0;
 	Placement.z = (rand() %40)-20 ;
 	minuser = seconds;
-	RandomAI = (rand() %3);
+	RandomAI = rand() %4;
+	cout<<RandomAI<<"   RANDOM AI NUM \n";
 	switch(RandomAI)
 	{
 	case 0:
@@ -316,6 +318,10 @@ void GameWorld::CreateAI()
 		}
 	case 3:
 		{
+			cout<<"StraferCreated \n";
+			AIStrafer = new Strafer;
+			AIStrafer->SetPosition(Placement);
+			StraferList->push_back(AIStrafer);
 			break;
 		}
 
@@ -364,6 +370,19 @@ void GameWorld::CreateAI()
 
 	}
 
+	list<Strafer*>::iterator itrst;
+	for(itrst=StraferList->begin(); itrst != StraferList->end(); ++itrst)
+	{
+		(*itrst)->SubtractHealth(1);
+		(*itrst)->Update(player->GetPosition());
+		(*itrst)->Display();
+		if((*itrst)->GetHealth() < 0)
+		{
+			itrst = StraferList->erase(itrst);
+		}
+
+	}
+
 	
 	//AIBird->Update(player->GetPosition());
 	//AIBird->Display();
@@ -400,6 +419,12 @@ void GameWorld::WipeAI()
 		(*itra)->Display();
 	}
 	
+	list<Strafer*>::iterator itrst;
+	for(itrst=StraferList->begin(); itrst != StraferList->end(); ++itrst)
+	{
+		itrst = StraferList->erase(itrst);
+		(*itrst)->Display();
+	}
 	
 	//WipeAI();
 
