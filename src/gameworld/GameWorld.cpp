@@ -11,8 +11,16 @@ GameWorld::~GameWorld(void)
 
 void GameWorld::Init(void)
 {
+
+	RandomAI = 0;
+	ShooterList = new list<Shooter*>;
+	BirdList = new list<Bird*>;
 	SoundController = new sounds;
 	SoundController->SoundMenu();
+	SoundController->PausePlaySoundTrack();
+
+
+
 
 	lastdrawn = 0;
 
@@ -188,9 +196,10 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 
 	if(Key == 'p')
 	{
+		currWorld = SHAYSWORLD;
+		WipeAI();
 		SoundController->StopMusic();
 		delete SoundController;
-		currWorld = SHAYSWORLD;
 	}
 	glutPostRedisplay();
 }
@@ -272,22 +281,62 @@ void GameWorld::CreateAI()
 	Placement.y = 0;
 	Placement.z = (rand() %40)-20 ;
 	minuser = seconds;
-	AIBird = new Bird;
-	AIBird->SetPosition(Placement);
-	BirdList.push_back(AIBird);
+	RandomAI = (rand() %2);
+	switch(RandomAI)
+	{
+	case 0:
+		{
+			cout<<"BirdCreated \n";
+			AIBird = new Bird;
+			AIBird->SetPosition(Placement);
+			BirdList->push_back(AIBird);
+			break;
+		}
+	case 1:
+		{
+			cout<<"ShooterCreated \n";
+			AIShooter = new Shooter;
+			AIShooter->SetPosition(Placement);
+			ShooterList->push_back(AIShooter);
+			break;
+		}
+	case 2:
+		{
+			break;
+		}
+	case 3:
+		{
+			break;
+		}
+
+	}
+	
 	//delete AIBird;
 	}
 
 
 	list<Bird*>::iterator itr;
-	for(itr=BirdList.begin(); itr != BirdList.end(); ++itr)
+	for(itr=BirdList->begin(); itr != BirdList->end(); ++itr)
 	{
 		(*itr)->SubtractHealth(1);
 		(*itr)->Update(player->GetPosition());
 		(*itr)->Display();
 		if((*itr)->GetHealth() < 0)
 		{
-			itr = BirdList.erase(itr);
+			itr = BirdList->erase(itr);
+		}
+
+	}
+
+	list<Shooter*>::iterator itrs;
+	for(itrs=ShooterList->begin(); itrs != ShooterList->end(); ++itrs)
+	{
+		(*itrs)->SubtractHealth(1);
+		(*itrs)->Update(player->GetPosition());
+		(*itrs)->Display();
+		if((*itrs)->GetHealth() < 0)
+		{
+			itrs = ShooterList->erase(itrs);
 		}
 
 	}
@@ -299,4 +348,18 @@ void GameWorld::CreateAI()
 	//AI = new Bird;
 	//AddObject(AI);
 
+}
+
+void GameWorld::WipeAI()
+{
+	
+	
+	list<Bird*>::iterator itr;
+	for(itr=BirdList->begin(); itr != BirdList->end(); ++itr)
+	{
+		itr = BirdList->erase(itr);
+		(*itr)->Display();
+	}
+
+	delete BirdList;
 }

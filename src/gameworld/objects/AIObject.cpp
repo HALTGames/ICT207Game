@@ -3,6 +3,7 @@
 AIObject::AIObject()
 {
 	seconds = 0;
+	GunSeconds = 0;
 }
 
 
@@ -113,11 +114,18 @@ int AIObject::GetHealth()
 	return Health;
 }
 
-bool AIObject::Check()
+double AIObject::GetDistanceFrom()
 {
 	temp = sqrt((PlayerPos.x-position.x)*(PlayerPos.x-position.x) + (PlayerPos.y-position.y)*(PlayerPos.y-position.y) + (PlayerPos.z-position.z)*(PlayerPos.z-position.z));
+	return temp;
+	/*
 	if(temp<0.5)
 		return true;
 	else 
-		return false;
+		return false;*/
+}
+
+void AIObject::Fire()
+{
+	cout<<"FIRING \n";
 }

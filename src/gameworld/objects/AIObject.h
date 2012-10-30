@@ -22,13 +22,15 @@ private:
 
 public:
 	int seconds;
+	int GunSeconds;
 	StateMachine<AIObject>*  GetFSM()const{return ThisStateMachine;}
 	AIObject();
 	void Move();
 	void SetVector(Vector3 dir, Vector3 other);
 	void Update(Vector3 PlayPos);
 	void SubtractHealth(int minus);
-	bool Check();
+	void Fire();
+	double GetDistanceFrom();
 	int GetHealth();
 	Vector3 GetPlayerPos();
 	Vector3 GetDirection();
