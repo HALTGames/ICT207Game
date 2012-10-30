@@ -48,7 +48,7 @@ public:
 	void CreateAI();
 	/// may get moved to a class
 private:
-	GameObjManager objectManager;
+	GameObjManager* objectManager;
 
 	sounds SoundController;
 	GameCamera camera;

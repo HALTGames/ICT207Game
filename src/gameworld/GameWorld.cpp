@@ -11,6 +11,8 @@ GameWorld::~GameWorld(void)
 
 void GameWorld::Init(void)
 {
+	objectManager = new GameObjManager;
+
 	SoundController.SoundMenu();
 
 	lastdrawn = 0;
@@ -18,10 +20,10 @@ void GameWorld::Init(void)
 	level.LoadModel("./models/island.obj");
 
 	TerrainObj* terrain = new TerrainObj;
-	objectManager.AddObject(terrain);
+	objectManager->AddObject(terrain);
 
 	player = new PlayerObj;
-	objectManager.AddObject(player);
+	objectManager->AddObject(player);
 
 	//AddObject(AIBird);
 
@@ -38,6 +40,8 @@ void GameWorld::Init(void)
 
 void GameWorld::Exit()
 {
+	delete objectManager;
+	objectManager = NULL;
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -72,7 +76,7 @@ void GameWorld::Display(void)
 		level.DrawModel();
 	glPopMatrix();
 
-	objectManager.UpdateObjects();
+	objectManager->UpdateObjects();
 	CreateAI();
 
 	glFlush();
