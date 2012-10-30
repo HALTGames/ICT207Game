@@ -21,10 +21,11 @@ void GameWorld::Init(void)
 	SoundController = new sounds;
 	SoundController->SoundMenu();
 	SoundController->PausePlaySoundTrack();
+	glEnable(GL_TEXTURE_2D);
 
 	lastdrawn = 0;
 
-	level.LoadModel("./models/island.obj");
+	//level.LoadModel("./models/island.obj");
 
 	TerrainObj* terrain = new TerrainObj;
 	objectManager->AddObject(terrain);
@@ -41,8 +42,11 @@ void GameWorld::Init(void)
 	srand(time(0));
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
-	//TextureLoad.LoadTexture(1, "textures/UIfinal.png");
-	
+	//TextureLoad.LoadTexture("textures/UIbackground.RAW",791,151,1);
+	float width, height;
+	width = 791;
+	height = 151;
+	//TextureLoad.SetTexture(glmLoadTexture("textures/UIbackground.RAW", GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE, &width, &height));
 }
 
 void GameWorld::Exit()
@@ -101,7 +105,7 @@ void GameWorld::GUI(void)
 	glClearDepth(1.0f);
 	glEnable(GL_DEPTH_TEST);
 	glLoadIdentity();
-//	glBindTexture(GL_TEXTURE_2D, TextureLoad.GetTexture(1));
+	glBindTexture(GL_TEXTURE_2D, TextureLoad.GetTexture(1));
 	glPushMatrix();
 
 	glColor3f (1.0F, 1.0F, 1.0F); 

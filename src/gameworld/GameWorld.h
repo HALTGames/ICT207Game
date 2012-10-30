@@ -1,6 +1,8 @@
 #pragma once
 
 #define GLUT_DISABLE_ATEXIT_HACK
+#ifndef GAMEWORLD_H
+#define GAMEWORLD_H
 
 // STL
 #include <list>
@@ -19,6 +21,7 @@
 #include "../TextureLoader.h"
 #include "../SoundControl/sounds.h"
 #include "GameObjManager.h"
+//#include "../modelimporter/glmimg.cpp"
 
 // OBJECTS
 #include "objects\Bird.h"
@@ -27,6 +30,7 @@
 #include "objects\PlayerObj.h"
 #include "objects\Strafer.h"
 #include "objects\TerrainObj.h"
+
 
 
 class GameWorld: public World
@@ -78,3 +82,4 @@ private:
 
 	bool left, right, forward, back;
 };
+#endif

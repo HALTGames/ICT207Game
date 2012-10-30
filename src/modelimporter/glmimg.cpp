@@ -152,3 +152,4 @@ GLuint glmLoadTexture(char *filename, GLboolean alpha, GLboolean repeat, GLboole
    
 	return tex;
 }
+
