@@ -17,7 +17,6 @@
 
 #include <GL/glut.h>
 
-
 #ifndef M_PI
 #define M_PI 3.14159265f
 #endif
@@ -311,3 +310,4 @@ glmReadPPM(char* filename, int* width, int* height);
 
 GLMgroup*
 glmFindGroup(GLMmodel* model, char* name);
+
