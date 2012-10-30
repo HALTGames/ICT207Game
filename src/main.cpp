@@ -25,12 +25,11 @@ void GUI(void);
 
 //void timer(int n);
 
-bool Game;
 World* game = new GameWorld;
 World* shays = new ShaysWorld;
 World* menu = new MenuWorld;
-World* currentWorld = shays;
-WorldEnum current = SHAYSWORLD;
+World* currentWorld = game;
+WorldEnum current = GAMEWORLD;
 
 int main(int argc, char** argv)
 {
@@ -41,9 +40,6 @@ int main(int argc, char** argv)
 	glutInitWindowSize(1280, 960);
 
 	glutCreateWindow("Window");
-
-	// Start World
-	//SwitchWorld(current);
 
 	currentWorld->Init();
 	
