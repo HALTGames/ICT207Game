@@ -25,7 +25,6 @@ typedef MapGameObj::const_iterator CItrGameObj;
 class GameWorld: public World
 {
 public:
-	GameWorld(void);
 	~GameWorld(void);
 
 	// Callbacks
@@ -40,6 +39,8 @@ public:
 	virtual void ReleaseKeys(unsigned char key, int x, int y);
 	virtual void MouseMove(int x, int y);
 	virtual void GUI();
+
+	virtual void Exit();
 
 	void UpdateObjects() const;
 	void CreateAI();

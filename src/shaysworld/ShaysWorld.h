@@ -46,6 +46,9 @@ public:
 
 	virtual void MouseMove(int x, int y);
 	virtual void GUI();
+
+	virtual void Exit();
+
 private:
 	GLdouble movementSpeed;
 	GLdouble rotationSpeed;

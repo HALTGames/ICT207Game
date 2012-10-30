@@ -20,12 +20,14 @@ ShaysWorld::ShaysWorld(void)
 
 	// Stores raw image file
 	image = NULL;
+
+	
 }
 
 
 ShaysWorld::~ShaysWorld(void)
 {
-
+	std::cout << "Shays Destructor" << std::endl;
 }
 
 void ShaysWorld::Init()
@@ -76,6 +78,13 @@ void ShaysWorld::Init()
 	frame_model.LoadModel("models/frame.obj");
 
 	CreateNewPlains();
+
+	currWorld = SHAYSWORLD;
+}
+
+void ShaysWorld::Exit()
+{
+	tp.Clear();
 }
 
 void ShaysWorld::Display()
@@ -291,8 +300,7 @@ void ShaysWorld::Keyboard(unsigned char key, int x, int y)
 		break;
 		case 'g':
 		{
-			//Load Game World
-			//GameMainLoop.GameLoop();
+			currWorld = GAMEWORLD;
 			break;
 		}
 	}
@@ -335,7 +343,7 @@ void ShaysWorld::Mouse(int button, int state, int x, int y)
 
 void ShaysWorld::MouseMove(int x, int y)
 {
-		if (x < 0)
+		/*if (x < 0)
 			cam.DirectionRotateLR(0);
 		else if (x > width)
 			cam.DirectionRotateLR(0);
@@ -367,7 +375,7 @@ void ShaysWorld::MouseMove(int x, int y)
 			glutWarpPointer(width/2.0,height/2.0);
 		}
 		else
-			cam.DirectionLookUD(0);
+			cam.DirectionLookUD(0);*/
 }
 
 void ShaysWorld::CreateBoundingBoxes()

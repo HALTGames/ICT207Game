@@ -7,14 +7,7 @@
 #include "World.h"
 #include "shaysworld\ShaysWorld.h"
 #include "gameworld\GameWorld.h"
-
-//-----------------------------------------------------------------------------
-
-enum WorldEnum {
-	SHAYSWORLD,
-	GAMEWORLD,
-	MENUWORLD
-};
+#include "gamemenu\MenuWorld.h"
 
 //-----------------------------------------------------------------------------
 
@@ -33,7 +26,11 @@ void GUI(void);
 //void timer(int n);
 
 bool Game;
-World* currentWorld = NULL;
+World* game = new GameWorld;
+World* shays = new ShaysWorld;
+World* menu = new MenuWorld;
+World* currentWorld = shays;
+WorldEnum current = SHAYSWORLD;
 
 int main(int argc, char** argv)
 {
@@ -46,7 +43,7 @@ int main(int argc, char** argv)
 	glutCreateWindow("Window");
 
 	// Start World
-	SwitchWorld(GAMEWORLD);
+	//SwitchWorld(current);
 
 	currentWorld->Init();
 	
@@ -62,7 +59,7 @@ int main(int argc, char** argv)
 	glutReshapeFunc(Reshape);
 	glutPassiveMotionFunc(MouseMove);
 
-	if(Game)
+	/*if(Game)
 	{
 		glutCreateSubWindow (1, 200, 810, 880, 150); //(1, 200, 810, 880, 150); 
 		glutDisplayFunc(GUI);
@@ -70,7 +67,7 @@ int main(int argc, char** argv)
 	else
 	{
 		glutDestroyWindow(2);
-	}
+	}*/
 
 	//int fps = 60;
 	//glutTimerFunc(100, timer, fps);
@@ -82,24 +79,19 @@ int main(int argc, char** argv)
 
 void SwitchWorld(WorldEnum newWorld)
 {
-	if(currentWorld) {
-		delete currentWorld;
-		currentWorld = NULL;
-	}
+	currentWorld->Exit();
 
-	switch (newWorld) {
-		case SHAYSWORLD:
-			{
-			currentWorld = new ShaysWorld();
-			Game = false;
-			break;
-			}
-		case GAMEWORLD:
-			{
-			currentWorld = new GameWorld();
-			Game = true;
-			break;
-			}
+	switch(newWorld)
+	{
+	case SHAYSWORLD:
+		currentWorld = shays;
+		break;
+	case GAMEWORLD:
+		currentWorld = game;
+		break;
+	case MENUWORLD:
+		currentWorld = menu;
+		break;
 	}
 
 	currentWorld->Init();
@@ -112,6 +104,14 @@ void Display(void)
 
 void Idle(void)
 {
+	std::cout << "CurrentWorld: " << current << std::endl;
+
+	if(currentWorld->currWorld != current)
+	{
+		current = currentWorld->currWorld;
+		SwitchWorld(current);
+	}
+
 	currentWorld->Idle();
 }
 

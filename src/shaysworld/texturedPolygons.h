@@ -65,6 +65,7 @@ public:
 							 const GLdouble &z1, const GLdouble &z2,
 							 const GLdouble &z3, const GLdouble &z4,
 							 const int &smallestX, const int &smallestZ);
+	void Clear ();
 
 private:
 	// pointer to display list
@@ -73,7 +74,7 @@ private:
 	// returns image file
 	GLubyte* LoadRawImageFile(char* filename, int width, int height);
 
-	void Clear ();
+	
 
 	// creates display list to contain image on X Z axis
 	void CreateXtoZTextureList(const GLdouble &xImgSize, const GLdouble &zImgSize, 

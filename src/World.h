@@ -1,8 +1,16 @@
 #pragma once
+
+enum WorldEnum {
+	NONE,
+	SHAYSWORLD,
+	GAMEWORLD,
+	MENUWORLD
+};
+
 class World abstract
 {
 public:
-	virtual ~World() {};
+	virtual ~World() {currWorld = NONE; }
 
 	virtual void Init() {};
 	virtual void Reshape(int w, int h) {};
@@ -15,5 +23,10 @@ public:
 	virtual void ReleaseKeys(unsigned char key, int x, int y) {};
 	virtual void MouseMove(int x, int y) {}; 
 	virtual void GUI() {};
+
+	virtual void Exit() {};
+
+	WorldEnum currWorld;
 };
+
 

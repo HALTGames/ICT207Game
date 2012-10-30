@@ -5,7 +5,11 @@ int minuser =0;
 time_t seconds;
 float back = 0.0;
 
-GameWorld::GameWorld(void)
+GameWorld::~GameWorld(void)
+{
+}
+
+void GameWorld::Init(void)
 {
 	SoundController.SoundMenu();
 	frameCount = 0;
@@ -25,19 +29,18 @@ GameWorld::GameWorld(void)
 	//AddObject(AIBird);
 
 	left = right = forward = back = false;
-}
 
+	currWorld = GAMEWORLD;
 
-GameWorld::~GameWorld(void)
-{
-}
-
-void GameWorld::Init(void)
-{
 	srand(time(0));
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
 	//TextureLoad.LoadTexture(1, "textures/UIfinal.png");
+	
+}
+
+void GameWorld::Exit()
+{
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -185,6 +188,11 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 	if(Key == 'm')
 	{
 		SoundController.PausePlaySoundTrack();
+	}
+
+	if(Key == 'p')
+	{
+		currWorld = SHAYSWORLD;
 	}
 	glutPostRedisplay();
 }
