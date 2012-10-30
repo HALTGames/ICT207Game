@@ -60,8 +60,6 @@ void sounds::playSound(string name)
 }
 
 
-
-
 void sounds::SoundMenu()
 {
 
@@ -131,6 +129,7 @@ void sounds::PausePlaySoundTrack()
           channel->setPaused(!paused);
      }
 }
+
 
 void sounds::loopmain()
 {
@@ -220,3 +219,13 @@ void sounds::loopmain()
 
     
 }
+
+void sounds::StopMusic()
+{
+	if(channel)
+	{
+		channel->stop();
+	}
+}
+
+

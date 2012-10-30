@@ -50,7 +50,7 @@ public:
 private:
 	GameObjManager objectManager;
 
-	sounds SoundController;
+	sounds* SoundController;
 	GameCamera camera;
 	PlayerObj* player;
 	list<Bird*> BirdList;

@@ -11,7 +11,8 @@ GameWorld::~GameWorld(void)
 
 void GameWorld::Init(void)
 {
-	SoundController.SoundMenu();
+	SoundController = new sounds;
+	SoundController->SoundMenu();
 
 	lastdrawn = 0;
 
@@ -55,7 +56,7 @@ void GameWorld::Reshape(int w, int h)
 
 void GameWorld::Display(void)
 {
-	SoundController.loopmain();
+	SoundController->loopmain();
 	glutSetWindow(1);
 
 	lastdrawn = glutGet(GLUT_ELAPSED_TIME);
@@ -182,11 +183,13 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 	}
 	if(Key == 'm')
 	{
-		SoundController.PausePlaySoundTrack();
+		SoundController->PausePlaySoundTrack();
 	}
 
 	if(Key == 'p')
 	{
+		SoundController->StopMusic();
+		delete SoundController;
 		currWorld = SHAYSWORLD;
 	}
 	glutPostRedisplay();
