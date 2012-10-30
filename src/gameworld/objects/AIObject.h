@@ -21,6 +21,7 @@ private:
 //
 
 public:
+	~AIObject(){delete[] ThisStateMachine;}
 	int seconds;
 	int GunSeconds;
 	StateMachine<AIObject>*  GetFSM()const{return ThisStateMachine;}

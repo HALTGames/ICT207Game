@@ -1,22 +1,22 @@
-#include "Alligator.h"
+#include "Strafer.h"
 #include <math.h>
 
-Alligator::Alligator()
+Strafer::Strafer()
 {
 	model.LoadModel("./models/frame.obj");
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
-	Health =5000;
-	MaxSpeed =0.05;
+	Health =1000;
+	MaxSpeed =0.09;
 	ThisStateMachine = new StateMachine<AIObject>(this);
-	ThisStateMachine->SetCurrentState(Seek::Instance());
+	ThisStateMachine->SetCurrentState(StrafeandSeek::Instance());
 
 	
 }
 
 
-void Alligator::Update(Vector3 PlayPos)
+void Strafer::Update(Vector3 PlayPos)
 {
 	//cout<<"update \n";
 	//move somewhere
@@ -33,7 +33,7 @@ void Alligator::Update(Vector3 PlayPos)
 }
 
 
-Alligator& Alligator::operator=(const Alligator &rhs)
+Strafer& Strafer::operator=(const Strafer &rhs)
 
 {
 
@@ -49,7 +49,7 @@ Alligator& Alligator::operator=(const Alligator &rhs)
 
  
 
-int Alligator::operator==(const Alligator &rhs) const
+int Strafer::operator==(const Strafer &rhs) const
 
 {
 
@@ -67,7 +67,7 @@ int Alligator::operator==(const Alligator &rhs) const
 
 // This function is required for built-in STL list functions like sort
 
-int Alligator::operator<(const Alligator &rhs) const
+int Strafer::operator<(const Strafer &rhs) const
 
 {
 

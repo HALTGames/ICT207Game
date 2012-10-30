@@ -15,6 +15,7 @@ void GameWorld::Init(void)
 	RandomAI = 0;
 	ShooterList = new list<Shooter*>;
 	BirdList = new list<Bird*>;
+	AlligatorList = new list<Alligator*>;
 	SoundController = new sounds;
 	SoundController->SoundMenu();
 	SoundController->PausePlaySoundTrack();
@@ -196,10 +197,12 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 
 	if(Key == 'p')
 	{
-		currWorld = SHAYSWORLD;
 		WipeAI();
 		SoundController->StopMusic();
 		delete SoundController;
+		currWorld = SHAYSWORLD;
+		
+		
 	}
 	glutPostRedisplay();
 }
@@ -281,7 +284,7 @@ void GameWorld::CreateAI()
 	Placement.y = 0;
 	Placement.z = (rand() %40)-20 ;
 	minuser = seconds;
-	RandomAI = (rand() %2);
+	RandomAI = (rand() %3);
 	switch(RandomAI)
 	{
 	case 0:
@@ -290,6 +293,7 @@ void GameWorld::CreateAI()
 			AIBird = new Bird;
 			AIBird->SetPosition(Placement);
 			BirdList->push_back(AIBird);
+			//delete[] AIBird;
 			break;
 		}
 	case 1:
@@ -298,10 +302,16 @@ void GameWorld::CreateAI()
 			AIShooter = new Shooter;
 			AIShooter->SetPosition(Placement);
 			ShooterList->push_back(AIShooter);
+			//delete[] AIShooter;
 			break;
 		}
 	case 2:
 		{
+			cout<<"AlligatorCreated \n";
+			AIAlligator = new Alligator;
+			AIAlligator->SetPosition(Placement);
+			AlligatorList->push_back(AIAlligator);
+			//delete[] AIAlligator;
 			break;
 		}
 	case 3:
@@ -341,6 +351,19 @@ void GameWorld::CreateAI()
 
 	}
 
+	list<Alligator*>::iterator itra;
+	for(itra=AlligatorList->begin(); itra != AlligatorList->end(); ++itra)
+	{
+		(*itra)->SubtractHealth(1);
+		(*itra)->Update(player->GetPosition());
+		(*itra)->Display();
+		if((*itra)->GetHealth() < 0)
+		{
+			itra = AlligatorList->erase(itra);
+		}
+
+	}
+
 	
 	//AIBird->Update(player->GetPosition());
 	//AIBird->Display();
@@ -360,6 +383,27 @@ void GameWorld::WipeAI()
 		itr = BirdList->erase(itr);
 		(*itr)->Display();
 	}
+	
 
-	delete BirdList;
+	list<Shooter*>::iterator itrs;
+	for(itrs=ShooterList->begin(); itrs != ShooterList->end(); ++itrs)
+	{
+		itrs = ShooterList->erase(itrs);
+		(*itrs)->Display();
+	}
+	
+
+	list<Alligator*>::iterator itra;
+	for(itra=AlligatorList->begin(); itra != AlligatorList->end(); ++itra)
+	{
+		itra = AlligatorList->erase(itra);
+		(*itra)->Display();
+	}
+	
+	
+	//WipeAI();
+
+	//delete[] BirdList;
+	//delete[] AlligatorList;
+	//delete[] ShooterList;
 }

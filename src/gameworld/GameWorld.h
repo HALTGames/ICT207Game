@@ -23,6 +23,7 @@
 // OBJECTS
 #include "objects\Bird.h"
 #include "objects\Shooter.h"
+#include "objects\Alligator.h"
 #include "objects\PlayerObj.h"
 #include "objects\TerrainObj.h"
 
@@ -57,10 +58,12 @@ private:
 	PlayerObj* player;
 	list<Bird*> *BirdList;
 	list<Shooter*> *ShooterList;
+	list<Alligator*> *AlligatorList;
 
 	int RandomAI;
 	Bird *AIBird;
 	Shooter *AIShooter;
+	Alligator *AIAlligator;
 	TextureLoader TextureLoad;
 
 	void PlayerMovement();

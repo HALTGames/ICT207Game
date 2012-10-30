@@ -180,6 +180,12 @@
     <ClCompile Include="gameworld\objects\Shooter.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="gameworld\Behaviours\StrafeandSeek.cpp">
+      <Filter>Source Files\GameWorld\Behaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\objects\Strafer.cpp">
+      <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -315,6 +321,12 @@
       <Filter>Header Files\GameWorld\Behaviours</Filter>
     </ClInclude>
     <ClInclude Include="gameworld\objects\Shooter.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\Behaviours\StrafeandSeek.h">
+      <Filter>Header Files\GameWorld\Behaviours</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\Strafer.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
     </ClInclude>
   </ItemGroup>

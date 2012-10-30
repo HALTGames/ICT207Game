@@ -136,6 +136,7 @@
     <ClCompile Include="gamemenu\RAWTexture.cpp" />
     <ClCompile Include="gameworld\Behaviours\Seek.cpp" />
     <ClCompile Include="gameworld\Behaviours\SeekandShoot.cpp" />
+    <ClCompile Include="gameworld\Behaviours\StrafeandSeek.cpp" />
     <ClCompile Include="gameworld\GameCamera.cpp" />
     <ClCompile Include="gameworld\GameCollision.cpp" />
     <ClCompile Include="gameworld\GameObj.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="gameworld\objects\PlayerObj.cpp" />
     <ClCompile Include="gameworld\objects\ProjectileObj.cpp" />
     <ClCompile Include="gameworld\objects\Shooter.cpp" />
+    <ClCompile Include="gameworld\objects\Strafer.cpp" />
     <ClCompile Include="gameworld\objects\TerrainObj.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="modelimporter\GameModel.cpp" />
@@ -181,6 +183,7 @@
     <ClInclude Include="gamemenu\RAWTexture.h" />
     <ClInclude Include="gameworld\Behaviours\Seek.h" />
     <ClInclude Include="gameworld\Behaviours\SeekandShoot.h" />
+    <ClInclude Include="gameworld\Behaviours\StrafeandSeek.h" />
     <ClInclude Include="gameworld\GameCamera.h" />
     <ClInclude Include="gameworld\GameCollision.h" />
     <ClInclude Include="gameworld\GameObj.h" />
@@ -193,6 +196,7 @@
     <ClInclude Include="gameworld\objects\PlayerObj.h" />
     <ClInclude Include="gameworld\objects\ProjectileObj.h" />
     <ClInclude Include="gameworld\objects\Shooter.h" />
+    <ClInclude Include="gameworld\objects\Strafer.h" />
     <ClInclude Include="gameworld\objects\TerrainObj.h" />
     <ClInclude Include="gameworld\State.h" />
     <ClInclude Include="gameworld\StateMachine.h" />
