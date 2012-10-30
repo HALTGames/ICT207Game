@@ -22,7 +22,10 @@
 
 // OBJECTS
 #include "objects\Bird.h"
+#include "objects\Shooter.h"
+#include "objects\Alligator.h"
 #include "objects\PlayerObj.h"
+#include "objects\Strafer.h"
 #include "objects\TerrainObj.h"
 
 
@@ -46,16 +49,24 @@ public:
 
 	virtual void Exit();
 	void CreateAI();
+	void WipeAI();
 	/// may get moved to a class
 private:
 	GameObjManager* objectManager;
 
-	sounds SoundController;
+	sounds* SoundController;
 	GameCamera camera;
 	PlayerObj* player;
-	list<Bird*> BirdList;
+	list<Bird*> *BirdList;
+	list<Shooter*> *ShooterList;
+	list<Alligator*> *AlligatorList;
+	list<Strafer*> *StraferList;
 
+	int RandomAI;
 	Bird *AIBird;
+	Shooter *AIShooter;
+	Alligator *AIAlligator;
+	Strafer *AIStrafer;
 	TextureLoader TextureLoad;
 
 	void PlayerMovement();

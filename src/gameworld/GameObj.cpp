@@ -17,6 +17,7 @@ GameObj::GameObj(void)
 GameObj::GameObj(const Vector3 pos, char* modelFile, 
 	const string collideType)
 {
+
 	identificationNumber = numObjects;
 	++numObjects;
 
@@ -38,11 +39,23 @@ GameObj::~GameObj(void)
 }
 
 //-----------------------------------------------------------------------------
+void GameObj::SetScale(float x, float y, float z)
+{
+	Sx=x;
+	Sy=y;
+	Sz=z;
+}
+
+//-----------------------------------------------------------------------------
 
 void GameObj::Display()
 {
 	glPushMatrix();
 		glTranslatef(position.x, position.y, position.z);
+		if((Sx > 0)&&(Sx > 0)&&(Sx > 0))
+		{
+		glScalef(Sx,Sy,Sz);
+		}
 		glRotatef(angle, 0.0, 1.0, 0.0);
 		model.DrawModel();
 	glPopMatrix();

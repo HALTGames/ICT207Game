@@ -13,7 +13,14 @@ void GameWorld::Init(void)
 {
 	objectManager = new GameObjManager;
 
-	SoundController.SoundMenu();
+	RandomAI = 0;
+	ShooterList = new list<Shooter*>;
+	BirdList = new list<Bird*>;
+	AlligatorList = new list<Alligator*>;
+	StraferList = new list<Strafer*>;
+	SoundController = new sounds;
+	SoundController->SoundMenu();
+	SoundController->PausePlaySoundTrack();
 
 	lastdrawn = 0;
 
@@ -59,7 +66,7 @@ void GameWorld::Reshape(int w, int h)
 
 void GameWorld::Display(void)
 {
-	SoundController.loopmain();
+	SoundController->loopmain();
 	glutSetWindow(1);
 
 	lastdrawn = glutGet(GLUT_ELAPSED_TIME);
@@ -186,12 +193,17 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 	}
 	if(Key == 'm')
 	{
-		SoundController.PausePlaySoundTrack();
+		SoundController->PausePlaySoundTrack();
 	}
 
 	if(Key == 'p')
 	{
+		WipeAI();
+		SoundController->StopMusic();
+		delete SoundController;
 		currWorld = SHAYSWORLD;
+		
+		
 	}
 	glutPostRedisplay();
 }
@@ -265,7 +277,7 @@ void GameWorld::MouseMove(int x, int y)
 void GameWorld::CreateAI() 
 {
 	seconds = time(NULL);
-	if(seconds>minuser+10)
+	if(seconds>minuser+1)
 	{
 	Vector3 Placement;
 	
@@ -273,22 +285,100 @@ void GameWorld::CreateAI()
 	Placement.y = 0;
 	Placement.z = (rand() %40)-20 ;
 	minuser = seconds;
-	AIBird = new Bird;
-	AIBird->SetPosition(Placement);
-	BirdList.push_back(AIBird);
+	RandomAI = rand() %4;
+	cout<<RandomAI<<"   RANDOM AI NUM \n";
+	switch(RandomAI)
+	{
+	case 0:
+		{
+			cout<<"BirdCreated \n";
+			AIBird = new Bird;
+			AIBird->SetPosition(Placement);
+			BirdList->push_back(AIBird);
+			//delete[] AIBird;
+			break;
+		}
+	case 1:
+		{
+			cout<<"ShooterCreated \n";
+			AIShooter = new Shooter;
+			AIShooter->SetPosition(Placement);
+			ShooterList->push_back(AIShooter);
+			//delete[] AIShooter;
+			break;
+		}
+	case 2:
+		{
+			cout<<"AlligatorCreated \n";
+			AIAlligator = new Alligator;
+			AIAlligator->SetPosition(Placement);
+			AlligatorList->push_back(AIAlligator);
+			//delete[] AIAlligator;
+			break;
+		}
+	case 3:
+		{
+			cout<<"StraferCreated \n";
+			AIStrafer = new Strafer;
+			AIStrafer->SetPosition(Placement);
+			StraferList->push_back(AIStrafer);
+			break;
+		}
+
+	}
+	
 	//delete AIBird;
 	}
 
 
 	list<Bird*>::iterator itr;
-	for(itr=BirdList.begin(); itr != BirdList.end(); ++itr)
+	for(itr=BirdList->begin(); itr != BirdList->end(); ++itr)
 	{
 		(*itr)->SubtractHealth(1);
 		(*itr)->Update(player->GetPosition());
 		(*itr)->Display();
 		if((*itr)->GetHealth() < 0)
 		{
-			itr = BirdList.erase(itr);
+			itr = BirdList->erase(itr);
+		}
+
+	}
+
+	list<Shooter*>::iterator itrs;
+	for(itrs=ShooterList->begin(); itrs != ShooterList->end(); ++itrs)
+	{
+		(*itrs)->SubtractHealth(1);
+		(*itrs)->Update(player->GetPosition());
+		(*itrs)->Display();
+		if((*itrs)->GetHealth() < 0)
+		{
+			itrs = ShooterList->erase(itrs);
+		}
+
+	}
+
+	list<Alligator*>::iterator itra;
+	for(itra=AlligatorList->begin(); itra != AlligatorList->end(); ++itra)
+	{
+		(*itra)->SubtractHealth(1);
+		(*itra)->Update(player->GetPosition());
+		(*itra)->Display();
+		if((*itra)->GetHealth() < 0)
+		{
+			itra = AlligatorList->erase(itra);
+		}
+
+	}
+
+	list<Strafer*>::iterator itrst;
+	for(itrst=StraferList->begin(); itrst != StraferList->end(); ++itrst)
+	{
+		(*itrst)->SubtractHealth(1);
+		(*itrst)->Update(player->GetPosition());
+		(*itrst)->Display();
+		if((*itrst)->GetHealth() < 0)
+		{
+			itrst = StraferList->erase(itrst);
 		}
 
 	}
@@ -300,4 +390,45 @@ void GameWorld::CreateAI()
 	//AI = new Bird;
 	//AddObject(AI);
 
+}
+
+void GameWorld::WipeAI()
+{
+	
+	
+	list<Bird*>::iterator itr;
+	for(itr=BirdList->begin(); itr != BirdList->end(); ++itr)
+	{
+		itr = BirdList->erase(itr);
+		(*itr)->Display();
+	}
+	
+
+	list<Shooter*>::iterator itrs;
+	for(itrs=ShooterList->begin(); itrs != ShooterList->end(); ++itrs)
+	{
+		itrs = ShooterList->erase(itrs);
+		(*itrs)->Display();
+	}
+	
+
+	list<Alligator*>::iterator itra;
+	for(itra=AlligatorList->begin(); itra != AlligatorList->end(); ++itra)
+	{
+		itra = AlligatorList->erase(itra);
+		(*itra)->Display();
+	}
+	
+	list<Strafer*>::iterator itrst;
+	for(itrst=StraferList->begin(); itrst != StraferList->end(); ++itrst)
+	{
+		itrst = StraferList->erase(itrst);
+		(*itrst)->Display();
+	}
+	
+	//WipeAI();
+
+	//delete[] BirdList;
+	//delete[] AlligatorList;
+	//delete[] ShooterList;
 }

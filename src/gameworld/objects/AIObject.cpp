@@ -3,14 +3,45 @@
 AIObject::AIObject()
 {
 	seconds = 0;
+	GunSeconds = 0;
+	checker = 0;
+	AILookDirection.x = 1;
+	AILookDirection.y = 0;
+	AILookDirection.z = 0;
 }
 
+double AIObject::GetMag(Vector3 pass)
+{
+	double tempmag;
+	tempmag = sqrt((pass.x*pass.x)+(pass.y*pass.y)+(pass.z*pass.z));
+
+	return tempmag;
+}
+
+void AIObject::SetAngle(Vector3 New, Vector3 other)
+{
+	
+	temp = sqrt((New.x-other.x)*(New.x-other.x) + (New.y-other.y)*(New.y-other.y) + (New.z-other.z)*(New.z-other.z));
+	Direction2.x = (New.x-other.x)/temp;
+	Direction2.y = (New.y-other.y)/temp;
+	Direction2.z = (New.z-other.z)/temp;
+
+	
+	temp = ((AILookDirection.x*Direction2.x)+(AILookDirection.y*Direction2.y)+(AILookDirection.z*Direction2.z));
+	temp = (temp/1);   
+	
+	angle = -(acos(temp) * 57.2957795);
+	if(Direction2.z < 0)
+	{
+		angle = -angle;
+	}
+	
+	
+}
 
 void AIObject::SetVector(Vector3 New, Vector3 other)
 {
-	//cout<<<<"\n";
-	//cout<<New.y-other.y<<"\n";
-	//cout<<New.z-other.z<<"\n";
+	
 	temp = sqrt((New.x-other.x)*(New.x-other.x) + (New.y-other.y)*(New.y-other.y) + (New.z-other.z)*(New.z-other.z));
 	
 	if(temp>0.1)
@@ -29,21 +60,14 @@ void AIObject::SetVector(Vector3 New, Vector3 other)
 		Direction.y = 0;
 		Direction.z = 0;
 	}
-
-	
-	
-
-	
+		
 }
 
 void  AIObject::Move()
 {
-	//cout<< Direction.x<<"    Move \n";
+	
 	ChangePosition(Direction);
-//	position.x = position.x + Direction.x;
-//	position.y = position.y + Direction.y;
-//	position.z = position.z + Direction.z;
-	//position += Direction;aaa
+
 }
 
 Vector3 AIObject::GetDirection()
@@ -113,11 +137,18 @@ int AIObject::GetHealth()
 	return Health;
 }
 
-bool AIObject::Check()
+double AIObject::GetDistanceFrom()
 {
 	temp = sqrt((PlayerPos.x-position.x)*(PlayerPos.x-position.x) + (PlayerPos.y-position.y)*(PlayerPos.y-position.y) + (PlayerPos.z-position.z)*(PlayerPos.z-position.z));
+	return temp;
+	/*
 	if(temp<0.5)
 		return true;
 	else 
-		return false;
+		return false;*/
+}
+
+void AIObject::Fire()
+{
+	cout<<"FIRING \n";
 }

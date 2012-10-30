@@ -3,15 +3,15 @@
 
 Alligator::Alligator()
 {
-	model.LoadModel("./models/frame.obj");
+	model.LoadModel("./models/arrowman.obj");
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
 	Health =5000;
-	MaxSpeed =0.09;
+	MaxSpeed =0.05;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(Seek::Instance());
-
+	SetScale(15,15,15);
 	
 }
 

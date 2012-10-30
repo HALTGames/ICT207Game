@@ -1,23 +1,22 @@
-#include "Bird.h"
+#include "Strafer.h"
 #include <math.h>
 
-Bird::Bird()
+Strafer::Strafer()
 {
 	model.LoadModel("./models/arrowman.obj");
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
 	Health =1000;
-	MaxSpeed =0.09;
+	MaxSpeed =0.07;
 	ThisStateMachine = new StateMachine<AIObject>(this);
-	ThisStateMachine->SetCurrentState(Seek::Instance());
+	ThisStateMachine->SetCurrentState(StrafeandSeek::Instance());
 	SetScale(10,10,10);
-
 	
 }
 
 
-void Bird::Update(Vector3 PlayPos)
+void Strafer::Update(Vector3 PlayPos)
 {
 	//cout<<"update \n";
 	//move somewhere
@@ -34,7 +33,7 @@ void Bird::Update(Vector3 PlayPos)
 }
 
 
-Bird& Bird::operator=(const Bird &rhs)
+Strafer& Strafer::operator=(const Strafer &rhs)
 
 {
 
@@ -50,7 +49,7 @@ Bird& Bird::operator=(const Bird &rhs)
 
  
 
-int Bird::operator==(const Bird &rhs) const
+int Strafer::operator==(const Strafer &rhs) const
 
 {
 
@@ -68,7 +67,7 @@ int Bird::operator==(const Bird &rhs) const
 
 // This function is required for built-in STL list functions like sort
 
-int Bird::operator<(const Bird &rhs) const
+int Strafer::operator<(const Strafer &rhs) const
 
 {
 

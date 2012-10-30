@@ -25,3 +25,8 @@ void Particle::CreateMissile(int i)
      MissileEffect[i].zspeed = 0.0005-(float)(rand()%100)/100000.0;
      MissileEffect[i].active = true;
 }
+
+void Particle::DecayMissile()
+{
+
+}

@@ -50,6 +50,7 @@ public:
 	 */
 	GameObj(const Vector3 pos, char* modelFile, const string collideType);
 
+
 	/**
 	 * \brief The default destructor.
 	 *
@@ -164,11 +165,14 @@ public:
 	CollisionSphere* GetCollisionSphere();
 
 	bool GetDeleteThis() const;
+
+void SetScale(float x, float y, float z);
 protected:
 	Vector3 position; /**< the current position of the object */
 	GameModel model; /**< the model of the game object */
 	string collidableType; /**< the collision type */
-	int angle; /**< the current angle of the object */
+	float angle; /**< the current angle of the object */
+	float Sx, Sy, Sz;
 
 	bool deleteThis;
 

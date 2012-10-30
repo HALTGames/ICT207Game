@@ -104,7 +104,7 @@ void Display(void)
 
 void Idle(void)
 {
-	std::cout << "CurrentWorld: " << current << std::endl;
+	//std::cout << "CurrentWorld: " << current << std::endl;
 
 	if(currentWorld->currWorld != current)
 	{

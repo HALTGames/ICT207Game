@@ -12,12 +12,14 @@ class sounds
 {
 public:
 	sounds();
+	
 	void ERRCHECK(FMOD_RESULT result);
 	void SoundMenu();
 	void addSound(const char *filename, string name);
 	void playSound(string name);
 	void PausePlaySoundTrack();
 	void loopmain();
+	void StopMusic();
 
 private:
 	FMOD::System     *system;
