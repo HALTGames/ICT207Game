@@ -277,7 +277,7 @@ void GameWorld::MouseMove(int x, int y)
 void GameWorld::CreateAI() 
 {
 	seconds = time(NULL);
-	if(seconds>minuser+5)
+	if(seconds>minuser+1)
 	{
 	Vector3 Placement;
 	

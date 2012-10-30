@@ -26,14 +26,13 @@ void AIObject::SetAngle(Vector3 New, Vector3 other)
 	Direction2.y = (New.y-other.y)/temp;
 	Direction2.z = (New.z-other.z)/temp;
 
-	cout<<Direction2.z<<"  \n";
+	
 	temp = ((AILookDirection.x*Direction2.x)+(AILookDirection.y*Direction2.y)+(AILookDirection.z*Direction2.z));
 	temp = (temp/1);   
 	
 	angle = -(acos(temp) * 57.2957795);
 	if(Direction2.z < 0)
 	{
-		cout<<"Triggerd \n";
 		angle = -angle;
 	}
 	
