@@ -19,6 +19,8 @@ public:
 
 	void CreateMissile(int i);
 
+	void DecayMissile();
+
 private:
 	PARTICLES MissileEffect[100];
 	PARTICLES SecondEffect[100];
