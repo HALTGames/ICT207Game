@@ -108,6 +108,8 @@ void GameWorld::GUIinit(void)
 	ModelLoader[1].LoadModel("./models/uibar.obj");
 	ModelLoader[2].LoadModel("./models/uiscroll.obj");
 	ModelLoader[3].LoadModel("./models/uibarouter.obj");
+	ModelLoader[4].LoadModel("./models/uiMagicMissile.obj");
+	ModelLoader[5].LoadModel("./models/uiProtection.obj");
 }
 
 void GameWorld::GUI(void)
@@ -132,17 +134,33 @@ void GameWorld::GUI(void)
 		glRotatef(90,1,0,0);
 		ModelLoader[1].DrawModel();
 	glPopMatrix();
-	//ui scroll - this needs to be changed later to only show when scroll is active on character
+	//ui scroll
 	if(Character.GetInventoryStatus(1) == true)
 	{
 		glPushMatrix();
-			glTranslatef(0.225, -0.04, -0.02);
+			glTranslatef(0.79, -0.04, -0.02);
 			glScalef(0.2,1,1);
 			glScalef(0.55,0.55,1);
 			glRotatef(90,1,0,0);
 			ModelLoader[2].DrawModel();
 		glPopMatrix();
 	}
+	//MM - basic attack
+	glPushMatrix();
+		glTranslatef(0.225, -0.04, -0.02);
+		glScalef(0.2,1,1);
+		glScalef(0.3,0.3,1);
+		glRotatef(90,1,0,0);
+		ModelLoader[4].DrawModel();
+	glPopMatrix();
+	//Protection - sphere defence
+	glPushMatrix();
+		glTranslatef(0.418, -0.04, -0.02);
+		glScalef(0.2,1,1);
+		glScalef(0.3,0.3,1);
+		glRotatef(90,1,0,0);
+		ModelLoader[5].DrawModel();
+	glPopMatrix();
 		//statbar outers
 	glPushMatrix();
 		glTranslatef(-0.67, -0.04, -0.02);
