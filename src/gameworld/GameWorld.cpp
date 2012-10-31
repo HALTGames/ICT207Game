@@ -116,7 +116,8 @@ void GameWorld::GUI(void)
 	glLoadIdentity();
 	//glBindTexture(GL_TEXTURE_2D, TextureLoad.GetTexture(1));
 	glPushMatrix();
-	//glScalef(10,10,10);
+	//glScalef(100,100,100);
+	//glRotatef(90,0,1,0);
 		ModelLoader.LoadModel("./models/UIback.obj");
 	/*glColor3f (1.0F, 1.0F, 1.0F); 
 	glBegin(GL_QUADS);
@@ -129,8 +130,8 @@ void GameWorld::GUI(void)
 		glTexCoord2f(1.0,0.0);
 		glVertex3f(1.0f,-1.0f,0);
 		glEnd();
-		glDisable(GL_TEXTURE_2D);
-	glPopMatrix();*/
+		glDisable(GL_TEXTURE_2D);*/
+	glPopMatrix();
 	//healthbar
 	glPushMatrix();
 	glColor3f (1.0F, 0.0F, 0.0F); 
