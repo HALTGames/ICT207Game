@@ -98,7 +98,10 @@ void GameWorld::Display(void)
 void GameWorld::GUIinit(void)
 {
 	glutSetWindow(2);
-	ModelLoader.LoadModel("./models/test.obj");
+			//glScalef(10,10,10);
+	//glRotatef(180,0,1,0);
+	//ModelLoader.LoadModel("./models/UIback.obj");
+
 }
 
 void GameWorld::GUI(void)
@@ -111,10 +114,11 @@ void GameWorld::GUI(void)
 	glClearDepth(1.0f);
 	glEnable(GL_DEPTH_TEST);
 	glLoadIdentity();
-	glBindTexture(GL_TEXTURE_2D, TextureLoad.GetTexture(1));
+	//glBindTexture(GL_TEXTURE_2D, TextureLoad.GetTexture(1));
 	glPushMatrix();
-
-	glColor3f (1.0F, 1.0F, 1.0F); 
+	//glScalef(10,10,10);
+		ModelLoader.LoadModel("./models/UIback.obj");
+	/*glColor3f (1.0F, 1.0F, 1.0F); 
 	glBegin(GL_QUADS);
 		glTexCoord2f(0.0,0.0);
 		glVertex3f(-1.0f,-1.0f,0);
@@ -126,7 +130,7 @@ void GameWorld::GUI(void)
 		glVertex3f(1.0f,-1.0f,0);
 		glEnd();
 		glDisable(GL_TEXTURE_2D);
-	glPopMatrix();
+	glPopMatrix();*/
 	//healthbar
 	glPushMatrix();
 	glColor3f (1.0F, 0.0F, 0.0F); 
