@@ -4837,6 +4837,10 @@ void ShaysWorld::IncrementFrameCount()
 	}
 }
 
+void ShaysWorld::GUIinit()
+{
+}
+
 void ShaysWorld::DrawModels()
 {
 	glPushMatrix();

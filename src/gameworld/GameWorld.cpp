@@ -42,11 +42,13 @@ void GameWorld::Init(void)
 	srand(time(0));
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
+	/* Probably never work due to glm fuckery
 	//TextureLoad.LoadTexture("textures/UIbackground.RAW",791,151,1);
 	float width, height;
 	width = 791;
 	height = 151;
 	//TextureLoad.SetTexture(glmLoadTexture("textures/UIbackground.RAW", GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE, &width, &height));
+	*/
 }
 
 void GameWorld::Exit()
@@ -93,7 +95,11 @@ void GameWorld::Display(void)
 	glFlush();
 	glutSwapBuffers();	
 }
-
+void GameWorld::GUIinit(void)
+{
+	glutSetWindow(2);
+	ModelLoader.LoadModel("./models/test.obj");
+}
 
 void GameWorld::GUI(void)
 {

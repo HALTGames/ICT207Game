@@ -21,7 +21,7 @@
 #include "../TextureLoader.h"
 #include "../SoundControl/sounds.h"
 #include "GameObjManager.h"
-//#include "../modelimporter/glmimg.cpp"
+#include "../modelimporter/model.h"
 
 // OBJECTS
 #include "objects\Bird.h"
@@ -50,6 +50,7 @@ public:
 	virtual void ReleaseKeys(unsigned char key, int x, int y);
 	virtual void MouseMove(int x, int y);
 	virtual void GUI();
+	virtual void GUIinit();
 
 	virtual void Exit();
 	void CreateAI();
@@ -76,6 +77,7 @@ private:
 	void PlayerMovement();
 
 	TerrainModel level;
+	Model ModelLoader;
 	PlayerObj Character;
 
 	int lastdrawn;

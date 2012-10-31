@@ -46,6 +46,7 @@ public:
 
 	virtual void MouseMove(int x, int y);
 	virtual void GUI();
+	virtual void GUIinit();
 
 	virtual void Exit();
 
