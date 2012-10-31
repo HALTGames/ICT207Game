@@ -2,6 +2,7 @@
 
 	int PlayerObj::Health = 100;
 	int PlayerObj::Mana = 100;
+	std::vector<bool> PlayerObj::Inventory;
 
 PlayerObj::PlayerObj()
 {
@@ -9,6 +10,11 @@ PlayerObj::PlayerObj()
 	collidableType = "Player";
 	position = Vector3(0.0, 0.0, 0.0);
 	angle = 0.0;
+	Inventory.resize(10); //only 4 currently used atm
+	for(int i = 0; i < 10; i++)
+	{
+		Inventory[i] = false;
+	}
 
 	GameCollision::AddCollidable(PLAYER, this);
 }

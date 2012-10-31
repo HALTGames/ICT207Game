@@ -116,6 +116,7 @@ void GameWorld::GUI(void)
 	glClearColor (0.25, 0.25, 0.25, 0.0); 
 	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
 	glColor4f(1.0, 1.0, 1.0, 1.0);
+
 	//ui back
 	glLoadIdentity();
 		glPushMatrix();
@@ -132,13 +133,16 @@ void GameWorld::GUI(void)
 		ModelLoader[1].DrawModel();
 	glPopMatrix();
 	//ui scroll - this needs to be changed later to only show when scroll is active on character
-	glPushMatrix();
-		glTranslatef(0.225, -0.04, -0.02);
-		glScalef(0.2,1,1);
-		glScalef(0.55,0.55,1);
-		glRotatef(90,1,0,0);
-		ModelLoader[2].DrawModel();
-	glPopMatrix();
+	if(Character.GetInventoryStatus(1) == true)
+	{
+		glPushMatrix();
+			glTranslatef(0.225, -0.04, -0.02);
+			glScalef(0.2,1,1);
+			glScalef(0.55,0.55,1);
+			glRotatef(90,1,0,0);
+			ModelLoader[2].DrawModel();
+		glPopMatrix();
+	}
 		//statbar outers
 	glPushMatrix();
 		glTranslatef(-0.67, -0.04, -0.02);
@@ -183,6 +187,9 @@ void GameWorld::Idle()
 {
 	if(glutGet(GLUT_ELAPSED_TIME) - lastdrawn > 1000/85)
 	{
+		glutSetWindow(1);
+		glutPostRedisplay();
+		glutSetWindow(2);
 		glutPostRedisplay();
 	}
 }
