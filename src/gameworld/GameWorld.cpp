@@ -106,6 +106,7 @@ void GameWorld::GUIinit(void)
 	ModelLoader[0].LoadModel("./models/UIback.obj");
 	ModelLoader[1].LoadModel("./models/uibar.obj");
 	ModelLoader[2].LoadModel("./models/uiscroll.obj");
+	ModelLoader[3].LoadModel("./models/uibarouter.obj");
 }
 
 void GameWorld::GUI(void)
@@ -131,32 +132,47 @@ void GameWorld::GUI(void)
 	glPopMatrix();
 	//ui scroll - this needs to be changed later to only show when scroll is active on character
 	glPushMatrix();
-		glTranslatef(0.225, -0.05, -0.02);
-		glScalef(0.25,1,1);
-		glScalef(0.5,0.5,1);
+		glTranslatef(0.225, -0.04, -0.02);
+		glScalef(0.2,1,1);
+		glScalef(0.55,0.55,1);
 		glRotatef(90,1,0,0);
 		ModelLoader[2].DrawModel();
 	glPopMatrix();
-	//healthbar
+		//statbar outers
+	glPushMatrix();
+		glTranslatef(-0.67, -0.04, -0.02);
+		glScalef(0.2,1,1);
+		glScalef(1.3,1.3,1);
+		glRotatef(90,1,0,0);
+		ModelLoader[3].DrawModel();
+	glPopMatrix();
+	glPushMatrix();
+		glTranslatef(-0.67, 0.33, -0.02);
+		glScalef(0.2,1,1);
+		glScalef(1.3,1.3,1);
+		glRotatef(90,1,0,0);
+		ModelLoader[3].DrawModel();
+	glPopMatrix();
+	//healthbar-------------------------------------------------- re calc formula
 	glPushMatrix();
 	glColor3f (1.0F, 0.0F, 0.0F); 
-	glTranslatef(-0.8, 0.3, 0);
+	glTranslatef(-0.778, 0.33, 0);
 	glBegin(GL_QUADS);
-		glVertex3f(-0.1,-0.1,-0.1);
-		glVertex3f(-0.1,0.1,-0.1);
-		glVertex3f((0.2*Character.GetHealth()/66.6-0.1),0.1,-0.1);
-		glVertex3f((0.2*Character.GetHealth()/66.6-0.1),-0.1,-0.1);
+		glVertex3f(-0.1,-0.14,-0.1);
+		glVertex3f(-0.1,0.14,-0.1);
+		glVertex3f((0.278*Character.GetHealth()/66.6-0.1),0.14,-0.1);
+		glVertex3f((0.278*Character.GetHealth()/66.6-0.1),-0.14,-0.1);
 		glEnd();
 	glPopMatrix();
-	//manabar
+	//manabar---------------------------------------------------- re calc formula
 	glPushMatrix();
 	glColor3f (0.0F, 0.0F, 1.0F); 
-	glTranslatef(-0.8, 0.0, 0);
+	glTranslatef(-0.778, -0.035, 0);
 	glBegin(GL_QUADS);
-		glVertex3f(-0.1,-0.1,-0.1);
-		glVertex3f(-0.1,0.1,-0.1);
-		glVertex3f((0.2*Character.GetMana()/66.6-0.1),0.1,-0.1);
-		glVertex3f((0.2*Character.GetMana()/66.6-0.1),-0.1,-0.1);
+		glVertex3f(-0.1,-0.14,-0.1);
+		glVertex3f(-0.1,0.14,-0.1);
+		glVertex3f((0.278*Character.GetMana()/66.6-0.1),0.14,-0.1);
+		glVertex3f((0.278*Character.GetMana()/66.6-0.1),-0.14,-0.1);
 		glEnd();
 	glPopMatrix();
 	glutSwapBuffers ();
