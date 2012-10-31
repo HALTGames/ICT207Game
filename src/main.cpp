@@ -26,8 +26,8 @@ void GUI(void);
 //void timer(int n);
 
 World* game = new GameWorld;
-World* shays = new ShaysWorld;
-World* menu = new MenuWorld;
+World* shays = NULL;
+World* menu = NULL;
 World* currentWorld = game;
 WorldEnum current = GAMEWORLD;
 
@@ -80,12 +80,24 @@ void SwitchWorld(WorldEnum newWorld)
 	switch(newWorld)
 	{
 	case SHAYSWORLD:
+		if(shays)
+		{
+			shays = new ShaysWorld;
+		}
 		currentWorld = shays;
 		break;
 	case GAMEWORLD:
+		if(game)
+		{
+			game = new GameWorld;
+		}
 		currentWorld = game;
 		break;
 	case MENUWORLD:
+		if(menu)
+		{
+			menu = new MenuWorld;
+		}
 		currentWorld = menu;
 		break;
 	}
