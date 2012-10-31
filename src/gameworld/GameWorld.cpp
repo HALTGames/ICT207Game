@@ -153,7 +153,7 @@ void GameWorld::GUI(void)
 		glRotatef(90,1,0,0);
 		ModelLoader[3].DrawModel();
 	glPopMatrix();
-	//healthbar
+	//healthbar-------------------------------------------------- re calc formula
 	glPushMatrix();
 	glColor3f (1.0F, 0.0F, 0.0F); 
 	glTranslatef(-0.778, 0.33, 0);
@@ -164,7 +164,7 @@ void GameWorld::GUI(void)
 		glVertex3f((0.278*Character.GetHealth()/66.6-0.1),-0.14,-0.1);
 		glEnd();
 	glPopMatrix();
-	//manabar
+	//manabar---------------------------------------------------- re calc formula
 	glPushMatrix();
 	glColor3f (0.0F, 0.0F, 1.0F); 
 	glTranslatef(-0.778, -0.035, 0);
