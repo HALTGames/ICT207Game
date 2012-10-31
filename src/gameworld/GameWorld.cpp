@@ -266,7 +266,18 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 
 void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 {
+	if(Button == GLUT_LEFT_BUTTON)
+	{
+		//activate left button code
+		if(State == GLUT_UP)
+		{
 
+		}
+		else if(State == GLUT_DOWN)
+		{
+
+		}
+	}
 }
 
 void GameWorld::PlayerMovement()
