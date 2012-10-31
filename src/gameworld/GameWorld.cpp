@@ -25,7 +25,7 @@ void GameWorld::Init(void)
 
 	lastdrawn = 0;
 
-	//level.LoadModel("./models/island.obj");
+	level.LoadModel("./models/island.obj");
 
 	TerrainObj* terrain = new TerrainObj;
 	objectManager->AddObject(terrain);
@@ -85,7 +85,8 @@ void GameWorld::Display(void)
 	PlayerMovement();
 
 	glPushMatrix();
-		glScalef(30.0, 30.0, 30.0);
+		glScalef(50.0, 50.0, 50.0);
+		glTranslatef(0,-0.35,0);
 		level.DrawModel();
 	glPopMatrix();
 
