@@ -57,7 +57,7 @@ int main(int argc, char** argv)
 
 	if(current == GAMEWORLD)
 	{
-		glutCreateSubWindow (1, 200, 810, 880, 150); //(1, 200, 810, 880, 150); 
+		glutCreateSubWindow (1, 200, 810, 880, 150); 
 		glutDisplayFunc(GUI);
 		currentWorld->GUIinit();
 	}
