@@ -105,6 +105,7 @@ void GameWorld::GUIinit(void)
 	glEnable(GL_DEPTH_TEST);
 	ModelLoader[0].LoadModel("./models/UIback.obj");
 	ModelLoader[1].LoadModel("./models/uibar.obj");
+	ModelLoader[2].LoadModel("./models/uiscroll.obj");
 }
 
 void GameWorld::GUI(void)
@@ -112,34 +113,30 @@ void GameWorld::GUI(void)
 	glutSetWindow(2);
 	glClearColor (0.25, 0.25, 0.25, 0.0); 
 	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
-
+	glColor4f(1.0, 1.0, 1.0, 1.0);
+	//ui back
 	glLoadIdentity();
-	//glBindTexture(GL_TEXTURE_2D, TextureLoad.GetTexture(1));
-	glPushMatrix();
-	glScalef(50,260,0);
-	glRotatef(90,1,0,0);
-		//ModelLoader.LoadModel("./models/UIback.obj");
+		glPushMatrix();
+		glScalef(50,260,0);
+		glRotatef(90,1,0,0);
 		ModelLoader[0].DrawModel();
-	/*glColor3f (1.0F, 1.0F, 1.0F); 
-	glBegin(GL_QUADS);
-		glTexCoord2f(0.0,0.0);
-		glVertex3f(-1.0f,-1.0f,0);
-		glTexCoord2f(0.0,1.0);
-		glVertex3f(-1.0f,1.0f,0);
-		glTexCoord2f(1.0,1.0);
-		glVertex3f(1.0f,1.0f,0);
-		glTexCoord2f(1.0,0.0);
-		glVertex3f(1.0f,-1.0f,0);
-		glEnd();
-		glDisable(GL_TEXTURE_2D);*/
 	glPopMatrix();
+	//ui bar
 	glPushMatrix();
-			glTranslatef(0.5, 0, -0.05);
-			glScalef(0.25,1,1);
-			glScalef(1.5,1.5,1);
-			glRotatef(90,1,0,0);
+		glTranslatef(0.5, -0.05, -0.01);
+		glScalef(0.25,1,1);
+		glScalef(1.6,1.6,1);
+		glRotatef(90,1,0,0);
 		ModelLoader[1].DrawModel();
-		glPopMatrix();
+	glPopMatrix();
+	//ui scroll - this needs to be changed later to only show when scroll is active on character
+	glPushMatrix();
+		glTranslatef(0.225, -0.05, -0.02);
+		glScalef(0.25,1,1);
+		glScalef(0.5,0.5,1);
+		glRotatef(90,1,0,0);
+		ModelLoader[2].DrawModel();
+	glPopMatrix();
 	//healthbar
 	glPushMatrix();
 	glColor3f (1.0F, 0.0F, 0.0F); 
