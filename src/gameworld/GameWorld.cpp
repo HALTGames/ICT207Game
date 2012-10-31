@@ -103,8 +103,8 @@ void GameWorld::GUIinit(void)
 	glShadeModel(GL_SMOOTH);
 	glClearDepth(1.0f);
 	glEnable(GL_DEPTH_TEST);
-	ModelLoader.LoadModel("./models/UIback.obj");
-
+	ModelLoader[0].LoadModel("./models/UIback.obj");
+	ModelLoader[1].LoadModel("./models/uibar.obj");
 }
 
 void GameWorld::GUI(void)
@@ -119,7 +119,7 @@ void GameWorld::GUI(void)
 	glScalef(50,260,0);
 	glRotatef(90,1,0,0);
 		//ModelLoader.LoadModel("./models/UIback.obj");
-		ModelLoader.DrawModel();
+		ModelLoader[0].DrawModel();
 	/*glColor3f (1.0F, 1.0F, 1.0F); 
 	glBegin(GL_QUADS);
 		glTexCoord2f(0.0,0.0);
@@ -133,6 +133,13 @@ void GameWorld::GUI(void)
 		glEnd();
 		glDisable(GL_TEXTURE_2D);*/
 	glPopMatrix();
+	glPushMatrix();
+			glTranslatef(0.5, 0, -0.05);
+			glScalef(0.25,1,1);
+			glScalef(1.5,1.5,1);
+			glRotatef(90,1,0,0);
+		ModelLoader[1].DrawModel();
+		glPopMatrix();
 	//healthbar
 	glPushMatrix();
 	glColor3f (1.0F, 0.0F, 0.0F); 

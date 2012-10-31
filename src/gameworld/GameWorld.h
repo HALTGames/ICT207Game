@@ -77,7 +77,7 @@ private:
 	void PlayerMovement();
 
 	TerrainModel level;
-	GameModel ModelLoader;
+	GameModel ModelLoader[10];
 	PlayerObj Character;
 
 	int lastdrawn;
