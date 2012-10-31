@@ -293,9 +293,9 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		}
 		else if(State == GLUT_DOWN)
 		{
-			if(Character)
+			//if()
 			{
-				ProjectileObj Projectile();
+				//Character.Shoot();
 			}
 		}
 	}

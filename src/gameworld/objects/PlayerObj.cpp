@@ -3,7 +3,8 @@
 	int PlayerObj::Health = 100;
 	int PlayerObj::Mana = 100;
 	std::vector<bool> PlayerObj::Inventory;
-	PlayerObj::Spells PlayerObj::SelectedSpell = 1;
+	PlayerObj::Spells PlayerObj::SelectedSpell = (Spells)1;
+	int PlayerObj::ProtectionTimer = 0;
 
 PlayerObj::PlayerObj()
 {
@@ -87,4 +88,13 @@ void PlayerObj::SelectSpell(int i)
 			SetSpell(New);
 		}		
 	}
+}
+
+void PlayerObj::Shoot()
+{
+	if(SelectedSpell == (Spells)1)
+	{
+
+	}
+	//ProjectileObj o();
 }

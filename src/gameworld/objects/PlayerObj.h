@@ -3,6 +3,7 @@
 #include <iostream>
 #include "..\gameobj.h"
 #include "..\GameCollision.h"
+#include "ProjectileObj.h"
 #include <vector>
 
 class PlayerObj :
@@ -24,6 +25,7 @@ public:
 	
 	void Death();
 
+	void Shoot();
 	void SelectSpell(int i);
 
 	//Setters
