@@ -14,6 +14,8 @@ public:
 	virtual void Display();
 
 	void ModifyHealth(int Change);
+	bool ModifyMana(int Change);
+	
 
 	void Death();
 	//Setters

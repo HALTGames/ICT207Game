@@ -55,6 +55,7 @@ public:
 	virtual void Exit();
 	void CreateAI();
 	void WipeAI();
+	void ManaRegen();
 	/// may get moved to a class
 private:
 	GameObjManager* objectManager;
@@ -79,6 +80,8 @@ private:
 	TerrainModel level;
 	GameModel ModelLoader[10];
 	PlayerObj Character;
+
+	int ManaTimer;
 
 	int lastdrawn;
 

@@ -187,11 +187,23 @@ void GameWorld::Idle()
 {
 	if(glutGet(GLUT_ELAPSED_TIME) - lastdrawn > 1000/85)
 	{
+		ManaRegen();
 		glutSetWindow(1);
 		glutPostRedisplay();
 		glutSetWindow(2);
 		glutPostRedisplay();
 	}
+}
+
+void GameWorld::ManaRegen()
+{
+	int time = glutGet(GLUT_ELAPSED_TIME);
+	if((time / 1000)-1 >=  ManaTimer/1000)
+	{
+		//everysecond gain 1 mana.
+		Character.ModifyMana(1);
+		ManaTimer = time;
+	}	
 }
 
 void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)

@@ -44,6 +44,22 @@ void PlayerObj::ModifyHealth(int Change)
 	}
 }
 
+bool PlayerObj::ModifyMana(int Change)
+{
+	Mana += Change;
+	if(Mana > 100)
+	{
+		Mana = 100;
+	}
+	else if(Mana < 0)
+	{
+		//reverses the change
+		Mana -= Change;
+		return false;
+	}
+	return true;
+}
+
 void PlayerObj::Death()
 {
 	//stubbed
