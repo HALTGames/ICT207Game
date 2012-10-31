@@ -21,7 +21,7 @@
 #include "../TextureLoader.h"
 #include "../SoundControl/sounds.h"
 #include "GameObjManager.h"
-#include "../modelimporter/model.h"
+#include "../modelimporter/GameModel.h"
 
 // OBJECTS
 #include "objects\Bird.h"
@@ -77,7 +77,7 @@ private:
 	void PlayerMovement();
 
 	TerrainModel level;
-	Model ModelLoader;
+	GameModel ModelLoader;
 	PlayerObj Character;
 
 	int lastdrawn;

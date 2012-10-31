@@ -1,7 +1,7 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 31.10.2012 09:03:33
+# File Created: 31.10.2012 09:33:12
 
-mtllib uiback.mtl
+mtllib UIback.mtl
 
 #
 # object Box001
@@ -32,7 +32,7 @@ vt 1.0000 1.0000 0.0000
 # 4 texture coords
 
 g Box001
-usemtl Material__2
+usemtl Material__3
 s 2
 f 1/1/1 2/2/1 3/3/1 
 s 4

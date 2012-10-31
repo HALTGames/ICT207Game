@@ -98,9 +98,12 @@ void GameWorld::Display(void)
 void GameWorld::GUIinit(void)
 {
 	glutSetWindow(2);
-			//glScalef(10,10,10);
-	//glRotatef(180,0,1,0);
-	//ModelLoader.LoadModel("./models/UIback.obj");
+
+	glEnable(GL_TEXTURE_2D);
+	glShadeModel(GL_SMOOTH);
+	glClearDepth(1.0f);
+	glEnable(GL_DEPTH_TEST);
+	ModelLoader.LoadModel("./models/UIback.obj");
 
 }
 
@@ -109,16 +112,14 @@ void GameWorld::GUI(void)
 	glutSetWindow(2);
 	glClearColor (0.25, 0.25, 0.25, 0.0); 
 	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
-	glEnable(GL_TEXTURE_2D);
-	glShadeModel(GL_SMOOTH);
-	glClearDepth(1.0f);
-	glEnable(GL_DEPTH_TEST);
+
 	glLoadIdentity();
 	//glBindTexture(GL_TEXTURE_2D, TextureLoad.GetTexture(1));
 	glPushMatrix();
-	//glScalef(100,100,100);
-	//glRotatef(90,0,1,0);
-		ModelLoader.LoadModel("./models/UIback.obj");
+	glScalef(50,260,0);
+	glRotatef(90,1,0,0);
+		//ModelLoader.LoadModel("./models/UIback.obj");
+		ModelLoader.DrawModel();
 	/*glColor3f (1.0F, 1.0F, 1.0F); 
 	glBegin(GL_QUADS);
 		glTexCoord2f(0.0,0.0);
@@ -135,7 +136,7 @@ void GameWorld::GUI(void)
 	//healthbar
 	glPushMatrix();
 	glColor3f (1.0F, 0.0F, 0.0F); 
-	glTranslatef(-0.7, 0.5, 0);
+	glTranslatef(-0.8, 0.3, 0);
 	glBegin(GL_QUADS);
 		glVertex3f(-0.1,-0.1,-0.1);
 		glVertex3f(-0.1,0.1,-0.1);
@@ -146,7 +147,7 @@ void GameWorld::GUI(void)
 	//manabar
 	glPushMatrix();
 	glColor3f (0.0F, 0.0F, 1.0F); 
-	glTranslatef(-0.7, 0.2, 0);
+	glTranslatef(-0.8, 0.0, 0);
 	glBegin(GL_QUADS);
 		glVertex3f(-0.1,-0.1,-0.1);
 		glVertex3f(-0.1,0.1,-0.1);
