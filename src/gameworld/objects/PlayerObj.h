@@ -12,7 +12,7 @@ public:
 	enum Spells
 	{
 		MagicMissile = 1,
-		Shield = 2,
+		Protection = 2,
 		
 	};
 	PlayerObj();
@@ -45,5 +45,6 @@ private:
 	static int Mana;
 	static std::vector<bool> Inventory;
 	static Spells SelectedSpell;
+	static int ProtectionTimer;
 };
 

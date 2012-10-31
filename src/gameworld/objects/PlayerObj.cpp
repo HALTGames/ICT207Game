@@ -69,9 +69,22 @@ void PlayerObj::Death()
 void PlayerObj::SelectSpell(int i)
 {
 	Spells New = (Spells)i;
+
+	int time = glutGet(GLUT_ELAPSED_TIME);
+
 	if(New != SelectedSpell)
 	{
-		if(New 
-		SetSpell(New);
+		if(New == (Spells)2)
+		{
+			if((time / 1000)-30 >=  ProtectionTimer/1000)
+			{
+				ProtectionTimer = time;
+				SetSpell(New);
+			}	
+		}
+		else
+		{
+			SetSpell(New);
+		}		
 	}
 }
