@@ -3,6 +3,7 @@
 	int PlayerObj::Health = 100;
 	int PlayerObj::Mana = 100;
 	std::vector<bool> PlayerObj::Inventory;
+	PlayerObj::Spells PlayerObj::SelectedSpell = 1;
 
 PlayerObj::PlayerObj()
 {
@@ -63,4 +64,14 @@ bool PlayerObj::ModifyMana(int Change)
 void PlayerObj::Death()
 {
 	//stubbed
+}
+
+void PlayerObj::SelectSpell(int i)
+{
+	Spells New = (Spells)i;
+	if(New != SelectedSpell)
+	{
+		if(New 
+		SetSpell(New);
+	}
 }

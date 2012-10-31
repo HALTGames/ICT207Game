@@ -155,13 +155,13 @@ void GameWorld::GUI(void)
 	glPopMatrix();
 	//Protection - sphere defence
 	glPushMatrix();
-		glTranslatef(0.418, -0.04, -0.02);
+		glTranslatef(0.417, -0.04, -0.02);
 		glScalef(0.2,1,1);
 		glScalef(0.3,0.3,1);
 		glRotatef(90,1,0,0);
 		ModelLoader[5].DrawModel();
 	glPopMatrix();
-		//statbar outers
+	//statbar outers
 	glPushMatrix();
 		glTranslatef(-0.67, -0.04, -0.02);
 		glScalef(0.2,1,1);
@@ -293,7 +293,10 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		}
 		else if(State == GLUT_DOWN)
 		{
-
+			if(Character)
+			{
+				ProjectileObj Projectile();
+			}
 		}
 	}
 }

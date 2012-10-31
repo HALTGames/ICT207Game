@@ -30,6 +30,7 @@
 #include "objects\PlayerObj.h"
 #include "objects\Strafer.h"
 #include "objects\TerrainObj.h"
+#include "objects\ProjectileObj.h"
 
 
 
