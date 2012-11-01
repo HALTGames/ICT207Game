@@ -29,7 +29,7 @@ void PlayerObj::Display()
 
 	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
 	{
-		std::cout << "Collision with terrain" << std::endl;
+		//std::cout << "Collision with terrain" << std::endl;
 	}
 }
 
@@ -77,8 +77,9 @@ void PlayerObj::SelectSpell(int i)
 	{
 		if(New == (Spells)2)
 		{
-			if((time / 1000)-30 >=  ProtectionTimer/1000)
+			if((time / 1000)-2 >=  ProtectionTimer/1000)
 			{
+				std::cout << "2 Pressed";
 				ProtectionTimer = time;
 				SetSpell(New);
 			}	
@@ -90,11 +91,23 @@ void PlayerObj::SelectSpell(int i)
 	}
 }
 
-void PlayerObj::Shoot()
+void PlayerObj::Shoot(int x, int y)
 {
 	if(SelectedSpell == (Spells)1)
 	{
-
+		Vector3 Target;
+		Target.Set(x,y,0);
+		ProjectileObj MagicMissile(GetPosition(),Target);
 	}
-	//ProjectileObj o();
+	else if(SelectedSpell = (Spells)2)
+	{
+					std::cout << "SPHERE AAACTIVATE!";
+		glutSetWindow(1);
+		glPushMatrix();
+			glLoadIdentity();
+			glTranslatef(GetPosition().x, GetPosition().y, GetPosition().z);
+			glutSolidSphere(100,5,5);
+			std::getchar();
+		glPopMatrix();
+	}
 }

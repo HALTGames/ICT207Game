@@ -199,6 +199,8 @@ void GameWorld::GUI(void)
 		glEnd();
 	glPopMatrix();
 	glutSwapBuffers ();
+	//return to main window
+	glutSetWindow(1);
 }
 
 void GameWorld::Idle()
@@ -269,15 +271,21 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 	{
 		SoundController->PausePlaySoundTrack();
 	}
+	if(Key == '1')
+	{
+		Character.SelectSpell(1);
+	}
+	if(Key == '2')
+	{
+		Character.SelectSpell(2);
+	}
 
 	if(Key == 'p')
 	{
 		WipeAI();
 		SoundController->StopMusic();
 		delete SoundController;
-		currWorld = SHAYSWORLD;
-		
-		
+		currWorld = SHAYSWORLD;	
 	}
 	glutPostRedisplay();
 }
@@ -295,7 +303,7 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		{
 			//if()
 			{
-				//Character.Shoot();
+				Character.Shoot(MouseX, MouseY);
 			}
 		}
 	}

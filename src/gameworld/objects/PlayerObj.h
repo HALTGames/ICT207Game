@@ -25,7 +25,7 @@ public:
 	
 	void Death();
 
-	void Shoot();
+	void Shoot(int x, int y);
 	void SelectSpell(int i);
 
 	//Setters
