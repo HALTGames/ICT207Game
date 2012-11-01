@@ -12,5 +12,5 @@ newmtl Material__25
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka uiMagicMissile.tga
-	map_Kd uiMagicMissile.tga
+	map_Ka uiMagicMissileNumber.tga
+	map_Kd uiMagicMissileNumber.tga
