@@ -17,13 +17,15 @@ void Seek::Enter(AIObject* AI)
 
 void Seek::Execute(AIObject* AI)
 {
+	AI->TakeDamage();
 	AI->SetVector(AI->GetPlayerPos(),  AI->GetPosition());
 	AI->SetAngle(AI->GetPlayerPos(),  AI->GetPosition());
 	if(time(NULL) > AI->seconds+1)
 	{
 	AI->Move();
-	if(AI->GetDistanceFrom()<0.5)
+	if(AI->Collide())
 	{
+		AI->DealDamage();
 		AI->seconds = time(NULL);
 	}
 	}

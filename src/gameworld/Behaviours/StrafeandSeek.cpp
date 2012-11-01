@@ -16,6 +16,7 @@ void StrafeandSeek::Enter(AIObject* AI)
 
 void StrafeandSeek::Execute(AIObject* AI)
 {
+	AI->TakeDamage();
 	AI->SetVector(AI->GetPlayerPos(),  AI->GetPosition());
 	AI->SetAngle(AI->GetPlayerPos(),  AI->GetPosition());
 	if(AI->checker == 0)

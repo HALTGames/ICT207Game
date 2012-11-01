@@ -56,8 +56,9 @@ void PlayerObj::ChangePosition(const Vector3 pos)
 
 void PlayerObj::ModifyHealth(int Change)
 {
-	if(Protection == false)
+	if(ProtectionStatus == false)
 	{
+		std::cout << "Damage DEALT" << std::endl <<std::endl;
 		Health += Change;
 		if(Health > 100)
 		{
@@ -65,9 +66,12 @@ void PlayerObj::ModifyHealth(int Change)
 		}
 		else if(Health <= 0)
 		{
+			Health = 0;
 			Death();
 		}
 	}
+
+	//cout<<Health<<" HEALTH \n";
 }
 
 bool PlayerObj::ModifyMana(int Change)
@@ -135,8 +139,9 @@ void PlayerObj::Shoot(int x, int y)
 				glLoadIdentity();
 				glColor3f(0,0,1);
 				glTranslatef(GetPosition().x, GetPosition().y, GetPosition().z);
-				glutSolidSphere(10,6,6);
+				glutSolidSphere(0.1,6,6);
 			glPopMatrix();	
+			glutSwapBuffers();
 		}
 		SetSpell((Spells)1);
 	}

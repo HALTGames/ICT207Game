@@ -1,6 +1,8 @@
 #pragma once
 
 #include <stdlib.h>
+#include <gl\glut.h>
+
 class Particle
 {
 public:
@@ -21,8 +23,11 @@ public:
 
 	void DecayMissile();
 
+	void DrawMissile();
 private:
-	PARTICLES MissileEffect[100];
-	PARTICLES SecondEffect[100];
+	PARTICLES MissileEffect[1000];
+	PARTICLES SecondEffect[1000];
+
+	int MaxParticle;
 };
 

@@ -9,8 +9,25 @@ AIObject::AIObject()
 	AILookDirection.y = 0;
 	AILookDirection.z = 0;
 	soundcontroller.addSound("sounds/AISpell.mp3", "AISpell");
+	
+	
+}
 
 
+void AIObject::TakeDamage()
+{
+	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), PLAYERPROJECTILE));
+	{
+		//Health-=10;
+		//cout<<Health<< "   AI DAMAGE \n";
+	}
+
+}
+
+void AIObject::DealDamage()
+{
+	cout<<Damage<<"  DAMAGE \n";
+	Player.ModifyHealth(Damage);
 }
 
 double AIObject::GetMag(Vector3 pass)
@@ -71,6 +88,17 @@ void  AIObject::Move()
 	
 	ChangePosition(Direction);
 
+}
+
+void AIObject::Lunge()
+{
+	Direction.x = Direction.x*2;
+	Direction.x = Direction.z*2;
+}
+
+bool AIObject::Collide()
+{
+	return(GameCollision::CollidesWith(this->model.GetCollisionSphere(), PLAYER));
 }
 
 Vector3 AIObject::GetDirection()
@@ -153,5 +181,7 @@ double AIObject::GetDistanceFrom()
 
 void AIObject::Fire()
 {
-	cout<<"FIRING \n";
+	//new ProjectileObj(position.x, position.z, Direction.x, Direction.z);
+	GameObjManager::AddObject(new AIProjectile(position.x, position.z, PlayerPos.x, PlayerPos.z));
+	//cout<<"Firingmutherfucker!!!!!!!! \n";
 }

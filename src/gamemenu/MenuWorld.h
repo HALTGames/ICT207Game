@@ -1,5 +1,7 @@
 #pragma once
 
+#define GLUT_DISABLE_ATEXIT_HACK
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
@@ -9,6 +11,7 @@
 #include "../world.h"
 
 #include "RAWTexture.h"
+#include "../modelimporter/GameModel.h"
 
 typedef GLfloat point[3];//Point in 3d space
 
@@ -39,6 +42,14 @@ private:
 	void MenuSelect();
 	void MenuDown();
 	void MenuUp();
+
+	void drawIsland(void);
+	void drawSkybox(void);
+	void animate(void);
+
+	GLMmodel* island;
+	GLMmodel* skybox;
+	static float ypoz;
 
 	GLuint texture; // stores the current texture being used
 

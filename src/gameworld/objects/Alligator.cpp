@@ -7,11 +7,12 @@ Alligator::Alligator()
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
-	Health =5000;
+	Health =200;
 	MaxSpeed =0.05;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(Seek::Instance());
 	SetScale(15,15,15);
+	Damage = 50;
 	
 }
 

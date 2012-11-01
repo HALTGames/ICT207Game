@@ -23,7 +23,7 @@ void GameWorld::Init(void)
 	glLightfv(GL_LIGHT0, GL_SPECULAR, light1_specular);
 	//glClearColor (0.0, 0.0, 0.0, 0.0);
 	glShadeModel (GL_SMOOTH);
-	 glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHTING);
 	glLightf(GL_LIGHT0, GL_CONSTANT_ATTENUATION, 0.5);
 	 glEnable(GL_LIGHT0);
 
@@ -119,7 +119,7 @@ void GameWorld::Display(void)
 
 	glPushMatrix();
 		glScalef(50.0, 50.0, 50.0);
-		glTranslatef(0,-0.35,0);
+		glTranslatef(0,-0.40,0);
 		level.DrawModel();
 	glPopMatrix();
 

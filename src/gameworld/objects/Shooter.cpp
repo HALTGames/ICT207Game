@@ -3,15 +3,15 @@
 
 Shooter::Shooter()
 {
-	model.LoadModel("./models/arrowman.obj");
+	model.LoadModel("./models/enemy.obj");
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
-	Health =1000;
+	Health =30;
 	MaxSpeed =0.12;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(SeekandShoot::Instance());
-	SetScale(10,10,10);
+	SetScale(1,1,1);
 
 	
 }
@@ -28,6 +28,7 @@ void Shooter::Update(Vector3 PlayPos)
 	
 	
 	ThisStateMachine->update();
+	angle-=90;
 	
 	
 	
