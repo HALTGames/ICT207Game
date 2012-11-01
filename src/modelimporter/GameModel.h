@@ -3,6 +3,7 @@
 //-----------------------------------------------------------------------------
 
 #include <iostream>
+#include <cmath>
 #include "model.h"
 #include "../Vector3.h"
 
@@ -15,6 +16,11 @@ struct CollisionSphere
 
 	CollisionSphere():center(Vector3()), radius(1) {}
 	CollisionSphere(Vector3 cen, double rad):center(cen), radius(rad) {}
+
+	bool operator==(const CollisionSphere& other)
+	{
+		return (center == other.center) && (abs(radius - other.radius) < 0.01);
+	}
 
 	void SetCenter(Vector3 cen) { center = cen; }
 	void ScaleSphere(double scale) { radius *= scale; }

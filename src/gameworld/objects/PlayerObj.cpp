@@ -36,11 +36,6 @@ void PlayerObj::Display()
 	{
 		ProtectionStatus = false;
 	}
-
-	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
-	{
-		//std::cout << "Collision with terrain" << std::endl;
-	}
 }
 
 void PlayerObj::ChangePosition(const Vector3 pos)
@@ -48,7 +43,8 @@ void PlayerObj::ChangePosition(const Vector3 pos)
 	Vector3 newPos = position + pos;
 	model.GetCollisionSphere()->SetCenter(newPos);
 
-	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
+	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN) ||
+		GameCollision::CollidesWith(this->model.GetCollisionSphere(), ENEMY))
 	{
 		model.GetCollisionSphere()->SetCenter(position);
 	}

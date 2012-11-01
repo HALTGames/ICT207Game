@@ -47,9 +47,9 @@ virtual	void SetAngle(Vector3 dir, Vector3 other);
 
 	AIObject &operator=(const AIObject &rhs);
 
-      int operator==(const AIObject &rhs) const;
+	  int operator==(const AIObject &rhs) const;
 
-      int operator<(const AIObject &rhs) const;
+	  int operator<(const AIObject &rhs) const;
 
 	
 	//void SetHealth(int health);

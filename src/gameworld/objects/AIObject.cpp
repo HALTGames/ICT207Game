@@ -9,6 +9,8 @@ AIObject::AIObject()
 	AILookDirection.y = 0;
 	AILookDirection.z = 0;
 	soundcontroller.addSound("sounds/AISpell.mp3", "AISpell");
+
+
 }
 
 double AIObject::GetMag(Vector3 pass)

@@ -32,7 +32,7 @@ bool GameModel::LoadModel(char* fileName)
 
 bool GameModel::DrawModel()
 {
-	//DrawSphere();
+	DrawSphere();
 
 	return Model::DrawModel();	
 }

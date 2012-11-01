@@ -21,7 +21,7 @@ bool TerrainModel::DrawModel()
 {
 	Model::DrawModel();
 
-	DrawTerrain();
+	//DrawTerrain();
 
 	return true;
 }

@@ -35,7 +35,6 @@ public:
 	static bool CollidesWith(CollisionSphere* sphere, collidableType type);
 
 	static bool RemoveCollidable(collidableType type, int objectNum);
-
 private:
 	static collisionMap objCollision;
 

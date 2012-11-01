@@ -15,7 +15,6 @@ public:
 
 protected:
 	double speed;
-	double length;
 
 private:
 	Vector3 movement;

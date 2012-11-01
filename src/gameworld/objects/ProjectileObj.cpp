@@ -16,14 +16,12 @@ ProjectileObj::ProjectileObj(double x1, double z1, double x2, double z2)
 	SetPosition(Vector3(x1, 0.0, z1));
 
 	startTime = glutGet(GLUT_ELAPSED_TIME);
-	length = 20.0;
 }
 
 void ProjectileObj::Display()
 {
 	double deltaTime = glutGet(GLUT_ELAPSED_TIME) / 1000.0;
-	Vector3 len = movement * deltaTime;
-	if(len.Length() < length){}
+	//if(deltaTime > ){}
 
 	ChangePosition(movement);
 	GameObj::Display();

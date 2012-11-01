@@ -19,9 +19,13 @@ bool GameCollision::CollidesWith(CollisionSphere* sphere, collidableType type)
 
 	for(CItrObjList itr = objCollision[type].begin(); itr != objCollision[type].end(); itr++)
 	{
-		if(CheckCollision((*itr)->GetCollisionSphere(), sphere))
-		{
-			collision = true;
+		if((*itr)->GetCollisionSphere() == sphere) {}
+		else {
+
+			if(CheckCollision((*itr)->GetCollisionSphere(), sphere))
+			{
+				collision = true;
+			}
 		}
 	}
 
