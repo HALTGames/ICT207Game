@@ -16,8 +16,6 @@ public:
 
 protected:
 	double speed;
-
-private:
 	double length;
 	Vector3 movement;
 	int startTime;	
