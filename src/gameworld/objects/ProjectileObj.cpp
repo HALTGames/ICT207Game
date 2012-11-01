@@ -3,6 +3,7 @@
 
 ProjectileObj::ProjectileObj(double x1, double z1, double x2, double z2)
 {
+	
 	model.LoadModel("./models/proj.obj");
 
 	speed = 1.0;

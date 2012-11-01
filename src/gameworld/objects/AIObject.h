@@ -5,6 +5,8 @@
 //#include "../Behaviours/Seek.h"
 #include <math.h>
 #include "../../SoundControl/sounds.h"
+#include "AIProjectile.h"
+#include "../GameObjManager.h"
 
 
 

@@ -9,6 +9,7 @@ class ProjectileObj :
 	public GameObj
 {
 public:
+	ProjectileObj(){};
 	ProjectileObj(double x1, double z1, double x2, double z2);
 
 	virtual void Display();
@@ -16,10 +17,10 @@ public:
 protected:
 	double speed;
 	double length;
+	Vector3 movement;
+	int startTime;
 
 private:
-	Vector3 movement;
-
-	int startTime;
+	
 };
 
