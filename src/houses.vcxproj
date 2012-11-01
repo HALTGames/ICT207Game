@@ -148,6 +148,7 @@
     <ClCompile Include="gameworld\objects\Bird.cpp" />
     <ClCompile Include="gameworld\objects\PlayerObj.cpp" />
     <ClCompile Include="gameworld\objects\ProjectileObj.cpp" />
+    <ClCompile Include="gameworld\objects\ReticuleObj.cpp" />
     <ClCompile Include="gameworld\objects\Shooter.cpp" />
     <ClCompile Include="gameworld\objects\Strafer.cpp" />
     <ClCompile Include="gameworld\objects\TerrainObj.cpp" />
@@ -195,6 +196,7 @@
     <ClInclude Include="gameworld\objects\Bird.h" />
     <ClInclude Include="gameworld\objects\PlayerObj.h" />
     <ClInclude Include="gameworld\objects\ProjectileObj.h" />
+    <ClInclude Include="gameworld\objects\ReticuleObj.h" />
     <ClInclude Include="gameworld\objects\Shooter.h" />
     <ClInclude Include="gameworld\objects\Strafer.h" />
     <ClInclude Include="gameworld\objects\TerrainObj.h" />

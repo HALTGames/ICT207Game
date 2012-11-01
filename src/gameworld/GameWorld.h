@@ -31,7 +31,7 @@
 #include "objects\Strafer.h"
 #include "objects\TerrainObj.h"
 #include "objects\ProjectileObj.h"
-
+#include "objects\ReticuleObj.h"
 
 
 class GameWorld: public World
@@ -66,6 +66,7 @@ private:
 	list<Shooter*> *ShooterList;
 	list<Alligator*> *AlligatorList;
 	list<Strafer*> *StraferList;
+	ReticuleObj* reticule;
 
 	int RandomAI;
 	Bird *AIBird;
@@ -84,5 +85,7 @@ private:
 	int lastdrawn;
 
 	bool left, right, forward, back;
+
+	int gameWidth, gameHeight;
 };
 #endif

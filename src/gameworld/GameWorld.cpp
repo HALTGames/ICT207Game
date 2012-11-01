@@ -31,11 +31,12 @@ void GameWorld::Init(void)
 	player = new PlayerObj;
 	GameObjManager::AddObject(player);
 
-	//AddObject(AIBird);
+	reticule = new ReticuleObj;
 
 	left = right = forward = back = false;
 
 	currWorld = GAMEWORLD;
+	gameWidth = 1280, gameHeight = 960;
 
 	srand(time(0));
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
@@ -52,6 +53,7 @@ void GameWorld::Init(void)
 void GameWorld::Exit()
 {
 	GameObjManager::Exit();
+	delete reticule;
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -65,6 +67,9 @@ void GameWorld::Reshape(int w, int h)
 
 	glMatrixMode(GL_MODELVIEW);
 	glViewport(0,0,w,h); 
+
+	gameWidth = w;
+	gameHeight = h;
 }
 
 void GameWorld::Display(void)
@@ -86,6 +91,8 @@ void GameWorld::Display(void)
 		glTranslatef(0,-0.35,0);
 		level.DrawModel();
 	glPopMatrix();
+
+	reticule->Display();
 
 	GameObjManager::UpdateObjects();
 	CreateAI();
@@ -299,7 +306,6 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		else if(State == GLUT_DOWN)
 		{
 			std::cout << "Mouse Pressed" << std::endl;
-			//GameObj* proj = new ProjectileObj(player->GetPosition().x, player->GetPosition().z, -100, -100);
 			player->Shoot(MouseX, MouseY);
 		}
 	}
@@ -363,7 +369,39 @@ void GameWorld::ReleaseKeys(unsigned char key, int x, int y)
 
 void GameWorld::MouseMove(int x, int y)
 {
+	GLdouble objx, objy, objz;
 
+	double offsetX = x - (gameWidth / 2);
+	double offsetY = (gameHeight / 2) - y;
+
+	double reticuleX = player->GetPosition().x + offsetX; 
+	double reticuleY = player->GetPosition().y + offsetY;
+
+	double modelview[16], projection[16];
+    int viewport[4];
+    float z;
+	//get the projection matrix		
+    glGetDoublev( GL_PROJECTION_MATRIX, projection );
+	//get the modelview matrix		
+    glGetDoublev( GL_MODELVIEW_MATRIX, modelview );
+	//get the viewport		
+    glGetIntegerv( GL_VIEWPORT, viewport );
+	
+    //Read the window z co-ordinate 
+    //(the z value on that point in unit cube)		
+    glReadPixels( x, viewport[3]-y, 1, 1,
+		 GL_DEPTH_COMPONENT, GL_FLOAT, &z );
+
+    //Unproject the window co-ordinates to 
+    //find the world co-ordinates.
+    gluUnProject( x, viewport[3]-y, z, modelview, 
+		projection, viewport, &objx, &objy, &objz );
+
+	reticule->SetPosition(Vector3(objx, objy, objz));
+
+	//std::cout << objx << std::endl;
+	//std::cout << objy << std::endl;
+	//std::cout << objz << std::endl;
 }
 
 void GameWorld::CreateAI() 
