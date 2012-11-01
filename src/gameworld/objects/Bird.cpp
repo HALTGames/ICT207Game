@@ -7,11 +7,14 @@ Bird::Bird()
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
-	Health =1000;
+	Health =100000;
 	MaxSpeed =0.09;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(Seek::Instance());
 	SetScale(1,1,1);
+	AILookDirection.x = 1;
+	AILookDirection.y = 0;
+	AILookDirection.z = 0;
 
 	
 }
@@ -25,9 +28,8 @@ void Bird::Update(Vector3 PlayPos)
 
 	//saves current position of player to the bird class so it can be accessed
 	PlayerPos =PlayPos;
-	
-	
 	ThisStateMachine->update();
+	angle+=90;
 	
 	
 	
@@ -81,3 +83,4 @@ int Bird::operator<(const Bird &rhs) const
    return 0;
 
 }
+

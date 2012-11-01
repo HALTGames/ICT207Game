@@ -19,7 +19,6 @@ private:
 
 public:
 	//void Init();
-	
 	void Update(Vector3 PlayPos);
 	~Bird(){/*delete ThisStateMachine;*/}
 	Bird();

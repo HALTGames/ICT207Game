@@ -54,11 +54,15 @@ public:
 	virtual void GUIinit();
 
 	virtual void Exit();
+	void UpdateAI();
+	void CheckForAICreate();
 	void CreateAI();
 	void WipeAI();
+	void PickAIPos();
 	void ManaRegen();
 	/// may get moved to a class
 private:
+
 	sounds* SoundController;
 	GameCamera camera;
 	PlayerObj* player;
@@ -73,6 +77,8 @@ private:
 	Shooter *AIShooter;
 	Alligator *AIAlligator;
 	Strafer *AIStrafer;
+	Vector3 Placement;
+
 	TextureLoader TextureLoad;
 
 	void PlayerMovement();
