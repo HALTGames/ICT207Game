@@ -76,6 +76,7 @@ void MenuWorld::Display()
 
 void MenuWorld::Idle()
 {
+	animate();
 }
 
 void MenuWorld::Keyboard(unsigned char key, int keyX, int keyY)
@@ -149,9 +150,61 @@ void MenuWorld::MouseMove(int x, int y)
 	}
 }
 
+void MenuWorld::drawIsland()
+{
+    if (!island) 
+	{
+        island = glmReadOBJ("models/island.obj");	
+        if (!island) exit(0);
+        glmUnitize(island);
+        glmFacetNormals(island);        
+		glmVertexNormals(island, 90.0);
+    }
+    glmDraw(island, GLM_SMOOTH| GLM_TEXTURE);
+}
+
+void MenuWorld::drawSkybox()
+{
+    if (!skybox) 
+	{
+        skybox = glmReadOBJ("models/skybox.obj");	
+        if (!skybox) exit(0);
+        glmUnitize(skybox);
+        glmFacetNormals(skybox);        
+		glmVertexNormals(skybox, 90.0);
+    }
+    glmDraw(skybox, GLM_SMOOTH| GLM_TEXTURE);
+}
+
+void MenuWorld::animate()
+{
+	ypoz+=0.01;
+	if (ypoz>360) ypoz=0;
+	glutPostRedisplay();
+}
+
 void MenuWorld::DrawMenu()
 {
-		glPushMatrix();
+	glPushMatrix();//draw the island
+		glEnable(GL_DEPTH_TEST);
+		glTranslatef(0,0,0);
+		glScalef(3,3,3);
+		glRotatef(45,1,0,0);
+		glRotatef(ypoz,0,1,0);
+		drawIsland();
+		glDisable(GL_DEPTH_TEST);
+	glPopMatrix();
+
+	glPushMatrix();//draw the skybox
+		glEnable(GL_DEPTH_TEST);
+		glTranslatef(0,0,0);
+		glScalef(5,5,5);
+		glRotatef(135,1,0,0);
+		drawSkybox();
+		glDisable(GL_DEPTH_TEST);
+	glPopMatrix();
+
+	glPushMatrix();
 		//Load our texture
 		texture = RAWTexture::LoadTexture( "textures/start_icon_alpha.raw", 256, 256 );
 		glColor4f(1,1,1,1);
