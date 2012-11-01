@@ -114,7 +114,7 @@ void PlayerObj::Shoot(int x, int y)
 	}
 	else if(SelectedSpell = (Spells)2)
 	{
-		if(ModifyMana(-15));
+		if(ModifyMana(-15) == true)
 		{
 			std::cout << "SPHERE AAACTIVATE!";
 			ProtectionStatus = true;
@@ -125,8 +125,8 @@ void PlayerObj::Shoot(int x, int y)
 				glColor3f(0,0,1);
 				glTranslatef(GetPosition().x, GetPosition().y, GetPosition().z);
 				glutSolidSphere(10,6,6);
-			glPopMatrix();
-			SetSpell((Spells)1);
+			glPopMatrix();	
 		}
+		SetSpell((Spells)1);
 	}
 }
