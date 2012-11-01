@@ -14,6 +14,7 @@ PlayerObj::PlayerObj()
 	collidableType = "Player";
 	position = Vector3(0.0, 0.0, 0.0);
 	angle = 0.0;
+	SetScale(2,2,2);
 	Inventory.resize(10); //only 4 currently used atm
 	for(int i = 0; i < 10; i++)
 	{
