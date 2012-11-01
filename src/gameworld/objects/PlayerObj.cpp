@@ -10,7 +10,7 @@
 
 PlayerObj::PlayerObj()
 {
-	model.LoadModel("./models/frame.obj");
+	model.LoadModel("./models/wizard_tpose.obj");
 	collidableType = "Player";
 	position = Vector3(0.0, 0.0, 0.0);
 	angle = 0.0;
