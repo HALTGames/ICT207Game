@@ -102,7 +102,7 @@ public:
 	 *
 	 * \param pos the amount to change the position
 	 */
-	void ChangePosition(const Vector3 pos);
+	virtual void ChangePosition(const Vector3 pos);
 
 	/**
 	 * \brief Sets the angle.

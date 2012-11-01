@@ -23,13 +23,9 @@ void ProjectileObj::Display()
 {
 	double deltaTime = glutGet(GLUT_ELAPSED_TIME) / 1000.0;
 	Vector3 len = movement * deltaTime;
-	if(len.Length() < length)
-	{
-		ChangePosition(movement);
-		GameObj::Display();
-	}
-	else
-	{
-		deleteThis = true;
-	}
+	if(len.Length() < length){}
+
+	ChangePosition(movement);
+	GameObj::Display();
+
 }

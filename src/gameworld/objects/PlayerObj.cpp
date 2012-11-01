@@ -47,6 +47,8 @@ void PlayerObj::ChangePosition(const Vector3 pos)
 	Vector3 newPos = position + pos;
 
 	//if(Ga
+
+	GameObj::ChangePosition(pos);
 }
 
 void PlayerObj::ModifyHealth(int Change)
