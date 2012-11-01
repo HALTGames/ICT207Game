@@ -1,7 +1,7 @@
 #include "PlayerObj.h"
 
 	int PlayerObj::Health = 100;
-	int PlayerObj::Mana = 100;
+	int PlayerObj::Mana = 50;
 	std::vector<bool> PlayerObj::Inventory;
 	PlayerObj::Spells PlayerObj::SelectedSpell = (Spells)1;
 	int PlayerObj::ProtectionTimer = 0;
@@ -101,13 +101,16 @@ void PlayerObj::Shoot(int x, int y)
 	}
 	else if(SelectedSpell = (Spells)2)
 	{
-					std::cout << "SPHERE AAACTIVATE!";
-		glutSetWindow(1);
-		glPushMatrix();
-			glLoadIdentity();
-			glTranslatef(GetPosition().x, GetPosition().y, GetPosition().z);
-			glutSolidSphere(100,5,5);
-			std::getchar();
-		glPopMatrix();
+		if(ModifyMana(-10));
+		{
+			std::cout << "SPHERE AAACTIVATE!";
+			glutSetWindow(1);
+			glPushMatrix();
+				glLoadIdentity();
+				glTranslatef(GetPosition().x, GetPosition().y, GetPosition().z);
+				glutSolidSphere(100,5,5);
+			glPopMatrix();
+			SetSpell((Spells)1);
+		}
 	}
 }
