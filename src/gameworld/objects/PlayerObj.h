@@ -45,7 +45,7 @@ private:
 
 	static int Health;
 	static int Mana;
-	static bool Protection;
+	static bool ProtectionStatus;
 	static int Timer;
 	static std::vector<bool> Inventory;
 	static Spells SelectedSpell;

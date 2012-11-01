@@ -6,7 +6,7 @@
 	PlayerObj::Spells PlayerObj::SelectedSpell = (Spells)1;
 	int PlayerObj::ProtectionTimer = 0;
 	int PlayerObj::Timer = 0;
-	bool PlayerObj::Protection = false;
+	bool PlayerObj::ProtectionStatus = false;
 
 PlayerObj::PlayerObj()
 {
@@ -33,7 +33,7 @@ void PlayerObj::Display()
 
 	if((time/1000) -2 >= Timer)
 	{
-		Protection = false;
+		ProtectionStatus = false;
 	}
 
 	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
@@ -113,10 +113,10 @@ void PlayerObj::Shoot(int x, int y)
 	}
 	else if(SelectedSpell = (Spells)2)
 	{
-		if(ModifyMana(-10));
+		if(ModifyMana(-15));
 		{
 			std::cout << "SPHERE AAACTIVATE!";
-			Protection = true;
+			ProtectionStatus = true;
 			Timer = glutGet(GLUT_ELAPSED_TIME);
 			glutSetWindow(1);
 			glPushMatrix();
