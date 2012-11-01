@@ -166,6 +166,8 @@ public:
 
 	bool GetDeleteThis() const;
 
+	void SetScaleSphere(double scale);
+
 void SetScale(float x, float y, float z);
 protected:
 	Vector3 position; /**< the current position of the object */

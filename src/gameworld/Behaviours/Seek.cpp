@@ -22,7 +22,7 @@ void Seek::Execute(AIObject* AI)
 	if(time(NULL) > AI->seconds+1)
 	{
 	AI->Move();
-	if(AI->GetDistanceFrom()<0.5)
+	if(AI->Collide())
 	{
 		AI->seconds = time(NULL);
 	}

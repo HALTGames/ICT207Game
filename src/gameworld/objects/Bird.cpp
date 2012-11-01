@@ -15,6 +15,9 @@ Bird::Bird()
 	AILookDirection.x = 1;
 	AILookDirection.y = 0;
 	AILookDirection.z = 0;
+	SetScaleSphere(0.0001);
+	
+
 
 	
 }
