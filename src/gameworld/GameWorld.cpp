@@ -11,8 +11,6 @@ GameWorld::~GameWorld(void)
 
 void GameWorld::Init(void)
 {
-	objectManager = new GameObjManager;
-
 	RandomAI = 0;
 	ShooterList = new list<Shooter*>;
 	BirdList = new list<Bird*>;
@@ -28,10 +26,10 @@ void GameWorld::Init(void)
 	level.LoadModel("./models/island.obj");
 
 	TerrainObj* terrain = new TerrainObj;
-	objectManager->AddObject(terrain);
+	GameObjManager::AddObject(terrain);
 
 	player = new PlayerObj;
-	objectManager->AddObject(player);
+	GameObjManager::AddObject(player);
 
 	//AddObject(AIBird);
 
@@ -53,8 +51,7 @@ void GameWorld::Init(void)
 
 void GameWorld::Exit()
 {
-	delete objectManager;
-	objectManager = NULL;
+	GameObjManager::Exit();
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -90,7 +87,7 @@ void GameWorld::Display(void)
 		level.DrawModel();
 	glPopMatrix();
 
-	objectManager->UpdateObjects();
+	GameObjManager::UpdateObjects();
 	CreateAI();
 
 	glFlush();
@@ -302,8 +299,7 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		else if(State == GLUT_DOWN)
 		{
 			std::cout << "Mouse Pressed" << std::endl;
-			GameObj* proj = new ProjectileObj(player->GetPosition().x, player->GetPosition().z, -100, -100);
-			objectManager->AddObject(proj);
+			//GameObj* proj = new ProjectileObj(player->GetPosition().x, player->GetPosition().z, -100, -100);
 			player->Shoot(MouseX, MouseY);
 		}
 	}

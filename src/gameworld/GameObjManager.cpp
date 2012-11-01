@@ -1,7 +1,8 @@
 #include "GameObjManager.h"
 
+MapGameObj GameObjManager::objects;
 
-GameObjManager::~GameObjManager(void)
+void GameObjManager::Exit(void)
 {
 	objects.clear();
 }

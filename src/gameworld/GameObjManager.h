@@ -11,16 +11,16 @@ typedef MapGameObj::const_iterator CItrGameObj;
 class GameObjManager
 {
 public:
-	~GameObjManager(void);
+	static void Exit(void);
 
-	void AddObject(GameObj* obj);
+	static void AddObject(GameObj* obj);
 
-	void UpdateObjects();
+	static void UpdateObjects();
 
-	void RemoveObject(int idnum);
+	static void RemoveObject(int idnum);
 
-	GameObj* GetObject(int idnum);
+	static GameObj* GetObject(int idnum);
 private:
-	MapGameObj objects;
+	static MapGameObj objects;
 };
 

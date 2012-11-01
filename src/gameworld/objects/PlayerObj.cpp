@@ -109,7 +109,8 @@ void PlayerObj::Shoot(int x, int y)
 	{
 		Vector3 Target;
 		Target.Set(x,y,0);
-		//ProjectileObj MagicMissile(GetPosition(),Target);
+		ProjectileObj* MagicMissile = new ProjectileObj(position.x, position.z, x, y);
+		GameObjManager::AddObject(MagicMissile);
 	}
 	else if(SelectedSpell = (Spells)2)
 	{

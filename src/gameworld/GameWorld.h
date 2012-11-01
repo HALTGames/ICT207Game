@@ -59,8 +59,6 @@ public:
 	void ManaRegen();
 	/// may get moved to a class
 private:
-	GameObjManager* objectManager;
-
 	sounds* SoundController;
 	GameCamera camera;
 	PlayerObj* player;

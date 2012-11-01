@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include "../GameObjManager.h"
 #include "..\gameobj.h"
 #include "..\GameCollision.h"
 #include "ProjectileObj.h"
