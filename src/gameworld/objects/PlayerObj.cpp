@@ -60,8 +60,9 @@ void PlayerObj::ChangePosition(const Vector3 pos)
 
 void PlayerObj::ModifyHealth(int Change)
 {
-	if(Protection == false)
+	if(ProtectionStatus == false)
 	{
+		std::cout << "Damage DEALT" << std::endl <<std::endl;
 		Health += Change;
 		if(Health > 100)
 		{
