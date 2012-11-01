@@ -70,6 +70,7 @@ void PlayerObj::ModifyHealth(int Change)
 		}
 		else if(Health <= 0)
 		{
+			Health = 0;
 			Death();
 		}
 	}
