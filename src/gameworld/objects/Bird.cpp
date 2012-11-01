@@ -3,7 +3,7 @@
 
 Bird::Bird()
 {
-	model.LoadModel("./models/arrowman.obj");
+	model.LoadModel("./models/bird.obj");
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
@@ -11,7 +11,7 @@ Bird::Bird()
 	MaxSpeed =0.09;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(Seek::Instance());
-	SetScale(10,10,10);
+	SetScale(1,1,1);
 
 	
 }
