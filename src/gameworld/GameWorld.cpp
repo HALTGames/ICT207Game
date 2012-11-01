@@ -92,7 +92,14 @@ void GameWorld::Display(void)
 	PlayerMovement();
 	Vector3 difference = reticule->GetPosition() - player->GetPosition();
 	double angle = atan(difference.x / difference.z) * (180 / PI);
-	player->SetAngle(angle + 90);
+	if(difference.z < 0)
+	{
+		player->SetAngle(angle+180);
+	}
+	else
+	{
+		player->SetAngle(angle);
+	}
 
 	glPushMatrix();
 		glScalef(50.0, 50.0, 50.0);
