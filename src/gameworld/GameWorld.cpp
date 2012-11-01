@@ -135,7 +135,7 @@ void GameWorld::GUI(void)
 		ModelLoader[1].DrawModel();
 	glPopMatrix();
 	//ui scroll
-	if(Character.GetInventoryStatus(1) == true)
+	if(player->GetInventoryStatus(1) == true)
 	{
 		glPushMatrix();
 			glTranslatef(0.79, -0.04, -0.02);
@@ -183,8 +183,8 @@ void GameWorld::GUI(void)
 	glBegin(GL_QUADS);
 		glVertex3f(-0.1,-0.14,-0.1);
 		glVertex3f(-0.1,0.14,-0.1);
-		glVertex3f((0.32*Character.GetHealth()/76.2-0.1),0.14,-0.1);
-		glVertex3f((0.32*Character.GetHealth()/76.2-0.1),-0.14,-0.1);
+		glVertex3f((0.32*player->GetHealth()/76.2-0.1),0.14,-0.1);
+		glVertex3f((0.32*player->GetHealth()/76.2-0.1),-0.14,-0.1);
 		glEnd();
 	glPopMatrix();
 	//manabar
@@ -194,8 +194,8 @@ void GameWorld::GUI(void)
 	glBegin(GL_QUADS);
 		glVertex3f(-0.1,-0.14,-0.1);
 		glVertex3f(-0.1,0.14,-0.1);
-		glVertex3f((0.32*Character.GetMana()/76.2-0.1),0.14,-0.1);
-		glVertex3f((0.32*Character.GetMana()/76.2-0.1),-0.14,-0.1);
+		glVertex3f((0.32*player->GetMana()/76.2-0.1),0.14,-0.1);
+		glVertex3f((0.32*player->GetMana()/76.2-0.1),-0.14,-0.1);
 		glEnd();
 	glPopMatrix();
 	glutSwapBuffers ();
@@ -221,7 +221,7 @@ void GameWorld::ManaRegen()
 	if((time / 1000)-1 >=  ManaTimer/1000)
 	{
 		//everysecond gain 1 mana.
-		Character.ModifyMana(1);
+		player->ModifyMana(1);
 		ManaTimer = time;
 	}	
 }
@@ -273,11 +273,11 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 	}
 	if(Key == '1')
 	{
-		Character.SelectSpell(1);
+		player->SelectSpell(1);
 	}
 	if(Key == '2')
 	{
-		Character.SelectSpell(2);
+		player->SelectSpell(2);
 	}
 
 	if(Key == 'p')
@@ -301,9 +301,10 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		}
 		else if(State == GLUT_DOWN)
 		{
-			{
-				Character.Shoot(MouseX, MouseY);
-			}
+			std::cout << "Mouse Pressed" << std::endl;
+			GameObj* proj = new ProjectileObj(player->GetPosition().x, player->GetPosition().z, -100, -100);
+			objectManager->AddObject(proj);
+			player->Shoot(MouseX, MouseY);
 		}
 	}
 }

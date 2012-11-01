@@ -80,7 +80,6 @@ private:
 
 	TerrainModel level;
 	GameModel ModelLoader[10];
-	PlayerObj Character;
 
 	int ManaTimer;
 

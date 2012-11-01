@@ -7,7 +7,7 @@ class ProjectileObj :
 	public GameObj
 {
 public:
-	ProjectileObj(Vector3 start, Vector3 end);
+	ProjectileObj(double x1, double z1, double x2, double z2);
 
 	virtual void Display();
 
@@ -16,9 +16,6 @@ protected:
 	double length;
 
 private:
-	Vector3 start;
-	Vector3 direction;
-
-	int beginTime;
+	Vector3 movement;
 };
 

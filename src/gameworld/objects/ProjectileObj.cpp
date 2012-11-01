@@ -1,35 +1,22 @@
 #include "ProjectileObj.h"
 
 
-ProjectileObj::ProjectileObj(Vector3 strt, Vector3 end)
+ProjectileObj::ProjectileObj(double x1, double z1, double x2, double z2)
 {
+	model.LoadModel("./models/proj.obj");
+
 	speed = 1.0;
+
+	movement = Vector3(x2 - x1, 0.0, z2 - z1).Normalise();
+	//movement = movement * speed;
+
+	SetPosition(Vector3(x1, 0.0, z1));
+
 	length = 20.0;
-
-	start = strt;
-	position = strt;
-
-	direction = end - strt;
-	direction = direction.Normalise();
-
-	beginTime = glutGet(GLUT_ELAPSED_TIME);
 }
 
 void ProjectileObj::Display()
 {
-	int timeDifference = (glutGet(GLUT_ELAPSED_TIME) - beginTime) / 1000;
-	double speedTime = speed * timeDifference;
-
-	position = direction * speedTime;
-
-	double distanceTravelled = (position - start).Length();
-
-	if(distanceTravelled < length)
-	{
-		GameObj::Display();
-	}
-	else
-	{
-		//destroy this object
-	}
+	ChangePosition(movement);
+	GameObj::Display();
 }
