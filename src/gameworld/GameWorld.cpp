@@ -41,6 +41,7 @@ void GameWorld::Init(void)
 	srand(time(0));
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
+	glutSetCursor(GLUT_CURSOR_NONE);
 	/* Probably never work due to glm fuckery
 	//TextureLoad.LoadTexture("textures/UIbackground.RAW",791,151,1);
 	float width, height;
@@ -85,6 +86,9 @@ void GameWorld::Display(void)
 	camera.Render(player->GetPosition());
 
 	PlayerMovement();
+	Vector3 difference = reticule->GetPosition() - player->GetPosition();
+	double angle = atan(difference.x / difference.z) * (180 / PI);
+	player->SetAngle(angle + 90);
 
 	glPushMatrix();
 		glScalef(50.0, 50.0, 50.0);
@@ -298,6 +302,8 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 
 void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 {
+	SetReticulePosition(MouseX, MouseY);
+
 	if(Button == GLUT_LEFT_BUTTON)
 	{
 		//activate left button code
@@ -375,31 +381,32 @@ void GameWorld::ReleaseKeys(unsigned char key, int x, int y)
 
 void GameWorld::MouseMove(int x, int y)
 {
-	GLdouble objx, objy, objz;
+	SetReticulePosition(x, y);
+}
 
-	double offsetX = x - (gameWidth / 2);
-	double offsetY = (gameHeight / 2) - y;
-
-	double reticuleX = player->GetPosition().x + offsetX; 
-	double reticuleY = player->GetPosition().y + offsetY;
-
-	double modelview[16], projection[16];
-    int viewport[4];
-    float z;
-	//get the projection matrix		
-    glGetDoublev( GL_PROJECTION_MATRIX, projection );
-	//get the modelview matrix		
-    glGetDoublev( GL_MODELVIEW_MATRIX, modelview );
-	//get the viewport		
-    glGetIntegerv( GL_VIEWPORT, viewport );
+void GameWorld::SetReticulePosition(int x, int y)
+{
+	if(y > gameHeight - (gameHeight * 0.95))
+	{
+		GLdouble objx, objy, objz;
+		double modelview[16], projection[16];
+		int viewport[4];
+		float z;
+		//get the projection matrix		
+		glGetDoublev( GL_PROJECTION_MATRIX, projection );
+		//get the modelview matrix		
+		glGetDoublev( GL_MODELVIEW_MATRIX, modelview );
+		//get the viewport		
+		glGetIntegerv( GL_VIEWPORT, viewport );
 		
-    glReadPixels( x, viewport[3]-y, 1, 1,
-		 GL_DEPTH_COMPONENT, GL_FLOAT, &z );
+		glReadPixels( x, viewport[3]-y, 1, 1,
+			 GL_DEPTH_COMPONENT, GL_FLOAT, &z );
 
-    gluUnProject( x, viewport[3]-y, z, modelview, 
-		projection, viewport, &objx, &objy, &objz );
+		gluUnProject( x, viewport[3]-y, z, modelview, 
+			projection, viewport, &objx, &objy, &objz );
 
-	reticule->SetPosition(Vector3(objx, objy, objz));
+		reticule->SetPosition(Vector3(objx, 1, objz));
+	}
 }
 
 void GameWorld::CheckForAICreate()

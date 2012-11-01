@@ -53,6 +53,7 @@ int main(int argc, char** argv)
 	glutDisplayFunc(Display);
 	glutIdleFunc(Idle);
 	glutMouseFunc(Mouse);
+	glutMotionFunc(MouseMove);
 	glutReshapeFunc(Reshape);
 	glutPassiveMotionFunc(MouseMove);
 

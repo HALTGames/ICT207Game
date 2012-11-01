@@ -4,8 +4,11 @@
 #ifndef GAMEWORLD_H
 #define GAMEWORLD_H
 
+#define PI 3.14159265
+
 // STL
 #include <list>
+#include <cmath>
 
 // FREEGLUT
 #include <GL\freeglut.h>
@@ -70,7 +73,9 @@ private:
 	list<Shooter*> *ShooterList;
 	list<Alligator*> *AlligatorList;
 	list<Strafer*> *StraferList;
+
 	ReticuleObj* reticule;
+	void SetReticulePosition(int x, int y);
 
 	int RandomAI;
 	Bird *AIBird;
