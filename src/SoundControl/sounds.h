@@ -12,11 +12,11 @@ class sounds
 {
 public:
 	sounds();
-	
 	void ERRCHECK(FMOD_RESULT result);
 	void SoundMenu();
 	void addSound(const char *filename, string name);
 	void playSound(string name);
+	void playSound2(string name);
 	void PausePlaySoundTrack();
 	void loopmain();
 	void StopMusic();
@@ -27,7 +27,7 @@ private:
     FMOD::Sound      *sound;
     FMOD::Channel    *channel;
 	FMOD::Channel    *channel2;
-    FMOD_TAG          tag;
+	FMOD_TAG          tag;
     FMOD_RESULT       result;
     FMOD_SOUND_TYPE   soundtype;
 	FMOD::Sound		  *sounds1[40];

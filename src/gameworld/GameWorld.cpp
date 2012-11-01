@@ -17,8 +17,12 @@ void GameWorld::Init(void)
 	AlligatorList = new list<Alligator*>;
 	StraferList = new list<Strafer*>;
 	SoundController = new sounds;
+
 	SoundController->SoundMenu();
 	SoundController->PausePlaySoundTrack();
+	SoundController->addSound("sounds/Spell.mp3", "Spell");
+	
+
 	glEnable(GL_TEXTURE_2D);
 
 	lastdrawn = 0;
@@ -313,6 +317,7 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		}
 		else if(State == GLUT_DOWN)
 		{
+			SoundController->playSound("Spell");
 			std::cout << "Mouse Pressed" << std::endl;
 			player->Shoot(MouseX, MouseY);
 		}

@@ -22,7 +22,7 @@
 #include "GameCamera.h"
 #include "GameObj.h"
 #include "../TextureLoader.h"
-#include "../SoundControl/sounds.h"
+//#include "../SoundControl/sounds.h"
 #include "GameObjManager.h"
 #include "../modelimporter/GameModel.h"
 
