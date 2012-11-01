@@ -72,6 +72,8 @@ void PlayerObj::ModifyHealth(int Change)
 			Death();
 		}
 	}
+
+	cout<<Health<<" HEALTH \n";
 }
 
 bool PlayerObj::ModifyMana(int Change)

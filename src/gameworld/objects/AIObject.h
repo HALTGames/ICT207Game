@@ -8,6 +8,7 @@
 #include "AIProjectile.h"
 #include "../GameObjManager.h"
 #include "../GameCollision.h"
+#include "PlayerObj.h"
 
 
 
@@ -22,13 +23,16 @@ protected:
 	Vector3 Direction2;
 	Vector3 AILookDirection;
 	double temp;
+	int Damage;
 	
 	
 	
 private:
+	PlayerObj Player;
 
 
 public:
+	void DealDamage();
 	bool Collide();
 	sounds soundcontroller;
 	~AIObject(){delete[] ThisStateMachine;}

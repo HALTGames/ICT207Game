@@ -24,6 +24,7 @@ void Seek::Execute(AIObject* AI)
 	AI->Move();
 	if(AI->Collide())
 	{
+		AI->DealDamage();
 		AI->seconds = time(NULL);
 	}
 	}

@@ -16,6 +16,7 @@ Bird::Bird()
 	AILookDirection.y = 0;
 	AILookDirection.z = 0;
 	SetScaleSphere(0.0001);
+	Damage = -10;
 	
 
 

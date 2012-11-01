@@ -10,6 +10,13 @@ AIObject::AIObject()
 	AILookDirection.z = 0;
 	soundcontroller.addSound("sounds/AISpell.mp3", "AISpell");
 	
+	
+}
+
+void AIObject::DealDamage()
+{
+	cout<<Damage<<"  DAMAGE \n";
+	Player.ModifyHealth(Damage);
 }
 
 double AIObject::GetMag(Vector3 pass)
