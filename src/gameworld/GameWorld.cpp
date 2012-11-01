@@ -314,7 +314,7 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		else if(State == GLUT_DOWN)
 		{
 			std::cout << "Mouse Pressed" << std::endl;
-			player->Shoot(MouseX, MouseY);
+			player->Shoot(reticule->GetPosition().x, reticule->GetPosition().z);
 		}
 	}
 }

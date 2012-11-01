@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cmath>
+
 #include "..\gameobj.h"
 #include "../../Vector3.h"
 
@@ -17,5 +19,7 @@ protected:
 
 private:
 	Vector3 movement;
+
+	int startTime;
 };
 

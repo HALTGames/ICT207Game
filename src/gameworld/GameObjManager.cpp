@@ -18,6 +18,7 @@ void GameObjManager::UpdateObjects()
 	{
 		if((itr->second)->GetDeleteThis())
 		{
+			delete (itr->second);
 			objects.erase(itr);
 		}
 
@@ -27,6 +28,7 @@ void GameObjManager::UpdateObjects()
 
 void GameObjManager::RemoveObject(int idnum)
 {
+	delete objects.at(idnum);
 	objects.erase(idnum);
 }
 
