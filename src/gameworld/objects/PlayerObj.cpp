@@ -5,6 +5,8 @@
 	std::vector<bool> PlayerObj::Inventory;
 	PlayerObj::Spells PlayerObj::SelectedSpell = (Spells)1;
 	int PlayerObj::ProtectionTimer = 0;
+	int PlayerObj::Timer = 0;
+	bool PlayerObj::Protection = false;
 
 PlayerObj::PlayerObj()
 {
@@ -27,6 +29,13 @@ void PlayerObj::Display()
 	GameObj::Display();
 	glPopMatrix();
 
+	int time = glutGet(GLUT_ELAPSED_TIME);
+
+	if((time/1000) -2 >= Timer)
+	{
+		Protection = false;
+	}
+
 	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
 	{
 		//std::cout << "Collision with terrain" << std::endl;
@@ -35,14 +44,17 @@ void PlayerObj::Display()
 
 void PlayerObj::ModifyHealth(int Change)
 {
-	Health += Change;
-	if(Health > 100)
+	if(Protection == false)
 	{
-		Health = 100;
-	}
-	else if(Health <= 0)
-	{
-		Death();
+		Health += Change;
+		if(Health > 100)
+		{
+			Health = 100;
+		}
+		else if(Health <= 0)
+		{
+			Death();
+		}
 	}
 }
 
@@ -104,6 +116,8 @@ void PlayerObj::Shoot(int x, int y)
 		if(ModifyMana(-10));
 		{
 			std::cout << "SPHERE AAACTIVATE!";
+			Protection = true;
+			Timer = glutGet(GLUT_ELAPSED_TIME);
 			glutSetWindow(1);
 			glPushMatrix();
 				glLoadIdentity();
