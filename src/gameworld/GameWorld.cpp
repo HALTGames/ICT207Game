@@ -316,21 +316,25 @@ void GameWorld::PlayerMovement()
 	if(left)
 	{
 		player->ChangePosition(Vector3(0.0, 0.0, -0.1));
+		reticule->ChangePosition(Vector3(0.0, 0.0, -0.1));
 	}
 
 	if(right)
 	{
 		player->ChangePosition(Vector3(0.0, 0.0, 0.1));
+		reticule->ChangePosition(Vector3(0.0, 0.0, 0.1));
 	}
 
 	if(forward)
 	{
 		player->ChangePosition(Vector3(0.1, 0.0, 0.0));
+		reticule->ChangePosition(Vector3(0.1, 0.0, 0.0));
 	}
 
 	if(back)
 	{
 		player->ChangePosition(Vector3(-0.1, 0.0, 0.0));
+		reticule->ChangePosition(Vector3(-0.1, 0.0, 0.0));
 	}
 
 }
@@ -386,22 +390,14 @@ void GameWorld::MouseMove(int x, int y)
     glGetDoublev( GL_MODELVIEW_MATRIX, modelview );
 	//get the viewport		
     glGetIntegerv( GL_VIEWPORT, viewport );
-	
-    //Read the window z co-ordinate 
-    //(the z value on that point in unit cube)		
+		
     glReadPixels( x, viewport[3]-y, 1, 1,
 		 GL_DEPTH_COMPONENT, GL_FLOAT, &z );
 
-    //Unproject the window co-ordinates to 
-    //find the world co-ordinates.
     gluUnProject( x, viewport[3]-y, z, modelview, 
 		projection, viewport, &objx, &objy, &objz );
 
 	reticule->SetPosition(Vector3(objx, objy, objz));
-
-	//std::cout << objx << std::endl;
-	//std::cout << objy << std::endl;
-	//std::cout << objz << std::endl;
 }
 
 void GameWorld::CreateAI() 
