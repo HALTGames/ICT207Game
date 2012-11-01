@@ -142,8 +142,9 @@ void PlayerObj::Shoot(int x, int y)
 				glLoadIdentity();
 				glColor3f(0,0,1);
 				glTranslatef(GetPosition().x, GetPosition().y, GetPosition().z);
-				glutSolidSphere(10,6,6);
+				glutSolidSphere(0.1,6,6);
 			glPopMatrix();	
+			glutSwapBuffers();
 		}
 		SetSpell((Spells)1);
 	}
