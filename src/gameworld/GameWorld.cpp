@@ -95,7 +95,9 @@ void GameWorld::Display(void)
 	reticule->Display();
 
 	GameObjManager::UpdateObjects();
-	CreateAI();
+	CheckForAICreate();
+	UpdateAI();
+	
 
 	glFlush();
 	glutSwapBuffers();	
@@ -404,17 +406,58 @@ void GameWorld::MouseMove(int x, int y)
 	//std::cout << objz << std::endl;
 }
 
-void GameWorld::CreateAI() 
+void GameWorld::CheckForAICreate()
 {
 	seconds = time(NULL);
 	if(seconds>minuser+1)
 	{
-	Vector3 Placement;
-	
-	Placement.x = (rand() %40)-20 ;
-	Placement.y = 0;
-	Placement.z = (rand() %40)-20 ;
 	minuser = seconds;
+	PickAIPos();
+	CreateAI();
+	}
+}
+
+void GameWorld::PickAIPos()
+{
+	
+	RandomAI = rand() %4;
+	switch(RandomAI)
+	{
+	case 0:
+		{
+	Placement.x = 60;
+	Placement.y = 0;
+	Placement.z = rand() %84-44;
+	break;
+		}
+	case 1:
+		{
+	Placement.x = -60;
+	Placement.y = 0;
+	Placement.z = rand() %84-44;
+	break;
+		}
+	case 2:
+		{
+	Placement.x = rand() %100-50;
+	Placement.y = 0;
+	Placement.z = 50;
+	break;
+		}
+	case 3:
+		{
+	Placement.x = rand() %100-50;
+	Placement.y = 0;
+	Placement.z = -55;
+	break;
+		}
+	}
+}
+
+void GameWorld::CreateAI() 
+{
+	
+	
 	RandomAI = rand() %4;
 	cout<<RandomAI<<"   RANDOM AI NUM \n";
 	switch(RandomAI)
@@ -457,14 +500,18 @@ void GameWorld::CreateAI()
 
 	}
 	
-	//delete AIBird;
-	}
+	
+	
 
+}
+
+void GameWorld::UpdateAI()
+{
 
 	list<Bird*>::iterator itr;
 	for(itr=BirdList->begin(); itr != BirdList->end(); ++itr)
 	{
-		(*itr)->SubtractHealth(1);
+		//(*itr)->SubtractHealth(1);
 		(*itr)->Update(player->GetPosition());
 		(*itr)->Display();
 		if((*itr)->GetHealth() < 0)
@@ -474,10 +521,11 @@ void GameWorld::CreateAI()
 
 	}
 
+
 	list<Shooter*>::iterator itrs;
 	for(itrs=ShooterList->begin(); itrs != ShooterList->end(); ++itrs)
 	{
-		(*itrs)->SubtractHealth(1);
+		//(*itrs)->SubtractHealth(1);
 		(*itrs)->Update(player->GetPosition());
 		(*itrs)->Display();
 		if((*itrs)->GetHealth() < 0)
@@ -490,7 +538,7 @@ void GameWorld::CreateAI()
 	list<Alligator*>::iterator itra;
 	for(itra=AlligatorList->begin(); itra != AlligatorList->end(); ++itra)
 	{
-		(*itra)->SubtractHealth(1);
+		//(*itra)->SubtractHealth(1);
 		(*itra)->Update(player->GetPosition());
 		(*itra)->Display();
 		if((*itra)->GetHealth() < 0)
@@ -503,7 +551,7 @@ void GameWorld::CreateAI()
 	list<Strafer*>::iterator itrst;
 	for(itrst=StraferList->begin(); itrst != StraferList->end(); ++itrst)
 	{
-		(*itrst)->SubtractHealth(1);
+		//(*itrst)->SubtractHealth(1);
 		(*itrst)->Update(player->GetPosition());
 		(*itrst)->Display();
 		if((*itrst)->GetHealth() < 0)
@@ -512,14 +560,6 @@ void GameWorld::CreateAI()
 		}
 
 	}
-
-	
-	//AIBird->Update(player->GetPosition());
-	//AIBird->Display();
-	//AI->ChangePosition(AI->GetDirection());
-	//AI = new Bird;
-	//AddObject(AI);
-
 }
 
 void GameWorld::WipeAI()

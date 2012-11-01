@@ -33,7 +33,7 @@ public:
 	AIObject();
 	void Move();
 	void SetVector(Vector3 dir, Vector3 other);
-	void SetAngle(Vector3 dir, Vector3 other);
+virtual	void SetAngle(Vector3 dir, Vector3 other);
 	void Update(Vector3 PlayPos);
 	void SubtractHealth(int minus);
 	void Fire();
