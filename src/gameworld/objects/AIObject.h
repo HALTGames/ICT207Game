@@ -32,6 +32,7 @@ private:
 
 
 public:
+	void TakeDamage();
 	void DealDamage();
 	bool Collide();
 	sounds soundcontroller;

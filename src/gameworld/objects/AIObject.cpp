@@ -13,6 +13,16 @@ AIObject::AIObject()
 	
 }
 
+void AIObject::TakeDamage()
+{
+	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), PLAYERPROJECTILE));
+	{
+		//Health-=10;
+		//cout<<Health<< "   AI DAMAGE \n";
+	}
+
+}
+
 void AIObject::DealDamage()
 {
 	cout<<Damage<<"  DAMAGE \n";
@@ -172,5 +182,5 @@ void AIObject::Fire()
 {
 	//new ProjectileObj(position.x, position.z, Direction.x, Direction.z);
 	GameObjManager::AddObject(new AIProjectile(position.x, position.z, PlayerPos.x, PlayerPos.z));
-	cout<<"Firingmutherfucker!!!!!!!! \n";
+	//cout<<"Firingmutherfucker!!!!!!!! \n";
 }
