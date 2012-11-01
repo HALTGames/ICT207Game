@@ -12,6 +12,7 @@ Alligator::Alligator()
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(Seek::Instance());
 	SetScale(15,15,15);
+	Damage = 50;
 	
 }
 
