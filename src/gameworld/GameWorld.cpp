@@ -20,7 +20,7 @@ void GameWorld::Init(void)
 
 	SoundController->SoundMenu();
 	SoundController->PausePlaySoundTrack();
-	SoundController->addSound("sounds/Spell.mp3", "Spell");
+	SoundController->addSound("sounds/fireball.wav", "Spell");
 	
 
 	glEnable(GL_TEXTURE_2D);
