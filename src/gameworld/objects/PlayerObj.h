@@ -20,7 +20,7 @@ public:
 	PlayerObj();
 
 	virtual void Display();
-
+	//virtual void ChangePosition(const Vector3 pos);
 	void ModifyHealth(int Change);
 	bool ModifyMana(int Change);
 	
