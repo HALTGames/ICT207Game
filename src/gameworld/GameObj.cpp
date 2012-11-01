@@ -80,6 +80,7 @@ void GameObj::SetCollidableType(const string collideType)
 void GameObj::SetPosition(const Vector3 pos)
 {
 	position = pos;
+	model.GetCollisionSphere()->SetCenter(position);
 }
 
 //-----------------------------------------------------------------------------

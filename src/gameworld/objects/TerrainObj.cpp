@@ -1,10 +1,9 @@
 #include "TerrainObj.h"
 
 TerrainObj::TerrainObj()
-{
-	model.LoadModel("./models/billboard.obj");
-	position = Vector3(0.0, 0.0, 0.0);
-	angle = 0.0;
+{	
+	SetPosition(Vector3(-25.0, 0.0, -14.0));
+	model.GetCollisionSphere()->ScaleSphere(13.0);
 
 	GameCollision::AddCollidable(TERRAIN, this);
 }

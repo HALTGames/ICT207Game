@@ -46,10 +46,16 @@ void PlayerObj::Display()
 void PlayerObj::ChangePosition(const Vector3 pos)
 {
 	Vector3 newPos = position + pos;
+	model.GetCollisionSphere()->SetCenter(newPos);
 
-	//if(Ga
-
-	GameObj::ChangePosition(pos);
+	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
+	{
+		model.GetCollisionSphere()->SetCenter(position);
+	}
+	else
+	{
+		GameObj::ChangePosition(pos);
+	}
 }
 
 void PlayerObj::ModifyHealth(int Change)
