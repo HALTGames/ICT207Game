@@ -4,6 +4,8 @@
 int minuser =0;
 time_t seconds;
 float back = 0.0;
+float lightx = 0, lighty =10, lightz =-5;
+GLfloat light_position[] = { lightx, lighty, lightz, 0.0 };
 
 GameWorld::~GameWorld(void)
 {
@@ -11,6 +13,20 @@ GameWorld::~GameWorld(void)
 
 void GameWorld::Init(void)
 {
+	GLfloat lmodel_ambient[] = { 3.3, 3.3, 3.3, 1.0 };
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
+	GLfloat light1_ambient[] = { 0.1, 0.1, 0.1, 1.0 };
+	GLfloat light1_diffuse[] = { 1, 1, 1, 1 };
+	GLfloat light1_specular[] = { 4.0, 4.0, 4.0, 1.0 };
+	glLightfv(GL_LIGHT0, GL_AMBIENT, light1_ambient);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, light1_diffuse);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, light1_specular);
+	//glClearColor (0.0, 0.0, 0.0, 0.0);
+	glShadeModel (GL_SMOOTH);
+	 glEnable(GL_LIGHTING);
+	glLightf(GL_LIGHT0, GL_CONSTANT_ATTENUATION, 0.5);
+	 glEnable(GL_LIGHT0);
+
 	RandomAI = 0;
 	ShooterList = new list<Shooter*>;
 	BirdList = new list<Bird*>;
