@@ -28,6 +28,7 @@ void Shooter::Update(Vector3 PlayPos)
 	
 	
 	ThisStateMachine->update();
+	angle-=90;
 	
 	
 	

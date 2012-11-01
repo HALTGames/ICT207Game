@@ -13,6 +13,7 @@ AIObject::AIObject()
 	
 }
 
+
 void AIObject::TakeDamage()
 {
 	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), PLAYERPROJECTILE));
