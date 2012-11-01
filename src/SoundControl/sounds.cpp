@@ -7,6 +7,9 @@
 #include "sounds.h"
 
 
+
+
+
 sounds::sounds()
 {
 	system   = 0;
@@ -14,6 +17,7 @@ sounds::sounds()
     sound    = 0;
     channel  = 0;
 	channel2 = 0;
+		
     isplaylist = false;
     title = NULL;
     count = 0;

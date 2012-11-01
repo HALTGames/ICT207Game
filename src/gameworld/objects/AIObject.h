@@ -4,6 +4,7 @@
 #include "../StateMachine.h"
 //#include "../Behaviours/Seek.h"
 #include <math.h>
+#include "../../SoundControl/sounds.h"
 
 
 
@@ -22,9 +23,10 @@ protected:
 	
 	
 private:
-//
+
 
 public:
+	sounds soundcontroller;
 	~AIObject(){delete[] ThisStateMachine;}
 	int seconds;
 	int checker;

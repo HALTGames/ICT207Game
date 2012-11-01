@@ -31,6 +31,7 @@ void SeekandShoot::Execute(AIObject* AI)
 	{
 		if(AI->GetDistanceFrom()<12)
 		{
+			AI->soundcontroller.playSound("AISpell");	
 		AI->Fire();
 		AI->GunSeconds = time(NULL);
 		}

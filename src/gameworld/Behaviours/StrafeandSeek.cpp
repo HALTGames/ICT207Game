@@ -28,6 +28,7 @@ void StrafeandSeek::Execute(AIObject* AI)
 		AI->checker = 1;
 		if(time(NULL) > AI->GunSeconds+1)
 		{
+		AI->soundcontroller.playSound("AISpell");	
 		AI->Fire();
 		AI->GunSeconds =time(NULL);
 		AI->seconds = time(NULL);
