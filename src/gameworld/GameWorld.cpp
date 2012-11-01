@@ -119,7 +119,7 @@ void GameWorld::Display(void)
 
 	glPushMatrix();
 		glScalef(50.0, 50.0, 50.0);
-		glTranslatef(0,-0.35,0);
+		glTranslatef(0,-0.40,0);
 		level.DrawModel();
 	glPopMatrix();
 

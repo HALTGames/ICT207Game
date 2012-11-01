@@ -12,5 +12,5 @@ newmtl 02___Default
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka beholder.raw
-	map_Kd beholder.raw
+	map_Ka enemy.tga
+	map_Kd enemy.tga
