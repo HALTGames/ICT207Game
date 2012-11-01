@@ -1,6 +1,8 @@
 #include "MenuWorld.h"
 
 
+float MenuWorld::ypoz;
+
 MenuWorld::MenuWorld(void)
 {
 	GLuint texture; // stores the current texture being used
