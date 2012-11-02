@@ -153,6 +153,7 @@
     <ClCompile Include="gameworld\objects\Shooter.cpp" />
     <ClCompile Include="gameworld\objects\Strafer.cpp" />
     <ClCompile Include="gameworld\objects\TerrainObj.cpp" />
+    <ClCompile Include="gameworld\ProjectileManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="modelimporter\GameModel.cpp" />
     <ClCompile Include="modelimporter\glm.cpp" />
@@ -202,9 +203,9 @@
     <ClInclude Include="gameworld\objects\Shooter.h" />
     <ClInclude Include="gameworld\objects\Strafer.h" />
     <ClInclude Include="gameworld\objects\TerrainObj.h" />
+    <ClInclude Include="gameworld\ProjectileManager.h" />
     <ClInclude Include="gameworld\State.h" />
     <ClInclude Include="gameworld\StateMachine.h" />
-    <ClInclude Include="GlobalVars.h" />
     <ClInclude Include="modelimporter\GameModel.h" />
     <ClInclude Include="modelimporter\glm.h" />
     <ClInclude Include="modelimporter\Model.h" />

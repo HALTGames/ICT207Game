@@ -125,6 +125,8 @@ void GameWorld::Display(void)
 
 	reticule->Display();
 
+	ProjectileManager::UpdateProjectiles();
+
 	GameObjManager::UpdateObjects();
 	CheckForAICreate();
 	UpdateAI();

@@ -125,7 +125,7 @@ void PlayerObj::Shoot(int x, int y)
 	{
 		Vector3 Target;
 		Target.Set(x,y,0);
-		GameObjManager::AddObject(new ProjectileObj(position.x, position.z, x, y));
+		ProjectileManager::AddProjectile(PROJECTILE, position.x, position.z, x, y);
 	}
 	else if(SelectedSpell = (Spells)2)
 	{

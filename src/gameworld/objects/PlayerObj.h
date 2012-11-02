@@ -1,10 +1,10 @@
 #pragma once
 
 #include <iostream>
-#include "../GameObjManager.h"
+#include "../ProjectileManager.h"
 #include "..\gameobj.h"
 #include "..\GameCollision.h"
-#include "ProjectileObj.h"
+
 #include <vector>
 
 class PlayerObj :

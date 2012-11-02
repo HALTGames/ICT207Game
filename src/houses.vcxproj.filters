@@ -171,9 +171,6 @@
     <ClCompile Include="Particle.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
-    <ClCompile Include="gameworld\GameObjManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="gameworld\Behaviours\SeekandShoot.cpp">
       <Filter>Source Files\GameWorld\Behaviours</Filter>
     </ClCompile>
@@ -191,6 +188,12 @@
     </ClCompile>
     <ClCompile Include="gameworld\objects\AIProjectile.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\GameObjManager.cpp">
+      <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="gameworld\ProjectileManager.cpp">
+      <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -260,9 +263,6 @@
     <ClInclude Include="Vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GlobalVars.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="gameworld\GameCamera.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
@@ -317,9 +317,6 @@
     <ClInclude Include="Particle.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
-    <ClInclude Include="gameworld\GameObjManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="gameworld\Behaviours\Seek.h">
       <Filter>Header Files\GameWorld\Behaviours</Filter>
     </ClInclude>
@@ -340,6 +337,12 @@
     </ClInclude>
     <ClInclude Include="gameworld\objects\AIProjectile.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\GameObjManager.h">
+      <Filter>Header Files\GameWorld</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\ProjectileManager.h">
+      <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

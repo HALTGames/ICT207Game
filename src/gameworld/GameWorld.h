@@ -25,6 +25,7 @@
 //#include "../SoundControl/sounds.h"
 #include "GameObjManager.h"
 #include "../modelimporter/GameModel.h"
+#include "ProjectileManager.h"
 
 // OBJECTS
 #include "objects\Bird.h"
