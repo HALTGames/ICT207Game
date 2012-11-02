@@ -11,8 +11,8 @@ void ProjectileManager::AddProjectile(ProjectileEnum type, double startX,
 		projectiles.push_back(new ProjectileObj(startX, startZ, endX, endZ));
 		break;
 	case AIPROJECTILE:
-		break;
 		//projectiles.push_back(new AIProjectile(startX, startZ, endX, endZ));
+		break;
 	}
 }
 

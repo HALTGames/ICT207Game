@@ -1,38 +1,48 @@
 #include "GameObjManager.h"
 
-MapGameObj GameObjManager::objects;
+GameObjVector GameObjManager::objects;
 
-void GameObjManager::Exit(void)
+int GameObjManager::AddObject(ObjectEnum type)
 {
-	objects.clear();
+	switch(type)
+	{
+	case PLAYER:
+		objects.push_back(new PlayerObj());
+		break;
+	case TERRAIN:
+		objects.push_back(new TerrainObj());
+		break;
+	}
 }
 
-void GameObjManager::AddObject(GameObj* obj)
+GameObj* GameObjManager::GetObject(int idnum)
 {
-	objects[obj->GetIdentificationNumber()] = obj;
+	return objects[idnum];
 }
 
 void GameObjManager::UpdateObjects()
 {
 	for(CItrGameObj itr = objects.begin(); itr != objects.end(); itr++)
 	{
-		if((itr->second)->GetDeleteThis())
+		if((*itr)->GetDeleteThis())
 		{
-			delete (itr->second);
-			objects.erase(itr);
+			RemoveObject(itr);
 		}
-
-		(itr->second)->Display();
+		else
+		{
+			(*itr)->Display();
+		}
 	}
 }
 
 void GameObjManager::RemoveObject(int idnum)
 {
-	delete objects.at(idnum);
-	objects.erase(idnum);
+	delete objects[idnum];
+	objects[idnum] = NULL;
 }
 
-GameObj* GameObjManager::GetObject(int idnum)
+void GameObjManager::RemoveObject(CItrGameObj index)
 {
-	return objects.at(idnum);
+	delete *index;
+	objects.erase(index);
 }

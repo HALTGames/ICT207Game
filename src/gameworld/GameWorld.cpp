@@ -45,11 +45,9 @@ void GameWorld::Init(void)
 
 	level.LoadModel("./models/island.obj");
 
-	TerrainObj* terrain = new TerrainObj;
-	GameObjManager::AddObject(terrain);
+	GameObjManager::AddObject(TERRAIN);
 
-	player = new PlayerObj;
-	GameObjManager::AddObject(player);
+	playerObj = GameObjManager::AddObject(PLAYER);
 
 	reticule = new ReticuleObj;
 

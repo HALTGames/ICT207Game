@@ -1,26 +1,36 @@
 #pragma once
 
-#include <map>
+#include <vector>
 
 #include "GameObj.h"
 
-typedef map<int, GameObj*> MapGameObj;
-typedef MapGameObj::iterator ItrGameObj;
-typedef MapGameObj::const_iterator CItrGameObj;
+// Objects
+#include "objects\PlayerObj.h"
+#include "objects\TerrainObj.h"
+
+typedef std::vector<GameObj*> GameObjVector;
+typedef GameObjVector::iterator ItrGameObj;
+typedef GameObjVector::const_iterator CItrGameObj;
+
+enum ObjectEnum
+{
+	PLAYER,
+	TERRAIN,
+};
 
 class GameObjManager
 {
 public:
-	static void Exit(void);
 
-	static void AddObject(GameObj* obj);
+	static int AddObject(ObjectEnum type);
+
+	static GameObj* GetObject(int idnum);
 
 	static void UpdateObjects();
 
 	static void RemoveObject(int idnum);
-
-	static GameObj* GetObject(int idnum);
+	static void RemoveObject(CItrGameObj index);
 private:
-	static MapGameObj objects;
+	static GameObjVector objects;
 };
 

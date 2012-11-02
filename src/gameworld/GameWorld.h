@@ -31,9 +31,7 @@
 #include "objects\Bird.h"
 #include "objects\Shooter.h"
 #include "objects\Alligator.h"
-#include "objects\PlayerObj.h"
 #include "objects\Strafer.h"
-#include "objects\TerrainObj.h"
 #include "objects\ProjectileObj.h"
 #include "objects\ReticuleObj.h"
 
@@ -66,10 +64,11 @@ public:
 	void ManaRegen();
 	/// may get moved to a class
 private:
+	int playerObj;
+	int reticuleObj;
 
 	sounds* SoundController;
 	GameCamera camera;
-	PlayerObj* player;
 	list<Bird*> *BirdList;
 	list<Shooter*> *ShooterList;
 	list<Alligator*> *AlligatorList;
