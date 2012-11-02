@@ -2,6 +2,7 @@
 
 #include <stdlib.h>
 #include <gl\glut.h>
+#include "Vector3.h"
 
 class Particle
 {
