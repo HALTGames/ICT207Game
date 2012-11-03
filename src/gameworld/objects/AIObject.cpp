@@ -9,8 +9,45 @@ AIObject::AIObject()
 	AILookDirection.y = 0;
 	AILookDirection.z = 0;
 	soundcontroller.addSound("sounds/AISpell.mp3", "AISpell");
+	PickAIPos();
 	
+}
+
+void AIObject::PickAIPos()
+{
 	
+	RandomAI = rand() %4;
+	switch(RandomAI)
+	{
+	case 0:
+		{
+	position.x = 60;
+	position.y = 0;
+	position.z = rand() %84-44;
+	break;
+		}
+	case 1:
+		{
+	position.x = -60;
+	position.y = 0;
+	position.z = rand() %84-44;
+	break;
+		}
+	case 2:
+		{
+	position.x = rand() %100-50;
+	position.y = 0;
+	position.z = 50;
+	break;
+		}
+	case 3:
+		{
+	position.x = rand() %100-50;
+	position.y = 0;
+	position.z = -55;
+	break;
+		}
+	}
 }
 
 
