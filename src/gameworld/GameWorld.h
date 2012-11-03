@@ -22,13 +22,16 @@
 #include "GameCamera.h"
 #include "GameObj.h"
 #include "../TextureLoader.h"
-#include "../SoundControl/sounds.h"
+//#include "../SoundControl/sounds.h"
 #include "GameObjManager.h"
 #include "../modelimporter/GameModel.h"
 #include "ProjectileManager.h"
 
 // OBJECTS
-//#include "objects\AIManager.h"
+#include "objects\Bird.h"
+#include "objects\Shooter.h"
+#include "objects\Alligator.h"
+#include "objects\Strafer.h"
 #include "objects\ProjectileObj.h"
 #include "objects\ReticuleObj.h"
 
@@ -53,6 +56,11 @@ public:
 	virtual void GUIinit();
 
 	virtual void Exit();
+	void UpdateAI();
+	void CheckForAICreate();
+	void CreateAI();
+	void WipeAI();
+	void PickAIPos();
 	void ManaRegen();
 	/// may get moved to a class
 private:
@@ -61,10 +69,19 @@ private:
 
 	sounds* SoundController;
 	GameCamera camera;
+	list<Bird*> *BirdList;
+	list<Shooter*> *ShooterList;
+	list<Alligator*> *AlligatorList;
+	list<Strafer*> *StraferList;
 
 	void SetReticulePosition(int x, int y);
 
-	
+	int RandomAI;
+	Bird *AIBird;
+	Shooter *AIShooter;
+	Alligator *AIAlligator;
+	Strafer *AIStrafer;
+	Vector3 Placement;
 
 	TextureLoader TextureLoad;
 
