@@ -28,10 +28,7 @@
 #include "ProjectileManager.h"
 
 // OBJECTS
-#include "objects\Bird.h"
-#include "objects\Shooter.h"
-#include "objects\Alligator.h"
-#include "objects\Strafer.h"
+#include "objects\AIManager.h"
 #include "objects\ProjectileObj.h"
 #include "objects\ReticuleObj.h"
 
@@ -67,13 +64,7 @@ private:
 	
 	void SetReticulePosition(int x, int y);
 
-	int RandomAI;
-	Bird *AIBird;
-	Shooter *AIShooter;
-	Alligator *AIAlligator;
-	Strafer *AIStrafer;
-	Vector3 Placement;
-
+	
 	TextureLoader TextureLoad;
 
 	void PlayerMovement();

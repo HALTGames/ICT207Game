@@ -29,10 +29,11 @@ protected:
 	
 private:
 	PlayerObj Player;
+	int RandomAI;
 
 
 public:
-	
+	void PickAIPos();
 	void TakeDamage();
 	void DealDamage();
 	bool Collide();

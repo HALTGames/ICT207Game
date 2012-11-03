@@ -95,7 +95,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OutputFile>Debug\houses.exe</OutputFile>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;GlU32.lib;OpenGL32.lib;freeglut.lib;glut32.lib;SDL.lib;SDLmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>fmodex_vc.lib;odbc32.lib;odbccp32.lib;GlU32.lib;OpenGL32.lib;freeglut.lib;glut32.lib;SDL.lib;SDLmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -143,6 +143,7 @@
     <ClCompile Include="gameworld\GameObjManager.cpp" />
     <ClCompile Include="gameworld\GameSound.cpp" />
     <ClCompile Include="gameworld\GameWorld.cpp" />
+    <ClCompile Include="gameworld\objects\AIManager.cpp" />
     <ClCompile Include="gameworld\objects\AIObject.cpp" />
     <ClCompile Include="gameworld\objects\AIProjectile.cpp" />
     <ClCompile Include="gameworld\objects\Alligator.cpp" />
@@ -194,6 +195,7 @@
     <ClInclude Include="gameworld\GameObjManager.h" />
     <ClInclude Include="gameworld\GameSound.h" />
     <ClInclude Include="gameworld\GameWorld.h" />
+    <ClInclude Include="gameworld\objects\AIManager.h" />
     <ClInclude Include="gameworld\objects\AIObject.h" />
     <ClInclude Include="gameworld\objects\AIProjectile.h" />
     <ClInclude Include="gameworld\objects\Alligator.h" />
