@@ -56,11 +56,6 @@ public:
 	virtual void GUIinit();
 
 	virtual void Exit();
-	void UpdateAI();
-	void CheckForAICreate();
-	void CreateAI();
-	void WipeAI();
-	void PickAIPos();
 	void ManaRegen();
 	/// may get moved to a class
 private:
@@ -69,11 +64,7 @@ private:
 
 	sounds* SoundController;
 	GameCamera camera;
-	list<Bird*> *BirdList;
-	list<Shooter*> *ShooterList;
-	list<Alligator*> *AlligatorList;
-	list<Strafer*> *StraferList;
-
+	
 	void SetReticulePosition(int x, int y);
 
 	int RandomAI;
