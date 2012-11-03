@@ -116,7 +116,6 @@ CollisionSphere* GameObj::GetCollisionSphere()
 void GameObj::SetScale(double factor)
 {
 	scale = factor;
-	model.GetCollisionSphere()->ScaleSphere(scale);
 }
 
 bool GameObj::GetDeleteObject() const

@@ -201,6 +201,9 @@
     <ClCompile Include="gameworld\objects\AIManager.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="gameworld\objects\PlayerProj.cpp">
+      <Filter>Source Files\GameWorld\Objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -357,6 +360,9 @@
       <Filter>Header Files\ModelImporter</Filter>
     </ClInclude>
     <ClInclude Include="gameworld\objects\AIManager.h">
+      <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\objects\PlayerProj.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
     </ClInclude>
   </ItemGroup>
