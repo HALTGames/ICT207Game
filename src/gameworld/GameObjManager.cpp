@@ -6,13 +6,17 @@ int GameObjManager::AddObject(ObjectEnum type)
 {
 	switch(type)
 	{
-	case PLAYER:
+	case OBJ_PLAYER:
 		objects.push_back(new PlayerObj());
 		break;
-	case TERRAIN:
+	case OBJ_TERRAIN:
 		objects.push_back(new TerrainObj());
 		break;
+	case OBJ_RETICULE:
+		objects.push_back(new ReticuleObj());
 	}
+
+	return objects.size() - 1;
 }
 
 GameObj* GameObjManager::GetObject(int idnum)
@@ -45,4 +49,14 @@ void GameObjManager::RemoveObject(CItrGameObj index)
 {
 	delete *index;
 	objects.erase(index);
+}
+
+void GameObjManager::Delete()
+{
+	for(CItrGameObj itr = objects.begin(); itr != objects.end(); ++itr)
+	{
+		RemoveObject(itr);
+	}
+
+	objects.clear();
 }

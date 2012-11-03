@@ -45,11 +45,10 @@ void GameWorld::Init(void)
 
 	level.LoadModel("./models/island.obj");
 
-	GameObjManager::AddObject(TERRAIN);
+	playerObj = new PlayerObj();
 
-	playerObj = GameObjManager::AddObject(PLAYER);
-
-	reticule = new ReticuleObj;
+	GameObjManager::AddObject(OBJ_TERRAIN);
+	reticuleObj = GameObjManager::AddObject(OBJ_RETICULE);
 
 	left = right = forward = back = false;
 
@@ -71,8 +70,10 @@ void GameWorld::Init(void)
 
 void GameWorld::Exit()
 {
-	GameObjManager::Exit();
-	delete reticule;
+	delete playerObj;
+	playerObj = NULL;
+
+	GameObjManager::Delete();
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -101,18 +102,20 @@ void GameWorld::Display(void)
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f ); 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
-	camera.Render(player->GetPosition());
+	camera.Render(playerObj->GetPosition());
+	playerObj->Display();
 
 	PlayerMovement();
-	Vector3 difference = reticule->GetPosition() - player->GetPosition();
+	Vector3 difference = GameObjManager::GetObject(reticuleObj)->GetPosition()
+		- playerObj->GetPosition();
 	double angle = atan(difference.x / difference.z) * (180 / PI);
 	if(difference.z < 0)
 	{
-		player->SetAngle(angle+180);
+		playerObj->SetAngle(angle+180);
 	}
 	else
 	{
-		player->SetAngle(angle);
+		playerObj->SetAngle(angle);
 	}
 
 	glPushMatrix();
@@ -121,13 +124,11 @@ void GameWorld::Display(void)
 		level.DrawModel();
 	glPopMatrix();
 
-	reticule->Display();
-
 	ProjectileManager::UpdateProjectiles();
 
-	GameObjManager::UpdateObjects();
-	CheckForAICreate();
-	UpdateAI();
+	//GameObjManager::UpdateObjects();
+	//CheckForAICreate();
+	//UpdateAI();
 	
 
 	glFlush();
@@ -172,7 +173,7 @@ void GameWorld::GUI(void)
 		ModelLoader[1].DrawModel();
 	glPopMatrix();
 	//ui scroll
-	if(player->GetInventoryStatus(1) == true)
+	if(playerObj->GetInventoryStatus(1) == true)
 	{
 		glPushMatrix();
 			glTranslatef(0.79, -0.04, -0.02);
@@ -220,8 +221,8 @@ void GameWorld::GUI(void)
 	glBegin(GL_QUADS);
 		glVertex3f(-0.1,-0.14,-0.1);
 		glVertex3f(-0.1,0.14,-0.1);
-		glVertex3f((0.32*player->GetHealth()/76.2-0.1),0.14,-0.1);
-		glVertex3f((0.32*player->GetHealth()/76.2-0.1),-0.14,-0.1);
+		glVertex3f((0.32*playerObj->GetHealth()/76.2-0.1),0.14,-0.1);
+		glVertex3f((0.32*playerObj->GetHealth()/76.2-0.1),-0.14,-0.1);
 		glEnd();
 	glPopMatrix();
 	//manabar
@@ -231,8 +232,8 @@ void GameWorld::GUI(void)
 	glBegin(GL_QUADS);
 		glVertex3f(-0.1,-0.14,-0.1);
 		glVertex3f(-0.1,0.14,-0.1);
-		glVertex3f((0.32*player->GetMana()/76.2-0.1),0.14,-0.1);
-		glVertex3f((0.32*player->GetMana()/76.2-0.1),-0.14,-0.1);
+		glVertex3f((0.32*playerObj->GetMana()/76.2-0.1),0.14,-0.1);
+		glVertex3f((0.32*playerObj->GetMana()/76.2-0.1),-0.14,-0.1);
 		glEnd();
 	glPopMatrix();
 	glutSwapBuffers ();
@@ -258,7 +259,7 @@ void GameWorld::ManaRegen()
 	if((time / 1000)-1 >=  ManaTimer/1000)
 	{
 		//everysecond gain 1 mana.
-		player->ModifyMana(1);
+		playerObj->ModifyMana(1);
 		ManaTimer = time;
 	}	
 }
@@ -310,11 +311,11 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 	}
 	if(Key == '1')
 	{
-		player->SelectSpell(1);
+		playerObj->SelectSpell(1);
 	}
 	if(Key == '2')
 	{
-		player->SelectSpell(2);
+		playerObj->SelectSpell(2);
 	}
 
 	if(Key == 'p')
@@ -342,7 +343,8 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		{
 			SoundController->playSound("Spell");
 			std::cout << "Mouse Pressed" << std::endl;
-			player->Shoot(reticule->GetPosition().x, reticule->GetPosition().z);
+			playerObj->Shoot(GameObjManager::GetObject(reticuleObj)->GetPosition().x,
+				GameObjManager::GetObject(reticuleObj)->GetPosition().z);
 		}
 	}
 }
@@ -351,26 +353,26 @@ void GameWorld::PlayerMovement()
 {
 	if(left)
 	{
-		player->ChangePosition(Vector3(0.0, 0.0, -0.1));
-		reticule->ChangePosition(Vector3(0.0, 0.0, -0.1));
+		playerObj->ChangePosition(Vector3(0.0, 0.0, -0.1));
+		GameObjManager::GetObject(reticuleObj)->ChangePosition(Vector3(0.0, 0.0, -0.1));
 	}
 
 	if(right)
 	{
-		player->ChangePosition(Vector3(0.0, 0.0, 0.1));
-		reticule->ChangePosition(Vector3(0.0, 0.0, 0.1));
+		playerObj->ChangePosition(Vector3(0.0, 0.0, 0.1));
+		GameObjManager::GetObject(reticuleObj)->ChangePosition(Vector3(0.0, 0.0, 0.1));
 	}
 
 	if(forward)
 	{
-		player->ChangePosition(Vector3(0.1, 0.0, 0.0));
-		reticule->ChangePosition(Vector3(0.1, 0.0, 0.0));
+		playerObj->ChangePosition(Vector3(0.1, 0.0, 0.0));
+		GameObjManager::GetObject(reticuleObj)->ChangePosition(Vector3(0.1, 0.0, 0.0));
 	}
 
 	if(back)
 	{
-		player->ChangePosition(Vector3(-0.1, 0.0, 0.0));
-		reticule->ChangePosition(Vector3(-0.1, 0.0, 0.0));
+		playerObj->ChangePosition(Vector3(-0.1, 0.0, 0.0));
+		GameObjManager::GetObject(reticuleObj)->ChangePosition(Vector3(-0.1, 0.0, 0.0));
 	}
 
 }
@@ -433,7 +435,7 @@ void GameWorld::SetReticulePosition(int x, int y)
 		gluUnProject( x, viewport[3]-y, z, modelview, 
 			projection, viewport, &objx, &objy, &objz );
 
-		reticule->SetPosition(Vector3(objx, 1, objz));
+		GameObjManager::GetObject(reticuleObj)->SetPosition(Vector3(objx, 1, objz));
 	}
 }
 
@@ -543,7 +545,7 @@ void GameWorld::UpdateAI()
 	for(itr=BirdList->begin(); itr != BirdList->end(); ++itr)
 	{
 		//(*itr)->SubtractHealth(1);
-		(*itr)->Update(player->GetPosition());
+		(*itr)->Update(playerObj->GetPosition());
 		(*itr)->Display();
 		if((*itr)->GetHealth() < 0)
 		{
@@ -557,7 +559,7 @@ void GameWorld::UpdateAI()
 	for(itrs=ShooterList->begin(); itrs != ShooterList->end(); ++itrs)
 	{
 		//(*itrs)->SubtractHealth(1);
-		(*itrs)->Update(player->GetPosition());
+		(*itrs)->Update(playerObj->GetPosition());
 		(*itrs)->Display();
 		if((*itrs)->GetHealth() < 0)
 		{
@@ -570,7 +572,7 @@ void GameWorld::UpdateAI()
 	for(itra=AlligatorList->begin(); itra != AlligatorList->end(); ++itra)
 	{
 		//(*itra)->SubtractHealth(1);
-		(*itra)->Update(player->GetPosition());
+		(*itra)->Update(playerObj->GetPosition());
 		(*itra)->Display();
 		if((*itra)->GetHealth() < 0)
 		{
@@ -583,7 +585,7 @@ void GameWorld::UpdateAI()
 	for(itrst=StraferList->begin(); itrst != StraferList->end(); ++itrst)
 	{
 		//(*itrst)->SubtractHealth(1);
-		(*itrst)->Update(player->GetPosition());
+		(*itrst)->Update(playerObj->GetPosition());
 		(*itrst)->Display();
 		if((*itrst)->GetHealth() < 0)
 		{

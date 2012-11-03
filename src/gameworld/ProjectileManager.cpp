@@ -1,6 +1,6 @@
 #include "ProjectileManager.h"
 
-ProjectileVector ProjectileManager::projectiles;
+ProjectileList ProjectileManager::projectiles;
 
 void ProjectileManager::AddProjectile(ProjectileEnum type, double startX,
 	double startZ, double endX, double endZ)
@@ -18,12 +18,12 @@ void ProjectileManager::AddProjectile(ProjectileEnum type, double startX,
 
 void ProjectileManager::UpdateProjectiles()
 {
-	for(CItrProjectileVector itr = projectiles.begin(); 
+	for(CItrProjectileList itr = projectiles.begin(); 
 		itr != projectiles.end(); ++itr)
 	{
 		if((*itr)->CheckTime())
 		{
-			RemoveProjectileAt(itr);
+			RemoveProjectile(itr);
 		}
 		else
 		{
@@ -32,8 +32,9 @@ void ProjectileManager::UpdateProjectiles()
 	}
 }
 
-void ProjectileManager::RemoveProjectileAt(CItrProjectileVector index)
+void ProjectileManager::RemoveProjectile(CItrProjectileList index)
 {
+	std::cout << "Removing Projectile" << std::endl;
 	delete *index;
 	projectiles.erase(index);
 }

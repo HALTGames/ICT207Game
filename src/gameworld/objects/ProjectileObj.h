@@ -10,7 +10,9 @@
 class ProjectileObj
 {
 public:
+	ProjectileObj();
 	ProjectileObj(double x1, double z1, double x2, double z2);
+	~ProjectileObj();
 
 	virtual void Display();
 

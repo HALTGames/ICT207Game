@@ -1,13 +1,13 @@
 #pragma once
 
-#include <vector>
+#include <list>
 
 #include "objects\ProjectileObj.h"
 #include "objects\AIProjectile.h"
 
-typedef std::vector<ProjectileObj*> ProjectileVector;
-typedef ProjectileVector::iterator ItrProjectileVector;
-typedef ProjectileVector::const_iterator CItrProjectileVector;
+typedef std::list<ProjectileObj*> ProjectileList;
+typedef ProjectileList::iterator ItrProjectileList;
+typedef ProjectileList::const_iterator CItrProjectileList;
 
 enum ProjectileEnum
 {
@@ -22,9 +22,9 @@ public:
 							double endX, double endZ);
 
 	static void UpdateProjectiles();
+
 private:
-	static ProjectileVector projectiles;
+	static ProjectileList projectiles;
 
-	static void RemoveProjectileAt(CItrProjectileVector index);
+	static void RemoveProjectile(CItrProjectileList index);
 };
-

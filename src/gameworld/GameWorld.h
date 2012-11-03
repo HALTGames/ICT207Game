@@ -64,7 +64,7 @@ public:
 	void ManaRegen();
 	/// may get moved to a class
 private:
-	int playerObj;
+	PlayerObj* playerObj;
 	int reticuleObj;
 
 	sounds* SoundController;
@@ -74,7 +74,6 @@ private:
 	list<Alligator*> *AlligatorList;
 	list<Strafer*> *StraferList;
 
-	ReticuleObj* reticule;
 	void SetReticulePosition(int x, int y);
 
 	int RandomAI;

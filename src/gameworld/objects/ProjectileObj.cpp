@@ -1,5 +1,9 @@
 #include "ProjectileObj.h"
 
+ProjectileObj::ProjectileObj()
+{
+	ProjectileObj(0, 0, 10, 10);
+}
 
 ProjectileObj::ProjectileObj(double x1, double z1, double x2, double z2)
 {
@@ -18,6 +22,10 @@ ProjectileObj::ProjectileObj(double x1, double z1, double x2, double z2)
 	startTime = glutGet(GLUT_ELAPSED_TIME);
 
 	scale = 1.0;
+}
+
+ProjectileObj::~ProjectileObj()
+{
 }
 
 void ProjectileObj::Display()

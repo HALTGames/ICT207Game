@@ -344,5 +344,8 @@
     <ClInclude Include="gameworld\ProjectileManager.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
+    <ClInclude Include="RotatingArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
