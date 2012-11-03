@@ -204,6 +204,9 @@
     <ClCompile Include="gameworld\objects\PlayerProj.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="gameworld\Score.cpp">
+      <Filter>Source Files\GameWorld</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -364,6 +367,9 @@
     </ClInclude>
     <ClInclude Include="gameworld\objects\PlayerProj.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="gameworld\Score.h">
+      <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
