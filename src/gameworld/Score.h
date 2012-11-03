@@ -1,25 +1,29 @@
 #ifndef SCORE_H
 #define SCORE_H
 
-
-
-
-//class Bird;
-
 class Score
 {
-private:
-	Score();
-	int score;
-	//may need copy constructer, assignment operator and destructer here
-
 public:
-	static Score* Instance();
 
-	void AddToScore(int addition);
-	int GetScore();
+	~Score(void) {instanceFlag = false;}
 
+	static Score* GetInstance();
 
+	float GetTotalScore() const {return TotalScore;}
+	float GetHighScore() const {return HighScore;}
+
+	void Modify(float Mod);
+	void CheckHighScore();
+
+private:
+	static bool instanceFlag;
+	static Score *singleton;
+	Score(void)	{}
+	void SetTotalScore(float T) {TotalScore = T;}
+	void SetHighScore(float H){HighScore = H;}
+
+	static float TotalScore;
+	static float HighScore;
 };
 
 
