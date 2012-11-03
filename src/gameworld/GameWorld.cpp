@@ -12,6 +12,7 @@ GameWorld::~GameWorld(void)
 
 void GameWorld::Init(void)
 {
+
 	GLfloat lmodel_ambient[] = { 3.3, 3.3, 3.3, 1.0 };
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
 	GLfloat light1_ambient[] = { 0.1, 0.1, 0.1, 1.0 };
@@ -28,7 +29,7 @@ void GameWorld::Init(void)
 
 	
 	SoundController = new sounds;
-
+	
 	SoundController->SoundMenu();
 	SoundController->PausePlaySoundTrack();
 	SoundController->addSound("sounds/fireball.wav", "Spell");
@@ -40,6 +41,7 @@ void GameWorld::Init(void)
 
 	level.LoadModel("./models/island.obj");
 
+	AImanage = new AIManager();
 	playerObj = new PlayerObj();
 
 	GameObjManager::AddObject(OBJ_TERRAIN);
@@ -50,7 +52,7 @@ void GameWorld::Init(void)
 	currWorld = GAMEWORLD;
 	gameWidth = 1280, gameHeight = 960;
 
-	srand(time(0));
+	
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
 	glutSetCursor(GLUT_CURSOR_NONE);
@@ -126,8 +128,12 @@ void GameWorld::Display(void)
 	
 	reticuleObj->Display();
 	GameObjManager::UpdateObjects();
-	//CheckForAICreate();
-	//UpdateAI();
+
+
+	
+	AImanage->CheckForAICreate();
+	
+	AImanage->UpdateAI();
 	
 
 	glFlush();

@@ -12,6 +12,7 @@ Shooter::Shooter()
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(SeekandShoot::Instance());
 	SetScale(1);
+	PickAIPos();
 
 	
 }

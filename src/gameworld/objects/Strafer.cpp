@@ -12,6 +12,7 @@ Strafer::Strafer()
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(StrafeandSeek::Instance());
 	SetScale(10);
+	PickAIPos();
 	
 }
 

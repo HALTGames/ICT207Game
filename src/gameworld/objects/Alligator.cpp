@@ -13,6 +13,7 @@ Alligator::Alligator()
 	ThisStateMachine->SetCurrentState(Seek::Instance());
 	SetScale(15);
 	Damage = 50;
+	PickAIPos();
 	
 }
 

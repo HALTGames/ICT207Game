@@ -58,6 +58,7 @@ public:
 private:
 	PlayerObj* playerObj;
 	ReticuleObj* reticuleObj;
+	AIManager* AImanage;
 
 	sounds* SoundController;
 	GameCamera camera;

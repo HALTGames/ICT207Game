@@ -11,6 +11,7 @@ AIObject::AIObject()
 	soundcontroller.addSound("sounds/AISpell.mp3", "AISpell");
 	
 	
+	
 }
 
 void AIObject::PickAIPos()
