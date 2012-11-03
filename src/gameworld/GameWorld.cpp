@@ -132,8 +132,7 @@ void GameWorld::Display(void)
 
 	
 	AImanage->CheckForAICreate();
-	
-	AImanage->UpdateAI();
+	AImanage->UpdateAI(playerObj->GetPosition());
 	
 
 	glFlush();

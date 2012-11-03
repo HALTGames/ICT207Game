@@ -68,14 +68,14 @@ void AIManager::CreateAI()
 	}
 }
 
-void AIManager::UpdateAI()
+void AIManager::UpdateAI(Vector3 PlayerPos)
 {
 	
 	
 	for(itr=BirdList.begin(); itr != BirdList.end(); ++itr)
 	{
 		//(*itr)->SubtractHealth(1);
-		//(*itr)->Update(playerObj->GetPosition());
+		(*itr)->Update(PlayerPos);
 		(*itr)->Display();
 		if((*itr)->GetHealth() < 0)
 		{
@@ -89,7 +89,7 @@ void AIManager::UpdateAI()
 	for(itrs=ShooterList.begin(); itrs != ShooterList.end(); ++itrs)
 	{
 		//(*itrs)->SubtractHealth(1);
-		//(*itrs)->Update(playerObj->GetPosition());
+		(*itrs)->Update(PlayerPos);
 		(*itrs)->Display();
 		if((*itrs)->GetHealth() < 0)
 		{
@@ -102,7 +102,7 @@ void AIManager::UpdateAI()
 	for(itra=AlligatorList.begin(); itra != AlligatorList.end(); ++itra)
 	{
 		//(*itra)->SubtractHealth(1);
-		//(*itra)->Update(playerObj->GetPosition());
+		(*itra)->Update(PlayerPos);
 		(*itra)->Display();
 		if((*itra)->GetHealth() < 0)
 		{
@@ -115,7 +115,7 @@ void AIManager::UpdateAI()
 	for(itrst=StraferList.begin(); itrst != StraferList.end(); ++itrst)
 	{
 		//(*itrst)->SubtractHealth(1);
-		//(*itrst)->Update(playerObj->GetPosition());
+		(*itrst)->Update(PlayerPos);
 		(*itrst)->Display();
 		if((*itrst)->GetHealth() < 0)
 		{

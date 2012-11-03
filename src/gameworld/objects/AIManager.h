@@ -10,7 +10,7 @@ class AIManager
 public:
 	AIManager();
 	~AIManager();
-	void UpdateAI();
+	void UpdateAI(Vector3 PlayerPoss);
 	void CheckForAICreate();
 	void CreateAI();
 	void WipeAI();
@@ -22,6 +22,7 @@ private:
 	list<Alligator*>::iterator itra;
 	list<Strafer*>::iterator itrst;
 
+	Vector3 PlayerPos;
 	int minuser;
 	time_t seconds;
 	int RandomAI;
