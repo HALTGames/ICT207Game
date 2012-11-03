@@ -4,7 +4,7 @@
 
 #include "ProjectileObj.h"
 
-/*class AIProjectile: public ProjectileObj
+class AIProjectile: public ProjectileObj
 {
 public:
 
