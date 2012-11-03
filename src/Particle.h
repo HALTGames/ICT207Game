@@ -20,11 +20,11 @@ public:
 	Particle(void);
 	~Particle(void);
 
-	void CreateMissile(int i);
+	void CreateMissile(int i, Vector3 Start, Vector3 Direction);
 
 	void DecayMissile();
 
-	void DrawMissile();
+	void DrawMissile(Vector3 Start, Vector3 Direction);
 private:
 	PARTICLES MissileEffect[1000];
 	PARTICLES SecondEffect[1000];
