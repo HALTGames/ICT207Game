@@ -17,12 +17,10 @@ public:
 	ProjectileObj(double x1, double z1, double x2, double z2);
 	~ProjectileObj();
 
-	virtual void Display();
+	void Display();
 
 	Vector3 GetCurrentPosition();
 	Vector3 GetDirection();
-
-	bool GetDeleteObject() const;
 protected:
 	double speed;
 	int time; // 1000 = 1 sec
@@ -30,10 +28,14 @@ protected:
 	int startTime;
 
 	void Scale(double factor);
+
 private:
 	
+
+	
+
 	bool CheckTime() const;
 
-	bool CheckCollision();
+	virtual bool CheckCollision();
 };
 

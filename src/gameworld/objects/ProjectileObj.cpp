@@ -55,11 +55,6 @@ Vector3 ProjectileObj::GetDirection()
 	return direction;
 }
 
-bool ProjectileObj::GetDeleteObject() const
-{
-	return deleteObject;
-}
-
 void ProjectileObj::Scale(double factor)
 {
 	scale = factor;
