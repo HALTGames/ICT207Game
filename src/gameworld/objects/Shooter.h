@@ -38,8 +38,8 @@ public:
 
 		Shooter &operator=(const Shooter &rhs);
 
-      int operator==(const Shooter &rhs) const;
+	  int operator==(const Shooter &rhs) const;
 
-      int operator<(const Shooter &rhs) const;
+	  int operator<(const Shooter &rhs) const;
 
 };

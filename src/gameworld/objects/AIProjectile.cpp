@@ -1,17 +1,11 @@
 #include "AIProjectile.h"
 
-
-/*
-
-
 AIProjectile::AIProjectile(double x1, double z1, double x2, double z2)
 {
 	model.LoadModel("./models/proj.obj");
 			
 	speed = 1.0;
 	time = 1000; // lasts for 10 seconds
-
-
 
 	speed = 0.4;
 	scale = 0.5;
@@ -30,18 +24,7 @@ AIProjectile::AIProjectile(double x1, double z1, double x2, double z2)
 	deleteObject = false;
 }
 
-
-	position = Vector3(x1, 0.0, z1);
-
-	startTime = glutGet(GLUT_ELAPSED_TIME);
-
-
-	deleteObject = false;
-}
-
 bool AIProjectile::CheckCollision()
 {
 	return false;
 }
-
-*/

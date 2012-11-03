@@ -37,8 +37,8 @@ public:
 
 		Alligator &operator=(const Alligator &rhs);
 
-      int operator==(const Alligator &rhs) const;
+	  int operator==(const Alligator &rhs) const;
 
-      int operator<(const Alligator &rhs) const;
+	  int operator<(const Alligator &rhs) const;
 
 };
