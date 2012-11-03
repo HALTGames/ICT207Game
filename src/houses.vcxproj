@@ -159,6 +159,7 @@
     <ClCompile Include="modelimporter\glm.cpp" />
     <ClCompile Include="modelimporter\glmimg.cpp" />
     <ClCompile Include="modelimporter\Model.cpp" />
+    <ClCompile Include="modelimporter\ModelManager.cpp" />
     <ClCompile Include="modelimporter\TerrainModel.cpp" />
     <ClCompile Include="modelimporter\Texture.cpp" />
     <ClCompile Include="Particle.cpp" />
@@ -209,6 +210,7 @@
     <ClInclude Include="modelimporter\GameModel.h" />
     <ClInclude Include="modelimporter\glm.h" />
     <ClInclude Include="modelimporter\Model.h" />
+    <ClInclude Include="modelimporter\ModelManager.h" />
     <ClInclude Include="modelimporter\TerrainModel.h" />
     <ClInclude Include="modelimporter\texture.h" />
     <ClInclude Include="Particle.h" />

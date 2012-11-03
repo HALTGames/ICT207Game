@@ -11,7 +11,7 @@ Strafer::Strafer()
 	MaxSpeed =0.07;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(StrafeandSeek::Instance());
-	SetScale(10,10,10);
+	SetScale(10);
 	
 }
 

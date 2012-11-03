@@ -5,9 +5,12 @@
 #include <cmath>
 #include <GL\freeglut.h>
 #include "../../Vector3.h"
+#include "../GameObj.h"
+#include "../GameCollision.h"
 #include "../../modelimporter/GameModel.h"
 
-class ProjectileObj
+class ProjectileObj:
+	public GameObj
 {
 public:
 	ProjectileObj();
@@ -19,20 +22,18 @@ public:
 	Vector3 GetCurrentPosition();
 	Vector3 GetDirection();
 
-	bool CheckTime();
+	bool GetDeleteObject() const;
 protected:
 	double speed;
 	int time; // 1000 = 1 sec
 
 	void Scale(double factor);
-
-	GameModel model;
 private:
-	Vector3 currentPosition;
 	Vector3 direction;
 
 	int startTime;
+	bool CheckTime() const;
 
-	double scale;
+	bool CheckCollision();
 };
 

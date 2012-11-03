@@ -164,19 +164,16 @@ public:
 
 	CollisionSphere* GetCollisionSphere();
 
-	bool GetDeleteThis() const;
+	bool GetDeleteObject() const;
 
-	void SetScaleSphere(double scale);
-
-void SetScale(float x, float y, float z);
+	void SetScale(double factor);
 protected:
 	Vector3 position; /**< the current position of the object */
 	GameModel model; /**< the model of the game object */
-	string collidableType; /**< the collision type */
 	float angle; /**< the current angle of the object */
-	float Sx, Sy, Sz;
+	float scale;
 
-	bool deleteThis;
+	bool deleteObject;
 
 private:
 	int identificationNumber; /**< identification number for the

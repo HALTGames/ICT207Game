@@ -11,7 +11,7 @@ Bird::Bird()
 	MaxSpeed =0.09;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(Seek::Instance());
-	SetScale(1,1,1);
+	SetScale(1);
 	AILookDirection.x = 1;
 	AILookDirection.y = 0;
 	AILookDirection.z = 0;

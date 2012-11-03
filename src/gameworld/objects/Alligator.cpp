@@ -11,7 +11,7 @@ Alligator::Alligator()
 	MaxSpeed =0.05;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(Seek::Instance());
-	SetScale(15,15,15);
+	SetScale(15);
 	Damage = 50;
 	
 }

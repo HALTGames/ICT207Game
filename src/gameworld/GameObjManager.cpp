@@ -28,7 +28,7 @@ void GameObjManager::UpdateObjects()
 {
 	for(CItrGameObj itr = objects.begin(); itr != objects.end(); itr++)
 	{
-		if((*itr)->GetDeleteThis())
+		if((*itr)->GetDeleteObject())
 		{
 			RemoveObject(itr);
 		}

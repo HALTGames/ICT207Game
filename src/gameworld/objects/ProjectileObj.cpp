@@ -17,11 +17,13 @@ ProjectileObj::ProjectileObj(double x1, double z1, double x2, double z2)
 	double len = sqrt(deltaX * deltaX + deltaZ * deltaZ);
 
 	direction = Vector3((deltaX * speed)/ len, 0.0, (deltaZ * speed)/ len);
-	currentPosition = Vector3(x1, 0.0, z1);
+	position = Vector3(x1, 0.0, z1);
 
 	startTime = glutGet(GLUT_ELAPSED_TIME);
 
-	scale = 1.0;
+	scale = 0.6;
+
+	deleteObject = false;
 }
 
 ProjectileObj::~ProjectileObj()
@@ -30,19 +32,22 @@ ProjectileObj::~ProjectileObj()
 
 void ProjectileObj::Display()
 {
-	currentPosition += direction;
-	model.GetCollisionSphere()->SetCenter(currentPosition);
+	position += direction;
+	model.GetCollisionSphere()->SetCenter(position);
+
+	if(CheckTime() || CheckCollision())
+	{
+		deleteObject = true;
+	}
 	
 	glPushMatrix();
-		glTranslatef(currentPosition.x, currentPosition.y, currentPosition.z);
-		glScalef(scale, scale, scale);
-		model.DrawModel();
+		GameObj::Display();
 	glPopMatrix();
 }
 
 Vector3 ProjectileObj::GetCurrentPosition()
 {
-	return currentPosition;
+	return position;
 }
 
 Vector3 ProjectileObj::GetDirection()
@@ -50,15 +55,30 @@ Vector3 ProjectileObj::GetDirection()
 	return direction;
 }
 
-bool ProjectileObj::CheckTime()
+bool ProjectileObj::GetDeleteObject() const
 {
-	int currentTime = glutGet(GLUT_ELAPSED_TIME);
-
-	return (currentTime - startTime > time);
+	return deleteObject;
 }
 
 void ProjectileObj::Scale(double factor)
 {
 	scale = factor;
 	model.GetCollisionSphere()->ScaleSphere(scale);
+}
+
+bool ProjectileObj::CheckTime() const
+{
+	int currentTime = glutGet(GLUT_ELAPSED_TIME);
+
+	return (currentTime - startTime > time);
+}
+
+bool ProjectileObj::CheckCollision()
+{
+	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
+	{
+		return true;
+	}
+
+	return false;
 }

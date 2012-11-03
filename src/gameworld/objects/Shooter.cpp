@@ -11,7 +11,7 @@ Shooter::Shooter()
 	MaxSpeed =0.12;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(SeekandShoot::Instance());
-	SetScale(1,1,1);
+	SetScale(1);
 
 	
 }

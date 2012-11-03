@@ -9,7 +9,7 @@ GameObj::GameObj(void)
 	identificationNumber = numObjects;
 	++numObjects;
 
-	deleteThis = false;
+	deleteObject = false;
 }
 
 //-----------------------------------------------------------------------------
@@ -21,14 +21,13 @@ GameObj::GameObj(const Vector3 pos, char* modelFile,
 	identificationNumber = numObjects;
 	++numObjects;
 
-	deleteThis = false;
+	deleteObject = false;
 
 	position = Vector3(0.0, 0.0, 0.0);
 	angle = 0.0f;
 
 	model.LoadModel(modelFile);
 	position = pos;
-	collidableType = collideType;
 }
 
 //-----------------------------------------------------------------------------
@@ -39,23 +38,12 @@ GameObj::~GameObj(void)
 }
 
 //-----------------------------------------------------------------------------
-void GameObj::SetScale(float x, float y, float z)
-{
-	Sx=x;
-	Sy=y;
-	Sz=z;
-}
-
-//-----------------------------------------------------------------------------
 
 void GameObj::Display()
 {
 	glPushMatrix();
 		glTranslatef(position.x, position.y, position.z);
-		if((Sx > 0)&&(Sx > 0)&&(Sx > 0))
-		{
-		glScalef(Sx,Sy,Sz);
-		}
+		glScalef(scale, scale, scale);
 		glRotatef(angle, 0.0, 1.0, 0.0);
 		model.DrawModel();
 	glPopMatrix();
@@ -66,13 +54,6 @@ void GameObj::Display()
 bool GameObj::SetModel(char* modelFile)
 {
 	return model.LoadModel(modelFile);
-}
-
-//-----------------------------------------------------------------------------
-
-void GameObj::SetCollidableType(const string collideType)
-{
-	collidableType = collideType;
 }
 
 //-----------------------------------------------------------------------------
@@ -108,13 +89,6 @@ void GameObj::ChangeAngle(const int ang)
 
 //-----------------------------------------------------------------------------
 
-string GameObj::GetCollidableType() const
-{
-	return collidableType;
-}
-
-//-----------------------------------------------------------------------------
-
 Vector3 GameObj::GetPosition() const
 {
 	return position;
@@ -139,12 +113,13 @@ CollisionSphere* GameObj::GetCollisionSphere()
 	return model.GetCollisionSphere();
 }
 
-void GameObj::SetScaleSphere(double scale)
+void GameObj::SetScale(double factor)
 {
+	scale = factor;
 	model.GetCollisionSphere()->ScaleSphere(scale);
 }
 
-bool GameObj::GetDeleteThis() const
+bool GameObj::GetDeleteObject() const
 {
-	return deleteThis;
+	return deleteObject;
 }

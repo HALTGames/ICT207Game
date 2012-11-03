@@ -48,7 +48,7 @@ void GameWorld::Init(void)
 	playerObj = new PlayerObj();
 
 	GameObjManager::AddObject(OBJ_TERRAIN);
-	reticuleObj = GameObjManager::AddObject(OBJ_RETICULE);
+	reticuleObj = new ReticuleObj;
 
 	left = right = forward = back = false;
 
@@ -72,6 +72,9 @@ void GameWorld::Exit()
 {
 	delete playerObj;
 	playerObj = NULL;
+
+	delete reticuleObj;
+	reticuleObj = NULL;
 
 	GameObjManager::Delete();
 }
@@ -106,7 +109,7 @@ void GameWorld::Display(void)
 	playerObj->Display();
 
 	PlayerMovement();
-	Vector3 difference = GameObjManager::GetObject(reticuleObj)->GetPosition()
+	Vector3 difference = reticuleObj->GetPosition()
 		- playerObj->GetPosition();
 	double angle = atan(difference.x / difference.z) * (180 / PI);
 	if(difference.z < 0)
@@ -125,8 +128,9 @@ void GameWorld::Display(void)
 	glPopMatrix();
 
 	ProjectileManager::UpdateProjectiles();
-
-	//GameObjManager::UpdateObjects();
+	
+	reticuleObj->Display();
+	GameObjManager::UpdateObjects();
 	//CheckForAICreate();
 	//UpdateAI();
 	
@@ -343,8 +347,8 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		{
 			SoundController->playSound("Spell");
 			std::cout << "Mouse Pressed" << std::endl;
-			playerObj->Shoot(GameObjManager::GetObject(reticuleObj)->GetPosition().x,
-				GameObjManager::GetObject(reticuleObj)->GetPosition().z);
+			playerObj->Shoot(reticuleObj->GetPosition().x, 
+				reticuleObj->GetPosition().z);
 		}
 	}
 }
@@ -354,25 +358,25 @@ void GameWorld::PlayerMovement()
 	if(left)
 	{
 		playerObj->ChangePosition(Vector3(0.0, 0.0, -0.1));
-		GameObjManager::GetObject(reticuleObj)->ChangePosition(Vector3(0.0, 0.0, -0.1));
+		reticuleObj->ChangePosition(Vector3(0.0, 0.0, -0.1));
 	}
 
 	if(right)
 	{
 		playerObj->ChangePosition(Vector3(0.0, 0.0, 0.1));
-		GameObjManager::GetObject(reticuleObj)->ChangePosition(Vector3(0.0, 0.0, 0.1));
+		reticuleObj->ChangePosition(Vector3(0.0, 0.0, 0.1));
 	}
 
 	if(forward)
 	{
 		playerObj->ChangePosition(Vector3(0.1, 0.0, 0.0));
-		GameObjManager::GetObject(reticuleObj)->ChangePosition(Vector3(0.1, 0.0, 0.0));
+		reticuleObj->ChangePosition(Vector3(0.1, 0.0, 0.0));
 	}
 
 	if(back)
 	{
 		playerObj->ChangePosition(Vector3(-0.1, 0.0, 0.0));
-		GameObjManager::GetObject(reticuleObj)->ChangePosition(Vector3(-0.1, 0.0, 0.0));
+		reticuleObj->ChangePosition(Vector3(-0.1, 0.0, 0.0));
 	}
 
 }
@@ -435,7 +439,7 @@ void GameWorld::SetReticulePosition(int x, int y)
 		gluUnProject( x, viewport[3]-y, z, modelview, 
 			projection, viewport, &objx, &objy, &objz );
 
-		GameObjManager::GetObject(reticuleObj)->SetPosition(Vector3(objx, 1, objz));
+		reticuleObj->SetPosition(Vector3(objx, 1, objz));
 	}
 }
 

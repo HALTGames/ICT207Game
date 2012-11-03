@@ -65,7 +65,7 @@ public:
 	/// may get moved to a class
 private:
 	PlayerObj* playerObj;
-	int reticuleObj;
+	ReticuleObj* reticuleObj;
 
 	sounds* SoundController;
 	GameCamera camera;

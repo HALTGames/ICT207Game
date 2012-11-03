@@ -195,6 +195,9 @@
     <ClCompile Include="gameworld\ProjectileManager.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
+    <ClCompile Include="modelimporter\ModelManager.cpp">
+      <Filter>Source Files\ModelImporter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shaysworld\AABB.H">
@@ -346,6 +349,9 @@
     </ClInclude>
     <ClInclude Include="RotatingArray.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modelimporter\ModelManager.h">
+      <Filter>Header Files\ModelImporter</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

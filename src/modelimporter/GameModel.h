@@ -16,6 +16,13 @@ struct CollisionSphere
 
 	CollisionSphere():center(Vector3()), radius(1) {}
 	CollisionSphere(Vector3 cen, double rad):center(cen), radius(rad) {}
+	
+	CollisionSphere(const CollisionSphere& other)
+	{
+		center = other.center;
+		radius = other.radius;
+	}
+
 
 	bool operator==(const CollisionSphere& other)
 	{

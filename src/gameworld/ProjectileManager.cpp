@@ -18,10 +18,12 @@ void ProjectileManager::AddProjectile(ProjectileEnum type, double startX,
 
 void ProjectileManager::UpdateProjectiles()
 {
+	//std::cout << projectiles.size() << std::endl;
+
 	for(CItrProjectileList itr = projectiles.begin(); 
 		itr != projectiles.end(); ++itr)
 	{
-		if((*itr)->CheckTime())
+		if((*itr)->GetDeleteObject())
 		{
 			RemoveProjectile(itr);
 		}
@@ -34,7 +36,7 @@ void ProjectileManager::UpdateProjectiles()
 
 void ProjectileManager::RemoveProjectile(CItrProjectileList index)
 {
-	std::cout << "Removing Projectile" << std::endl;
+	//std::cout << "Removing Projectile" << std::endl;
 	delete *index;
 	projectiles.erase(index);
 }
