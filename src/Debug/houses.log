@@ -1,42 +1,47 @@
-﻿Build started 29/10/2012 6:41:03 PM.
+﻿Build started 3/11/2012 5:59:07 PM.
      1>Project "D:\Github\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(298,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>InitializeBuildStatus:
-         Creating "Debug\houses.unsuccessfulbuild" because "AlwaysCreate" was specified.
+         Touching "Debug\houses.unsuccessfulbuild".
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MD /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt gameworld\GameWorld.cpp main.cpp
-         main.cpp
-         GameWorld.cpp
-     1>d:\github\ict207game\src\gameworld\gameworld.cpp(36): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>d:\github\ict207game\src\gameworld\gameworld.cpp(277): warning C4244: '=' : conversion from 'time_t' to 'int', possible loss of data
-         Generating Code...
+         All outputs are up-to-date.
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\houses.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib GlU32.lib OpenGL32.lib freeglut.lib glut32.lib SDL.lib SDLmain.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Github\ICT207Game\src\Debug\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\houses.lib" /MACHINE:X86 Debug\houses.exe.embed.manifest.res
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\houses.exe" /INCREMENTAL /NOLOGO fmodex_vc.lib odbc32.lib odbccp32.lib GlU32.lib OpenGL32.lib freeglut.lib glut32.lib SDL.lib SDLmain.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Github\ICT207Game\src\Debug\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\houses.lib" /MACHINE:X86 Debug\houses.exe.embed.manifest.res
          .\Debug\MenuWorld.obj
          .\Debug\RAWTexture.obj
          .\Debug\Seek.obj
+         .\Debug\SeekandShoot.obj
+         .\Debug\StrafeandSeek.obj
          .\Debug\GameCamera.obj
          .\Debug\GameCollision.obj
          .\Debug\GameObj.obj
+         .\Debug\GameObjManager.obj
          .\Debug\GameSound.obj
          .\Debug\GameWorld.obj
+         .\Debug\AIManager.obj
          .\Debug\AIObject.obj
+         .\Debug\AIProjectile.obj
          .\Debug\Alligator.obj
-         .\Debug\AlligatorStates.obj
          .\Debug\Bird.obj
          .\Debug\PlayerObj.obj
          .\Debug\ProjectileObj.obj
+         .\Debug\ReticuleObj.obj
+         .\Debug\Shooter.obj
+         .\Debug\Strafer.obj
          .\Debug\TerrainObj.obj
+         .\Debug\ProjectileManager.obj
          .\Debug\main.obj
          .\Debug\GameModel.obj
          .\Debug\glm.obj
          .\Debug\glmimg.obj
          .\Debug\Model.obj
+         .\Debug\ModelManager.obj
          .\Debug\TerrainModel.obj
          .\Debug\Texture.obj
+         .\Debug\Particle.obj
          .\Debug\AABB.obj
          .\Debug\AABBLinkedList.obj
          .\Debug\AABBNode.obj
@@ -51,6 +56,7 @@
          .\Debug\SoundTime.obj
          .\Debug\texturedPolygons.obj
          .\Debug\Wave.obj
+         .\Debug\sounds.obj
          .\Debug\TextureLoader.obj
          .\Debug\UserInterface.obj
          .\Debug\Vector3.obj
@@ -61,7 +67,7 @@
          All outputs are up-to-date.
          houses.vcxproj -> D:\Github\ICT207Game\src\Debug\houses.exe
        BscMake:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Debug\houses.bsc" Debug\MenuWorld.sbr Debug\RAWTexture.sbr Debug\Seek.sbr Debug\GameCamera.sbr Debug\GameCollision.sbr Debug\GameObj.sbr Debug\GameSound.sbr Debug\GameWorld.sbr Debug\AIObject.sbr Debug\Alligator.sbr Debug\AlligatorStates.sbr Debug\Bird.sbr Debug\PlayerObj.sbr Debug\ProjectileObj.sbr Debug\TerrainObj.sbr Debug\main.sbr Debug\GameModel.sbr Debug\glm.sbr Debug\glmimg.sbr Debug\Model.sbr Debug\TerrainModel.sbr Debug\Texture.sbr Debug\AABB.sbr Debug\AABBLinkedList.sbr Debug\AABBNode.sbr Debug\camera.sbr Debug\cameraMap.sbr Debug\collision.sbr Debug\EasySound.sbr Debug\PlainLinkedList.sbr Debug\PlainNode.sbr Debug\ShaysWorld.sbr Debug\Sound.sbr Debug\SoundTime.sbr Debug\texturedPolygons.sbr Debug\Wave.sbr Debug\TextureLoader.sbr Debug\UserInterface.sbr Debug\Vector3.sbr
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Debug\houses.bsc" Debug\MenuWorld.sbr Debug\RAWTexture.sbr Debug\Seek.sbr Debug\SeekandShoot.sbr Debug\StrafeandSeek.sbr Debug\GameCamera.sbr Debug\GameCollision.sbr Debug\GameObj.sbr Debug\GameObjManager.sbr Debug\GameSound.sbr Debug\GameWorld.sbr Debug\AIManager.sbr Debug\AIObject.sbr Debug\AIProjectile.sbr Debug\Alligator.sbr Debug\Bird.sbr Debug\PlayerObj.sbr Debug\ProjectileObj.sbr Debug\ReticuleObj.sbr Debug\Shooter.sbr Debug\Strafer.sbr Debug\TerrainObj.sbr Debug\ProjectileManager.sbr Debug\main.sbr Debug\GameModel.sbr Debug\glm.sbr Debug\glmimg.sbr Debug\Model.sbr Debug\ModelManager.sbr Debug\TerrainModel.sbr Debug\Texture.sbr Debug\Particle.sbr Debug\AABB.sbr Debug\AABBLinkedList.sbr Debug\AABBNode.sbr Debug\camera.sbr Debug\cameraMap.sbr Debug\collision.sbr Debug\EasySound.sbr Debug\PlainLinkedList.sbr Debug\PlainNode.sbr Debug\ShaysWorld.sbr Debug\Sound.sbr Debug\SoundTime.sbr Debug\texturedPolygons.sbr Debug\Wave.sbr Debug\sounds.sbr Debug\TextureLoader.sbr Debug\UserInterface.sbr Debug\Vector3.sbr
        FinalizeBuildStatus:
          Deleting file "Debug\houses.unsuccessfulbuild".
          Touching "Debug\houses.lastbuildstate".
@@ -69,4 +75,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.27
+Time Elapsed 00:00:04.93

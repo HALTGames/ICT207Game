@@ -95,7 +95,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OutputFile>Debug\houses.exe</OutputFile>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;GlU32.lib;OpenGL32.lib;freeglut.lib;glut32.lib;SDL.lib;SDLmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>fmodex_vc.lib;odbc32.lib;odbccp32.lib;GlU32.lib;OpenGL32.lib;freeglut.lib;glut32.lib;SDL.lib;SDLmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
