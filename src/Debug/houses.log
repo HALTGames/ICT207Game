@@ -1,11 +1,377 @@
-﻿Build started 3/11/2012 5:59:07 PM.
+﻿Build started 3/11/2012 6:33:42 PM.
      1>Project "D:\Github\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(298,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>InitializeBuildStatus:
          Touching "Debug\houses.unsuccessfulbuild".
        ClCompile:
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MD /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt main.cpp shaysworld\ShaysWorld.cpp
+         ShaysWorld.cpp
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(37): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(37): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(37): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1384): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1410): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1427): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1662): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1750): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1762): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1828): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1829): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1830): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1831): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1832): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1834): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1841): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1842): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1843): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1844): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1845): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1847): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1855): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1856): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1857): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1858): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1859): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1861): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1925): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(1929): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2006): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2006): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2011): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2015): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2021): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2025): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2032): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2036): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2042): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2059): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2063): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2069): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2073): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2111): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2118): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2129): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2136): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2159): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2173): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2173): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2193): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2231): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2232): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2233): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2234): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2285): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2293): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2300): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2313): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2321): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2387): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2388): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2389): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2390): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2399): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2400): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2401): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2402): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2687): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2886): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2901): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2917): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2937): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2960): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2964): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2983): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(2987): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3007): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3011): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3031): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3035): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3096): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3097): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3098): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3099): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3099): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3101): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3108): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3109): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3110): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3110): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3111): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3112): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3121): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3123): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3124): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3124): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3125): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3125): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3125): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3126): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3126): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3127): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3127): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3135): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3136): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3137): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3137): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3138): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3138): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3139): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3140): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3150): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3151): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3152): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3153): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3163): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3164): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3165): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3166): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3174): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3175): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3176): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3176): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3177): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3177): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3178): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3179): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3189): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3190): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3191): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3192): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3202): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3203): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3204): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3205): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3212): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3213): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3214): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3214): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3215): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3215): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3216): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3216): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3217): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3218): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3225): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3227): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3228): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3229): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3230): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3231): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3238): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3240): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3241): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3242): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3243): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3244): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3252): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3253): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3254): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3254): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3255): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3256): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3256): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3267): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3269): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3280): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3282): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3323): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3323): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3323): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3325): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3325): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3325): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3326): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3327): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3327): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3328): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3329): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3329): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3335): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3335): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3335): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3337): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3337): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3337): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3338): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3339): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3339): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3340): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3341): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3341): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3351): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3351): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3351): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3353): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3353): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3353): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3354): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3355): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3356): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3357): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3363): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3363): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3363): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3365): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3365): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3365): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3366): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3367): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3368): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3369): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3396): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3396): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3400): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3400): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3455): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3482): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3496): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3524): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3524): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3551): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3565): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3722): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3756): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3787): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3830): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3835): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3966): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3968): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3968): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3969): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3969): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3970): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3970): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3971): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3971): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3978): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3980): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3980): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3981): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3981): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3982): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3982): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3983): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3983): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3990): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3992): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3992): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3993): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3993): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3994): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3994): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3995): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(3995): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4002): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4004): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4004): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4005): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4005): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4006): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4006): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4007): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4007): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4016): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4017): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4018): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4019): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4046): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4057): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4069): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4103): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4114): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4126): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4136): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4149): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4233): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4244): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4255): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4267): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4285): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4505): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4512): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4519): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4538): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4538): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4542): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4542): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4558): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4558): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4562): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4562): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4663): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4672): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4679): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4686): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4692): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4693): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4694): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4705): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4712): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4719): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4725): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4726): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4727): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4740): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4741): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4743): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4744): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4746): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4747): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4749): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4750): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4752): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4753): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4758): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4763): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4768): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4774): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4776): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4777): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4778): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4779): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4780): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4781): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4782): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4783): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4784): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4785): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4786): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4847): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4847): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4850): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4850): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4851): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4851): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4855): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4855): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4861): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4861): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4864): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4868): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4868): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4873): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4873): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4873): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4877): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4877): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4877): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4878): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4884): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4884): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4885): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4891): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4891): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4891): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4892): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4892): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>d:\github\ict207game\src\shaysworld\shaysworld.cpp(4892): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+         Generating Code...
+         Compiling...
+         main.cpp
+     1>d:\github\ict207game\src\gameworld\gameworld.h(7): warning C4005: 'PI' : macro redefinition
+                 d:\github\ict207game\src\shaysworld\shaysworld.h(4) : see previous definition of 'PI'
+         Generating Code...
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -60,19 +426,10 @@
          .\Debug\TextureLoader.obj
          .\Debug\UserInterface.obj
          .\Debug\Vector3.obj
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\houses.exe.embed.manifest" /manifest Debug\houses.exe.intermediate.manifest
-         All outputs are up-to-date.
-       LinkEmbedManifest:
-         All outputs are up-to-date.
-         houses.vcxproj -> D:\Github\ICT207Game\src\Debug\houses.exe
-       BscMake:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Debug\houses.bsc" Debug\MenuWorld.sbr Debug\RAWTexture.sbr Debug\Seek.sbr Debug\SeekandShoot.sbr Debug\StrafeandSeek.sbr Debug\GameCamera.sbr Debug\GameCollision.sbr Debug\GameObj.sbr Debug\GameObjManager.sbr Debug\GameSound.sbr Debug\GameWorld.sbr Debug\AIManager.sbr Debug\AIObject.sbr Debug\AIProjectile.sbr Debug\Alligator.sbr Debug\Bird.sbr Debug\PlayerObj.sbr Debug\ProjectileObj.sbr Debug\ReticuleObj.sbr Debug\Shooter.sbr Debug\Strafer.sbr Debug\TerrainObj.sbr Debug\ProjectileManager.sbr Debug\main.sbr Debug\GameModel.sbr Debug\glm.sbr Debug\glmimg.sbr Debug\Model.sbr Debug\ModelManager.sbr Debug\TerrainModel.sbr Debug\Texture.sbr Debug\Particle.sbr Debug\AABB.sbr Debug\AABBLinkedList.sbr Debug\AABBNode.sbr Debug\camera.sbr Debug\cameraMap.sbr Debug\collision.sbr Debug\EasySound.sbr Debug\PlainLinkedList.sbr Debug\PlainNode.sbr Debug\ShaysWorld.sbr Debug\Sound.sbr Debug\SoundTime.sbr Debug\texturedPolygons.sbr Debug\Wave.sbr Debug\sounds.sbr Debug\TextureLoader.sbr Debug\UserInterface.sbr Debug\Vector3.sbr
-       FinalizeBuildStatus:
-         Deleting file "Debug\houses.unsuccessfulbuild".
-         Touching "Debug\houses.lastbuildstate".
-     1>Done Building Project "D:\Github\ICT207Game\src\houses.vcxproj" (build target(s)).
+     1>ShaysWorld.obj : error LNK2019: unresolved external symbol "public: void __thiscall TexturedPolygons::Clear(void)" (?Clear@TexturedPolygons@@QAEXXZ) referenced in function "public: virtual void __thiscall ShaysWorld::Exit(void)" (?Exit@ShaysWorld@@UAEXXZ)
+     1>Debug\houses.exe : fatal error LNK1120: 1 unresolved externals
+     1>Done Building Project "D:\Github\ICT207Game\src\houses.vcxproj" (build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:04.93
+Time Elapsed 00:00:01.62

@@ -11,7 +11,8 @@
 
 #include <GL/freeglut.h>
 #include "camera.h"
-#include "texturedPolygons.h"
+#include "../shaysworld/texturedPolygons.h"
+//#include "texturedPolygons.h"
 #include "Wave.h"
 
 #include "../modelimporter/Model.h"
