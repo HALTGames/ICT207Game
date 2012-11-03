@@ -26,12 +26,12 @@ public:
 protected:
 	double speed;
 	int time; // 1000 = 1 sec
+	Vector3 direction;
+	int startTime;
 
 	void Scale(double factor);
 private:
-	Vector3 direction;
-
-	int startTime;
+	
 	bool CheckTime() const;
 
 	bool CheckCollision();
