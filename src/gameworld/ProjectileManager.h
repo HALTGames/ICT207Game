@@ -4,6 +4,7 @@
 
 #include "objects\ProjectileObj.h"
 #include "objects\AIProjectile.h"
+#include "objects\PlayerProj.h"
 
 typedef std::list<ProjectileObj*> ProjectileList;
 typedef ProjectileList::iterator ItrProjectileList;
@@ -12,7 +13,8 @@ typedef ProjectileList::const_iterator CItrProjectileList;
 enum ProjectileEnum
 {
 	PROJECTILE,
-	AIPROJECTILE
+	AIPROJECTILE,
+	PLAYER_PROJECTILE
 };
 
 class ProjectileManager

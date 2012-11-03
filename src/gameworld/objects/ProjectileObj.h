@@ -17,7 +17,7 @@ public:
 	ProjectileObj(double x1, double z1, double x2, double z2);
 	~ProjectileObj();
 
-	void Display();
+	virtual void Display();
 
 	Vector3 GetCurrentPosition();
 	Vector3 GetDirection();
@@ -25,15 +25,8 @@ protected:
 	double speed;
 	int time; // 1000 = 1 sec
 	Vector3 direction;
+
 	int startTime;
-
-	void Scale(double factor);
-
-private:
-	
-
-	
-
 	bool CheckTime() const;
 
 	virtual bool CheckCollision();

@@ -55,12 +55,6 @@ Vector3 ProjectileObj::GetDirection()
 	return direction;
 }
 
-void ProjectileObj::Scale(double factor)
-{
-	scale = factor;
-	model.GetCollisionSphere()->ScaleSphere(scale);
-}
-
 bool ProjectileObj::CheckTime() const
 {
 	int currentTime = glutGet(GLUT_ELAPSED_TIME);

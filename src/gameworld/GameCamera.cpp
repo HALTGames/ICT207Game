@@ -2,8 +2,8 @@
 
 GameCamera::GameCamera()
 {
-	m_height = 40;
-	m_behind = 5;
+	m_height = 30;
+	m_behind = 7;
 }
 
 bool GameCamera::SetHeight(double height)

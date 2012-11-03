@@ -57,6 +57,8 @@ virtual	void SetAngle(Vector3 dir, Vector3 other);
 	Vector3 GetPlayerPos();
 	Vector3 GetDirection();
 
+	virtual void ChangePosition(const Vector3 pos);
+
 	AIObject &operator=(const AIObject &rhs);
 
 	  int operator==(const AIObject &rhs) const;

@@ -36,8 +36,8 @@ public:
 
 		Bird &operator=(const Bird &rhs);
 
-      int operator==(const Bird &rhs) const;
+	  int operator==(const Bird &rhs) const;
 
-      int operator<(const Bird &rhs) const;
+	  int operator<(const Bird &rhs) const;
 
 };
