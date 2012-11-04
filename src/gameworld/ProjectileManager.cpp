@@ -49,7 +49,6 @@ int ProjectileManager::GetNumProjectiles()
 
 void ProjectileManager::RemoveProjectile(CItrProjectileList index)
 {
-	//std::cout << "Removing Projectile" << std::endl;
 	delete *index;
 	projectiles.erase(index);
 }

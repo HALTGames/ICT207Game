@@ -12,7 +12,6 @@ using namespace std;
 #include "../Vector3.h"
 #include "../modelimporter/GameModel.h"
 
-
 //-----------------------------------------------------------------------------
 
 /**
@@ -28,6 +27,15 @@ using namespace std;
  * \version 01 - Timothy Veletta, 09/10/12
  *		Created constructors, get and set functions as well as initialising,
  *		display and updating functions.
+ * \version 02 - Timothy Veletta, 10/10/12
+ *		Added the documentation for the existing functions.
+ * \version 03 - Arran Ford, 15/10/12
+ *		Changed the numObjects and identification number member variables to be
+ *		private.
+ * \version 04 - Timothy Veletta, 25/10/12
+ *		Removed collidableType member variable and associated functions.
+ * \version 05 - Arran Ford, 30/10/12
+ *		Added a scale member variable and associated functions.
  */
 class GameObj
 {
@@ -77,15 +85,6 @@ public:
 	bool SetModel(char* modelFile);
 
 	/**
-	 * \brief Sets the collidable type.
-	 *
-	 * Sets the collidable type of the game object.
-	 *
-	 * \param collideType the collidable type
-	 */
-	void SetCollidableType(const string collideType);
-
-	/**
 	 * \brief Sets the position.
 	 *
 	 * Sets the position of the game object.
@@ -124,16 +123,6 @@ public:
 	 */
 	void ChangeAngle(const int ang);
 
-
-	/**
-	 * \brief Gets the collidable type.
-	 *
-	 * Gets the collidable type of this game object.
-	 *
-	 * \retval the collidable type
-	 */
-	string GetCollidableType() const;
-
 	/**
 	 * \brief Gets the position.
 	 *
@@ -162,18 +151,40 @@ public:
 	 */
 	int GetIdentificationNumber() const;
 
+	/**
+	 * \brief Gets collision sphere.
+	 *
+	 * Gets the collision sphere for this game objects model.
+	 *
+	 * \retval a reference to the collision sphere
+	 */
 	CollisionSphere* GetCollisionSphere();
 
+	/**
+	 * \brief Returns delete object.
+	 *
+	 * Returns whether or not the current object needs to be deleted on the next
+	 * update loop.
+	 *
+	 * \retval whether or not the object should be deleted
+	 */
 	bool GetDeleteObject() const;
 
+	/**
+	 * \brief Sets the scale.
+	 *
+	 * Sets the scale of the objects model and collision sphere.
+	 *
+	 * \param factor how much to scale the object
+	 */
 	void SetScale(double factor);
 protected:
 	Vector3 position; /**< the current position of the object */
 	GameModel model; /**< the model of the game object */
 	float angle; /**< the current angle of the object */
-	float scale;
+	float scale; /**< the scale of the model and collision sphere */
 
-	bool deleteObject;
+	bool deleteObject; /**< whether or not the object should be deleted */
 
 private:
 	int identificationNumber; /**< identification number for the
