@@ -140,7 +140,6 @@
     <ClCompile Include="gameworld\GameCamera.cpp" />
     <ClCompile Include="gameworld\GameCollision.cpp" />
     <ClCompile Include="gameworld\GameObj.cpp" />
-    <ClCompile Include="gameworld\GameObjManager.cpp" />
     <ClCompile Include="gameworld\GameSound.cpp" />
     <ClCompile Include="gameworld\GameWorld.cpp" />
     <ClCompile Include="gameworld\objects\AIManager.cpp" />
@@ -194,7 +193,6 @@
     <ClInclude Include="gameworld\GameCamera.h" />
     <ClInclude Include="gameworld\GameCollision.h" />
     <ClInclude Include="gameworld\GameObj.h" />
-    <ClInclude Include="gameworld\GameObjManager.h" />
     <ClInclude Include="gameworld\GameSound.h" />
     <ClInclude Include="gameworld\GameWorld.h" />
     <ClInclude Include="gameworld\objects\AIManager.h" />

@@ -8,7 +8,5 @@ ReticuleObj::ReticuleObj(void)
 
 void ReticuleObj::Display(void)
 {
-	glPushMatrix();
 	GameObj::Display();
-	glPopMatrix();
 }

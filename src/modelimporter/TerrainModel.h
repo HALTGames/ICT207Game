@@ -1,7 +1,5 @@
 #pragma once
 
-#include <iostream>
-
 #include "../Vector3.h"
 #include "Model.h"
 
@@ -29,6 +27,8 @@ public:
 	void DrawTerrain();
 
 	bool IsOver(TriangleApprox *b, GLfloat x, GLfloat y, GLfloat z);
+
+	bool IsOn(GLfloat x, GLfloat z);
 
 	TriangleApprox *FindTerrainBox(float x, float y, float z);
 

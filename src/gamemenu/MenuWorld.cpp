@@ -5,6 +5,11 @@ float MenuWorld::ypoz;
 
 MenuWorld::MenuWorld(void)
 {
+
+}
+
+void MenuWorld::Init()
+{
 	GLuint texture; // stores the current texture being used
 
 	windowWidth = 500;//window width
@@ -25,10 +30,7 @@ MenuWorld::MenuWorld(void)
 	p5[0] = 0.5,0,0.0;
 	p6[0] = 0.5,0.5,0.0;
 	p7[0] = 0,0.5,0.0;
-}
 
-void MenuWorld::Init()
-{
 	glClearColor (0.0, 0.0, 0.0, 1.0);  
    glColor3f(1.0,0.0,0.0);
    //glEnable(GL_DEPTH_TEST); //alpha channel will not work if this is enabled
@@ -46,6 +48,7 @@ void MenuWorld::Init()
 	//glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
 
 	glMatrixMode(GL_MODELVIEW);
+	currWorld = MENUWORLD;
 }
 
 void MenuWorld::Reshape(int w, int h)
@@ -154,28 +157,28 @@ void MenuWorld::MouseMove(int x, int y)
 
 void MenuWorld::drawIsland()
 {
-    if (!island) 
+	if (!island) 
 	{
-        island = glmReadOBJ("models/island.obj");	
-        if (!island) exit(0);
-        glmUnitize(island);
-        glmFacetNormals(island);        
+		island = glmReadOBJ("models/island.obj");	
+		if (!island) exit(0);
+		glmUnitize(island);
+		glmFacetNormals(island);        
 		glmVertexNormals(island, 90.0);
-    }
-    glmDraw(island, GLM_SMOOTH| GLM_TEXTURE);
+	}
+	glmDraw(island, GLM_SMOOTH| GLM_TEXTURE);
 }
 
 void MenuWorld::drawSkybox()
 {
-    if (!skybox) 
+	if (!skybox) 
 	{
-        skybox = glmReadOBJ("models/skybox.obj");	
-        if (!skybox) exit(0);
-        glmUnitize(skybox);
-        glmFacetNormals(skybox);        
+		skybox = glmReadOBJ("models/skybox.obj");	
+		if (!skybox) exit(0);
+		glmUnitize(skybox);
+		glmFacetNormals(skybox);        
 		glmVertexNormals(skybox, 90.0);
-    }
-    glmDraw(skybox, GLM_SMOOTH| GLM_TEXTURE);
+	}
+	glmDraw(skybox, GLM_SMOOTH| GLM_TEXTURE);
 }
 
 void MenuWorld::animate()

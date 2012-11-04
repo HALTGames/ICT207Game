@@ -189,9 +189,6 @@
     <ClCompile Include="gameworld\objects\AIProjectile.cpp">
       <Filter>Source Files\GameWorld\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="gameworld\GameObjManager.cpp">
-      <Filter>Source Files\GameWorld</Filter>
-    </ClCompile>
     <ClCompile Include="gameworld\ProjectileManager.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
@@ -349,9 +346,6 @@
     </ClInclude>
     <ClInclude Include="gameworld\objects\AIProjectile.h">
       <Filter>Header Files\GameWorld\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="gameworld\GameObjManager.h">
-      <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
     <ClInclude Include="gameworld\ProjectileManager.h">
       <Filter>Header Files\GameWorld</Filter>

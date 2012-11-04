@@ -110,6 +110,22 @@ bool TerrainModel::IsOver(TriangleApprox *b,GLfloat x, GLfloat y, GLfloat z)
 		z <= b->max.z && z >= b->min.z;
 }
 
+bool TerrainModel::IsOn(GLfloat x, GLfloat z)
+{
+	bool over = false;
+
+	for(int i = 0; i < terrainIndex; i++)
+	{
+		if(IsOver(terrain[i], x, 0, z))
+		{
+			over = true;
+		}
+	}
+
+	return over;
+}
+
+
 TriangleApprox* TerrainModel::FindTerrainBox(float x, float y, float z)
 {
 	for(int i = 0; i < terrainIndex; i++)

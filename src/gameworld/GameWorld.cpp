@@ -44,18 +44,17 @@ void GameWorld::Init(void)
 	AImanage = new AIManager();
 	playerObj = new PlayerObj();
 
-	GameObjManager::AddObject(OBJ_TERRAIN);
+	terrainObj = new TerrainObj();
 	reticuleObj = new ReticuleObj;
 
 	left = right = forward = back = false;
 
 	currWorld = GAMEWORLD;
 	gameWidth = 1280, gameHeight = 960;
-
 	
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
-	glutSetCursor(GLUT_CURSOR_NONE);
+	//glutSetCursor(GLUT_CURSOR_NONE);
 	/* Probably never work due to glm fuckery
 	//TextureLoad.LoadTexture("textures/UIbackground.RAW",791,151,1);
 	float width, height;
@@ -72,8 +71,6 @@ void GameWorld::Exit()
 
 	delete reticuleObj;
 	reticuleObj = NULL;
-
-	GameObjManager::Delete();
 }
 
 void GameWorld::Reshape(int w, int h) 
@@ -104,6 +101,8 @@ void GameWorld::Display(void)
 	glLoadIdentity();
 	camera.Render(playerObj->GetPosition());
 	playerObj->Display();
+	reticuleObj->Display();
+	terrainObj->Display();
 
 	PlayerMovement();
 	Vector3 difference = reticuleObj->GetPosition()
@@ -126,14 +125,10 @@ void GameWorld::Display(void)
 
 	ProjectileManager::UpdateProjectiles();
 	
-	reticuleObj->Display();
-	GameObjManager::UpdateObjects();
-
-
-	
 	AImanage->CheckForAICreate();
 	AImanage->UpdateAI(playerObj->GetPosition());
 	
+	//std::cout << level.IsOn(playerObj->GetPosition().x, playerObj->GetPosition().z) << std::endl;
 
 	glFlush();
 	glutSwapBuffers();	

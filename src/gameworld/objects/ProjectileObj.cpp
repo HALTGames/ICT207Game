@@ -9,7 +9,7 @@ ProjectileObj::ProjectileObj(double x1, double z1, double x2, double z2)
 {
 	model.LoadModel("./models/proj.obj");
 
-	speed = 1.0;
+	speed = 0.2;
 	time = 1000; // lasts for 10 seconds
 
 	double deltaX = x2 - x1;

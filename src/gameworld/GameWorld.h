@@ -23,7 +23,6 @@
 #include "GameObj.h"
 #include "../TextureLoader.h"
 //#include "../SoundControl/sounds.h"
-#include "GameObjManager.h"
 #include "../modelimporter/GameModel.h"
 #include "ProjectileManager.h"
 
@@ -31,7 +30,7 @@
 #include "objects\AIManager.h"
 #include "objects\ProjectileObj.h"
 #include "objects\ReticuleObj.h"
-
+#include "objects\TerrainObj.h"
 
 class GameWorld: public World
 {
@@ -58,7 +57,10 @@ public:
 private:
 	PlayerObj* playerObj;
 	ReticuleObj* reticuleObj;
+	TerrainObj* terrainObj;
+	
 	AIManager* AImanage;
+	
 
 	sounds* SoundController;
 	GameCamera camera;

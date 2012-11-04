@@ -123,7 +123,7 @@ void PlayerObj::Shoot(int x, int y)
 	{
 		Vector3 Target;
 		Target.Set(x,y,0);
-		ProjectileManager::AddProjectile(PROJECTILE, position.x, position.z, x, y);
+		ProjectileManager::AddProjectile(PLAYER_PROJECTILE, position.x, position.z, x, y);
 	}
 	else if(SelectedSpell = (Spells)2)
 	{
