@@ -36,6 +36,7 @@ void PlayerObj::Display()
 	glPopMatrix();
 
 	int time = glutGet(GLUT_ELAPSED_TIME);
+	/*
 	glEnable (GL_BLEND);
 	glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glPushMatrix();
@@ -60,7 +61,7 @@ void PlayerObj::Display()
 		//glColor4f(0.0, 1.0, 1.0, 0.0);
 	//	glTranslatef(position.x, position.y, position.z);
 	//	glutSolidSphere(2,6,6);
-	glPopMatrix();	
+	glPopMatrix();	*/
 
  glEnable (GL_BLEND);
 glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -98,15 +99,15 @@ void PlayerObj::ChangePosition(const Vector3 pos)
 	Vector3 newPos = position + pos;
 	model.GetCollisionSphere()->SetCenter(newPos);
 
-	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN) ||
-		GameCollision::CollidesWith(this->model.GetCollisionSphere(), ENEMY))
-	{
-		model.GetCollisionSphere()->SetCenter(position);
-	}
-	else
-	{
+	//if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN) ||
+	//	GameCollision::CollidesWith(this->model.GetCollisionSphere(), ENEMY))
+	//{
+	//	model.GetCollisionSphere()->SetCenter(position);
+	//}
+	//else
+	//{
 		GameObj::ChangePosition(pos);
-	}
+	//}
 }
 
 //-----------------------------------------------------------------------------

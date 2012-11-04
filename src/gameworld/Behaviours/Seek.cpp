@@ -10,7 +10,6 @@ Seek *Seek::Instance()
 
 void Seek::Enter(AIObject* AI)
 {
-	
 	std::cout<<"Enter seek function called \n";
 }
 
@@ -32,7 +31,6 @@ void Seek::Execute(AIObject* AI)
 	AI->Move();
 	if(AI->Collide())
 	{
-		cout<<"COLLISSSOOOOOOOOOOOOOOOOOOOOOOOOOON \n";
 		AI->DealDamage();
 		AI->seconds = time(NULL);
 	}

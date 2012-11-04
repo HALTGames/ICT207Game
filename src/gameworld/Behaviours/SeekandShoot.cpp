@@ -10,8 +10,7 @@ SeekandShoot *SeekandShoot::Instance()
 
 void SeekandShoot::Enter(AIObject* AI)
 {
-	
-	//std::cout<<"Enter seek function called \n";
+		
 }
 
 
@@ -48,6 +47,5 @@ void SeekandShoot::Execute(AIObject* AI)
 
 void SeekandShoot::Exit(AIObject* AI)
 {
-	//std::cout<<"Exit seek function called \n";
-
+	
 }

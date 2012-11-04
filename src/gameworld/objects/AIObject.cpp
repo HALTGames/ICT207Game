@@ -238,14 +238,14 @@ void AIObject::Fire()
 void AIObject::ChangePosition(const Vector3 pos)
 {
 	Vector3 newPos = position + pos;
-	model.GetCollisionSphere()->SetCenter(newPos);
+	//model.GetCollisionSphere()->SetCenter(newPos);
 
-	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
-	{
-		model.GetCollisionSphere()->SetCenter(position);
-	}
-	else
-	{
+//	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
+//	{
+	//	model.GetCollisionSphere()->SetCenter(position);
+	//}
+	//else
+	//{
 		GameObj::ChangePosition(pos);
-	}
+//	}
 }
