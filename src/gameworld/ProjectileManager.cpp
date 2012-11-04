@@ -2,6 +2,12 @@
 
 ProjectileList ProjectileManager::projectiles;
 
+ProjectileList ProjectileManager::GetList()
+{
+	return projectiles;
+}
+
+
 void ProjectileManager::AddProjectile(ProjectileEnum type, double startX,
 	double startZ, double endX, double endZ)
 {
@@ -14,8 +20,11 @@ void ProjectileManager::AddProjectile(ProjectileEnum type, double startX,
 		//projectiles.push_back(new AIProjectile(startX, startZ, endX, endZ));
 		break;
 	case PLAYER_PROJECTILE:
+		{
 		projectiles.push_back(new PlayerProj(startX, startZ, endX, endZ));
+		
 		break;
+		}
 	}
 }
 
@@ -29,6 +38,7 @@ void ProjectileManager::UpdateProjectiles()
 		if((*itr)->GetDeleteObject())
 		{
 			RemoveProjectile(itr);
+			
 		}
 		else
 		{

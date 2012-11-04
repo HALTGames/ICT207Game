@@ -18,6 +18,7 @@ protected:
 
 	StateMachine<AIObject>* ThisStateMachine;
 
+	
 	int Health;
 	double MaxSpeed;
 	Vector3 PlayerPos;
@@ -39,8 +40,9 @@ private:
 
 
 public:
+	int DamageSeconds;
 	void PickAIPos();
-	void TakeDamage();
+	bool TakeDamage();
 	void DealDamage();
 	bool Collide();
 	sounds soundcontroller;

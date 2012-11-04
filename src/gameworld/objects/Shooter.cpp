@@ -7,7 +7,7 @@ Shooter::Shooter()
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
-	Health =30;
+	Health =20;
 	MaxSpeed =0.12;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(SeekandShoot::Instance());
