@@ -86,9 +86,9 @@ public:
 	 *
 	 * Calls the Keyboard function of the current World.
 	 * 
-	 * \param key the key pressed
-	 * \param x the x coordinate of the mouse pointer
-	 * \param y the y coordinate of the mouse pointer
+	 * /param key the key pressed
+	 * /param x the x coordinate of the mouse pointer
+	 * /param y the y coordinate of the mouse pointer
 	 */
 	virtual void Keyboard(unsigned char key, int keyX, int keyY) {};
 
@@ -109,9 +109,9 @@ public:
 	 *
 	 * Calls the special keyboard function of the current World.
 	 *
-	 * \param key the special key pressed
-	 * \param x the x coordinate of the mouse pointer
-	 * \param y the y coordinate of the mouse pointer
+	 * /param key the special key pressed
+	 * /param x the x coordinate of the mouse pointer
+	 * /param y the y coordinate of the mouse pointer
 	 */
 	virtual void MovementKeys(int key, int x, int y) {};
 
@@ -120,9 +120,7 @@ public:
 	 *
 	 * Calls the special keyboard up function of the current World.
 	 *
-	 * \param key the key that was released
-	 * \param x the x coordinate of the mouse pointer
-	 * \param y the y coordinate of the mouse pointer
+	 * \param newWorld the world to switch to
 	 */
 	virtual void ReleaseKey(int key, int x, int y) {};
 
@@ -131,9 +129,9 @@ public:
 	 *
 	 * Calls the keyboard up function of the current World.
 	 *
-	 * \param key the special key up
-	 * \param x the x coordinate of the mouse pointer
-	 * \param y the y coordinate of the mouse pointer
+	 * /param key the special key up
+	 * /param x the x coordinate of the mouse pointer
+	 * /param y the y coordinate of the mouse pointer
 	 */
 	virtual void ReleaseKeys(unsigned char key, int x, int y) {};
 
@@ -142,8 +140,8 @@ public:
 	 *
 	 * Calls the mouse move function of the current World.
 	 *
-	 * \param x the x coordinate of the mouse pointer
-	 * \param y the y coordinate of the mouse pointer
+	 * /param x the x coordinate of the mouse pointer
+	 * /param y the y coordinate of the mouse pointer
 	 */
 	virtual void MouseMove(int x, int y) {}; 
 
