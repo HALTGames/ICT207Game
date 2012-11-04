@@ -183,7 +183,6 @@ void MenuWorld::Mouse(int Button, int State, int mouseX, int mouseY)
 			{
 				 glutDestroyWindow (1);
 				 exit (0);
-
 			}
 		}
 	}
