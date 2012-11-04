@@ -5,7 +5,6 @@
 #define GAMEWORLD_H
 
 #define PI 3.14159265
-
 // STL
 #include <list>
 #include <cmath>
