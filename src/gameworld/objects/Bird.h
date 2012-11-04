@@ -6,38 +6,54 @@
 
 
 
+/**
+ *\class Bird
+ *\brief Bird class implementation.
+ *
+ *This is the child class of AIobject 
+ *for the Bird AI
+ *
+ *
+ *\author Arran Ford
+ */
 class Bird: public AIObject
 {
 private:
-	
-	
-		
-	//StateMachine<AIObject>* ThisStateMachine;
+	///temp variable used in calculations
 	double temp;
-
-
+	
 
 public:
-	//void Init();
+	
+	/**
+	*\brief update function
+	*
+	*Updates the alligators variable that
+	*dictates current player position
+	*and updates the statemachine
+	*
+	*\param Vector3 PlayPos
+	*/
 	void Update(Vector3 PlayPos);
-	~Bird(){/*delete ThisStateMachine;*/}
+	///Deconstructer for Bird
+	~Bird(){}
+	///Constructer for Bird
 	Bird();
 
+	///overloaded constructer for Bird
 	Bird(const Vector3 pos, char* modelFile, const string collideType):AIObject(pos, modelFile, collideType)
 	{
 	
 		Health =100;
 		MaxSpeed =0.0001;
-	// ThisStateMachine = new StateMachine<AIObject>(this);
-	// ThisStateMachine->SetCurrentState(Seek::Instance());
-
 
 	}
 
-		Bird &operator=(const Bird &rhs);
-
-	  int operator==(const Bird &rhs) const;
-
-	  int operator<(const Bird &rhs) const;
+	///Overloaded assignment operator
+	Bird &operator=(const Bird &rhs);
+	///Overloaded comparisson operator
+	int operator==(const Bird &rhs) const;
+	 ///Overloaded less than operator
+	int operator<(const Bird &rhs) const;
 
 };

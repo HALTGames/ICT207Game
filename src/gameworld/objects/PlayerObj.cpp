@@ -31,6 +31,22 @@ void PlayerObj::Display()
 
 	int time = glutGet(GLUT_ELAPSED_TIME);
 
+	glEnable (GL_BLEND);
+	glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	glPushMatrix();
+	glTranslatef(0+position.x, 0+position.y, 0+position.z);
+	GLfloat mat_specular1[] = { 0.6, 0.0, 0.0, 0.5 };
+	GLfloat mat_both1[] = { 0.6, 0.0, 0.0, 0.5 };
+	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, mat_both1);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat_specular1);
+	glutSolidSphere(2.5,20,20);
+	glPopMatrix();
+	GLfloat mat_specular2[] = { 0.1, 0.1, 0.1, 1.0 };
+	GLfloat mat_both2[] = { 0.1, 0.1, 0.1, 1 };
+	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, mat_both2);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat_specular2);
+
+
 	if((time/1000) -2 >= Timer)
 	{
 		ProtectionStatus = false;

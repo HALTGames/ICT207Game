@@ -21,18 +21,10 @@ Alligator::Alligator()
 
 void Alligator::Update(Vector3 PlayPos)
 {
-	//cout<<"update \n";
-	//move somewhere
-	//possibly generate random number that may change state
-
-	//saves current position of player to the bird class so it can be accessed
+	
 	PlayerPos =PlayPos;
-	
-	
 	ThisStateMachine->update();
-	
-	
-	
+		
 }
 
 

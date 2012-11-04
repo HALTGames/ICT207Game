@@ -143,7 +143,6 @@
     <ClCompile Include="gameworld\GameWorld.cpp" />
     <ClCompile Include="gameworld\objects\AIManager.cpp" />
     <ClCompile Include="gameworld\objects\AIObject.cpp" />
-    <ClCompile Include="gameworld\objects\AIProjectile.cpp" />
     <ClCompile Include="gameworld\objects\Alligator.cpp" />
     <ClCompile Include="gameworld\objects\Bird.cpp" />
     <ClCompile Include="gameworld\objects\PlayerObj.cpp" />
@@ -195,7 +194,6 @@
     <ClInclude Include="gameworld\GameWorld.h" />
     <ClInclude Include="gameworld\objects\AIManager.h" />
     <ClInclude Include="gameworld\objects\AIObject.h" />
-    <ClInclude Include="gameworld\objects\AIProjectile.h" />
     <ClInclude Include="gameworld\objects\Alligator.h" />
     <ClInclude Include="gameworld\objects\Bird.h" />
     <ClInclude Include="gameworld\objects\PlayerObj.h" />
