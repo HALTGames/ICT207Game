@@ -1,92 +1,14 @@
-﻿Build started 4/11/2012 4:27:56 PM.
+﻿Build started 4/11/2012 6:15:27 PM.
      1>Project "D:\Github\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(298,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>InitializeBuildStatus:
          Creating ".\Release\houses.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt gamemenu\MenuWorld.cpp
-         MenuWorld.cpp
-     1>gamemenu\MenuWorld.cpp(69): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(69): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(69): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(70): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(76): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(76): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(76): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(83): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(83): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(83): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(84): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(95): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(95): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(95): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(96): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(96): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(107): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(107): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(107): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(108): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(108): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(118): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(118): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(118): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
-     1>gamemenu\MenuWorld.cpp(119): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+         All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\houses.exe" /INCREMENTAL:NO /NOLOGO fmodex_vc.lib SOIL.lib odbc32.lib odbccp32.lib fmodex_vc.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Release\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:\Github\ICT207Game\src\Release\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\houses.lib" /MACHINE:X86 .\Release\MenuWorld.obj
-         .\Release\RAWTexture.obj
-         .\Release\Seek.obj
-         .\Release\SeekandShoot.obj
-         .\Release\StrafeandSeek.obj
-         .\Release\GameCamera.obj
-         .\Release\GameCollision.obj
-         .\Release\GameObj.obj
-         .\Release\GameSound.obj
-         .\Release\GameWorld.obj
-         .\Release\AIManager.obj
-         .\Release\AIObject.obj
-         .\Release\AIProjectile.obj
-         .\Release\Alligator.obj
-         .\Release\Bird.obj
-         .\Release\PlayerObj.obj
-         .\Release\PlayerProj.obj
-         .\Release\ProjectileObj.obj
-         .\Release\ReticuleObj.obj
-         .\Release\Shooter.obj
-         .\Release\Strafer.obj
-         .\Release\TerrainObj.obj
-         .\Release\ProjectileManager.obj
-         .\Release\Score.obj
-         .\Release\main.obj
-         .\Release\GameModel.obj
-         .\Release\glm.obj
-         .\Release\glmimg.obj
-         .\Release\Model.obj
-         .\Release\ModelManager.obj
-         .\Release\TerrainModel.obj
-         .\Release\Texture.obj
-         .\Release\Particle.obj
-         .\Release\AABB.obj
-         .\Release\AABBLinkedList.obj
-         .\Release\AABBNode.obj
-         .\Release\camera.obj
-         .\Release\cameraMap.obj
-         .\Release\collision.obj
-         .\Release\EasySound.obj
-         .\Release\PlainLinkedList.obj
-         .\Release\PlainNode.obj
-         .\Release\ShaysWorld.obj
-         .\Release\Sound.obj
-         .\Release\SoundTime.obj
-         .\Release\texturedPolygons.obj
-         .\Release\Wave.obj
-         .\Release\sounds.obj
-         .\Release\TextureLoader.obj
-         .\Release\UserInterface.obj
-         .\Release\Vector3.obj
+         All outputs are up-to-date.
          houses.vcxproj -> D:\Github\ICT207Game\src\.\Release\houses.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:".\Release\houses.exe;#1" /manifest .\Release\houses.exe.intermediate.manifest
        FinalizeBuildStatus:
          Deleting file ".\Release\houses.unsuccessfulbuild".
          Touching ".\Release\houses.lastbuildstate".
@@ -94,4 +16,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.54
+Time Elapsed 00:00:00.07
