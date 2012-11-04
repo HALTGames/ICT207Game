@@ -353,7 +353,7 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		else if(State == GLUT_DOWN)
 		{
 			SoundController->playSound("Spell");
-			std::cout << "Mouse Pressed" << std::endl;
+			//std::cout << "Mouse Pressed" << std::endl;
 			playerObj->Shoot(reticuleObj->GetPosition().x, 
 				reticuleObj->GetPosition().z);
 		}

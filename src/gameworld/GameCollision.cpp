@@ -1,17 +1,17 @@
 #include "GameCollision.h"
 
+//-----------------------------------------------------------------------------
+
 collisionMap GameCollision::objCollision;
 
-GameCollision::GameCollision()
-{
-}
+//-----------------------------------------------------------------------------
 
-bool GameCollision::AddCollidable(collidableType type, GameObj* obj)
+void GameCollision::AddCollidable(collidableType type, GameObj* obj)
 {
 	objCollision[type].push_back(obj);
-
-	return true;
 }
+
+//-----------------------------------------------------------------------------
 
 bool GameCollision::CollidesWith(CollisionSphere* sphere, collidableType type)
 {
@@ -32,11 +32,7 @@ bool GameCollision::CollidesWith(CollisionSphere* sphere, collidableType type)
 	return collision;
 }
 
-bool GameCollision::RemoveCollidable(collidableType type, int objectNum)
-{
-
-	return true;
-}
+//-----------------------------------------------------------------------------
 
 bool GameCollision::CheckCollision(CollisionSphere* sphere1, 
 									CollisionSphere* sphere2)
@@ -47,3 +43,5 @@ bool GameCollision::CheckCollision(CollisionSphere* sphere1,
 
 	return (distance.Length() <= sumRadius);
 }
+
+//-----------------------------------------------------------------------------

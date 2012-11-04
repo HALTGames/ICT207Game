@@ -73,13 +73,6 @@ bool GameModel::CreateCollisionSphere()
 		if(maxz < z) maxz = z;
 	}
 
-	std::cout << minx << std::endl;
-	std::cout << miny << std::endl;
-	std::cout << minz << std::endl;
-	std::cout << maxx << std::endl;
-	std::cout << maxy << std::endl;
-	std::cout << maxz << std::endl;
-
 	double average = ((maxx - minx) + (maxy - miny) + (maxz - minz)) / 3;
 
 	//std::cout << "Average: " << average << std::endl;
