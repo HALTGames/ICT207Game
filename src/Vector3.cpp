@@ -1,5 +1,18 @@
 #include "Vector3.h"
 
+//-----------------------------------------------------------------------------
+
+Vector3& Vector3::operator=(const Vector3& other)
+{
+	x = other.x;
+	y = other.y;
+	z = other.z;
+
+	return *this;
+}
+
+//-----------------------------------------------------------------------------
+
 void Vector3::Set( const double X, const double Y, const double Z)
 {
 	x = X;
@@ -31,6 +44,7 @@ const Vector3& Vector3::operator-=(const Vector3& rhs)
 }
 
 //-----------------------------------------------------------------------------
+
 const Vector3 Vector3::operator-(const Vector3& rhs)
 {
 	Vector3 Vec;
@@ -40,8 +54,9 @@ const Vector3 Vector3::operator-(const Vector3& rhs)
 	Vec.z = z-rhs.z;
 
 	return Vec;
-
 }
+
+//-----------------------------------------------------------------------------
 
 const Vector3 Vector3::operator+(const Vector3 &other)
 {
@@ -53,6 +68,8 @@ const Vector3 Vector3::operator+(const Vector3 &other)
 
 	return vec;
 }
+
+//-----------------------------------------------------------------------------
 
 const Vector3 Vector3::operator*(const double scalar)
 {
@@ -118,3 +135,5 @@ Vector3 Vector3::Cross(const Vector3& other) const
 
 	return crossProduct;
 }
+
+//-----------------------------------------------------------------------------
