@@ -116,25 +116,25 @@ void MouseMove(int x, int y);
  */
 void GUI(void);
 
+
 //-----------------------------------------------------------------------------
 //Uncomment to start in GameWorld
-
+/*
 World* game = new GameWorld;
 World* shays = NULL;
 World* menu = NULL;
 World* currentWorld = game;
 WorldEnum current = GAMEWORLD;
-
+*/
 //-----------------------------------------------------------------------------
 //Uncomment to start in MenuWorld
 
-/*
 World* game = NULL;
 World* shays = NULL;
 World* menu = new MenuWorld;
 World* currentWorld = menu;
 WorldEnum current = MENUWORLD;
-*/
+
 
 /*
 World* game = new GameWorld;
@@ -143,7 +143,6 @@ World* menu = new MenuWorld;
 World* currentWorld = game;
 WorldEnum current = GAMEWORLD;
 */
-
 //-----------------------------------------------------------------------------
 int main(int argc, char** argv)
 {
@@ -208,34 +207,40 @@ void SwitchWorld(WorldEnum newWorld)
 
 	current = newWorld;
 
-	switch(newWorld)
+	switch(current)
 	{
 	case SHAYSWORLD:
 		if(shays)
 		{
 			shays = new ShaysWorld;
 		}
+		shays = new ShaysWorld;
 		currentWorld = shays;
 		break;
 	case GAMEWORLD:
-		if(game)
 		{
+			if(game)
+			{
+				game = new GameWorld;
+			}
 			game = new GameWorld;
+			currentWorld = game;
+			break;
 		}
-		currentWorld = game;
-		break;
 	case MENUWORLD:
 		if(menu)
 		{
 			menu = new MenuWorld;
 		}
+		menu = new MenuWorld;
 		currentWorld = menu;
 		break;
 	}
 
+	currentWorld->Init();
 	if(current == GAMEWORLD)
 	{
-		glutCreateSubWindow (1, 200, 810, 880, 150); 
+		glutCreateSubWindow (1, 200, 810, 880, 150); 			
 		glutDisplayFunc(GUI);
 		currentWorld->GUIinit();
 	}
@@ -243,8 +248,6 @@ void SwitchWorld(WorldEnum newWorld)
 	{
 		glutDestroyWindow(2);
 	}
-
-	currentWorld->Init();
 }
 
 //-----------------------------------------------------------------------------

@@ -1,21 +1,27 @@
 #include "GameWorld.h"
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 float back = 0.0;
 float lightx = 0, lighty =10, lightz =-5;
 GLfloat light_position[] = { lightx, lighty, lightz, 0.0 };
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 GameWorld::~GameWorld(void)
 {
 }
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 void GameWorld::Init(void)
 {
+	glutSetWindow(1);
+	gameWidth = 1280, gameHeight = 960;
+	glMatrixMode (GL_PROJECTION);
+	glLoadIdentity ();
+	gluPerspective(60.0,(GLdouble)gameWidth/(GLdouble)gameHeight,1.0, 500.0);
+	glMatrixMode (GL_MODELVIEW);
 
 	GLfloat lmodel_ambient[] = { 3.3, 3.3, 3.3, 1.0 };
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
@@ -38,6 +44,7 @@ void GameWorld::Init(void)
 	SoundController->PausePlaySoundTrack();
 	SoundController->addSound("sounds/fireball.wav", "Spell");
 	
+	Switch = false;
 
 	glEnable(GL_TEXTURE_2D);
 
@@ -54,13 +61,12 @@ void GameWorld::Init(void)
 	left = right = forward = back = false;
 
 	currWorld = GAMEWORLD;
-	gameWidth = 1280, gameHeight = 960;
 	
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
 }
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 void GameWorld::Exit()
 {
@@ -71,7 +77,7 @@ void GameWorld::Exit()
 	reticuleObj = NULL;
 }
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 void GameWorld::Reshape(int w, int h) 
 {
@@ -89,7 +95,7 @@ void GameWorld::Reshape(int w, int h)
 	gameHeight = h;
 }
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 void GameWorld::Display(void)
 {
@@ -134,7 +140,7 @@ void GameWorld::Display(void)
 	glutSwapBuffers();	
 }
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 void GameWorld::GUIinit(void)
 {
@@ -152,7 +158,7 @@ void GameWorld::GUIinit(void)
 	ModelLoader[5].LoadModel("./models/uiProtection.obj");
 }
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 void GameWorld::GUI(void)
 {
@@ -245,10 +251,17 @@ void GameWorld::GUI(void)
 	glutSetWindow(1);
 }
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 void GameWorld::Idle()
 {
+/*	if(Switch == false)
+	{
+		glutSetWindow(1);
+		std::cout << "Switch";
+		Switch = true;
+
+	}*/
 	if(glutGet(GLUT_ELAPSED_TIME) - lastdrawn > 1000/85)
 	{
 		ManaRegen();
@@ -259,7 +272,7 @@ void GameWorld::Idle()
 	}
 }
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 void GameWorld::ManaRegen()
 {
@@ -272,7 +285,7 @@ void GameWorld::ManaRegen()
 	}	
 }
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 {
@@ -334,10 +347,14 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 		delete SoundController;
 		currWorld = SHAYSWORLD;	
 	}
+	if(Key == 'g')
+	{
+		currWorld = MENUWORLD;
+	}
 	glutPostRedisplay();
 }
 
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
 
 void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 {
@@ -353,7 +370,7 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		else if(State == GLUT_DOWN)
 		{
 			SoundController->playSound("Spell");
-			std::cout << "Mouse Pressed" << std::endl;
+			//std::cout << "Mouse Pressed" << std::endl;
 			playerObj->Shoot(reticuleObj->GetPosition().x, 
 				reticuleObj->GetPosition().z);
 		}

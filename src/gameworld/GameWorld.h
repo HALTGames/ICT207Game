@@ -13,10 +13,7 @@
 // STL
 #include <list>
 #include <cmath>
-
 #include <time.h>
-
-
 
 // FREEGLUT
 #include <GL\freeglut.h>
@@ -262,6 +259,8 @@ private:
 										whether the ASDW keys are pressed */
 
 	int gameWidth, gameHeight; /**< The resolution of the game window */
+
+	bool Switch;
 };
 
 //------------------------------------------------------------------------------

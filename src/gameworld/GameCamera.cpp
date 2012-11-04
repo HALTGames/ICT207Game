@@ -1,50 +1,60 @@
 #include "GameCamera.h"
 
+//-----------------------------------------------------------------------------
+
 GameCamera::GameCamera()
 {
-	m_height = 30;
-	m_behind = 7;
+	height = 30;
+	behind = 7;
 }
 
-bool GameCamera::SetHeight(double height)
+//-----------------------------------------------------------------------------
+
+bool GameCamera::SetHeight(const double hght)
 {
 	if(height >= 0)
 	{
-		m_height = height;
+		height = hght;
 		return true;
 	}
 
 	return false;
 }
 
-bool GameCamera::SetBehind(double behind)
+//-----------------------------------------------------------------------------
+
+bool GameCamera::SetBehind(const double bhnd)
 {
 	if(behind >= 0)
 	{
-		m_behind = behind;
+		behind = bhnd;
 		return true;
 	}
 
 	return false;
 }
 
-void GameCamera::Render(const Vector3 position)
+//-----------------------------------------------------------------------------
+
+void GameCamera::Render(const Vector3 position) const
 {
-	gluLookAt(position.x - m_behind, position.y + m_height, position.z, 
+	gluLookAt(position.x - behind, position.y + height, position.z, 
 			position.x, position.y, position.z, 
 			1.0, 0.0, 0.0);
 }
 
-bool GameCamera::ChangeHeight(double height)
-{
-	m_height += height;
+//-----------------------------------------------------------------------------
 
-	return true;
+void GameCamera::ChangeHeight(const double hght)
+{
+	height += hght;
 }
 
-bool GameCamera::ChangeBehind(double behind)
-{
-	m_behind += behind;
+//-----------------------------------------------------------------------------
 
-	return true;
+void GameCamera::ChangeBehind(const double bhnd)
+{
+	behind += bhnd;
 }
+
+//-----------------------------------------------------------------------------

@@ -7,7 +7,13 @@
 //-----------------------------------------------------------------------------
 
 /**
- * A structure to represent 3D vectors.
+ * \file Vector3.h Vector3.cpp
+ * \brief Vector3 struct implementation.
+ *
+ * Sets up a 3D vector with an x, y and z components.
+ *
+ * \author Timothy Veletta, Arran Ford
+ * \date 09/10/12
  */
 struct Vector3
 {
@@ -33,6 +39,15 @@ struct Vector3
 	 */
 	Vector3(const double X, const double Y, const double Z):x(X), y(Y), z(Z) {}
 
+	/**
+	 * \brief Sets the vector.
+	 *
+	 *  Sets the x, y and z components of the vector.
+	 *
+	 * \param X	the x component
+	 * \param Y the y component
+	 * \param Z the z component
+	 */
 	void Set(const double X, const double Y, const double Z);
 
 	/**
@@ -66,10 +81,25 @@ struct Vector3
 	 */
 	const Vector3 operator-(const Vector3& rhs);
 
+	/**
+	 * \brief Adds two vectors.
+	 *
+	 * Adds two vectors to each other.
+	 *
+	 * \param other the other vector to add
+	 * \retval the result of adding the two vectors
+	 */
 	const Vector3 operator+(const Vector3 &other);
 
+	/**
+	 * \brief Multiplies a vector.
+	 *
+	 * Multiplies a vector by a scalar.
+	 *
+	 * \param how much to scale the vector
+	 * \retval the result of scaling the vector
+	 */
 	const Vector3 operator*(const double scalar);
-
 
 	/**
 	 * \brief Equlity operator.
@@ -119,6 +149,15 @@ struct Vector3
 	 */
 	double Dot(const Vector3& other) const;
 
+	/**
+	 * \brief The vector cross product.
+	 *
+	 * Returns the result of performing the vector cross product on this vector
+	 * and the input vector.
+	 *
+	 * \param other the vector to cross
+	 * \retval the result after the cross product
+	 */
 	Vector3 Cross(const Vector3& other) const;
 };
 

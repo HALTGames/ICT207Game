@@ -1,5 +1,7 @@
 #include "PlayerObj.h"
 
+//-----------------------------------------------------------------------------
+
 	int PlayerObj::Health = 100;
 	int PlayerObj::Mana = 50;
 	std::vector<bool> PlayerObj::Inventory;
@@ -7,6 +9,8 @@
 	int PlayerObj::ProtectionTimer = 0;
 	int PlayerObj::Timer = 0;
 	bool PlayerObj::ProtectionStatus = false;
+
+//-----------------------------------------------------------------------------
 
 PlayerObj::PlayerObj()
 {
@@ -23,6 +27,8 @@ PlayerObj::PlayerObj()
 	GameCollision::AddCollidable(PLAYER, this);
 }
 
+//-----------------------------------------------------------------------------
+
 void PlayerObj::Display()
 {
 	glPushMatrix();
@@ -30,28 +36,62 @@ void PlayerObj::Display()
 	glPopMatrix();
 
 	int time = glutGet(GLUT_ELAPSED_TIME);
-
 	glEnable (GL_BLEND);
 	glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glPushMatrix();
 	glTranslatef(0+position.x, 0+position.y, 0+position.z);
-	GLfloat mat_specular1[] = { 0.6, 0.0, 0.0, 0.5 };
-	GLfloat mat_both1[] = { 0.6, 0.0, 0.0, 0.5 };
+	GLfloat mat_specular1[] = { 0.9, 0.9, 0.9, 0.5 };
+	GLfloat mat_both1[] = { 0.9, 0.9, 0.9, 0.5 };
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, mat_both1);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat_specular1);
-	glutSolidSphere(2.5,20,20);
+	if(ProtectionStatus == true)
+	{
+		//std::cout << "true";
+		glutSolidSphere(2.5,10,10);
+	}
 	glPopMatrix();
 	GLfloat mat_specular2[] = { 0.1, 0.1, 0.1, 1.0 };
 	GLfloat mat_both2[] = { 0.1, 0.1, 0.1, 1 };
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, mat_both2);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat_specular2);
 
+	glPushMatrix();
+	//glClearColor (0.0, 0.0, 0.0, 0.0); 
+		//glColor4f(0.0, 1.0, 1.0, 0.0);
+	//	glTranslatef(position.x, position.y, position.z);
+	//	glutSolidSphere(2,6,6);
+	glPopMatrix();	
 
-	if((time/1000) -2 >= Timer)
-	{
-		ProtectionStatus = false;
-	}
+ glEnable (GL_BLEND);
+glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+glPushMatrix();
+glTranslatef(0+position.x, 0+position.y, 0+position.z);
+GLfloat mat_specular1[] = { 0.9, 0.9, 0.9, 0.5 };
+GLfloat mat_both1[] = { 0.9, 0.9, 0.9, 0.5 };
+glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, mat_both1);
+glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat_specular1);
+if(ProtectionStatus == true)
+{
+std::cout << "true";
+glutSolidSphere(2.5,10,10);
 }
+glPopMatrix();
+GLfloat mat_specular2[] = { 0.1, 0.1, 0.1, 1.0 };
+GLfloat mat_both2[] = { 0.1, 0.1, 0.1, 1 };
+glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, mat_both2);
+glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat_specular2);
+
+if((time/1000) -2 >= Timer/1000)
+{
+Timer = time;
+ProtectionStatus = false;
+}
+
+
+
+}
+
+//-----------------------------------------------------------------------------
 
 void PlayerObj::ChangePosition(const Vector3 pos)
 {
@@ -69,6 +109,8 @@ void PlayerObj::ChangePosition(const Vector3 pos)
 	}
 }
 
+//-----------------------------------------------------------------------------
+
 void PlayerObj::ModifyHealth(int Change)
 {
 	if(ProtectionStatus == false)
@@ -84,9 +126,9 @@ void PlayerObj::ModifyHealth(int Change)
 			Death();
 		}
 	}
-
-	//cout<<Health<<" HEALTH \n";
 }
+
+//-----------------------------------------------------------------------------
 
 bool PlayerObj::ModifyMana(int Change)
 {
@@ -104,10 +146,14 @@ bool PlayerObj::ModifyMana(int Change)
 	return true;
 }
 
+//-----------------------------------------------------------------------------
+
 void PlayerObj::Death()
 {
 	//stubbed
 }
+
+//-----------------------------------------------------------------------------
 
 void PlayerObj::SelectSpell(int i)
 {
@@ -121,7 +167,7 @@ void PlayerObj::SelectSpell(int i)
 		{
 			if((time / 1000)-2 >=  ProtectionTimer/1000)
 			{
-				std::cout << "2 Pressed";
+				//std::cout << "2 Pressed";
 				ProtectionTimer = time;
 				SetSpell(New);
 			}	
@@ -132,6 +178,8 @@ void PlayerObj::SelectSpell(int i)
 		}		
 	}
 }
+
+//-----------------------------------------------------------------------------
 
 void PlayerObj::Shoot(int x, int y)
 {
@@ -145,7 +193,7 @@ void PlayerObj::Shoot(int x, int y)
 	{
 		if(ModifyMana(-15) == true)
 		{
-			std::cout << "SPHERE AAACTIVATE!";
+			//std::cout << "SPHERE AAACTIVATE!";
 			ProtectionStatus = true;
 			Timer = glutGet(GLUT_ELAPSED_TIME);
 			glutSetWindow(1);
@@ -160,3 +208,5 @@ void PlayerObj::Shoot(int x, int y)
 		SetSpell((Spells)1);
 	}
 }
+
+//-----------------------------------------------------------------------------

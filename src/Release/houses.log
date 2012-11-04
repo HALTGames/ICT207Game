@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ﻿Build started 11/5/2012 2:59:54 AM.
      1>Project "D:\shaysnew\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
+=======
+﻿Build started 5/11/2012 3:36:52 AM.
+     1>Project "D:\Github\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
+>>>>>>> f696dac5b60927b670e9690c3feb1411e8cbf0b6
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(298,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>InitializeBuildStatus:
@@ -2411,6 +2416,7 @@
                  d:\shaysnew\ict207game\src\shaysworld\ShaysWorld.h(4) : see previous definition of 'PI'
          Generating Code...
        Link:
+<<<<<<< HEAD
          d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\houses.exe" /INCREMENTAL:NO /NOLOGO fmodex_vc.lib SOIL.lib odbc32.lib odbccp32.lib fmodex_vc.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Release\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:\shaysnew\ICT207Game\src\Release\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\houses.lib" /MACHINE:X86 .\Release\MenuWorld.obj
          .\Release\RAWTexture.obj
          .\Release\Seek.obj
@@ -2463,11 +2469,19 @@
          houses.vcxproj -> D:\shaysnew\ICT207Game\src\.\Release\houses.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:".\Release\houses.exe;#1" /manifest .\Release\houses.exe.intermediate.manifest
+=======
+         All outputs are up-to-date.
+         houses.vcxproj -> D:\Github\ICT207Game\src\.\Release\houses.exe
+>>>>>>> f696dac5b60927b670e9690c3feb1411e8cbf0b6
        FinalizeBuildStatus:
          Deleting file ".\Release\houses.unsuccessfulbuild".
          Touching ".\Release\houses.lastbuildstate".
-     1>Done Building Project "D:\shaysnew\ICT207Game\src\houses.vcxproj" (build target(s)).
+     1>Done Building Project "D:\Github\ICT207Game\src\houses.vcxproj" (build target(s)).
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:03.78
+=======
+Time Elapsed 00:00:00.05
+>>>>>>> f696dac5b60927b670e9690c3feb1411e8cbf0b6

@@ -108,17 +108,25 @@ int GameObj::GetIdentificationNumber() const
 	return identificationNumber;
 }
 
+//-----------------------------------------------------------------------------
+
 CollisionSphere* GameObj::GetCollisionSphere()
 {
 	return model.GetCollisionSphere();
 }
+
+//-----------------------------------------------------------------------------
 
 void GameObj::SetScale(double factor)
 {
 	scale = factor;
 }
 
+//-----------------------------------------------------------------------------
+
 bool GameObj::GetDeleteObject() const
 {
 	return deleteObject;
 }
+
+//-----------------------------------------------------------------------------

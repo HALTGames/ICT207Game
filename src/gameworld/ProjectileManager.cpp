@@ -1,11 +1,17 @@
 #include "ProjectileManager.h"
 
+//-----------------------------------------------------------------------------
+
 ProjectileList ProjectileManager::projectiles;
+
+//-----------------------------------------------------------------------------
 
 ProjectileList ProjectileManager::GetList()
 {
 	return projectiles;
 }
+
+//-----------------------------------------------------------------------------
 
 
 void ProjectileManager::AddProjectile(ProjectileEnum type, double startX,
@@ -28,10 +34,10 @@ void ProjectileManager::AddProjectile(ProjectileEnum type, double startX,
 	}
 }
 
+//-----------------------------------------------------------------------------
+
 void ProjectileManager::UpdateProjectiles()
 {
-	//std::cout << projectiles.size() << std::endl;
-
 	for(CItrProjectileList itr = projectiles.begin(); 
 		itr != projectiles.end(); ++itr)
 	{
@@ -47,19 +53,26 @@ void ProjectileManager::UpdateProjectiles()
 	}
 }
 
+//-----------------------------------------------------------------------------
+
 Vector3 ProjectileManager::GetCurrentPosition(CItrProjectileList index)
 {
 	return (*index)->GetPosition();
 }
+
+//-----------------------------------------------------------------------------
 
 int ProjectileManager::GetNumProjectiles()
 {
 	return projectiles.size();
 }
 
+//-----------------------------------------------------------------------------
+
 void ProjectileManager::RemoveProjectile(CItrProjectileList index)
 {
-	//std::cout << "Removing Projectile" << std::endl;
 	delete *index;
 	projectiles.erase(index);
 }
+
+//-----------------------------------------------------------------------------
