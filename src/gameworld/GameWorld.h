@@ -251,13 +251,14 @@ private:
 	TerrainModel level; /**< Loads in the Island model */
 	GameModel ModelLoader[10]; /**< Loads in the models for the GUI */
 
-	int ManaTimer; /**<  */
+	int ManaTimer; /**< Times the passive mana regeneration */
 
-	int lastdrawn; /**< */
+	int lastdrawn; /**< Gets the time the Display function was last called */
 
-	bool left, right, forward, back; /**< */
+	bool left, right, forward, back; /**< Gets the movement states as to
+										whether the ASDW keys are pressed */
 
-	int gameWidth, gameHeight; /**< */
+	int gameWidth, gameHeight; /**< The resolution of the game window */
 };
 
 //------------------------------------------------------------------------------
