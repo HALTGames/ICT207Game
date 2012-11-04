@@ -1,5 +1,7 @@
 #include "PlayerObj.h"
 
+//-----------------------------------------------------------------------------
+
 	int PlayerObj::Health = 100;
 	int PlayerObj::Mana = 50;
 	std::vector<bool> PlayerObj::Inventory;
@@ -7,6 +9,8 @@
 	int PlayerObj::ProtectionTimer = 0;
 	int PlayerObj::Timer = 0;
 	bool PlayerObj::ProtectionStatus = false;
+
+//-----------------------------------------------------------------------------
 
 PlayerObj::PlayerObj()
 {
@@ -23,6 +27,8 @@ PlayerObj::PlayerObj()
 	GameCollision::AddCollidable(PLAYER, this);
 }
 
+//-----------------------------------------------------------------------------
+
 void PlayerObj::Display()
 {
 	glPushMatrix();
@@ -36,6 +42,8 @@ void PlayerObj::Display()
 		ProtectionStatus = false;
 	}
 }
+
+//-----------------------------------------------------------------------------
 
 void PlayerObj::ChangePosition(const Vector3 pos)
 {
@@ -53,6 +61,8 @@ void PlayerObj::ChangePosition(const Vector3 pos)
 	}
 }
 
+//-----------------------------------------------------------------------------
+
 void PlayerObj::ModifyHealth(int Change)
 {
 	if(ProtectionStatus == false)
@@ -68,9 +78,9 @@ void PlayerObj::ModifyHealth(int Change)
 			Death();
 		}
 	}
-
-	//cout<<Health<<" HEALTH \n";
 }
+
+//-----------------------------------------------------------------------------
 
 bool PlayerObj::ModifyMana(int Change)
 {
@@ -88,10 +98,14 @@ bool PlayerObj::ModifyMana(int Change)
 	return true;
 }
 
+//-----------------------------------------------------------------------------
+
 void PlayerObj::Death()
 {
 	//stubbed
 }
+
+//-----------------------------------------------------------------------------
 
 void PlayerObj::SelectSpell(int i)
 {
@@ -116,6 +130,8 @@ void PlayerObj::SelectSpell(int i)
 		}		
 	}
 }
+
+//-----------------------------------------------------------------------------
 
 void PlayerObj::Shoot(int x, int y)
 {
@@ -144,3 +160,5 @@ void PlayerObj::Shoot(int x, int y)
 		SetSpell((Spells)1);
 	}
 }
+
+//-----------------------------------------------------------------------------
