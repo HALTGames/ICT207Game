@@ -51,16 +51,32 @@ void AIObject::PickAIPos()
 }
 
 
-void AIObject::TakeDamage()
+bool AIObject::TakeDamage()
 {
-	/*
-	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), PLAYERPROJECTILE));
+	
+	for(CItrProjectileList itr = ProjectileManager::projectiles.begin(); 
+	itr != ProjectileManager::projectiles.end(); ++itr)
 	{
-		//Health-=10;
-		//cout<<Health<< "   AI DAMAGE \n";
-	}*/
+		//cout<<"SHOOTING SO LOOPING \n";
+		temp = sqrt((ProjectileManager::GetCurrentPosition(itr).x-position.x)
+			*(ProjectileManager::GetCurrentPosition(itr).x-position.x) + (ProjectileManager::GetCurrentPosition(itr).y-position.y)
+			*(ProjectileManager::GetCurrentPosition(itr).y-position.y) + (ProjectileManager::GetCurrentPosition(itr).z-position.z)
+			*(ProjectileManager::GetCurrentPosition(itr).z-position.z));
+		
 
+		if(temp<1.8)
+		{
+			Health-=10;
+			cout<<Health<< " DAMAGE DO YOU SPEAK IS MUTHERFUCKIER";
+			return true;
+		} 
+
+	}
+	return false;
+		
 }
+	
+	
 
 void AIObject::DealDamage()
 {
@@ -222,7 +238,7 @@ double AIObject::GetDistanceFrom()
 void AIObject::Fire()
 {
 	//new ProjectileObj(position.x, position.z, Direction.x, Direction.z);
-	ProjectileManager::AddProjectile(PROJECTILE, position.x, position.z, PlayerPos.x, PlayerPos.z);
+	ProjectileManager::AddProjectile(PROJECTILE, position.x+Direction.x*30, position.z+Direction.z*30, PlayerPos.x, PlayerPos.z);
 
 	//cout<<"Firingmutherfucker!!!!!!!! \n";
 }

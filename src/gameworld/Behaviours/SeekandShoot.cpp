@@ -17,7 +17,13 @@ void SeekandShoot::Enter(AIObject* AI)
 
 void SeekandShoot::Execute(AIObject* AI)
 {
-	AI->TakeDamage();
+	if(time(NULL) > AI->DamageSeconds)
+	{
+	if(AI->TakeDamage())
+	{
+		AI->DamageSeconds = time(NULL);
+	}
+	}
 	AI->SetAngle(AI->GetPlayerPos(),  AI->GetPosition());
 	
 	if(time(NULL) > AI->seconds+1)

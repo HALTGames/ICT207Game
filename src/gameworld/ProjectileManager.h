@@ -28,8 +28,12 @@ public:
 	static Vector3 GetCurrentPosition(CItrProjectileList index);
 
 	static int GetNumProjectiles();
+
+	static ProjectileList projectiles; 
+
+	static ProjectileList GetList();
 private:
-	static ProjectileList projectiles;
+	
 
 	static void RemoveProjectile(CItrProjectileList index);
 };

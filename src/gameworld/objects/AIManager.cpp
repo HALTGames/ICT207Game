@@ -25,47 +25,25 @@ void AIManager::CheckForAICreate()
 
 void AIManager::CreateAI() 
 {
-	RandomAI = rand() %4;
+	RandomAI = rand() %10;
 	
 	
-	switch(RandomAI)
-	{
-	case 0:
+	if((RandomAI == 1) ||(RandomAI ==2)||(RandomAI ==3)||(RandomAI ==4))
 		{
-			
-			//AIBird = new Bird;
-			//AIBird.SetPosition(Placement);
 			BirdList.push_back(new Bird());
-			//delete[] AIBird;
-			break;
 		}
-	case 1:
+	else if((RandomAI == 5) ||(RandomAI ==6)||(RandomAI ==7))	
 		{
-			
-			//AIShooter = new Shooter;
-			//AIShooter.SetPosition(Placement);
 			ShooterList.push_back(new Shooter());
-			//delete[] AIShooter;
-			break;
 		}
-	case 2:
+	else if((RandomAI == 8) ||(RandomAI ==9))
 		{
-			
-			//AIAlligator = new Alligator;
-			//AIAlligator.SetPosition(Placement);
+			StraferList.push_back(new Strafer());	
+		}
+	else if(RandomAI == 0)
+		{
 			AlligatorList.push_back(new Alligator());
-			//delete[] AIAlligator;
-			break;
 		}
-	case 3:
-		{
-			
-			//AIStrafer = new Strafer;
-			//AIStrafer.SetPosition(Placement);
-			StraferList.push_back(new Strafer());
-			break;
-		}
-	}
 }
 
 void AIManager::UpdateAI(Vector3 PlayerPos)
@@ -77,7 +55,7 @@ void AIManager::UpdateAI(Vector3 PlayerPos)
 		//(*itr)->SubtractHealth(1);
 		(*itr)->Update(PlayerPos);
 		(*itr)->Display();
-		if((*itr)->GetHealth() < 0)
+		if((*itr)->GetHealth() <= 0)
 		{
 			Score::Instance()->Modify(10);
 			itr = BirdList.erase(itr);
@@ -92,7 +70,7 @@ void AIManager::UpdateAI(Vector3 PlayerPos)
 		//(*itrs)->SubtractHealth(1);
 		(*itrs)->Update(PlayerPos);
 		(*itrs)->Display();
-		if((*itrs)->GetHealth() < 0)
+		if((*itrs)->GetHealth() <= 0)
 		{
 			itrs = ShooterList.erase(itrs);
 		}
@@ -105,7 +83,7 @@ void AIManager::UpdateAI(Vector3 PlayerPos)
 		//(*itra)->SubtractHealth(1);
 		(*itra)->Update(PlayerPos);
 		(*itra)->Display();
-		if((*itra)->GetHealth() < 0)
+		if((*itra)->GetHealth() <= 0)
 		{
 			itra = AlligatorList.erase(itra);
 		}
@@ -118,7 +96,7 @@ void AIManager::UpdateAI(Vector3 PlayerPos)
 		//(*itrst)->SubtractHealth(1);
 		(*itrst)->Update(PlayerPos);
 		(*itrst)->Display();
-		if((*itrst)->GetHealth() < 0)
+		if((*itrst)->GetHealth() <= 0)
 		{
 			itrst = StraferList.erase(itrst);
 		}

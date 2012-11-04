@@ -8,7 +8,7 @@ Bird::Bird()
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
 	Health =20;
-	MaxSpeed =0.09;
+	MaxSpeed =0.1;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(Seek::Instance());
 	SetScale(1);

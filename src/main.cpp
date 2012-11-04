@@ -136,13 +136,13 @@ World* currentWorld = menu;
 WorldEnum current = MENUWORLD;
 */
 
-
+/*
 World* game = new GameWorld;
 World* shays = new ShaysWorld;
 World* menu = new MenuWorld;
 World* currentWorld = game;
 WorldEnum current = GAMEWORLD;
-
+*/
 
 //-----------------------------------------------------------------------------
 int main(int argc, char** argv)
