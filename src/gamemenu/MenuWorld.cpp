@@ -1,9 +1,5 @@
 #include "MenuWorld.h"
 
-
-//float MenuWorld::ypoz;
-
-
 void MenuWorld::Init()
 {
 	windowWidth = 1280, windowHeight = 960;
@@ -18,13 +14,6 @@ void MenuWorld::Init()
 
 	MenuChoice = 0;
 	Exit = false;
-	//glMatrixMode(GL_PROJECTION);
-	//glLoadIdentity();
-
-	//gluPerspective(60.0, 1, 1.0, 1000.0);
-
-	//glMatrixMode(GL_MODELVIEW);
-
 
 	glMatrixMode(GL_MODELVIEW);
 
@@ -117,7 +106,6 @@ void MenuWorld::Display()
 				break;
 			}
 		}
-		//glFlush();
 	}
 	else
 	{
@@ -135,8 +123,7 @@ void MenuWorld::Display()
 
 void MenuWorld::Idle()
 {
-	//glutSetWindow(1);
-	//glutPostRedisplay();
+
 }
 
 void MenuWorld::DisplayExit()
@@ -229,114 +216,3 @@ void MenuWorld::MouseMove(int x, int y)
 		}
 	}
 }
-
-/*
-void MenuWorld::Idle()
-{
-	animate();
-}
-
-void MenuWorld::Keyboard(unsigned char key, int keyX, int keyY)
-{
-	switch (key) {
-		case 13: 
-			MenuSelect();
-			break;
-		case 27:
-			exit(EXIT_SUCCESS);
-			break;
-	}
-}
-
-void MenuWorld::Mouse(int button, int state, int mouseX, int mouseY)
-{
-	switch(button){
-		case GLUT_LEFT_BUTTON:
-			MenuSelect();
-			break;
-	}
-}
-
-void MenuWorld::MovementKeys(int key, int x, int y)
-{
-}
-
-void MenuWorld::ReleaseKey(int key, int x, int y)
-{
-	switch (key) {
-		case GLUT_KEY_UP: 
-			MenuUp();
-			glutPostRedisplay();
-			break;
-		case GLUT_KEY_DOWN: 
-			MenuDown(); 
-			glutPostRedisplay();
-			break;
-	}
-}
-
-void MenuWorld::ReleaseKeys(unsigned char key, int x, int y)
-{
-}
-
-void MenuWorld::MouseMove(int x, int y)
-{
-	if(x < (windowWidth/3)+(windowWidth/3) && (x > (windowWidth/3)))
-	{
-		//std::cout << "left/right check working" << "\n";
-		if(y > (windowHeight/11)*5 && (y < (windowHeight/11)*6))
-		{
-			menuPos = 1;
-			glutPostRedisplay();
-		}
-		else if(y > (windowHeight/11)*6 && (y < (windowHeight/11)*7))
-		{
-			menuPos = 2;
-			glutPostRedisplay();
-		}
-		else if(y > (windowHeight/11)*7 && (y < (windowHeight/11)*8))
-		{
-			menuPos = 3;
-			glutPostRedisplay();
-		}
-		else if(y > (windowHeight/11)*8 && (y < (windowHeight/11)*9))
-		{
-			menuPos = 4;
-			glutPostRedisplay();
-		}
-	}
-}
-
-void MenuWorld::drawIsland()
-{
-	if (!island) 
-	{
-		island = glmReadOBJ("models/island.obj");	
-		if (!island) exit(0);
-		glmUnitize(island);
-		glmFacetNormals(island);        
-		glmVertexNormals(island, 90.0);
-	}
-	glmDraw(island, GLM_SMOOTH| GLM_TEXTURE);
-}
-
-void MenuWorld::drawSkybox()
-{
-	if (!skybox) 
-	{
-		skybox = glmReadOBJ("models/skybox.obj");	
-		if (!skybox) exit(0);
-		glmUnitize(skybox);
-		glmFacetNormals(skybox);        
-		glmVertexNormals(skybox, 90.0);
-	}
-	glmDraw(skybox, GLM_SMOOTH| GLM_TEXTURE);
-}
-
-void MenuWorld::animate()
-{
-	ypoz+=0.01;
-	if (ypoz>360) ypoz=0;
-	glutPostRedisplay();
-}
-*/
