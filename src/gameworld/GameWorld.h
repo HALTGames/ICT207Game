@@ -26,7 +26,6 @@
 #include "../modelimporter/TerrainModel.h"
 #include "GameCamera.h"
 #include "GameObj.h"
-#include "../TextureLoader.h"
 //#include "../SoundControl/sounds.h"
 #include "../modelimporter/GameModel.h"
 #include "ProjectileManager.h"
@@ -96,7 +95,7 @@ public:
 	 *
 	 * Sets up the lighting, sound, player, AI, terrain. window size
 	 */
-	virtual void Init() {};
+	virtual void Init();
 
 	/**
 	 *	\brief Reshape callback.
@@ -106,7 +105,7 @@ public:
 	 * \param w the width of the window
 	 * \param h the height of the window
 	 */
-	virtual void Reshape(int w, int h) {};
+	virtual void Reshape(int w, int h);
 
 	/**
 	 *	\brief Display callback.
@@ -114,14 +113,14 @@ public:
 	 * Handles the camera movement, displaying of the player and the island and
 	 * also calls the update function for the AI.
 	 */
-	virtual void Display() {};
+	virtual void Display();
 
 	/**
 	 *	\brief Idle callback.
 	 *
 	 * Handles the limiting of the frame rate.
 	 */
-	virtual void Idle() {};
+	virtual void Idle();
 
 	/**
 	 *	\brief Keyboard callback.
@@ -132,7 +131,7 @@ public:
 	 * /param x the x coordinate of the mouse pointer
 	 * /param y the y coordinate of the mouse pointer
 	 */
-	virtual void Keyboard(unsigned char key, int keyX, int keyY) {};
+	virtual void Keyboard(unsigned char key, int keyX, int keyY);
 
 	/**
 	 *	\brief Mouse callback.
@@ -144,7 +143,7 @@ public:
 	 * \param mouseX the x coordinate of the mouse pointer
 	 * \param mouseY the y coordinate of the mouse pointer
 	 */
-	virtual void Mouse(int button, int state, int mouseX, int mouseY) {};
+	virtual void Mouse(int button, int state, int mouseX, int mouseY);
 
 	/**
 	 *	\brief Special keyboard callback.
@@ -155,7 +154,7 @@ public:
 	 * /param x the x coordinate of the mouse pointer
 	 * /param y the y coordinate of the mouse pointer
 	 */
-	virtual void MovementKeys(int key, int x, int y) {};
+	virtual void MovementKeys(int key, int x, int y);
 
 	/**
 	 *	\brief Special keyboard up callback.
@@ -166,7 +165,7 @@ public:
 	 * /param x the x coordinate of the mouse pointer
 	 * /param y the y coordinate of the mouse pointer
 	 */
-	virtual void ReleaseKey(int key, int x, int y) {};
+	virtual void ReleaseKey(int key, int x, int y);
 
 	/**
 	 *	\brief Keyboard up callback.
@@ -177,31 +176,32 @@ public:
 	 * /param x the x coordinate of the mouse pointer
 	 * /param y the y coordinate of the mouse pointer
 	 */
-	virtual void ReleaseKeys(unsigned char key, int x, int y) {};
+	virtual void ReleaseKeys(unsigned char key, int x, int y);
 
 	/**
 	 *	\brief Motion callback.
 	 *
-	 * Calls the mouse move function of the current World.
+	 * Gets where the mouse pointer is in relation to the world and uses this
+	 * to work out what direction the player is facing.
 	 *
 	 * /param x the x coordinate of the mouse pointer
 	 * /param y the y coordinate of the mouse pointer
 	 */
-	virtual void MouseMove(int x, int y) {}; 
+	virtual void MouseMove(int x, int y); 
 
 	/**
 	 * \brief Displays the GUI.
 	 *
 	 * Displays the GUI in the current window.
 	 */
-	virtual void GUI() {};
+	virtual void GUI();
 
 	/**
 	 * \brief Initalises the GUI.
 	 *
 	 * Loads in the GUI models.
 	 */
-	virtual void GUIinit() {};
+	virtual void GUIinit();
 
 	/**
 	 * \brief Deallocates the memory used by the world.
@@ -210,7 +210,7 @@ public:
 	 * we change away from the current world to deallocate the memory used by
 	 * that world.
 	 */
-	virtual void Exit() {};
+	virtual void Exit();
 
 	/**
 	 * \brief Passive Mana Regen.
@@ -220,33 +220,44 @@ public:
 	void ManaRegen();
 	
 private:
-	PlayerObj* playerObj;
-	ReticuleObj* reticuleObj;
-	TerrainObj* terrainObj;
+	PlayerObj* playerObj; /**< The player object */
+	ReticuleObj* reticuleObj; /**< The reticule object */
+	TerrainObj* terrainObj; /**< The terrain object that handles collision 
+								around the mountain on the island. */
 	
-	AIManager* AImanage;
+	AIManager* AImanage; /**< Manages the AI spawning. */
+	sounds* SoundController; /**< Manages the playing of sound */
+	GameCamera camera; /**< Manages the camera movement */
 	
-
-	sounds* SoundController;
-	GameCamera camera;
-	
+	/**
+	 *	\brief Sets the position of the reticule.
+	 *
+	 * Gets where the mouse pointer is in relation to the world and uses this
+	 * to work out what direction they are firing and where to place the
+	 * reticule.
+	 *
+	 * /param x the x coordinate of the mouse pointer
+	 * /param y the y coordinate of the mouse pointer
+	 */
 	void SetReticulePosition(int x, int y);
 
-	
-	TextureLoader TextureLoad;
-
+	/**
+	 * \brief Handles player movement.
+	 *
+	 * Handles continuous player movement in the case of keys being held down.
+	 */
 	void PlayerMovement();
 
-	TerrainModel level;
-	GameModel ModelLoader[10];
+	TerrainModel level; /**< Loads in the Island model */
+	GameModel ModelLoader[10]; /**< Loads in the models for the GUI */
 
-	int ManaTimer;
+	int ManaTimer; /**<  */
 
-	int lastdrawn;
+	int lastdrawn; /**< */
 
-	bool left, right, forward, back;
+	bool left, right, forward, back; /**< */
 
-	int gameWidth, gameHeight;
+	int gameWidth, gameHeight; /**< */
 };
 
 //------------------------------------------------------------------------------

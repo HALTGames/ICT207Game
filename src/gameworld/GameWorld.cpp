@@ -1,14 +1,18 @@
 #include "GameWorld.h"
-#include <time.h>
 
+//------------------------------------------------------------------------------
 
 float back = 0.0;
 float lightx = 0, lighty =10, lightz =-5;
 GLfloat light_position[] = { lightx, lighty, lightz, 0.0 };
 
+//------------------------------------------------------------------------------
+
 GameWorld::~GameWorld(void)
 {
 }
+
+//------------------------------------------------------------------------------
 
 void GameWorld::Init(void)
 {
@@ -54,15 +58,9 @@ void GameWorld::Init(void)
 	
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
-	//glutSetCursor(GLUT_CURSOR_NONE);
-	/* Probably never work due to glm fuckery
-	//TextureLoad.LoadTexture("textures/UIbackground.RAW",791,151,1);
-	float width, height;
-	width = 791;
-	height = 151;
-	//TextureLoad.SetTexture(glmLoadTexture("textures/UIbackground.RAW", GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE, &width, &height));
-	*/
 }
+
+//------------------------------------------------------------------------------
 
 void GameWorld::Exit()
 {
@@ -72,6 +70,8 @@ void GameWorld::Exit()
 	delete reticuleObj;
 	reticuleObj = NULL;
 }
+
+//------------------------------------------------------------------------------
 
 void GameWorld::Reshape(int w, int h) 
 {
@@ -88,6 +88,8 @@ void GameWorld::Reshape(int w, int h)
 	gameWidth = w;
 	gameHeight = h;
 }
+
+//------------------------------------------------------------------------------
 
 void GameWorld::Display(void)
 {
@@ -133,6 +135,9 @@ void GameWorld::Display(void)
 	glFlush();
 	glutSwapBuffers();	
 }
+
+//------------------------------------------------------------------------------
+
 void GameWorld::GUIinit(void)
 {
 	glutSetWindow(2);
@@ -148,6 +153,8 @@ void GameWorld::GUIinit(void)
 	ModelLoader[4].LoadModel("./models/uiMagicMissile.obj");
 	ModelLoader[5].LoadModel("./models/uiProtection.obj");
 }
+
+//------------------------------------------------------------------------------
 
 void GameWorld::GUI(void)
 {
@@ -240,6 +247,8 @@ void GameWorld::GUI(void)
 	glutSetWindow(1);
 }
 
+//------------------------------------------------------------------------------
+
 void GameWorld::Idle()
 {
 	if(glutGet(GLUT_ELAPSED_TIME) - lastdrawn > 1000/85)
@@ -252,6 +261,8 @@ void GameWorld::Idle()
 	}
 }
 
+//------------------------------------------------------------------------------
+
 void GameWorld::ManaRegen()
 {
 	int time = glutGet(GLUT_ELAPSED_TIME);
@@ -262,6 +273,8 @@ void GameWorld::ManaRegen()
 		ManaTimer = time;
 	}	
 }
+
+//------------------------------------------------------------------------------
 
 void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 {
@@ -326,6 +339,8 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 	glutPostRedisplay();
 }
 
+//------------------------------------------------------------------------------
+
 void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 {
 	SetReticulePosition(MouseX, MouseY);
@@ -346,6 +361,8 @@ void GameWorld::Mouse(int Button, int State, int MouseX, int MouseY)
 		}
 	}
 }
+
+//------------------------------------------------------------------------------
 
 void GameWorld::PlayerMovement()
 {
@@ -375,14 +392,19 @@ void GameWorld::PlayerMovement()
 
 }
 
+//------------------------------------------------------------------------------
+
 void GameWorld::MovementKeys(int key, int x, int y)
 {
 }
 
+//------------------------------------------------------------------------------
+
 void GameWorld::ReleaseKey(int key, int x, int y)
 {
-
 }
+
+//------------------------------------------------------------------------------
 
 void GameWorld::ReleaseKeys(unsigned char key, int x, int y)
 {
@@ -407,10 +429,14 @@ void GameWorld::ReleaseKeys(unsigned char key, int x, int y)
 	}
 }
 
+//------------------------------------------------------------------------------
+
 void GameWorld::MouseMove(int x, int y)
 {
 	SetReticulePosition(x, y);
 }
+
+//------------------------------------------------------------------------------
 
 void GameWorld::SetReticulePosition(int x, int y)
 {
@@ -437,3 +463,4 @@ void GameWorld::SetReticulePosition(int x, int y)
 	}
 }
 
+//------------------------------------------------------------------------------
