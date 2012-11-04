@@ -132,8 +132,6 @@ public:
 	 */
 	void SetInventoryStatus(int i, bool value) {Inventory[i] = value;}
 
-
-	//Getters
 	/**
 	 * \brief Gets the health.
 	 *
@@ -153,33 +151,31 @@ public:
 	int GetMana() const {return Mana;}
 
 	/**
-	 * \brief
+	 * \brief Gets the inventory status.
 	 *
+	 * Gets the inventory status of the input inventory item.
 	 *
-	 *
-	 *
-	 *
+	 * \param i the inventory index
+	 * \retval the status of the item
 	 */
 	bool GetInventoryStatus(int i) const {return Inventory[i];}
 
 	/**
-	 * \brief
+	 * \brief Returns selected spell.
 	 *
+	 * Returns the currently selected spell.
 	 *
-	 *
-	 *
-	 *
+	 * \retval the currently selected spell
 	 */
 	int GetSelectedSpell() const {return SelectedSpell;}
 
 private:
 	/**
-	 * \brief
+	 * \brief Sets the current spell.
 	 *
+	 * Sets the currently active spell.
 	 *
-	 *
-	 *
-	 *
+	 * \param s the spell to change to
 	 */
 	void SetSpell(Spells s) {SelectedSpell = s;}
 
