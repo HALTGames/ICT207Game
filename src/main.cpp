@@ -116,6 +116,7 @@ void MouseMove(int x, int y);
  */
 void GUI(void);
 
+
 //-----------------------------------------------------------------------------
 //Uncomment to start in GameWorld
 
@@ -143,7 +144,6 @@ World* menu = new MenuWorld;
 World* currentWorld = game;
 WorldEnum current = GAMEWORLD;
 */
-
 //-----------------------------------------------------------------------------
 int main(int argc, char** argv)
 {
