@@ -13,7 +13,7 @@
 // STL
 #include <list>
 #include <cmath>
-#include <time>
+#include <time.h>
 
 // FREEGLUT
 #include <GL\freeglut.h>
