@@ -3,6 +3,7 @@
 #include "Shooter.h"
 #include "Strafer.h"
 #include <time.h>
+#include "../Score.h"
 
 
 class AIManager

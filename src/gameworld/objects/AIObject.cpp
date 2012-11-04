@@ -53,11 +53,12 @@ void AIObject::PickAIPos()
 
 void AIObject::TakeDamage()
 {
+	/*
 	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), PLAYERPROJECTILE));
 	{
 		//Health-=10;
 		//cout<<Health<< "   AI DAMAGE \n";
-	}
+	}*/
 
 }
 
@@ -98,6 +99,14 @@ void AIObject::SetVector(Vector3 New, Vector3 other)
 {
 	
 	temp = sqrt((New.x-other.x)*(New.x-other.x) + (New.y-other.y)*(New.y-other.y) + (New.z-other.z)*(New.z-other.z));
+	if(temp<CollDistance)
+	{
+		collision = true;
+	}
+	else 
+	{
+		collision = false;
+	}
 	
 	if(temp>0.1)
 	{
@@ -133,7 +142,9 @@ void AIObject::Lunge()
 
 bool AIObject::Collide()
 {
-	return(GameCollision::CollidesWith(this->model.GetCollisionSphere(), PLAYER));
+
+	return collision;
+	//return(GameCollision::CollidesWith(this->model.GetCollisionSphere(), PLAYER));
 }
 
 Vector3 AIObject::GetDirection()

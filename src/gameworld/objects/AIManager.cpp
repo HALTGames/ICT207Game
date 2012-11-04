@@ -13,9 +13,8 @@ void AIManager::CheckForAICreate()
 
 	seconds = time(NULL);
 	
-	if(seconds>minuser+1)
+	if(seconds>minuser+3)
 	{
-	std::cout<<"Check for AIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII \n";
 	minuser = seconds;
 	CreateAI();
 	}
@@ -27,12 +26,13 @@ void AIManager::CheckForAICreate()
 void AIManager::CreateAI() 
 {
 	RandomAI = rand() %4;
-	cout<<RandomAI<<"   RANDOM AI NUM \n";
+	
+	
 	switch(RandomAI)
 	{
 	case 0:
 		{
-			cout<<"BirdCreated \n";
+			
 			//AIBird = new Bird;
 			//AIBird.SetPosition(Placement);
 			BirdList.push_back(new Bird());
@@ -41,7 +41,7 @@ void AIManager::CreateAI()
 		}
 	case 1:
 		{
-			cout<<"ShooterCreated \n";
+			
 			//AIShooter = new Shooter;
 			//AIShooter.SetPosition(Placement);
 			ShooterList.push_back(new Shooter());
@@ -50,7 +50,7 @@ void AIManager::CreateAI()
 		}
 	case 2:
 		{
-			cout<<"AlligatorCreated \n";
+			
 			//AIAlligator = new Alligator;
 			//AIAlligator.SetPosition(Placement);
 			AlligatorList.push_back(new Alligator());
@@ -59,7 +59,7 @@ void AIManager::CreateAI()
 		}
 	case 3:
 		{
-			cout<<"StraferCreated \n";
+			
 			//AIStrafer = new Strafer;
 			//AIStrafer.SetPosition(Placement);
 			StraferList.push_back(new Strafer());
@@ -79,6 +79,7 @@ void AIManager::UpdateAI(Vector3 PlayerPos)
 		(*itr)->Display();
 		if((*itr)->GetHealth() < 0)
 		{
+			Score::Instance()->Modify(10);
 			itr = BirdList.erase(itr);
 		}
 

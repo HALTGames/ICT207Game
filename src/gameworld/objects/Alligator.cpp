@@ -14,6 +14,7 @@ Alligator::Alligator()
 	SetScale(15);
 	Damage = -50;
 	PickAIPos();
+	CollDistance = 3;
 	
 }
 

@@ -5,20 +5,23 @@ class Score
 {
 public:
 
-	~Score(void) {instanceFlag = false;}
+	~Score(void) {}//instanceFlag = false;}
 
-	static Score* GetInstance();
+	//static Score* GetInstance();
 
 	float GetTotalScore() const {return TotalScore;}
 	float GetHighScore() const {return HighScore;}
 
 	void Modify(float Mod);
 	void CheckHighScore();
+	static Score* Instance();
 
 private:
-	static bool instanceFlag;
-	static Score *singleton;
+	//static bool instanceFlag;
+	//static Score *singleton;
+	
 	Score(void)	{}
+
 	void SetTotalScore(float T) {TotalScore = T;}
 	void SetHighScore(float H){HighScore = H;}
 

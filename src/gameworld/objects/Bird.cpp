@@ -18,6 +18,7 @@ Bird::Bird()
 	//SetScaleSphere(0.0001);
 	Damage = -10;
 	PickAIPos();
+	CollDistance = 2;
 	
 
 

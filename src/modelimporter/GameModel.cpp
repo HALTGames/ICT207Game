@@ -82,11 +82,11 @@ bool GameModel::CreateCollisionSphere()
 
 	double average = ((maxx - minx) + (maxy - miny) + (maxz - minz)) / 3;
 
-	std::cout << "Average: " << average << std::endl;
+	//std::cout << "Average: " << average << std::endl;
 
 	sphere->radius = average;
 
-	std::cout << "Radius: " << sphere->radius << std::endl;
+	//std::cout << "Radius: " << sphere->radius << std::endl;
 
 	return true;
 }

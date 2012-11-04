@@ -3,9 +3,18 @@
 float Score::HighScore = 0;
 float Score::TotalScore = 0;
 
-bool Score::instanceFlag = false;
-Score* Score::singleton = 0;
+//bool Score::instanceFlag = false;
+//Score* Score::singleton = 0;
 
+Score *Score::Instance()
+{
+	static Score instance;
+
+	return &instance;
+}
+
+
+/*
 Score* Score::GetInstance()
 {
 	if(!instanceFlag)
@@ -18,7 +27,7 @@ Score* Score::GetInstance()
 	{
 		return singleton;
 	}
-}
+}*/
 
 void Score::Modify(float Mod)
 {

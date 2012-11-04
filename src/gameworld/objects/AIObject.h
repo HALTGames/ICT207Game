@@ -11,6 +11,7 @@
 #include "../ProjectileManager.h"
 
 
+
 class AIObject: public GameObj
 {
 protected:
@@ -23,6 +24,10 @@ protected:
 	Vector3 AILookDirection;
 	double temp;
 	int Damage;
+	bool collision;
+	double CollDistance;
+
+
 	
 	
 	
