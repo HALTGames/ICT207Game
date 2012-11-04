@@ -139,8 +139,8 @@ void GameWorld::Display(void)
 	glFlush();
 	glutSwapBuffers();	
 
-	std::cout << "x = " << playerObj->GetPosition().x << std::endl;
-	std::cout << "z = " << playerObj->GetPosition().z << std::endl;
+	//std::cout << "x = " << playerObj->GetPosition().x << std::endl;
+	//std::cout << "z = " << playerObj->GetPosition().z << std::endl;
 }
 
 //-----------------------------------------------------------------------------
@@ -292,6 +292,8 @@ void GameWorld::ManaRegen()
 
 void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 {
+	std::cout << Key << " pressed " << std::endl;
+
 	if(Key == 'a')
 	{
 		left = true;
@@ -350,10 +352,12 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 		delete SoundController;
 		currWorld = SHAYSWORLD;	
 	}
+
 	if(Key == 'g')
 	{
 		currWorld = MENUWORLD;
 	}
+
 	glutPostRedisplay();
 }
 
