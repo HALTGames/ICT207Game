@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+﻿Build started 5/11/2012 5:08:05 AM.
+=======
+<<<<<<< HEAD
 ﻿Build started 11/5/2012 2:59:54 AM.
      1>Project "D:\shaysnew\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
 =======
 ﻿Build started 5/11/2012 3:36:52 AM.
+>>>>>>> d4d29de0091d14b8330358b3f9d5ac8b7d7fb78f
      1>Project "D:\Github\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
 >>>>>>> f696dac5b60927b670e9690c3feb1411e8cbf0b6
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(298,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
@@ -10,6 +14,16 @@
      1>InitializeBuildStatus:
          Creating ".\Release\houses.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
+<<<<<<< HEAD
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt gameworld\objects\AIManager.cpp gameworld\objects\Alligator.cpp
+         AIManager.cpp
+     1>gameworld\objects\AIManager.cpp(7): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>gameworld\objects\AIManager.cpp(18): warning C4244: '=' : conversion from 'time_t' to 'int', possible loss of data
+         Alligator.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\houses.exe" /INCREMENTAL:NO /NOLOGO fmodex_vc.lib SOIL.lib odbc32.lib odbccp32.lib fmodex_vc.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Release\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:\Github\ICT207Game\src\Release\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\houses.lib" /MACHINE:X86 .\Release\MenuWorld.obj
+=======
          d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt gameworld\GameWorld.cpp gameworld\objects\AIManager.cpp gameworld\objects\Alligator.cpp gameworld\objects\Bird.cpp gameworld\objects\ProjectileObj.cpp gameworld\objects\Shooter.cpp main.cpp
          GameWorld.cpp
      1>d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL/glut.h(227): warning C4005: 'GLUT_RGB' : macro redefinition
@@ -2418,6 +2432,7 @@
        Link:
 <<<<<<< HEAD
          d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\houses.exe" /INCREMENTAL:NO /NOLOGO fmodex_vc.lib SOIL.lib odbc32.lib odbccp32.lib fmodex_vc.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:".\Release\houses.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"D:\shaysnew\ICT207Game\src\Release\houses.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Release\houses.lib" /MACHINE:X86 .\Release\MenuWorld.obj
+>>>>>>> d4d29de0091d14b8330358b3f9d5ac8b7d7fb78f
          .\Release\RAWTexture.obj
          .\Release\Seek.obj
          .\Release\SeekandShoot.obj
@@ -2428,6 +2443,10 @@
          .\Release\GameWorld.obj
          .\Release\AIManager.obj
          .\Release\AIObject.obj
+<<<<<<< HEAD
+         .\Release\AIProjectile.obj
+=======
+>>>>>>> d4d29de0091d14b8330358b3f9d5ac8b7d7fb78f
          .\Release\Alligator.obj
          .\Release\Bird.obj
          .\Release\PlayerObj.obj
@@ -2466,6 +2485,11 @@
          .\Release\TextureLoader.obj
          .\Release\UserInterface.obj
          .\Release\Vector3.obj
+<<<<<<< HEAD
+         houses.vcxproj -> D:\Github\ICT207Game\src\.\Release\houses.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:".\Release\houses.exe;#1" /manifest .\Release\houses.exe.intermediate.manifest
+=======
          houses.vcxproj -> D:\shaysnew\ICT207Game\src\.\Release\houses.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:".\Release\houses.exe;#1" /manifest .\Release\houses.exe.intermediate.manifest
@@ -2473,6 +2497,7 @@
          All outputs are up-to-date.
          houses.vcxproj -> D:\Github\ICT207Game\src\.\Release\houses.exe
 >>>>>>> f696dac5b60927b670e9690c3feb1411e8cbf0b6
+>>>>>>> d4d29de0091d14b8330358b3f9d5ac8b7d7fb78f
        FinalizeBuildStatus:
          Deleting file ".\Release\houses.unsuccessfulbuild".
          Touching ".\Release\houses.lastbuildstate".
@@ -2481,7 +2506,11 @@
 Build succeeded.
 
 <<<<<<< HEAD
+Time Elapsed 00:00:01.29
+=======
+<<<<<<< HEAD
 Time Elapsed 00:00:03.78
 =======
 Time Elapsed 00:00:00.05
 >>>>>>> f696dac5b60927b670e9690c3feb1411e8cbf0b6
+>>>>>>> d4d29de0091d14b8330358b3f9d5ac8b7d7fb78f

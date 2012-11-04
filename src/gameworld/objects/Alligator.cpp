@@ -3,7 +3,7 @@
 
 Alligator::Alligator()
 {
-	model.LoadModel("./models/arrowman.obj");
+	model.LoadModel("./models/Ghost.obj");
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
@@ -11,7 +11,7 @@ Alligator::Alligator()
 	MaxSpeed =0.06;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(Seek::Instance());
-	SetScale(15);
+	SetScale(3);
 	Damage = -50;
 	PickAIPos();
 	CollDistance = 3;
@@ -24,7 +24,13 @@ void Alligator::Update(Vector3 PlayPos)
 	
 	PlayerPos =PlayPos;
 	ThisStateMachine->update();
+<<<<<<< HEAD
+	
+	angle+=90;
+	
+=======
 		
+>>>>>>> d4d29de0091d14b8330358b3f9d5ac8b7d7fb78f
 }
 
 
