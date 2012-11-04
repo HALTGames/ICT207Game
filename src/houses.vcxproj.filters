@@ -126,9 +126,6 @@
     <ClCompile Include="gameworld\GameCollision.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
-    <ClCompile Include="gameworld\GameSound.cpp">
-      <Filter>Source Files\GameWorld</Filter>
-    </ClCompile>
     <ClCompile Include="gameworld\GameWorld.cpp">
       <Filter>Source Files\GameWorld</Filter>
     </ClCompile>
@@ -276,9 +273,6 @@
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
     <ClInclude Include="gameworld\GameCollision.h">
-      <Filter>Header Files\GameWorld</Filter>
-    </ClInclude>
-    <ClInclude Include="gameworld\GameSound.h">
       <Filter>Header Files\GameWorld</Filter>
     </ClInclude>
     <ClInclude Include="gameworld\GameWorld.h">
