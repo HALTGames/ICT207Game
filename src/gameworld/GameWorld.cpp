@@ -16,6 +16,12 @@ GameWorld::~GameWorld(void)
 
 void GameWorld::Init(void)
 {
+	glutSetWindow(1);
+	gameWidth = 1280, gameHeight = 960;
+	glMatrixMode (GL_PROJECTION);
+	glLoadIdentity ();
+	gluPerspective(60.0,(GLdouble)gameWidth/(GLdouble)gameHeight,1.0, 500.0);
+	glMatrixMode (GL_MODELVIEW);
 
 	GLfloat lmodel_ambient[] = { 3.3, 3.3, 3.3, 1.0 };
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
@@ -38,6 +44,7 @@ void GameWorld::Init(void)
 	SoundController->PausePlaySoundTrack();
 	SoundController->addSound("sounds/fireball.wav", "Spell");
 	
+	Switch = false;
 
 	glEnable(GL_TEXTURE_2D);
 
@@ -54,7 +61,6 @@ void GameWorld::Init(void)
 	left = right = forward = back = false;
 
 	currWorld = GAMEWORLD;
-	gameWidth = 1280, gameHeight = 960;
 	
 	glutSetWindowTitle("Blizzard, the motherfucking Wizard.");
 	glEnable(GL_DEPTH_TEST);
@@ -249,6 +255,13 @@ void GameWorld::GUI(void)
 
 void GameWorld::Idle()
 {
+/*	if(Switch == false)
+	{
+		glutSetWindow(1);
+		std::cout << "Switch";
+		Switch = true;
+
+	}*/
 	if(glutGet(GLUT_ELAPSED_TIME) - lastdrawn > 1000/85)
 	{
 		ManaRegen();
@@ -333,6 +346,10 @@ void GameWorld::Keyboard(unsigned char Key, int KeyX, int KeyY)
 		SoundController->StopMusic();
 		delete SoundController;
 		currWorld = SHAYSWORLD;	
+	}
+	if(Key == 'g')
+	{
+		currWorld = MENUWORLD;
 	}
 	glutPostRedisplay();
 }

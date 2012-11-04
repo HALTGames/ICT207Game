@@ -259,6 +259,8 @@ private:
 										whether the ASDW keys are pressed */
 
 	int gameWidth, gameHeight; /**< The resolution of the game window */
+
+	bool Switch;
 };
 
 //------------------------------------------------------------------------------

@@ -2,9 +2,13 @@
 
 void MenuWorld::Init()
 {
+	//std::cout << "Switch";
+	glMatrixMode (GL_PROJECTION);
+	glLoadIdentity ();
+	glMatrixMode (GL_MODELVIEW);
 	windowWidth = 1280, windowHeight = 960;
-
 	glutSetWindow(1);
+		glFlush();
 	glEnable(GL_TEXTURE_2D);
 	glShadeModel(GL_SMOOTH);
 	glClearDepth(1.0f);

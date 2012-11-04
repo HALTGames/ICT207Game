@@ -11,7 +11,26 @@
 #include "../world.h"
 
 #include "../modelimporter/GameModel.h"
-
+/**
+ * \file GameWorld.h GameWorld.cpp
+ * \class GameWorld
+ * \brief Handles the Game World functionality.
+ *
+ * The game world sets up and manages the components of the game world. It
+ * handles the displaying of components, spawning of AI, sound, lighting and the
+ * GUI.
+ *
+ * \author Hamish Carrier
+ * \date 1/11/12
+ * \version 01 - Hamish Carrier 01/11/12
+ *		Started the basic framework for the menu screen, implemented the basic graphics.
+ * \version 02 - Hamish Carrier 01/11/12
+ *		Added the menu arrow animation, and mouse tracking
+ * \version 03 - Hamish Carrier 01/11/12
+ *		Added button clicking functionality
+ * \version 04 - Hamish Carrier 01/11/12
+ *		Added exit splash
+ */
 class MenuWorld :
 	public World
 {

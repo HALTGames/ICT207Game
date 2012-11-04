@@ -4,7 +4,7 @@
 class Score
 {
 public:
-
+	
 	~Score(void) {}//instanceFlag = false;}
 
 	//static Score* GetInstance();
