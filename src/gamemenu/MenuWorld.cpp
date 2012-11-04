@@ -1,84 +1,165 @@
 #include "MenuWorld.h"
 
 
-float MenuWorld::ypoz;
+//float MenuWorld::ypoz;
 
-MenuWorld::MenuWorld(void)
-{
-
-}
 
 void MenuWorld::Init()
 {
-	GLuint texture; // stores the current texture being used
+	windowWidth = 1280, windowHeight = 960;
 
-	windowWidth = 500;//window width
-	windowHeight = 500;//window height
+	glutSetWindow(1);
+	glEnable(GL_TEXTURE_2D);
+	glShadeModel(GL_SMOOTH);
+	glClearDepth(1.0f);
+	glEnable(GL_DEPTH_TEST);
 
-	menuPos = 1; //Menu position, initialised to first spot
-	maxEntries = 4; //Max amount of menu items
+	currWorld = MENUWORLD;
 
-	menuDist = 0.5;//Distance apart each menu element is
+	MenuChoice = 0;
 
-	//Defines a menu element polygon size,
-	p1[0] = 0,0,0;
-	p2[0] = 2,0,0.0;
-	p3[0] = 2,2,0.0;
-	p4[0] = 0,2,0.0;
+   // glMatrixMode(GL_PROJECTION);
+	//glLoadIdentity();
 
-	//for the selection arrow element
-	p5[0] = 0.5,0,0.0;
-	p6[0] = 0.5,0.5,0.0;
-	p7[0] = 0,0.5,0.0;
+	//gluPerspective(60.0, 1, 1.0, 1000.0);
 
-	glClearColor (0.0, 0.0, 0.0, 1.0);  
-   glColor3f(1.0,0.0,0.0);
-   //glEnable(GL_DEPTH_TEST); //alpha channel will not work if this is enabled
-   glLineWidth(5.0);
-   //glShadeModel (GL_SMOOTH);
+	//glMatrixMode(GL_MODELVIEW);
 
-   glEnable( GL_TEXTURE_2D );
-   glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
-
-   glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-
-	gluPerspective(60.0, 1, 1.0, 1000.0);
-	//glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
 
 	glMatrixMode(GL_MODELVIEW);
-	currWorld = MENUWORLD;
+
+	Loader[0].LoadModel("./models/MenuTitle.obj");
+	Loader[1].LoadModel("./models/MenuNew.obj");
+	Loader[2].LoadModel("./models/MenuShay.obj");
+	Loader[3].LoadModel("./models/MenuExit.obj");
+	Loader[4].LoadModel("./models/MenuArrow.obj");
+
 }
 
 void MenuWorld::Reshape(int w, int h)
 {
 	glViewport (0, 0, (GLsizei) w, (GLsizei) h);
 	glMatrixMode (GL_PROJECTION);
-   glLoadIdentity ();
-   gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 20.0);
-   glMatrixMode (GL_MODELVIEW);
+    glLoadIdentity ();
+   // gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 20.0);
+    glMatrixMode (GL_MODELVIEW);
 
 	//update vars
-   windowWidth = w;
-   windowHeight = h;
+    windowWidth = w;
+    windowHeight = h;
 }
 
 void MenuWorld::Display()
 {
-	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-   glLoadIdentity ();             
-		   
-   gluLookAt (0.0f, 0.0f, 5.0f, //5 units backward from the origin
-				0.0f, 0.0f, 0.0f, 
-				0.0f, 1.0f, 0.0f);
+	glutSetWindow(1);
+	glClearColor (0.0, 0.0, 0.0, 0.0); 
+	glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
+	glColor4f(1.0, 1.0, 1.0, 1.0);
+	glLoadIdentity();
+	glPushMatrix();
+			glRotatef(90,1,0,0);
+			//glScalef(1.0, 1.0, 1.0);
+			glScalef(0.5, 0.5, 0.5);
+			glTranslatef(0.0,0.0,-1.5);
+			Loader[0].DrawModel();
+	glPopMatrix();
+	glPushMatrix();
+			glRotatef(90,1,0,0);
+			//glScalef(1.0, 1.0, 1.0);
+			glScalef(0.14, 0.14, 0.14);
+			glTranslatef(-0.06,0.0,-1.0);
+			Loader[1].DrawModel();
+	glPopMatrix();
+	glPushMatrix();
+			glRotatef(90,1,0,0);
+			//glScalef(1.0, 1.0, 1.0);
+			glScalef(0.15, 0.15, 0.15);
+			glTranslatef(0.0,0.0,0.5);
+			Loader[2].DrawModel();
+	glPopMatrix();
+	glPushMatrix();
+			glRotatef(90,1,0,0);
+			//glScalef(1.0, 1.0, 1.0);
+			glScalef(0.07, 0.10, 0.12);
+			glTranslatef(-1.1,0.0,2.0);
+			Loader[3].DrawModel();
+	glPopMatrix();
 
-   //drawDivision();
-   DrawMenu();
-
-   glutSwapBuffers();
+	switch(MenuChoice)
+	{
+	case 1:
+		{
+			glPushMatrix();
+				glRotatef(90,1,0,0);
+				//glScalef(1.0, 1.0, 1.0);
+				glScalef(0.08, 0.10, 0.10);
+				glTranslatef(-2.2,0.0,2.5);
+				Loader[4].DrawModel();
+			glPopMatrix();
+			break;
+		}
+	case 2:
+		{
+			glPushMatrix();
+				glRotatef(90,1,0,0);
+				//glScalef(1.0, 1.0, 1.0);
+				glScalef(0.08, 0.10, 0.10);
+				glTranslatef(-2.2,0.0,0.65);
+				Loader[4].DrawModel();
+			glPopMatrix();
+			break;
+		}
+	case 3:
+		{	
+			glPushMatrix();
+				glRotatef(90,1,0,0);
+				//glScalef(1.0, 1.0, 1.0);
+				glScalef(0.08, 0.10, 0.10);
+				glTranslatef(-2.2,0.0,-1.4);
+				Loader[4].DrawModel();
+			glPopMatrix();
+			break;
+		}
+	}
+	glFlush();
+    glutSwapBuffers();
 }
 
+void MenuWorld::Idle()
+{
+	glutSetWindow(1);
+	glutPostRedisplay();
+}
+
+void MenuWorld::Keyboard(unsigned char key, int keyX, int keyY)
+{
+
+}
+
+void MenuWorld::Mouse(int button, int state, int mouseX, int mouseY)
+{
+
+}
+
+void MenuWorld::MovementKeys(int key, int x, int y)
+{
+
+}
+
+void MenuWorld::ReleaseKey(int key, int x, int y)
+{
+
+}
+void MenuWorld::ReleaseKeys(unsigned char key, int x, int y)
+{
+
+}
+void MenuWorld::MouseMove(int x, int y)
+{
+
+}
+
+/*
 void MenuWorld::Idle()
 {
 	animate();
@@ -187,186 +268,4 @@ void MenuWorld::animate()
 	if (ypoz>360) ypoz=0;
 	glutPostRedisplay();
 }
-
-void MenuWorld::DrawMenu()
-{
-	glPushMatrix();//draw the island
-		glEnable(GL_DEPTH_TEST);
-		glTranslatef(0,0,0);
-		glScalef(3,3,3);
-		glRotatef(45,1,0,0);
-		glRotatef(ypoz,0,1,0);
-		drawIsland();
-		glDisable(GL_DEPTH_TEST);
-	glPopMatrix();
-
-	glPushMatrix();//draw the skybox
-		glEnable(GL_DEPTH_TEST);
-		glTranslatef(0,0,0);
-		glScalef(5,5,5);
-		glRotatef(135,1,0,0);
-		drawSkybox();
-		glDisable(GL_DEPTH_TEST);
-	glPopMatrix();
-
-	glPushMatrix();
-		//Load our texture
-		texture = RAWTexture::LoadTexture( "textures/start_icon_alpha.raw", 256, 256 );
-		glColor4f(1,1,1,1);
-		glTranslatef(-1,-1,0);
-		DrawBox();
-
-		texture = RAWTexture::LoadTexture( "textures/settings_icon_alpha.raw", 256, 256 );
-		glTranslatef(0,-menuDist,0);
-		DrawBox();
-
-		texture = RAWTexture::LoadTexture( "textures/help_icon_alpha.raw", 256, 256 );
-		glTranslatef(0,-menuDist,0);
-		DrawBox();
-
-		texture = RAWTexture::LoadTexture( "textures/exit_icon_alpha.raw", 256, 256 );
-		glTranslatef(0,-menuDist,0);
-		DrawBox();
-		//Free our texture
-		RAWTexture::FreeTexture( texture );
-	glPopMatrix();
-	
-	glPushMatrix();
-		glColor4f(1,1,1,1);
-		glTranslatef(-0.1,-0.2,0);
-		if(menuPos == 1)
-		{
-			glTranslatef(1.2,0,0);
-			DrawSelectionBox();
-		}
-		else if(menuPos == 2)
-		{
-			glTranslatef(1.2,-menuDist,0);
-			DrawSelectionBox();
-		}
-		else if(menuPos == 3)
-		{
-			glTranslatef(1.2,-menuDist*2,0);
-			DrawSelectionBox();
-		}
-		else
-		{
-			glTranslatef(1.2,-menuDist*3,0);
-			DrawSelectionBox();
-		}
-	glPopMatrix();
-
-	glPushMatrix();
-		glColor4f(1,1,1,1);
-		glTranslatef(-1.4,0.4,0);
-		texture = RAWTexture::LoadTexture( "textures/banner_alpha.raw", 512, 512 );
-		DrawBanner();
-		RAWTexture::FreeTexture( texture );
-	glPopMatrix();
-}
-
-void MenuWorld::DrawBanner()
-{
-	glBegin(GL_POLYGON);
-		glTexCoord3f(0,1,0); glVertex3f(0,0,0);
-		glTexCoord3f(1,1,0); glVertex3f(3,0,0);
-		glTexCoord3f(1,0,0); glVertex3f(3,3,0);
-		glTexCoord3f(0,0,0); glVertex3f(0,3,0);
-	glEnd();
-}
-
-void MenuWorld::DrawSelectionBox()
-{
-	texture = RAWTexture::LoadTexture( "textures/select_icon_alpha.raw", 256, 256 );
-	glBegin(GL_POLYGON);
-		glTexCoord3f(0,1,0); glVertex3fv(p1);
-		glTexCoord3f(1,1,0); glVertex3fv(p5);
-		glTexCoord3f(1,0,0); glVertex3fv(p6);
-		glTexCoord3f(0,0,0); glVertex3fv(p7);
-	glEnd();
-	glTranslatef(-2.75,-0.05,0);
-	glBegin(GL_POLYGON); 
-		glTexCoord3f(1,0,0); glVertex3fv(p1);
-		glTexCoord3f(0,0,0); glVertex3fv(p5);
-		glTexCoord3f(0,1,0); glVertex3fv(p6);
-		glTexCoord3f(1,1,0); glVertex3fv(p7);
-	glEnd();
-	RAWTexture::FreeTexture( texture );
-}
-
-void MenuWorld::DrawBox()
-{
-	glBegin(GL_POLYGON); 
-		glTexCoord3f(0,1,0); glVertex3fv(p1);
-		glTexCoord3f(1,1,0); glVertex3fv(p2);
-		glTexCoord3f(1,0,0); glVertex3fv(p3);
-		glTexCoord3f(0,0,0); glVertex3fv(p4);
-	glEnd();
-}
-
-void MenuWorld::DrawDivision()
-{
-	glColor4f(0,1,0,1);//green
-
-	glPushMatrix();
-	glTranslatef(-1,-3,0);
-	glBegin(GL_LINES);
-		glVertex3f(0,0,0);
-		glVertex3f(0,4,0);
-	glEnd();
-	glPopMatrix();
-
-	glPushMatrix();
-	
-	glTranslatef(1,-3,0);
-	glBegin(GL_LINES);
-		glVertex3f(0,0,0);
-		glVertex3f(0,4,0);
-	glEnd();
-	
-	glPopMatrix();
-}
-
-void MenuWorld::MenuSelect()
-{
-	switch(menuPos){
-		case 1:
-			//START GAME HERE
-			break;
-		case 2:
-			//GO TO SETTINGS HERE
-			break;
-		case 3:
-			//GO TO HELP HERE
-			break;
-		case 4:
-			exit(EXIT_SUCCESS);
-			break;
-		default:
-			break;
-	}
-}
-
-void MenuWorld::MenuDown()
-{
-	if(menuPos==maxEntries)
-	{
-		menuPos = 1;
-	}
-	else
-	{
-		menuPos++;
-	}
-}
-
-void MenuWorld::MenuUp()
-{
-	if(menuPos==1)
-	{
-		menuPos = maxEntries;
-	}
-	else
-	{
-		menuPos--;
-	}
-}
+*/

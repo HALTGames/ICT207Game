@@ -116,6 +116,7 @@ void MouseMove(int x, int y);
 void GUI(void);
 
 //-----------------------------------------------------------------------------
+//Uncomment to start in GameWorld
 
 World* game = new GameWorld;
 World* shays = NULL;
@@ -124,7 +125,15 @@ World* currentWorld = game;
 WorldEnum current = GAMEWORLD;
 
 //-----------------------------------------------------------------------------
-
+//Uncomment to start in MenuWorld
+/*
+World* game = NULL;
+World* shays = NULL;
+World* menu = new MenuWorld;
+World* currentWorld = menu;
+WorldEnum current = MENUWORLD;
+*/
+//-----------------------------------------------------------------------------
 int main(int argc, char** argv)
 {
 	// OpenGL Initialisation

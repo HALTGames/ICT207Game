@@ -10,7 +10,7 @@
 #include <GL\freeglut.h>
 #include "../world.h"
 
-#include "RAWTexture.h"
+//#include "RAWTexture.h"
 #include "../modelimporter/GameModel.h"
 
 typedef GLfloat point[3];//Point in 3d space
@@ -19,7 +19,7 @@ class MenuWorld :
 	public World
 {
 public:
-	MenuWorld(void);
+	//MenuWorld(void);
 	
 	virtual void Init();
 	virtual void Reshape(int w, int h);
@@ -33,7 +33,16 @@ public:
 	virtual void MouseMove(int x, int y);
 
 private:
-	void DrawMenu();
+
+	int windowWidth;//window width
+	int windowHeight;//window height
+
+	///Create 10 GameModel Loader Objects
+	GameModel Loader[10]; 
+
+	int MenuChoice;
+
+/*	void DrawMenu();
 	void DrawBanner();
 	void DrawSelectionBox();
 	void DrawBox();
@@ -42,34 +51,31 @@ private:
 	void MenuSelect();
 	void MenuDown();
 	void MenuUp();
-
+	
 	void drawIsland(void);
 	void drawSkybox(void);
 	void animate(void);
+	*/
+	//GLMmodel* island;
+	//GLMmodel* skybox;
+	//static float ypoz;
 
-	GLMmodel* island;
-	GLMmodel* skybox;
-	static float ypoz;
+	//GLuint texture; // stores the current texture being used
 
-	GLuint texture; // stores the current texture being used
+	//int menuPos; //Menu position, initialised to first spot
+	//int maxEntries; //Max amount of menu items
 
-	int windowWidth;//window width
-	int windowHeight;//window height
-
-	int menuPos; //Menu position, initialised to first spot
-	int maxEntries; //Max amount of menu items
-
-	GLfloat menuDist;//Distance apart each menu element is
+	//GLfloat menuDist;//Distance apart each menu element is
 
 	//Defines a menu element polygon size,
-	point p1;
-	point p2;
-	point p3;
-	point p4;
+	//point p1;
+	//point p2;
+	//point p3;
+	//point p4;
 
 	//for the selection arrow element
-	point p5;
-	point p6;
-	point p7;
+	//point p5;
+	//point p6;
+	//point p7;
 };
 
