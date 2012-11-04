@@ -25,6 +25,9 @@ public:
 
 	static void UpdateProjectiles();
 
+	static Vector3 GetCurrentPosition(CItrProjectileList index);
+
+	static int GetNumProjectiles();
 private:
 	static ProjectileList projectiles;
 

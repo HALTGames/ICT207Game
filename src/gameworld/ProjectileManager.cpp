@@ -37,6 +37,16 @@ void ProjectileManager::UpdateProjectiles()
 	}
 }
 
+Vector3 ProjectileManager::GetCurrentPosition(CItrProjectileList index)
+{
+	return (*index)->GetPosition();
+}
+
+int ProjectileManager::GetNumProjectiles()
+{
+	return projectiles.size();
+}
+
 void ProjectileManager::RemoveProjectile(CItrProjectileList index)
 {
 	//std::cout << "Removing Projectile" << std::endl;

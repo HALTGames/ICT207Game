@@ -2,6 +2,7 @@
 
 //-----------------------------------------------------------------------------
 
+#include <iostream>
 #include <GL\freeglut.h>
 #include <SDL.h>
 #include "World.h"
@@ -126,6 +127,7 @@ WorldEnum current = GAMEWORLD;
 
 //-----------------------------------------------------------------------------
 //Uncomment to start in MenuWorld
+
 /*
 World* game = NULL;
 World* shays = NULL;
@@ -133,6 +135,15 @@ World* menu = new MenuWorld;
 World* currentWorld = menu;
 WorldEnum current = MENUWORLD;
 */
+
+
+World* game = new GameWorld;
+World* shays = new ShaysWorld;
+World* menu = new MenuWorld;
+World* currentWorld = game;
+WorldEnum current = GAMEWORLD;
+
+
 //-----------------------------------------------------------------------------
 int main(int argc, char** argv)
 {
@@ -170,10 +181,6 @@ int main(int argc, char** argv)
 	{
 		glutDestroyWindow(2);
 	}
-	if(current == MENUWORLD)
-	{
-
-	}
 
 	glutMainLoop();
 
@@ -184,7 +191,22 @@ int main(int argc, char** argv)
 
 void SwitchWorld(WorldEnum newWorld)
 {
-	currentWorld->Exit();
+	//currentWorld->Exit();
+
+	switch(current)
+	{
+	case SHAYSWORLD:
+		delete shays;
+		break;
+	case GAMEWORLD:
+		delete game;
+		break;
+	case MENUWORLD:
+		delete menu;
+		break;
+	}
+
+	current = newWorld;
 
 	switch(newWorld)
 	{
@@ -211,6 +233,17 @@ void SwitchWorld(WorldEnum newWorld)
 		break;
 	}
 
+	if(current == GAMEWORLD)
+	{
+		glutCreateSubWindow (1, 200, 810, 880, 150); 
+		glutDisplayFunc(GUI);
+		currentWorld->GUIinit();
+	}
+	else
+	{
+		glutDestroyWindow(2);
+	}
+
 	currentWorld->Init();
 }
 
@@ -227,8 +260,7 @@ void Idle(void)
 {
 	if(currentWorld->currWorld != current)
 	{
-		current = currentWorld->currWorld;
-		SwitchWorld(current);
+		SwitchWorld(currentWorld->currWorld);
 	}
 
 	currentWorld->Idle();
