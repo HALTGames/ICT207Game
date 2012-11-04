@@ -134,12 +134,6 @@ void  AIObject::Move()
 
 }
 
-void AIObject::Lunge()
-{
-	Direction.x = Direction.x*2;
-	Direction.x = Direction.z*2;
-}
-
 bool AIObject::Collide()
 {
 
