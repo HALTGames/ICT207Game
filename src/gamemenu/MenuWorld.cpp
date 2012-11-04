@@ -153,7 +153,7 @@ void MenuWorld::Keyboard(unsigned char key, int keyX, int keyY)
 
 void MenuWorld::Mouse(int Button, int State, int mouseX, int mouseY)
 {
-	 //std::cout <<mouseX;
+	 
 
 	if(Button == GLUT_LEFT_BUTTON)
 	{
