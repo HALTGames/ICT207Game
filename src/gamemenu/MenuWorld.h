@@ -32,6 +32,8 @@ public:
 	virtual void ReleaseKeys(unsigned char key, int x, int y);
 	virtual void MouseMove(int x, int y);
 
+
+
 private:
 
 	int windowWidth;//window width
@@ -41,6 +43,8 @@ private:
 	GameModel Loader[10]; 
 
 	int MenuChoice;
+	bool Exit;
+	void DisplayExit();
 
 /*	void DrawMenu();
 	void DrawBanner();

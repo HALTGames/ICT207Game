@@ -64,7 +64,9 @@ void AIObject::TakeDamage()
 
 void AIObject::DealDamage()
 {
+
 	Player.ModifyHealth(Damage);
+
 }
 
 double AIObject::GetMag(Vector3 pass)
