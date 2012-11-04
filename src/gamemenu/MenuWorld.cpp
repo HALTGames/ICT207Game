@@ -125,7 +125,8 @@ void MenuWorld::Display()
 		glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
 		glPushMatrix();
 			glRotatef(90,1,0,0);
-			glScalef(1, 1, 1);
+			glScalef(0.8, 1.0, 1.0);
+			glTranslatef(0,0.0,-0.1);
 			Loader[5].DrawModel();
 		glPopMatrix();
 	}
@@ -153,7 +154,6 @@ void MenuWorld::Keyboard(unsigned char key, int keyX, int keyY)
 
 void MenuWorld::Mouse(int Button, int State, int mouseX, int mouseY)
 {
-	 
 
 	if(Button == GLUT_LEFT_BUTTON)
 	{
@@ -205,8 +205,6 @@ void MenuWorld::ReleaseKeys(unsigned char key, int x, int y)
 }
 void MenuWorld::MouseMove(int x, int y)
 {
-	std::cout << "Xvalue: "<<x << std::endl;
-	std::cout << "Yvalue: " << y << std::endl;
 	if(Exit == false)
 	{
 		if((y > 384) && (y < 440))

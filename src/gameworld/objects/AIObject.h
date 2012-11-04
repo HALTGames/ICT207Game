@@ -10,56 +10,21 @@
 #include "PlayerObj.h"
 #include "../ProjectileManager.h"
 
-/**
-*\brief Parent object for all AI objects
-*\class AIObject
-*
-*This class inherites from gameobj and adds all the functions
-*and variables required by the AIObjects, including but not limited to
-*functions for shooting, taking damage and variables for damage dealt
-*and amount of health.
-*
-*\author Arran Ford
-*
-*
-*/
-
 
 
 class AIObject: public GameObj
 {
 protected:
-	///instance of state machine created for use by this AI object
 	StateMachine<AIObject>* ThisStateMachine;
-
-	///The amount of health the AI currently has
 	int Health;
-
-	///The speed at which the AI object can move
 	double MaxSpeed;
-
-	///The current known position of the player
 	Vector3 PlayerPos;
-
-	///The vector between AI and player
 	Vector3 Direction;
-
-	///Another Vector between AI and player, using one was causing conflicts
 	Vector3 Direction2;
-
-	///The direction the AI model is looking in when spawned
 	Vector3 AILookDirection;
-
-	///a temp value used vector math
 	double temp;
-
-	///The amount of damage the AI can deal to the player
 	int Damage;
-
-	///True if the ai is colliding with the player, else false
 	bool collision;
-
-	///Value for distance bellow which it is considered a collision between AI and player
 	double CollDistance;
 
 
@@ -67,56 +32,19 @@ protected:
 	
 	
 private:
-
-	///an instance of the player object for accessing its static variables
 	PlayerObj Player;
-
-	///Variable used in picking random AI starting position
 	int RandomAI;
 
 
 public:
-
-	/**
-	*\brief function used to randomise AI starting position
-	*
-	*This function uses a random number to pick a random case
-	*depending on the case statement called a range will be set
-	*and the AI starting position will be at a random spot within
-	*this range
-	*
-	*/
 	void PickAIPos();
-
-	/**
-	*\brief function that reduces AI health
-	*
-	*function called to deal damage to the player by subtracting
-	*from heatlh variable
-	*
-	*/
 	void TakeDamage();
-
-	/**
-	*\brief Function for dealing damage
-	*
-	*Calls the player obj function modify health and passes in
-	*the Damage value
-	*
-	*/
 	void DealDamage();
-
-	///Getter for the collide variable
 	bool Collide();
-
-	///object of type sounds for controlling AI sounds
 	sounds soundcontroller;
-
-	///AI destructer
 	~AIObject(){delete[] ThisStateMachine;}
-
-	///number of seconds passed since program start
 	int seconds;
+
 
 	///variable used in AI behaviour
 	int checker;
