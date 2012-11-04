@@ -25,11 +25,11 @@ void GUI(void);
 
 //void timer(int n);
 
-World* game = new GameWorld;
+World* game = NULL;
 World* shays = NULL;
-World* menu = NULL;
-World* currentWorld = game;
-WorldEnum current = GAMEWORLD;
+World* menu = new MenuWorld;
+World* currentWorld = menu;
+WorldEnum current = MENUWORLD;
 
 int main(int argc, char** argv)
 {
