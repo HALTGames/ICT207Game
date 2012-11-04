@@ -217,7 +217,8 @@ double AIObject::GetDistanceFrom()
 void AIObject::Fire()
 {
 	//new ProjectileObj(position.x, position.z, Direction.x, Direction.z);
-	//GameObjManager::AddObject(new AIProjectile(position.x, position.z, PlayerPos.x, PlayerPos.z));
+	ProjectileManager::AddProjectile(PROJECTILE, position.x, position.z, PlayerPos.x, PlayerPos.z);
+
 	//cout<<"Firingmutherfucker!!!!!!!! \n";
 }
 

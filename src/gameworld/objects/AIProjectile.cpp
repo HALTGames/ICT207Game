@@ -1,4 +1,10 @@
+
 #include "AIProjectile.h"
+
+
+
+
+
 
 AIProjectile::AIProjectile(double x1, double z1, double x2, double z2)
 {
@@ -24,7 +30,20 @@ AIProjectile::AIProjectile(double x1, double z1, double x2, double z2)
 	deleteObject = false;
 }
 
+
+/*
+	position = Vector3(x1, 0.0, z1);
+
+	startTime = glutGet(GLUT_ELAPSED_TIME);
+
+
+	deleteObject = false;
+}*/
+
+
 bool AIProjectile::CheckCollision()
 {
 	return false;
+
 }
+

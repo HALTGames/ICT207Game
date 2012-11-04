@@ -9,7 +9,7 @@
 #include "../GameObjManager.h"
 #include "../GameCollision.h"
 #include "PlayerObj.h"
-
+#include "../ProjectileManager.h"
 
 
 class AIObject: public GameObj

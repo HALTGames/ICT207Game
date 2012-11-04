@@ -67,6 +67,10 @@ int main(int argc, char** argv)
 	{
 		glutDestroyWindow(2);
 	}
+	if(current == MENUWORLD)
+	{
+
+	}
 
 	//int fps = 60;
 	//glutTimerFunc(100, timer, fps);

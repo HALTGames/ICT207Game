@@ -57,7 +57,6 @@ void PlayerObj::ModifyHealth(int Change)
 {
 	if(ProtectionStatus == false)
 	{
-		std::cout << "Damage DEALT" << std::endl <<std::endl;
 		Health += Change;
 		if(Health > 100)
 		{
