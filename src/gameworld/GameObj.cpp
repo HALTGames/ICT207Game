@@ -70,7 +70,7 @@ void GameObj::ChangePosition(const Vector3 pos)
 {
 	position += pos;
 
-	model.GetCollisionSphere()->SetCenter(position);
+	//model.GetCollisionSphere()->SetCenter(position);
 }
 
 //-----------------------------------------------------------------------------

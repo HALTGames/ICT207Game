@@ -43,7 +43,7 @@ public:
 	 *
 	 * \param position the point to look at
 	 */
-	void Render (const Vector3 position) const;	
+	void Render(const Vector3 position) const;	
 
 	/**
 	 * \brief Sets the height of the camera.

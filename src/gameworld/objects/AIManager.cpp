@@ -10,15 +10,12 @@ AIManager::AIManager()
 
 void AIManager::CheckForAICreate()
 {
-
 	seconds = time(NULL);
-	
 	if(seconds>minuser+3)
 	{
 	minuser = seconds;
 	CreateAI();
 	}
-	//UpdateAI();
 }
 
 

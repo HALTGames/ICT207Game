@@ -67,7 +67,6 @@ bool AIObject::TakeDamage()
 		if(temp<1.8)
 		{
 			Health-=10;
-			cout<<Health<< " DAMAGE DO YOU SPEAK IS MUTHERFUCKIER";
 			return true;
 		} 
 
@@ -80,7 +79,6 @@ bool AIObject::TakeDamage()
 
 void AIObject::DealDamage()
 {
-	cout<<Damage<<"  DAMAGE \n";
 	Player.ModifyHealth(Damage);
 }
 
@@ -228,32 +226,26 @@ double AIObject::GetDistanceFrom()
 {
 	temp = sqrt((PlayerPos.x-position.x)*(PlayerPos.x-position.x) + (PlayerPos.y-position.y)*(PlayerPos.y-position.y) + (PlayerPos.z-position.z)*(PlayerPos.z-position.z));
 	return temp;
-	/*
-	if(temp<0.5)
-		return true;
-	else 
-		return false;*/
 }
 
 void AIObject::Fire()
 {
-	//new ProjectileObj(position.x, position.z, Direction.x, Direction.z);
+	
 	ProjectileManager::AddProjectile(PROJECTILE, position.x+Direction.x*30, position.z+Direction.z*30, PlayerPos.x, PlayerPos.z);
-
-	//cout<<"Firingmutherfucker!!!!!!!! \n";
+		
 }
 
 void AIObject::ChangePosition(const Vector3 pos)
 {
 	Vector3 newPos = position + pos;
-	model.GetCollisionSphere()->SetCenter(newPos);
+	//model.GetCollisionSphere()->SetCenter(newPos);
 
-	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
-	{
-		model.GetCollisionSphere()->SetCenter(position);
-	}
-	else
-	{
+//	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN))
+//	{
+	//	model.GetCollisionSphere()->SetCenter(position);
+	//}
+	//else
+	//{
 		GameObj::ChangePosition(pos);
-	}
+//	}
 }

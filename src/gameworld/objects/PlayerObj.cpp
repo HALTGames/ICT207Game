@@ -36,6 +36,7 @@ void PlayerObj::Display()
 	glPopMatrix();
 
 	int time = glutGet(GLUT_ELAPSED_TIME);
+	/*
 	glEnable (GL_BLEND);
 	glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glPushMatrix();
@@ -60,13 +61,35 @@ void PlayerObj::Display()
 		//glColor4f(0.0, 1.0, 1.0, 0.0);
 	//	glTranslatef(position.x, position.y, position.z);
 	//	glutSolidSphere(2,6,6);
-	glPopMatrix();	
+	glPopMatrix();	*/
 
-	if((time/1000) -2 >= Timer/1000)
-	{
-		Timer = time;
-		ProtectionStatus = false;
-	}
+ glEnable (GL_BLEND);
+glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+glPushMatrix();
+glTranslatef(0+position.x, 0+position.y, 0+position.z);
+GLfloat mat_specular1[] = { 0.9, 0.9, 0.9, 0.5 };
+GLfloat mat_both1[] = { 0.9, 0.9, 0.9, 0.5 };
+glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, mat_both1);
+glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat_specular1);
+if(ProtectionStatus == true)
+{
+std::cout << "true";
+glutSolidSphere(2.5,10,10);
+}
+glPopMatrix();
+GLfloat mat_specular2[] = { 0.1, 0.1, 0.1, 1.0 };
+GLfloat mat_both2[] = { 0.1, 0.1, 0.1, 1 };
+glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, mat_both2);
+glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat_specular2);
+
+if((time/1000) -2 >= Timer/1000)
+{
+Timer = time;
+ProtectionStatus = false;
+}
+
+
+
 }
 
 //-----------------------------------------------------------------------------
@@ -76,15 +99,15 @@ void PlayerObj::ChangePosition(const Vector3 pos)
 	Vector3 newPos = position + pos;
 	model.GetCollisionSphere()->SetCenter(newPos);
 
-	if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN) ||
-		GameCollision::CollidesWith(this->model.GetCollisionSphere(), ENEMY))
-	{
-		model.GetCollisionSphere()->SetCenter(position);
-	}
-	else
-	{
+	//if(GameCollision::CollidesWith(this->model.GetCollisionSphere(), TERRAIN) ||
+	//	GameCollision::CollidesWith(this->model.GetCollisionSphere(), ENEMY))
+	//{
+	//	model.GetCollisionSphere()->SetCenter(position);
+	//}
+	//else
+	//{
 		GameObj::ChangePosition(pos);
-	}
+	//}
 }
 
 //-----------------------------------------------------------------------------

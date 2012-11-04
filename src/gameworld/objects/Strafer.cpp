@@ -3,7 +3,7 @@
 
 Strafer::Strafer()
 {
-	model.LoadModel("./models/arrowman.obj");
+	model.LoadModel("./models/Ghost.obj");
 	//collidableType = "Player";
 	position = Vector3(2.0, 0.0, 2.0);
 	angle = 0.0;
@@ -11,7 +11,7 @@ Strafer::Strafer()
 	MaxSpeed =0.07;
 	ThisStateMachine = new StateMachine<AIObject>(this);
 	ThisStateMachine->SetCurrentState(StrafeandSeek::Instance());
-	SetScale(10);
+	SetScale(1);
 	PickAIPos();
 	
 }
@@ -29,7 +29,7 @@ void Strafer::Update(Vector3 PlayPos)
 	
 	ThisStateMachine->update();
 	
-	
+	angle+=90;
 	
 }
 
