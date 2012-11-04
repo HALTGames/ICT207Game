@@ -138,6 +138,9 @@ void GameWorld::Display(void)
 
 	glFlush();
 	glutSwapBuffers();	
+
+	std::cout << "x = " << playerObj->GetPosition().x << std::endl;
+	std::cout << "z = " << playerObj->GetPosition().z << std::endl;
 }
 
 //-----------------------------------------------------------------------------

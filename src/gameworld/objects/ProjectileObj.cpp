@@ -1,9 +1,13 @@
 #include "ProjectileObj.h"
 
+//-----------------------------------------------------------------------------
+
 ProjectileObj::ProjectileObj()
 {
 	ProjectileObj(0, 0, 10, 10);
 }
+
+//-----------------------------------------------------------------------------
 
 ProjectileObj::ProjectileObj(double x1, double z1, double x2, double z2)
 {
@@ -26,9 +30,7 @@ ProjectileObj::ProjectileObj(double x1, double z1, double x2, double z2)
 	deleteObject = false;
 }
 
-ProjectileObj::~ProjectileObj()
-{
-}
+//-----------------------------------------------------------------------------
 
 void ProjectileObj::Display()
 {
@@ -45,15 +47,21 @@ void ProjectileObj::Display()
 	glPopMatrix();
 }
 
+//-----------------------------------------------------------------------------
+
 Vector3 ProjectileObj::GetCurrentPosition()
 {
 	return position;
 }
 
+//-----------------------------------------------------------------------------
+
 Vector3 ProjectileObj::GetDirection()
 {
 	return direction;
 }
+
+//-----------------------------------------------------------------------------
 
 bool ProjectileObj::CheckTime() const
 {
@@ -61,6 +69,8 @@ bool ProjectileObj::CheckTime() const
 
 	return (currentTime - startTime > time);
 }
+
+//-----------------------------------------------------------------------------
 
 bool ProjectileObj::CheckCollision()
 {
@@ -71,3 +81,5 @@ bool ProjectileObj::CheckCollision()
 
 	return false;
 }
+
+//-----------------------------------------------------------------------------

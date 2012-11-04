@@ -86,11 +86,24 @@ public:
 	 */
 	virtual bool DrawModel();
 
+	/**
+	 * \brief Draws collision sphere.
+	 *
+	 * Draws the collision sphere to screen.
+	 */
 	void DrawSphere();
 
+	
+	/**
+	 * \brief Returns the collision sphere.
+	 *
+	 * Returns the collision sphere for the current model.
+	 *
+	 * \retval the collision sphere for this model
+	 */
 	CollisionSphere* GetCollisionSphere();
 private:
-	CollisionSphere* sphere;
+	CollisionSphere* sphere; /**< the collision sphere for this model */
 
 	/**
 	 * \brief Creates the bounding box.

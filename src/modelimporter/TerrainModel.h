@@ -19,6 +19,7 @@ public:
 	virtual bool LoadModel(char* fileName);
 
 	virtual bool DrawModel();
+private:
 
 	void InitBox(TriangleApprox *b);
 
@@ -34,7 +35,6 @@ public:
 
 	float CalculateTerrainCollisions(GLMmodel *model, float px, float py, float pz);
 
-private:
 	TriangleApprox* terrain[100000];
 	int terrainIndex;
 };

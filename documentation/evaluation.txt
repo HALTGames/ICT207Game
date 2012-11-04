@@ -1,5 +1,19 @@
 WHAT DOES WORK?
 ******************************
+- The game world
+- The player loading in
+- The model importer classes
+- Collision spheres
+- Projectiles
+- The menu system
+
 
 WHAT DOESN'T WORK?
 ******************************
+- Sometimes when you start a new game, the player can't move.
+- The reticule doesn't display properly.
+- We tried to get a particle engine working however it does not so its not
+  actually used in the program despite being included in the source
+- The model importer loads in the model every time an object requires a model
+  of that type
+  

@@ -5,7 +5,7 @@
 #include <list>
 
 #include "objects\ProjectileObj.h"
-#include "objects\AIProjectile.h"
+//#include "objects\AIProjectile.h"
 #include "objects\PlayerProj.h"
 
 //-----------------------------------------------------------------------------
@@ -47,26 +47,64 @@ class ProjectileManager
 {
 public:
 	/**
+	 * \brief Adds a projectile.
 	 *
+	 * Adds the projectile to the list of projectiles currently displayed.
 	 *
-	 *
-	 *
-	 *
-	 *
+	 * \param type the type of projectile
+	 * \param startX the start x position of the projectile
+	 * \param startZ the start z position of the projectile
+	 * \param endX the end x position of the projectile
+	 * \param endZ the end z position of the projectile
 	 */
 	static void AddProjectile(ProjectileEnum type, double startX, double startZ,
 							double endX, double endZ);
 
+	/**
+	 * \brief Updates the projectiles.
+	 *
+	 * Goes through and calls the update function of all the projectiles.
+	 */
 	static void UpdateProjectiles();
 
+	/**
+	 * \brief Returns the current position.
+	 *
+	 * Returns the current position of the projectile at the position
+	 * pointed to by the iterator.
+	 *
+	 * \param index the position of the projectile in question
+	 * \retval the current position of the projectile
+	 */
 	static Vector3 GetCurrentPosition(CItrProjectileList index);
 
+	/**
+	 * \brief Returns the number of projectiles.
+	 *
+	 * Returns the current number of projectiles.
+	 *
+	 * \retval the current number of projectiles
+	 */
 	static int GetNumProjectiles();
 
-	static ProjectileList projectiles; 
+	static ProjectileList projectiles; /**< the projectile list */
 
+	/**
+	 * \brief Gets the list of projectiles
+	 *
+	 * Returns the current list of projectiles.
+	 *
+	 * \retval the current projectile list
+	 */
 	static ProjectileList GetList();
 private:
+	/**
+	 * \brief Remove a projectile from the list.
+	 *
+	 * Removes the projectile at the given index.
+	 *
+	 * \param index the index of the projectile to be removed
+	 */
 	static void RemoveProjectile(CItrProjectileList index);
 };
 

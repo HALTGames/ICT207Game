@@ -5,7 +5,7 @@
 //#include "../Behaviours/Seek.h"
 #include <math.h>
 #include "../../SoundControl/sounds.h"
-#include "AIProjectile.h"
+//#include "AIProjectile.h"
 #include "../GameCollision.h"
 #include "PlayerObj.h"
 #include "../ProjectileManager.h"

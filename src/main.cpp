@@ -143,6 +143,7 @@ World* menu = new MenuWorld;
 World* currentWorld = game;
 WorldEnum current = GAMEWORLD;
 */
+
 //-----------------------------------------------------------------------------
 int main(int argc, char** argv)
 {
@@ -273,6 +274,7 @@ void Idle(void)
 
 void Keyboard(unsigned char key, int x, int y)
 {
+	std::cout << "key" << std::endl;
 	currentWorld->Keyboard(key, x, y);
 }
 

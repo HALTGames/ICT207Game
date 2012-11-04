@@ -7,6 +7,7 @@ TerrainModel::TerrainModel(void)
 	terrainIndex = 0;
 }
 
+//-----------------------------------------------------------------------------
 
 bool TerrainModel::LoadModel(char* fileName)
 {
@@ -17,6 +18,8 @@ bool TerrainModel::LoadModel(char* fileName)
 	return true;
 }
 
+//-----------------------------------------------------------------------------
+
 bool TerrainModel::DrawModel()
 {
 	Model::DrawModel();
@@ -25,6 +28,8 @@ bool TerrainModel::DrawModel()
 
 	return true;
 }
+
+//-----------------------------------------------------------------------------
 
 void TerrainModel::InitBox(TriangleApprox *b)
 {
@@ -36,6 +41,8 @@ void TerrainModel::InitBox(TriangleApprox *b)
 	b->max.y = -100000;
 	b->max.z = -100000;
 }
+
+//-----------------------------------------------------------------------------
 
 void TerrainModel::DefineTerrain()
 {
@@ -60,6 +67,8 @@ void TerrainModel::DefineTerrain()
 		terrain[terrainIndex++] = tri;
 	}
 }
+
+//-----------------------------------------------------------------------------
 
 void TerrainModel::DrawTerrain()
 {
@@ -104,11 +113,15 @@ void TerrainModel::DrawTerrain()
 	glColor4f(1.0, 1.0, 1.0, 1.0);
 }
 
+//-----------------------------------------------------------------------------
+
 bool TerrainModel::IsOver(TriangleApprox *b,GLfloat x, GLfloat y, GLfloat z)
 {
 	return x <= b->max.x && x >= b->min.x &&
 		z <= b->max.z && z >= b->min.z;
 }
+
+//-----------------------------------------------------------------------------
 
 bool TerrainModel::IsOn(GLfloat x, GLfloat z)
 {
@@ -125,6 +138,7 @@ bool TerrainModel::IsOn(GLfloat x, GLfloat z)
 	return over;
 }
 
+//-----------------------------------------------------------------------------
 
 TriangleApprox* TerrainModel::FindTerrainBox(float x, float y, float z)
 {
@@ -138,6 +152,8 @@ TriangleApprox* TerrainModel::FindTerrainBox(float x, float y, float z)
 
 	return 0;
 }
+
+//-----------------------------------------------------------------------------
 
 float TerrainModel::CalculateTerrainCollisions(GLMmodel *model, float px, float py, float pz)
 {
@@ -173,3 +189,5 @@ float TerrainModel::CalculateTerrainCollisions(GLMmodel *model, float px, float 
 
 	return (D+A*px+C*pz)/B; //height_of_character - (D+A*px+C*pz)/B;
 }
+
+//-----------------------------------------------------------------------------
