@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 ﻿Build started 11/4/2012 3:55:38 PM.
      1>Project "D:\shaysnew\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
+=======
+﻿Build started 4/11/2012 3:52:16 PM.
+     1>Project "D:\Github\ICT207Game\src\houses.vcxproj" on node 2 (build target(s)).
+>>>>>>> 216879a645dc838b46a91f2c7592184d646dd393
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(298,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(299,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>InitializeBuildStatus:
          Creating ".\Release\houses.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
+<<<<<<< HEAD
          d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt gameworld\objects\AIObject.cpp
          AIObject.cpp
      1>d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL/glut.h(227): warning C4005: 'GLUT_RGB' : macro redefinition
@@ -404,6 +410,12 @@
          houses.vcxproj -> D:\shaysnew\ICT207Game\src\.\Release\houses.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:".\Release\houses.exe;#1" /manifest .\Release\houses.exe.intermediate.manifest
+=======
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         houses.vcxproj -> D:\Github\ICT207Game\src\.\Release\houses.exe
+>>>>>>> 216879a645dc838b46a91f2c7592184d646dd393
        FinalizeBuildStatus:
          Deleting file ".\Release\houses.unsuccessfulbuild".
          Touching ".\Release\houses.lastbuildstate".
@@ -411,4 +423,8 @@
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:00.73
+=======
+Time Elapsed 00:00:00.06
+>>>>>>> 216879a645dc838b46a91f2c7592184d646dd393

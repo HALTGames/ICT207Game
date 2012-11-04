@@ -93,9 +93,10 @@ void MenuWorld::Display()
 				glRotatef(90,1,0,0);
 				//glScalef(1.0, 1.0, 1.0);
 				glScalef(0.08, 0.10, 0.10);
-				glTranslatef(-2.2,0.0,2.5);
+				glTranslatef(-2.2,0.0,-1.4);
 				Loader[4].DrawModel();
 			glPopMatrix();
+
 			break;
 		}
 	case 2:
@@ -115,7 +116,7 @@ void MenuWorld::Display()
 				glRotatef(90,1,0,0);
 				//glScalef(1.0, 1.0, 1.0);
 				glScalef(0.08, 0.10, 0.10);
-				glTranslatef(-2.2,0.0,-1.4);
+				glTranslatef(-2.2,0.0,2.5);
 				Loader[4].DrawModel();
 			glPopMatrix();
 			break;
@@ -127,8 +128,8 @@ void MenuWorld::Display()
 
 void MenuWorld::Idle()
 {
-	glutSetWindow(1);
-	glutPostRedisplay();
+	//glutSetWindow(1);
+	//glutPostRedisplay();
 }
 
 void MenuWorld::Keyboard(unsigned char key, int keyX, int keyY)
@@ -136,9 +137,32 @@ void MenuWorld::Keyboard(unsigned char key, int keyX, int keyY)
 
 }
 
-void MenuWorld::Mouse(int button, int state, int mouseX, int mouseY)
+void MenuWorld::Mouse(int Button, int State, int mouseX, int mouseY)
 {
+	if(Button == GLUT_LEFT_BUTTON)
+	{
+		if(State == GLUT_DOWN)
+		{
+			switch(MenuChoice)
+			{
+			case 1:
+				{
+					currWorld = GAMEWORLD;
+					break;
+				}
+			case 2:
+				{
+					currWorld = SHAYSWORLD;
+					break;
+				}
+			case 3:
+				{
 
+					break;
+				}
+			}
+		}
+	}
 }
 
 void MenuWorld::MovementKeys(int key, int x, int y)
@@ -156,7 +180,28 @@ void MenuWorld::ReleaseKeys(unsigned char key, int x, int y)
 }
 void MenuWorld::MouseMove(int x, int y)
 {
-
+	std::cout << "Xvalue: "<<x << std::endl;
+	std::cout << "Yvalue: " << y << std::endl;
+	if((y > 384) && (y < 440))
+	{
+		MenuChoice = 1;
+		glutPostRedisplay();
+	}
+	else if((y > 484) && (y < 545))
+	{
+		MenuChoice = 2;
+		glutPostRedisplay();
+	}
+	else if((y > 571) && (y < 615))
+	{
+		MenuChoice = 3;
+		glutPostRedisplay();
+	}
+	else
+	{
+		MenuChoice = 0;
+		glutPostRedisplay();
+	}
 }
 
 /*
