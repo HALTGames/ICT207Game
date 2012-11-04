@@ -14,6 +14,10 @@
 #include <list>
 #include <cmath>
 
+#include <time.h>
+
+
+
 // FREEGLUT
 #include <GL\freeglut.h>
 #include <GL\freeglut_ext.h>

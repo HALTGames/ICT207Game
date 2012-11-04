@@ -15,7 +15,9 @@
 class AIObject: public GameObj
 {
 protected:
+
 	StateMachine<AIObject>* ThisStateMachine;
+
 	int Health;
 	double MaxSpeed;
 	Vector3 PlayerPos;
